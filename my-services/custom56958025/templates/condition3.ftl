@@ -1000,3 +1000,4 @@ tr.inline td:last-child {
 		<td>« <span class="underline in" style="width: 30px;"> </span> » <span class="underline in" style="width: 110px;"> </span> 20<span class="underline in" style="width: 20px;"> </span> г.</td>
 	</tr>
 </table>
+<!-- by applethecandy -->

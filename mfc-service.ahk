@@ -10,7 +10,7 @@ While(true) {
 		; template (or template_%num%, name, value, template)
 
 		RegExMatch(service, "<ahk-is_mine>(.*)</ahk-is_mine>", is_mine)
-		if (is_mine == 1) {
+		if (is_mine1 == 1) {
 			owner := "my-services"
 		} else {
 			owner := "not-my-services"

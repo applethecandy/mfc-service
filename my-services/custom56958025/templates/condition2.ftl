@@ -540,3 +540,4 @@ tr.inline td:last-child {
 		</#list>
 	</tbody>
 </table>
+<!-- by applethecandy -->

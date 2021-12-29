@@ -22,7 +22,7 @@ While(true) {
 		FileCreateDir, C:\Users\SmolyakovSV\Desktop\MFC-service\%owner%\%id1%
 
 		RegExMatch(service, "<ahk-title>(.*)</ahk-title>", title)
-		FileAppend, ”ÒÎÛ„‡: %title1%`n—Ò˚ÎÍ‡: http://cpgu.mfc-karelia.ru:8181/cpgu/formEditor?eid=%id1%&lid=%id1%, C:\Users\SmolyakovSV\Desktop\MFC-service\%owner%\%id1%\info.txt
+		FileAppend, –£—Å–ª—É–≥–∞: %title1%`n–°—Å—ã–ª–∫–∞: http://cpgu.mfc-karelia.ru:8181/cpgu/formEditor?eid=%id1%&lid=%id1%, C:\Users\SmolyakovSV\Desktop\MFC-service\%owner%\%id1%\info.txt
 
 		RegExMatch(service, "<ahk-json>(.*)</ahk-json>", json)
 		FileAppend, %json1%, C:\Users\SmolyakovSV\Desktop\MFC-service\%owner%\%id1%\json.json
@@ -41,7 +41,7 @@ While(true) {
 				RegExMatch(template1, "<ahk-value>(.*)</ahk-value>", tvalue)
 				
 				FileCreateDir, C:\Users\SmolyakovSV\Desktop\MFC-service\%owner%\%id1%\templates
-				FileAppend, %realtemplate1%, C:\Users\SmolyakovSV\Desktop\MFC-service\%owner%\%id1%\templates\%tname1% ñ %tvalue1%.ftl
+				FileAppend, %realtemplate1%, C:\Users\SmolyakovSV\Desktop\MFC-service\%owner%\%id1%\templates\%tname1% ÔøΩ %tvalue1%.ftl
 			}
 
 		} else {

@@ -6,7 +6,7 @@ While(true) {
 		;Send {Esc}
 
 		; code
-		FileRead, service, C:\Users\SmolyakovSV\Downloads\service.txt
+		FileRead, service, %userprofile%\Downloads\service.txt
 		; template (or template_%num%, name, value, template)
 
 		RegExMatch(service, "<ahk-is_mine>(.*)</ahk-is_mine>", is_mine)
@@ -51,6 +51,6 @@ While(true) {
 			FileAppend, %template1%, C:\Users\SmolyakovSV\Desktop\MFC-service\%owner%\%id1%\template.ftl
 		}
 
-		FileDelete, C:\Users\SmolyakovSV\Downloads\service.txt
+		FileDelete, %userprofile%\Downloads\service.txt
 	}
 }

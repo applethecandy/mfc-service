@@ -1,6 +1,6 @@
 While(true) {
 	sleep, 100
-	IfExist, C:\Users\SmolyakovSV\Downloads\service.txt
+	IfExist, %userprofile%\Downloads\service.txt
 	{
 		sleep, 200
 		;Send {Esc}

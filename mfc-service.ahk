@@ -1,3 +1,5 @@
+#SingleInstance, Ignore
+
 While(true) {
 	sleep, 100
 	IfExist, %userprofile%\Downloads\service.txt

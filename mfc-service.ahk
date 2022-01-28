@@ -19,15 +19,15 @@ While(true) {
 		}
 
 		RegExMatch(service, "<ahk-id>(.*)</ahk-id>", id)
-		FileRemoveDir, C:\Users\SmolyakovSV\Desktop\MFC-service\my-services\%id1%, 1
-		FileRemoveDir, C:\Users\SmolyakovSV\Desktop\MFC-service\not-my-services\%id1%, 1
-		FileCreateDir, C:\Users\SmolyakovSV\Desktop\MFC-service\%owner%\%id1%
+		FileRemoveDir, my-services\%id1%, 1
+		FileRemoveDir, not-my-services\%id1%, 1
+		FileCreateDir, %owner%\%id1%
 
 		RegExMatch(service, "<ahk-title>(.*)</ahk-title>", title)
-		FileAppend, Услуга: %title1%`n<br>`nСсылка: http://cpgu.mfc-karelia.ru:8181/cpgu/formEditor?eid=%id1%&lid=%id1%, C:\Users\SmolyakovSV\Desktop\MFC-service\%owner%\%id1%\readme.md
+		FileAppend, Услуга: %title1%`n<br>`nСсылка: http://cpgu.mfc-karelia.ru:8181/cpgu/formEditor?eid=%id1%&lid=%id1%, %owner%\%id1%\readme.md
 
 		RegExMatch(service, "<ahk-json>(.*)</ahk-json>", json)
-		FileAppend, %json1%, C:\Users\SmolyakovSV\Desktop\MFC-service\%owner%\%id1%\json.json
+		FileAppend, %json1%, %owner%\%id1%\json.json
 
 		RegExMatch(service, "<ahk-count>(.*)</ahk-count>", count)
 		if (count1 > 1) {
@@ -44,13 +44,13 @@ While(true) {
 				
 				realtemplate1=<!-- %tname1% -> %tvalue1% -->`n`n%realtemplate1%
 
-				FileCreateDir, C:\Users\SmolyakovSV\Desktop\MFC-service\%owner%\%id1%\templates
-				FileAppend, %realtemplate1%, C:\Users\SmolyakovSV\Desktop\MFC-service\%owner%\%id1%\templates\condition%A_Index%.ftl
+				FileCreateDir, %owner%\%id1%\templates
+				FileAppend, %realtemplate1%, %owner%\%id1%\templates\condition%A_Index%.ftl
 			}
 
 		} else {
 			RegExMatch(service, "<ahk-template>(.*)</ahk-template>", template)
-			FileAppend, %template1%, C:\Users\SmolyakovSV\Desktop\MFC-service\%owner%\%id1%\template.ftl
+			FileAppend, %template1%, %owner%\%id1%\template.ftl
 		}
 
 		FileDelete, %userprofile%\Downloads\service.txt

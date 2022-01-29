@@ -24,10 +24,10 @@ While(true) {
 		FileCreateDir, %owner%\%id1%
 
 		RegExMatch(service, "<ahk-title>(.*)</ahk-title>", title)
-		FileAppend, Услуга: %title1%`n<br>`nСсылка: http://cpgu.mfc-karelia.ru:8181/cpgu/formEditor?eid=%id1%&lid=%id1%, %owner%\%id1%\readme.md
+		FileAppend, # Услуга: %title1%`n`nСсылка: <http://cpgu.mfc-karelia.ru:8181/cpgu/formEditor?eid=%id1%&lid=%id1%>`n, %owner%\%id1%\readme.md
 
 		RegExMatch(service, "<ahk-json>(.*)</ahk-json>", json)
-		FileAppend, %json1%, %owner%\%id1%\json.json
+		FileAppend, [%json1%], %owner%\%id1%\json.json
 
 		RegExMatch(service, "<ahk-count>(.*)</ahk-count>", count)
 		if (count1 > 1) {

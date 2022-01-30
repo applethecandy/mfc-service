@@ -41,8 +41,9 @@ While(true) {
 				RegExMatch(template1, "<ahk-template>(.*)</ahk-template>", realtemplate)
 				RegExMatch(template1, "<ahk-name>(.*)</ahk-name>", tname)
 				RegExMatch(template1, "<ahk-value>(.*)</ahk-value>", tvalue)
-				
-				realtemplate1=<!-- %tname1% -> %tvalue1% -->`n`n%realtemplate1%
+
+				if realtemplate1 not contains <!-- %tname1% -> %tvalue1% -->`n`n
+					realtemplate1=<!-- %tname1% -> %tvalue1% -->`n`n%realtemplate1%
 
 				FileCreateDir, %owner%\%id1%\templates
 				FileAppend, %realtemplate1%, %owner%\%id1%\templates\condition%A_Index%.ftl

@@ -1,0 +1,138 @@
+[
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "lastname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_1",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "firstname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_2",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "middlename"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "ДОКУМЕНТ, УДОСТОВЕРЯЮЩИЙ ЛИЧНОСТЬ ЗАЯВИТЕЛЯ",
+        "name": "fieldset_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "textfield_3",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "docseries"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "textfield_4",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "docnumber"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "datefield_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "issuedate"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "textfield_5",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "issueorg"
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_0",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": ""
+            },
+            {
+                "name": "combobox_1",
+                "xtype": "combobox",
+                "fieldLabel": "договор (соглашения)",
+                "isPersonField": true,
+                "isSoleField": true,
+                "isLegalField": true,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "Составление проекта договора купли-продажи недвижимого имущества (земельные участки, здания, сооружения, дома, гаражи, объекты незавершённого строительства, жилые и нежилые помещения, квартиры, комнаты и др.)"
+                        },
+                        {
+                            "value": "Составление предварительного договора купли-продажи недвижимого имущества"
+                        },
+                        {
+                            "value": "Составление проекта дополнительного соглашения к договору"
+                        },
+                        {
+                            "value": "Составление проекта договора аренды, субаренды недвижимого / движимого имущества"
+                        },
+                        {
+                            "value": "Составление проекта договора переуступки права аренды недвижимого имущества"
+                        },
+                        {
+                            "value": "Дополнительная плата за составление проекта договора с использованием кредитных средств / займа / материнского капитала"
+                        },
+                        {
+                            "value": "Составление проекта договора мены недвижимого имущества"
+                        },
+                        {
+                            "value": "Дополнительная плата за каждый дополнительный объект (долю в праве собственности), начиная со второго, а также за каждого дополнительного участника сделки в договоре, начиная с третьего"
+                        },
+                        {
+                            "value": "Составление проекта соглашения об установлении (изменении) долей в праве собственности на недвижимое имущество"
+                        },
+                        {
+                            "value": "Составление проекта договора купли-продажи автомобиля (вторичный рынок)"
+                        }
+                    ],
+                    "type": "store"
+                }
+            }
+        ],
+        "prefix": "cloneablePanel_0",
+        "fieldName": "cloneablePanel_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    }
+]

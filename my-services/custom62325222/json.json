@@ -1,1 +1,260 @@
-[{"xtype":"textfield","fieldLabel":"Фамилия","name":"textfield_0","isPersonField":true,"isSoleField":true,"isLegalField":true,"strategy":"lastname"},{"xtype":"textfield","fieldLabel":"Имя","name":"textfield_1","isPersonField":true,"isSoleField":true,"isLegalField":true,"strategy":"firstname"},{"xtype":"textfield","fieldLabel":"Отчество","name":"textfield_2","isPersonField":true,"isSoleField":true,"isLegalField":true,"strategy":"middlename"},{"xtype":"textfield","fieldLabel":"Телефон","name":"textfield_6","isPersonField":true,"isSoleField":true,"isLegalField":true,"strategy":"person_mobile"},{"xtype":"textfield","fieldLabel":"Адрес электронной почты","name":"textfield_7","isPersonField":true,"isSoleField":true,"isLegalField":true,"strategy":"person_email"},{"xtype":"fieldset","title":"ДОКУМЕНТ, УДОСТОВЕРЯЮЩИЙ ЛИЧНОСТЬ ЗАЯВИТЕЛЯ","name":"fieldset_0","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"KLADR","fieldLabel":"Адрес места жительства/пребывания","name":"KLADR_0","isPersonField":true,"isSoleField":true,"isLegalField":true,"strategy":"residenceAddressKladrFullAddrJson"},{"xtype":"textfield","fieldLabel":"Документ удостоверяющий личность","name":"textfield_8","isPersonField":true,"isSoleField":true,"isLegalField":true,"strategy":"documenttypename"},{"xtype":"textfield","fieldLabel":"Серия","name":"textfield_3","isPersonField":true,"isSoleField":true,"isLegalField":true,"strategy":"docseries"},{"xtype":"textfield","fieldLabel":"Номер","name":"textfield_4","isPersonField":true,"isSoleField":true,"isLegalField":true,"strategy":"docnumber"},{"xtype":"datefield","fieldLabel":"Дата выдачи","name":"datefield_0","isPersonField":true,"isSoleField":true,"isLegalField":true,"strategy":"issuedate"},{"xtype":"textfield","fieldLabel":"Кем выдан","name":"textfield_5","isPersonField":true,"isSoleField":true,"isLegalField":true,"strategy":"issueorg"},{"xtype":"fieldset","title":"Прошу заполнить декларацию 3-НДФЛ и подготовить пакет документов по случаю","name":"fieldset_1","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"checkbox","boxLabel":"Лечение","name":"checkbox_0","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"checkbox","boxLabel":"ДМС","name":"checkbox_1","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"checkbox","boxLabel":"Обучение","name":"checkbox_2","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"checkbox","boxLabel":"Страхование жизни","name":"checkbox_3","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"checkbox","boxLabel":"НПФ","name":"checkbox_4","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"checkbox","boxLabel":"Дарение","name":"checkbox_5","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"checkbox","boxLabel":"Сдача в найм","name":"checkbox_6","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"checkbox","boxLabel":"Продажа имущества","name":"checkbox_7","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"checkbox","boxLabel":"Имущественный вычет","name":"checkbox_8","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"checkbox","boxLabel":"ИИС","name":"checkbox_9","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"checkbox","boxLabel":"Вычет дети","name":"checkbox_10","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"checkbox","boxLabel":"Выигрыш","name":"checkbox_11","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"checkbox","boxLabel":"Благотворительность","name":"checkbox_12","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"fieldset","title":"За отчетные периоды","name":"fieldset_2","isPersonField":true,"isSoleField":true,"isLegalField":true},{"xtype":"combobox","fieldLabel":"Выпадающий список","name":"combobox_0","isPersonField":true,"isSoleField":true,"isLegalField":true,"queryMode":"local","displayField":"value","valueField":"value","store":{"fields":["value"],"data":[{"value":"2019"},{"value":"2020"},{"value":"2021"},{"value":"2022"}],"type":"store"}}]
+[
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "lastname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_1",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "firstname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_2",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "middlename"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Телефон",
+        "name": "textfield_6",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "person_mobile"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес электронной почты",
+        "name": "textfield_7",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "person_email"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "ДОКУМЕНТ, УДОСТОВЕРЯЮЩИЙ ЛИЧНОСТЬ ЗАЯВИТЕЛЯ",
+        "name": "fieldset_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "KLADR",
+        "fieldLabel": "Адрес места жительства/пребывания",
+        "name": "KLADR_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "residenceAddressKladrFullAddrJson"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Документ удостоверяющий личность",
+        "name": "textfield_8",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "documenttypename"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "textfield_3",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "docseries"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "textfield_4",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "docnumber"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "datefield_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "issuedate"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "textfield_5",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "issueorg"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Прошу заполнить декларацию 3-НДФЛ и подготовить пакет документов по случаю",
+        "name": "fieldset_1",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Лечение",
+        "name": "checkbox_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "ДМС",
+        "name": "checkbox_1",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Обучение",
+        "name": "checkbox_2",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Страхование жизни",
+        "name": "checkbox_3",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "НПФ",
+        "name": "checkbox_4",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Дарение",
+        "name": "checkbox_5",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Сдача в найм",
+        "name": "checkbox_6",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Продажа имущества",
+        "name": "checkbox_7",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Имущественный вычет",
+        "name": "checkbox_8",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "ИИС",
+        "name": "checkbox_9",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вычет дети",
+        "name": "checkbox_10",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Выигрыш",
+        "name": "checkbox_11",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Благотворительность",
+        "name": "checkbox_12",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "За отчетные периоды",
+        "name": "fieldset_2",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "За какой год",
+        "name": "combobox_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "2019"
+                },
+                {
+                    "value": "2020"
+                },
+                {
+                    "value": "2021"
+                },
+                {
+                    "value": "2022"
+                }
+            ],
+            "type": "store"
+        }
+    }
+]

@@ -1,0 +1,66 @@
+[
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "lastname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_1",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "firstname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_2",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "middlename"
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_0",
+        "items": [
+            {
+                "name": "combobox_0",
+                "xtype": "combobox",
+                "fieldLabel": "Заполнение Декларации 3-НДФЛ",
+                "isPersonField": true,
+                "isSoleField": true,
+                "isLegalField": true,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "социальные вычеты (лечение, обучение, пенсионное страхование и др.)"
+                        },
+                        {
+                            "value": "имущественный вычет (купля/продажа квартиры, машины, дачи и др.)"
+                        }
+                    ],
+                    "type": "store"
+                }
+            }
+        ],
+        "prefix": "cloneablePanel_0",
+        "fieldName": "cloneablePanel_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    }
+]

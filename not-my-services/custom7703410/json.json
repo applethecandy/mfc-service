@@ -1,0 +1,200 @@
+[
+    {
+        "xtype": "fieldset",
+        "title": "Дополнительные поля для представителя заявителя",
+        "name": "fieldset_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Тип представителя",
+        "name": "combobox_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "представитель гражданина"
+                },
+                {
+                    "value": "законный представитель несовершеннолетнего или недееспособного лица"
+                }
+            ],
+            "type": "store"
+        },
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_3\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_1\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_1\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Место рождения представителя",
+        "name": "textfield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_3\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_1\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_1\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<b style=\"font-size:14px \"><font color=\"red\">Заявления принимаем до 1 октября текущего года! Возобновляем прием заявлений с 1 января.</font></b>",
+        "name": "fieldset_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Заявитель подаёт заявление",
+        "name": "combobox_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "о предоставлении набора социальных услуг"
+                },
+                {
+                    "value": "о возобновлении получения набора социальных услуг"
+                },
+                {
+                    "value": "об отказе от получения набора социальных услуг"
+                }
+            ],
+            "type": "store"
+        },
+        "allowBlank": false,
+        "editable": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_3\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_1\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_1\"]}]}]}",
+        "scripts": [
+            "setTimeout(fuk, 1000);\nfunction fuk(){\n\tdocument.getElementById('mfcCombo-triggerWrap').onmouseover = function() {\n\t//confirm(\"Получение результата по данной услуге исключительно в ОВ!!!\");\n\tvar div = document.createElement('div');\n\tdiv.setAttribute(\"id\", \"output_documents\");\n\tdocument.getElementById('mfcCombo-triggerWrap').appendChild(div);\n\tdocument.getElementById('output_documents').style.cssText=\"width: 100%;\\\n\theight: 89px;\\\n\tbackground-color: #f0724a;\\\n\tposition: absolute;\\\n\toverflow: hidden;\\\n\tclear: both;\\\n\tz-index: 1000;\\\n\ttop: 45px;\\\n\tright: 0px;\\\n\tdisplay: block;\\\n\tborder:2px dashed #ff3f05;\\\n\tmargin:0 auto;\\\n\ttext-align:center;\\\n\tpadding-top:22px;\\\n\t\";\n\tdocument.getElementById('output_documents').innerHTML = \"<p>Место выдачи результата услуги -<br />исключительно орган власти!</p>\"\n\t};\n\n\n\tdocument.getElementById('mfcCombo-triggerWrap').onmouseout = function() {\n\tvar div = document.createElement('div');\n\tdiv.setAttribute(\"id\", \"output_documents\");\n\tdocument.getElementById('mfcCombo-triggerWrap').appendChild(div);\n\tdocument.getElementById('output_documents').style.cssText=\"display: none;\";\n\t};\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "набор социальных услуг, предусмотренный частью 1 статьи 6.2 Федерального закона от 17 июля 1999 г. № 178-ФЗ",
+        "name": "checkbox_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(часть 1 статьи 6.2 - <span style=\"color:red\">все виды социальных услуг (лекарства, путевка в санаторий и проезд)</span>)",
+        "scripts": [
+            "var checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\nvar checkbox_2 = Ext.ComponentQuery.query('[name=checkbox_2]')[0];\nvar checkbox_3 = Ext.ComponentQuery.query('[name=checkbox_3]')[0];\nvar checkbox_4 = Ext.ComponentQuery.query('[name=checkbox_4]')[0];\n\nif (checkbox_1.checked == true){\ncheckbox_2.setValue(true);\ncheckbox_3.setValue(true);\ncheckbox_4.setValue(true);\ncheckbox_2.disable();\ncheckbox_3.disable();\ncheckbox_4.disable();\n}\nelse{\ncheckbox_2.setValue(false);\ncheckbox_3.setValue(false);\ncheckbox_4.setValue(false);\ncheckbox_2.enable();\ncheckbox_3.enable();\ncheckbox_4.enable();\n}"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_3\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_1\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_1\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "социальную услугу, предусмотренную пунктом 1 части 1 статьи 6.2 Федерального закона от 17 июля 1999 г. № 178-ФЗ",
+        "name": "checkbox_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(пункт 1 части 1 статьи 6.2 - <span style=\"color:red\">обеспечение необходимыми лекарственными препаратами и медицинскими изделиями</span>)",
+        "scripts": [
+            "var checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\nvar checkbox_2 = Ext.ComponentQuery.query('[name=checkbox_2]')[0];\nvar checkbox_3 = Ext.ComponentQuery.query('[name=checkbox_3]')[0];\nvar checkbox_4 = Ext.ComponentQuery.query('[name=checkbox_4]')[0];\n\nif (checkbox_2.checked == true){\ny = checkbox_3.getValue();\nz = checkbox_4.getValue();\nif (y  && z) {checkbox_1.setValue(true);}\n}\nelse{\n}"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_3\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_1\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_1\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "социальную услугу, предусмотренную подпунктом 1.1 части 1 статьи 6.2 Федерального закона от 17 июля 1999 г. № 178-ФЗ",
+        "name": "checkbox_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(подпункт 1.1 части 1 статьи 6.2 - <span style=\"color:red\">предоставление путевки на санаторно-курортное лечение</span>)",
+        "scripts": [
+            "var checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\nvar checkbox_2 = Ext.ComponentQuery.query('[name=checkbox_2]')[0];\nvar checkbox_3 = Ext.ComponentQuery.query('[name=checkbox_3]')[0];\nvar checkbox_4 = Ext.ComponentQuery.query('[name=checkbox_4]')[0];\n\nif (checkbox_3.checked == true){\ny = checkbox_2.getValue();\nz = checkbox_4.getValue();\nif (y  && z) {checkbox_1.setValue(true);}\n}\nelse{\n}"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_3\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_1\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_1\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "социальную услугу, предусмотренную пунктом 2 части 1 статьи 6.2 Федерального закона от 17 июля 1999 г. № 178-ФЗ",
+        "name": "checkbox_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(пункт 2 части 1 статьи 6.2 - <span style=\"color:red\">бесплатный проезд на пригородном железнодорожном транспорте, а также на междугородном транспорте к месту лечения и обратно</span>)",
+        "scripts": [
+            "var checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\nvar checkbox_2 = Ext.ComponentQuery.query('[name=checkbox_2]')[0];\nvar checkbox_3 = Ext.ComponentQuery.query('[name=checkbox_3]')[0];\nvar checkbox_4 = Ext.ComponentQuery.query('[name=checkbox_4]')[0];\n\nif (checkbox_4.checked == true){\ny = checkbox_2.getValue();\nz = checkbox_3.getValue();\nif (y  && z) {checkbox_1.setValue(true);}\n}\nelse{\n}"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_3\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_1\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_1\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "с 01 января 20.. года",
+        "name": "textfield_0",
+        "isPersonField": false,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "maxLength": 2,
+        "minLength": 2,
+        "description": "(назначить/возобновить/прекратить выплаты с 1 января следующего года (<span style=\"color:red\">поставить 2 последние цифры года</span>))",
+        "scripts": [
+            "setTimeout(fuk, 1000);\nfunction fuk(){\n\tdocument.getElementById('mfcCombo-triggerWrap').onmouseover = function() {\n\t//confirm(\"Получение результата по данной услуге исключительно в ОВ!!!\");\n\tvar div = document.createElement('div');\n\tdiv.setAttribute(\"id\", \"output_documents\");\n\tdocument.getElementById('mfcCombo-triggerWrap').appendChild(div);\n\tdocument.getElementById('output_documents').style.cssText=\"width: 100%;\\\n\theight: 89px;\\\n\tbackground-color: #f0724a;\\\n\tposition: absolute;\\\n\toverflow: hidden;\\\n\tclear: both;\\\n\tz-index: 1000;\\\n\ttop: 45px;\\\n\tright: 0px;\\\n\tdisplay: block;\\\n\tborder:2px dashed #ff3f05;\\\n\tmargin:0 auto;\\\n\ttext-align:center;\\\n\tpadding-top:22px;\\\n\t\";\n\tdocument.getElementById('output_documents').innerHTML = \"<p>Место выдачи результата услуги -<br />исключительно орган власти!</p>\"\n\t};\n\n\n\tdocument.getElementById('mfcCombo-triggerWrap').onmouseout = function() {\n\tvar div = document.createElement('div');\n\tdiv.setAttribute(\"id\", \"output_documents\");\n\tdocument.getElementById('mfcCombo-triggerWrap').appendChild(div);\n\tdocument.getElementById('output_documents').style.cssText=\"display: none;\";\n\t};\n};"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_3\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_1\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_1\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<b style=\"font-size:10px \"><font color=\"red\">Для информирования заявителя письменный ответ не предусмотрен. Результат услуги - регистрация заявления в ОПФ</b></font>",
+        "name": "fieldset_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Список документов",
+        "name": "fieldset_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Заявление",
+        "fieldName": "LoadStatement",
+        "name": "LoadStatement",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "flag": "original",
+        "allowBlank": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, удостоверяющий личность заявителя",
+        "fieldName": "fileuploadpanel_5",
+        "name": "fileuploadpanel_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false
+    }
+]

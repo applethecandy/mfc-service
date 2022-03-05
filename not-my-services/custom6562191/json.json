@@ -1,0 +1,1529 @@
+[
+    {
+        "xtype": "checkbox",
+        "boxLabel": "В роли заявителя выступает доверенное лицо",
+        "name": "checkbox_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_12 = Ext.ComponentQuery.query('[name=checkbox_12]')[0];\nvar representative_check = Ext.ComponentQuery.query('[name=representative_check]')[0];\nvar fieldset_3 = Ext.ComponentQuery.query('[name=fieldset_3]')[0];\nvar fieldset_9 = Ext.ComponentQuery.query('[name=fieldset_9]')[0];\nvar datefield_9 = Ext.ComponentQuery.query('[name=datefield_9]')[0];\nvar combobox_6 = Ext.ComponentQuery.query('[name=combobox_6]')[0];\nvar textfield_50 = Ext.ComponentQuery.query('[name=textfield_50]')[0];\nvar textfield_42 = Ext.ComponentQuery.query('[name=textfield_42]')[0];\nvar textfield_43 = Ext.ComponentQuery.query('[name=textfield_43]')[0];\nvar textfield_44 = Ext.ComponentQuery.query('[name=textfield_44]')[0];\nvar textfield_45 = Ext.ComponentQuery.query('[name=textfield_45]')[0];\nvar textfield_56 = Ext.ComponentQuery.query('[name=textfield_56]')[0];\nvar textfield_46 = Ext.ComponentQuery.query('[name=textfield_46]')[0];\nvar textfield_47 = Ext.ComponentQuery.query('[name=textfield_47]')[0];\nvar textfield_48 = Ext.ComponentQuery.query('[name=textfield_48]')[0];\nvar textfield_49 = Ext.ComponentQuery.query('[name=textfield_49]')[0];\nvar datefield_10 = Ext.ComponentQuery.query('[name=datefield_10]')[0];\nvar datefield_11 = Ext.ComponentQuery.query('[name=datefield_11]')[0];\n\nrepresentative_check.hide();\ntextfield_50.hide();\n\nif (checkbox_12.checked == true){\nrepresentative_check.setValue(true);\nfieldset_3.show();\nfieldset_9.show();\ndatefield_9.show();\ncombobox_6.show();\ntextfield_50.show();\ntextfield_56.show();\n}\nelse\n{\nrepresentative_check.setValue(false);\nfieldset_3.hide();\nfieldset_9.hide();\ndatefield_9.hide();\ncombobox_6.hide();\ncombobox_6.setValue(' ');\ntextfield_56.hide();\n};\n\n\n\n\n"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Дополнительные поля для представителя",
+        "name": "fieldset_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата регистрации представителя по месту жительства",
+        "name": "datefield_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Место рождения представителя",
+        "name": "textfield_50",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Страна места жительства представителя",
+        "name": "textfield_56",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "При наличии у представителя",
+        "name": "combobox_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "адреса места пребывания"
+                },
+                {
+                    "value": "адреса места фактического проживания"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var checkbox_12 = Ext.ComponentQuery.query('[name=checkbox_12]')[0];\nvar representative_check = Ext.ComponentQuery.query('[name=representative_check]')[0];\nvar fieldset_3 = Ext.ComponentQuery.query('[name=fieldset_3]')[0];\nvar fieldset_9 = Ext.ComponentQuery.query('[name=fieldset_9]')[0];\nvar datefield_9 = Ext.ComponentQuery.query('[name=datefield_9]')[0];\nvar combobox_6 = Ext.ComponentQuery.query('[name=combobox_6]')[0];\nvar textfield_50 = Ext.ComponentQuery.query('[name=textfield_50]')[0];\nvar textfield_42 = Ext.ComponentQuery.query('[name=textfield_42]')[0];\nvar textfield_43 = Ext.ComponentQuery.query('[name=textfield_43]')[0];\nvar textfield_44 = Ext.ComponentQuery.query('[name=textfield_44]')[0];\nvar textfield_45 = Ext.ComponentQuery.query('[name=textfield_45]')[0];\nvar textfield_46 = Ext.ComponentQuery.query('[name=textfield_46]')[0];\nvar textfield_47 = Ext.ComponentQuery.query('[name=textfield_47]')[0];\nvar textfield_48 = Ext.ComponentQuery.query('[name=textfield_48]')[0];\nvar textfield_49 = Ext.ComponentQuery.query('[name=textfield_49]')[0];\nvar textfield_57 = Ext.ComponentQuery.query('[name=textfield_57]')[0];\nvar datefield_10 = Ext.ComponentQuery.query('[name=datefield_10]')[0];\nvar datefield_11 = Ext.ComponentQuery.query('[name=datefield_11]')[0];\n\nvar sasha = ['адреса места пребывания', 'адреса места фактического проживания'].indexOf(combobox_6.getValue());\n\nif (sasha == 0 || sasha == 1){\ntextfield_42.show();\ntextfield_43.show();\ntextfield_44.show();\ntextfield_45.show();\ntextfield_46.show();\ntextfield_47.show();\ntextfield_48.show();\ntextfield_49.show();\ntextfield_57.show();\n}\nelse\n{\ntextfield_42.hide();\ntextfield_43.hide();\ntextfield_44.hide();\ntextfield_45.hide();\ntextfield_46.hide();\ntextfield_47.hide();\ntextfield_48.hide();\ntextfield_49.hide();\ntextfield_57.hide();\n};\n\nif (sasha == 0){\ndatefield_10.show();\ndatefield_11.show();\n}\nelse\n{\ndatefield_10.hide();\ndatefield_11.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Страна",
+        "name": "textfield_57",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Регион",
+        "name": "textfield_42",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Район",
+        "name": "textfield_43",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Населенный пункт",
+        "name": "textfield_44",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Улица",
+        "name": "textfield_45",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Дом",
+        "name": "textfield_46",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Корпус",
+        "name": "textfield_47",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Строение",
+        "name": "textfield_48",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Квартира",
+        "name": "textfield_49",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Срок регистрации с",
+        "name": "datefield_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Срок регистрации по",
+        "name": "datefield_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Цели",
+        "name": "combobox_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Обращение по месту жительства заявителя"
+                },
+                {
+                    "value": "Оформление паспорта заявителю, имеющему (имевшему) допуск к сведениям особой важности или совершенно секретным сведениям"
+                },
+                {
+                    "value": "Обращение не по месту жительства заявителя"
+                }
+            ],
+            "type": "store"
+        },
+        "description": "(от выбора зависит срок оказания услуги)",
+        "scripts": [
+            "var combobox_0 = Ext.ComponentQuery.query('[name=combobox_0]')[0];\nvar combobox_4 = Ext.ComponentQuery.query('[name=combobox_4]')[0];\nvar checkbox_16 = Ext.ComponentQuery.query('[name=checkbox_16]')[0];\nvar textfield_51 = Ext.ComponentQuery.query('[name=textfield_51]')[0];\n\nvar textfield_52 = Ext.ComponentQuery.query('[name=textfield_52]')[0];\nvar textfield_14 = Ext.ComponentQuery.query('[name=textfield_14]')[0];\nvar textfield_15 = Ext.ComponentQuery.query('[name=textfield_15]')[0];\nvar textfield_16 = Ext.ComponentQuery.query('[name=textfield_16]')[0];\nvar textfield_17 = Ext.ComponentQuery.query('[name=textfield_17]')[0];\nvar textfield_18 = Ext.ComponentQuery.query('[name=textfield_18]')[0];\nvar textfield_19 = Ext.ComponentQuery.query('[name=textfield_19]')[0];\nvar textfield_20 = Ext.ComponentQuery.query('[name=textfield_20]')[0];\nvar textfield_21 = Ext.ComponentQuery.query('[name=textfield_21]')[0];\nvar datefield_4 = Ext.ComponentQuery.query('[name=datefield_4]')[0];\nvar datefield_5 = Ext.ComponentQuery.query('[name=datefield_5]')[0];\n\ntextfield_52.hide();\ntextfield_14.hide();\ntextfield_15.hide();\ntextfield_16.hide();\ntextfield_17.hide();\ntextfield_18.hide();\ntextfield_19.hide();\ntextfield_20.hide();\ntextfield_21.hide();\ndatefield_4.hide();\ndatefield_5.hide();\n\nvar mesto_jit = ['Обращение по месту жительства заявителя', 'Оформление паспорта заявителю, имеющему (имевшему) допуск к сведениям особой важности или совершенно секретным сведениям', 'Обращение не по месту жительства заявителя'].indexOf(combobox_0.getValue());\n\nif (mesto_jit == 0) {\n\ttextfield_51.setValue(\"Российская Федерация\");\n};\n\nif (mesto_jit == 2) {\n\tcombobox_4.show();\n}\nelse\n{\n\tcombobox_4.hide();\n};\n\nif (mesto_jit == 1) {\n\tcheckbox_16.setValue(true);\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"text-transform:none;\"><font style=\"color:red;text-decoration:underline;\">Примечание</font>: Обращение по доверенности невозможно! За оформлением паспорта несовершеннолетним гражданам (не достигшим 18-летнего возраста) или гражданам, признанным судом недееспособными (ограниченно дееспособными) обращается законный представитель <em style=\"font-style:italic;\">(для подтверждения полномочий требуется свидетельство о рождении несовершеннолетнего или акт органа опеки и попечительства о назначении опекуна или попечителя)</em></span><br />",
+        "name": "fieldset_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Категории заявителей",
+        "name": "combobox_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "description": "(от выбора зависит форма заявления и документы)",
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Оформление паспорта совершеннолетнему гражданину"
+                },
+                {
+                    "value": "Оформления паспорта несовершеннолетнему гражданину в возрасте от 14 до 18 лет"
+                },
+                {
+                    "value": "Оформления паспорта несовершеннолетнему гражданину в возрасте до 14 лет"
+                },
+                {
+                    "value": "Оформления паспорта гражданам, признанным судом недееспособными (ограниченно дееспособными)"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_1 = Ext.ComponentQuery.query('[name=combobox_1]')[0];\nvar LoadStatement = Ext.ComponentQuery.query('[fieldName=LoadStatement]')[0];\nvar fileuploadpanel_1 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_1]')[0];\nvar fileuploadpanel_2 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_2]')[0];\nvar fileuploadpanel_4 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_4]')[0];\nvar fileuploadpanel_5 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_5]')[0];\nvar fileuploadpanel_14 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_14]')[0];\nvar fileuploadpanel_24 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_24]')[0];\nvar fileuploadpanel_18 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_18]')[0];\nvar fileuploadpanel_19 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_19]')[0];\nvar fileuploadpanel_17 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_17]')[0];\nvar fileuploadpanel_25 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_25]')[0];\nvar checkbox_8 = Ext.ComponentQuery.query('[name=checkbox_8]')[0];\nvar checkbox_0 = Ext.ComponentQuery.query('[name=checkbox_0]')[0];\nvar checkbox_9 = Ext.ComponentQuery.query('[name=checkbox_9]')[0];\nvar checkbox_2 = Ext.ComponentQuery.query('[name=checkbox_2]')[0];\nvar checkbox_3 = Ext.ComponentQuery.query('[name=checkbox_3]')[0];\nvar checkbox_4 = Ext.ComponentQuery.query('[name=checkbox_4]')[0];\nvar checkbox_28 = Ext.ComponentQuery.query('[name=checkbox_28]')[0];\nvar fieldset_1 = Ext.ComponentQuery.query('[name=fieldset_1]')[0];\nvar checkbox_13 = Ext.ComponentQuery.query('[name=checkbox_13]')[0];\nvar checkbox_14 = Ext.ComponentQuery.query('[name=checkbox_14]')[0];\nvar checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\nvar cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\nvar checkbox_12 = Ext.ComponentQuery.query('[name=checkbox_12]')[0];\n\nvar iks = ['Оформление паспорта совершеннолетнему гражданину', 'Оформления паспорта несовершеннолетнему гражданину в возрасте от 14 до 18 лет', 'Оформления паспорта несовершеннолетнему гражданину в возрасте до 14 лет','Оформления паспорта гражданам, признанным судом недееспособными (ограниченно дееспособными)'].indexOf(combobox_1.getValue());\n\nvar fileuploadpanel_6 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_6]')[0];\nvar fileuploadpanel_7 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_7]')[0];\nvar fileuploadpanel_8 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_8]')[0];\nvar fileuploadpanel_22 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_22]')[0];\nvar fileuploadpanel_23 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_23]')[0];\nvar fileuploadpanel_9 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_9]')[0];\nvar fileuploadpanel_10 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_10]')[0];\nvar fileuploadpanel_11 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_11]')[0];\nvar fileuploadpanel_12 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_12]')[0];\nvar fileuploadpanel_13 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_13]')[0];\nvar fileuploadpanel_20 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_20]')[0];\nvar fileuploadpanel_21 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_21]')[0];\nvar fileuploadpanel_25 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_25]')[0];\n\nfileuploadpanel_6.hide();\nfileuploadpanel_7.hide();\nfileuploadpanel_8.hide();\nfileuploadpanel_22.hide();\nfileuploadpanel_23.hide();\nfileuploadpanel_9.hide();\nfileuploadpanel_10.hide();\nfileuploadpanel_11.hide();\nfileuploadpanel_12.hide();\nfileuploadpanel_13.hide();\nfileuploadpanel_20.hide();\nfileuploadpanel_21.hide();\nfileuploadpanel_24.hide();\n\nif (iks == 0) {\nLoadStatement.show();\nfileuploadpanel_2.show();\nfileuploadpanel_4.show();\nfileuploadpanel_5.show();\ncheckbox_0.show();\ncheckbox_2.show();\ncloneablePanel_1.show();\ncheckbox_13.show();\ncheckbox_14.show();\ncheckbox_12.hide();\ncheckbox_12.setValue(false);\n}\nelse\n{\nLoadStatement.hide();\nfileuploadpanel_2.hide();\nfileuploadpanel_4.hide();\nfileuploadpanel_5.hide();\ncheckbox_0.hide();\ncheckbox_0.setValue(false);\ncheckbox_2.hide();\ncheckbox_2.setValue(false);\ncloneablePanel_1.hide();\ncheckbox_13.hide();\ncheckbox_14.hide();\ncheckbox_12.show();\n};\n\nif (iks == 1 || iks == 3) {\nfileuploadpanel_1.show();\nfileuploadpanel_14.show();\n}\nelse\n{\nfileuploadpanel_1.hide();\nfileuploadpanel_14.hide();\n};\n\nif (iks == 1 || iks == 2) {\ncheckbox_28.show();\n}\nelse\n{\ncheckbox_28.hide();\n};\n\nif (iks == 2) {\nfileuploadpanel_19.show();\nfileuploadpanel_17.show();\nfileuploadpanel_24.show();\n}\nelse\n{\nfileuploadpanel_19.hide();\nfileuploadpanel_17.hide();\nfileuploadpanel_24.hide();\n};\n\nif (iks == 0 || iks == 1 || iks == 3) {\nfileuploadpanel_1.show();\n}\nelse\n{\nfileuploadpanel_1.hide();\n};\n\nif (iks == 0 || iks == 1 || iks == 2 || iks == 3) {\nfieldset_1.show();\ncheckbox_9.show();\ncheckbox_3.show();\ncheckbox_4.show();\ncheckbox_8.show();\n};\n\nif (iks == 1 || iks == 2 || iks == 3) {\nfileuploadpanel_18.show();\n}\nelse\n{\nfileuploadpanel_18.hide();\n};\n\nif (iks == 3) {\nfileuploadpanel_25.show();\n}\nelse\n{\nfileuploadpanel_25.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Жизненные ситуации",
+        "name": "fieldset_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Заявитель не возражает против получения паспорта другим законным представителем несовершеннолетнего гражданина",
+        "name": "checkbox_28",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(заполняется по желанию)",
+        "scripts": [
+            "var checkbox_28 = Ext.ComponentQuery.query('[name=checkbox_28]')[0];\nvar textfield_58 = Ext.ComponentQuery.query('[name=textfield_58]')[0];\nvar textfield_59 = Ext.ComponentQuery.query('[name=textfield_59]')[0];\nvar textfield_60 = Ext.ComponentQuery.query('[name=textfield_60]')[0];\nvar textfield_61 = Ext.ComponentQuery.query('[name=textfield_61]')[0];\nvar datefield_13 = Ext.ComponentQuery.query('[name=datefield_13]')[0];\nvar combobox_8 = Ext.ComponentQuery.query('[name=combobox_8]')[0];\n\nif (checkbox_28.checked == true) {\ntextfield_58.show();\ntextfield_59.show();\ntextfield_60.show();\ntextfield_61.show();\ndatefield_13.show();\ncombobox_8.show();\n}\nelse\n{\ntextfield_58.hide();\ntextfield_59.hide();\ntextfield_60.hide();\ntextfield_61.hide();\ndatefield_13.hide();\ncombobox_8.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия другого представителя",
+        "name": "textfield_58",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя другого представителя",
+        "name": "textfield_59",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество другого представителя",
+        "name": "textfield_60",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения другого представителя",
+        "name": "datefield_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Пол другого представителя",
+        "name": "combobox_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Мужской"
+                },
+                {
+                    "value": "Женский"
+                }
+            ],
+            "type": "store"
+        }
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": " Место рождения",
+        "name": "textfield_61",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(страна, республика, край, область, населенный пункт)"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "У заявителя имеются основные документы, удостоверяющие личность гражданина Российской Федерации за пределами территории Российской Федерации, в том числе содержащие электронный носитель информации (паспорта)",
+        "name": "checkbox_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var fieldset_4 = Ext.ComponentQuery.query('[name=fieldset_4]')[0];\nvar fieldset_10 = Ext.ComponentQuery.query('[name=fieldset_10]')[0];\nvar fieldset_11 = Ext.ComponentQuery.query('[name=fieldset_11]')[0];\nvar checkbox_8 = Ext.ComponentQuery.query('[name=checkbox_8]')[0];\nvar checkbox_23 = Ext.ComponentQuery.query('[name=checkbox_23]')[0];\nvar checkbox_24 = Ext.ComponentQuery.query('[name=checkbox_24]')[0];\nvar checkbox_25 = Ext.ComponentQuery.query('[name=checkbox_25]')[0];\nvar checkbox_26 = Ext.ComponentQuery.query('[name=checkbox_26]')[0];\nvar checkbox_27 = Ext.ComponentQuery.query('[name=checkbox_27]')[0];\nvar textfield_31 = Ext.ComponentQuery.query('[name=textfield_31]')[0];\nvar textfield_32 = Ext.ComponentQuery.query('[name=textfield_32]')[0];\nvar textfield_33 = Ext.ComponentQuery.query('[name=textfield_33]')[0];\nvar textfield_53 = Ext.ComponentQuery.query('[name=textfield_53]')[0];\nvar textfield_54 = Ext.ComponentQuery.query('[name=textfield_54]')[0];\nvar textfield_55 = Ext.ComponentQuery.query('[name=textfield_55]')[0];\nvar datefield_7 = Ext.ComponentQuery.query('[name=datefield_7]')[0];\nvar datefield_12 = Ext.ComponentQuery.query('[name=datefield_12]')[0];\nvar fieldset_12 = Ext.ComponentQuery.query('[name=fieldset_12]')[0];\nvar fieldset_13 = Ext.ComponentQuery.query('[name=fieldset_13]')[0];\n\nif (checkbox_8.checked == true) {\nfieldset_4.show();\nfieldset_10.show();\nfieldset_11.show();\ntextfield_31.show();\ntextfield_32.show();\ntextfield_33.show();\ndatefield_7.show();\ncheckbox_23.show();\ncheckbox_24.show();\ncheckbox_25.show();\ncheckbox_26.show();\ncheckbox_27.show();\ncheckbox_27.setValue(true);\ntextfield_53.show();\ntextfield_54.show();\ntextfield_55.show();\ndatefield_12.show();\nfieldset_12.show();\nfieldset_13.show();\n}\nelse {\nfieldset_4.hide();\nfieldset_10.hide();\nfieldset_11.hide();\ntextfield_31.hide();\ntextfield_32.hide();\ntextfield_33.hide();\ndatefield_7.hide();\ncheckbox_23.hide();\ncheckbox_24.hide();\ncheckbox_25.hide();\ncheckbox_26.hide();\ncheckbox_27.hide();\ntextfield_53.hide();\ntextfield_54.hide();\ntextfield_55.hide();\ndatefield_12.hide();\nfieldset_12.hide();\nfieldset_13.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"text-transform:none;\"><font style=\"color:red;text-decoration:underline;\">Примечание</font>: Загранпаспорт необходим для проверки сведений и формирования шаблона заявления. Оригинал загранпаспорта требуется при выдаче нового паспорта (а старый аннулируется).</span>",
+        "name": "fieldset_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о первом загранпаспорте",
+        "name": "fieldset_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия загранпаспорта",
+        "name": "textfield_31",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "№ загранпаспорта",
+        "name": "textfield_32",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи загранпаспорта",
+        "name": "datefield_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Орган, выдавший загранпаспорт",
+        "name": "textfield_33",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Будет ли данный загранпаспорт представлен для аннулирования",
+        "name": "checkbox_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Данный загранпаспорт утрачен",
+        "name": "checkbox_24",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о втором загранпаспорте (при наличии)",
+        "name": "fieldset_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия загранпаспорта",
+        "name": "textfield_53",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "№ загранпаспорта",
+        "name": "textfield_54",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи загранпаспорта",
+        "name": "datefield_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Орган, выдавший загранпаспорт",
+        "name": "textfield_55",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Будет представлен для аннулирования",
+        "name": "checkbox_25",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Данный загранпаспорт утрачен",
+        "name": "checkbox_26",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "&nbsp;",
+        "name": "fieldset_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Других действующих паспортов не имею",
+        "name": "checkbox_27",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "&nbsp;",
+        "name": "fieldset_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Заявитель оформляет паспорт и хочет внести в него сведения о его несовершеннолетних детях в возрасте до 14 лет",
+        "name": "checkbox_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var fileuploadpanel_6 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_6]')[0];\nvar fileuploadpanel_7 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_7]')[0];\nvar fileuploadpanel_8 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_8]')[0];\nvar checkbox_0 = Ext.ComponentQuery.query('[name=checkbox_0]')[0];\nvar cloneablePanel_2 = Ext.ComponentQuery.query('[name=cloneablePanel_2]')[0];\n\nif (checkbox_0.checked == true) {\nfileuploadpanel_6.show();\nfileuploadpanel_7.show();\nfileuploadpanel_8.show();\ncloneablePanel_2.show();\n}\nelse {\nfileuploadpanel_6.hide();\nfileuploadpanel_7.hide();\nfileuploadpanel_8.hide();\ncloneablePanel_2.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_2",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "СВЕДЕНИЯ О ДЕТЯХ, ГРАЖДАНАХ РОССИЙСКОЙ ФЕДЕРАЦИИ, В ВОЗРАСТЕ ДО 14 ЛЕТ, ДЛЯ ВНЕСЕНИЯ В ПАСПОРТ",
+                "isPersonField": true
+            },
+            {
+                "name": "textfield_38",
+                "xtype": "textfield",
+                "fieldLabel": "Фамилия ребенка",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_39",
+                "xtype": "textfield",
+                "fieldLabel": "Имя ребенка",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_40",
+                "xtype": "textfield",
+                "fieldLabel": "Отчество ребенка",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "combobox_5",
+                "xtype": "combobox",
+                "fieldLabel": "Пол",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "мужской"
+                        },
+                        {
+                            "value": "женский"
+                        }
+                    ],
+                    "type": "store"
+                }
+            },
+            {
+                "name": "datefield_8",
+                "xtype": "datefield",
+                "fieldLabel": "Дата рождения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_41",
+                "xtype": "textfield",
+                "fieldLabel": "Место рождения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_2",
+        "fieldName": "cloneablePanel_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Заявитель имел ранее другие фамилию, имя, отчество",
+        "name": "checkbox_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_9 = Ext.ComponentQuery.query('[name=checkbox_9]')[0];\nvar textfield_5 = Ext.ComponentQuery.query('[name=textfield_5]')[0];\nvar textfield_6 = Ext.ComponentQuery.query('[name=textfield_6]')[0];\nvar textfield_7 = Ext.ComponentQuery.query('[name=textfield_7]')[0];\nvar textfield_8 = Ext.ComponentQuery.query('[name=textfield_8]')[0];\nvar datefield_1 = Ext.ComponentQuery.query('[name=datefield_1]')[0];\nvar checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\n\nif (checkbox_9.checked == true) {\ntextfield_5.show();\ntextfield_6.show();\ntextfield_7.show();\ntextfield_8.show();\ndatefield_1.show();\ncheckbox_1.show();\n}\nelse\n{\ntextfield_5.hide();\ntextfield_6.hide();\ntextfield_7.hide();\ntextfield_8.hide();\ndatefield_1.hide();\ncheckbox_1.hide();\ncheckbox_1.setValue(false);\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Заявитель сменил фамилию, имя, отчество (при наличии) более одного раза",
+        "name": "checkbox_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\nvar fileuploadpanel_22 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_22]')[0];\nvar cloneablePanel_0 = Ext.ComponentQuery.query('[name=cloneablePanel_0]')[0];\n\n\nif (checkbox_1.checked == true) {\nfileuploadpanel_22.show();\ncloneablePanel_0.show();\n}\nelse {\nfileuploadpanel_22.hide();\ncloneablePanel_0.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "В заявлении недостаточно места для внесения сведений о трудовой деятельности за последние 10 лет",
+        "name": "checkbox_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var fileuploadpanel_23 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_23]')[0];\nvar checkbox_2 = Ext.ComponentQuery.query('[name=checkbox_2]')[0];\n\nif (checkbox_2.checked == true) {\nfileuploadpanel_23.show();\n}\nelse {\nfileuploadpanel_23.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Документы составлены на иностранном языке",
+        "name": "checkbox_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var fileuploadpanel_9 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_9]')[0];\nvar checkbox_3 = Ext.ComponentQuery.query('[name=checkbox_3]')[0];\n\nif (checkbox_3.checked == true) {\nfileuploadpanel_9.show();\n}\nelse {\nfileuploadpanel_9.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Необходимо внести сведений о владельце паспорта буквами латинского алфавита в соответствии с представленными документами",
+        "name": "checkbox_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var fileuploadpanel_10 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_10]')[0];\nvar fileuploadpanel_11 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_11]')[0];\nvar checkbox_4 = Ext.ComponentQuery.query('[name=checkbox_4]')[0];\n\nif (checkbox_4.checked == true) {\nfileuploadpanel_10.show();\nfileuploadpanel_11.show();\n}\nelse {\nfileuploadpanel_10.hide();\nfileuploadpanel_11.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Информация о заявителе",
+        "name": "fieldset_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "lastname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "firstname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "middlename"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Пол",
+        "name": "textfield_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "sex"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "datefield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "birthdate"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Место рождения",
+        "name": "textfield_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "birthPlace"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Прежняя фамилия",
+        "name": "textfield_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Прежнее имя",
+        "name": "textfield_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Прежнее отчество",
+        "name": "textfield_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата изменения",
+        "name": "datefield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Место изменения",
+        "name": "textfield_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_0",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "СВЕДЕНИЯ ОБ ИЗМЕНЕНИИ ПЕРСОНАЛЬНЫХ ДАННЫХ",
+                "isPersonField": true
+            },
+            {
+                "name": "textfield_9",
+                "xtype": "textfield",
+                "fieldLabel": "Фамилия",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_10",
+                "xtype": "textfield",
+                "fieldLabel": "Имя",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_11",
+                "xtype": "textfield",
+                "fieldLabel": "Отчество",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "datefield_2",
+                "xtype": "datefield",
+                "fieldLabel": "Дата изменения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_12",
+                "xtype": "textfield",
+                "fieldLabel": "Место изменения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_0",
+        "fieldName": "cloneablePanel_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "&nbsp;",
+        "name": "fieldset_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Страна адреса места жительства",
+        "name": "textfield_51",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места жительства",
+        "name": "textfield_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "address_reg_kladr"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата регистрации",
+        "name": "datefield_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Обращение не по месту жительства",
+        "name": "combobox_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "по месту пребывания"
+                },
+                {
+                    "value": "по месту фактического проживания"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_4 = Ext.ComponentQuery.query('[name=combobox_4]')[0];\nvar textfield_14 = Ext.ComponentQuery.query('[name=textfield_14]')[0];\nvar textfield_15 = Ext.ComponentQuery.query('[name=textfield_15]')[0];\nvar textfield_16 = Ext.ComponentQuery.query('[name=textfield_16]')[0];\nvar textfield_17 = Ext.ComponentQuery.query('[name=textfield_17]')[0];\nvar textfield_18 = Ext.ComponentQuery.query('[name=textfield_18]')[0];\nvar textfield_19 = Ext.ComponentQuery.query('[name=textfield_19]')[0];\nvar textfield_20 = Ext.ComponentQuery.query('[name=textfield_20]')[0];\nvar textfield_21 = Ext.ComponentQuery.query('[name=textfield_21]')[0];\nvar textfield_52 = Ext.ComponentQuery.query('[name=textfield_52]')[0];\nvar datefield_4 = Ext.ComponentQuery.query('[name=datefield_4]')[0];\nvar datefield_5 = Ext.ComponentQuery.query('[name=datefield_5]')[0];\n\nvar adresss = ['по месту пребывания', 'по месту фактического проживания'].indexOf(combobox_4.getValue());\n\nif (adresss == 0 || adresss == 1) {\ntextfield_14.show();\ntextfield_15.show();\ntextfield_16.show();\ntextfield_17.show();\ntextfield_18.show();\ntextfield_19.show();\ntextfield_20.show();\ntextfield_21.show();\ntextfield_52.show();\n}\nelse\n{\ntextfield_14.hide();\ntextfield_15.hide();\ntextfield_16.hide();\ntextfield_17.hide();\ntextfield_18.hide();\ntextfield_19.hide();\ntextfield_20.hide();\ntextfield_21.hide();\ntextfield_52.hide();\n};\n\nif (adresss == 0) {\ndatefield_4.show();\ndatefield_5.show();\n}\nelse\n{\ndatefield_4.hide();\ndatefield_5.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Страна",
+        "name": "textfield_52",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var textfield_52 = Ext.ComponentQuery.query('[name=textfield_52]')[0];\ntextfield_52.setValue(\"Российская Федерация\");"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Регион",
+        "name": "textfield_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Район",
+        "name": "textfield_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Населенный пункт",
+        "name": "textfield_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(город)"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Улица",
+        "name": "textfield_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Дом",
+        "name": "textfield_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Корпус",
+        "name": "textfield_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Строение",
+        "name": "textfield_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Квартира",
+        "name": "textfield_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Срок регистрации с",
+        "name": "datefield_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Срок регистрации по",
+        "name": "datefield_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Указать в анкете контактный телефон",
+        "name": "checkbox_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(по желанию)",
+        "scripts": [
+            "var checkbox_13 = Ext.ComponentQuery.query('[name=checkbox_13]')[0];\nvar textfield_22 = Ext.ComponentQuery.query('[name=textfield_22]')[0];\n\nif (checkbox_13.checked == true){\n\ttextfield_22.show();\n}else{\n\ttextfield_22.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Указать в анкете контактный e-mail",
+        "name": "checkbox_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(по желанию)",
+        "scripts": [
+            "var checkbox_14 = Ext.ComponentQuery.query('[name=checkbox_14]')[0];\nvar textfield_23 = Ext.ComponentQuery.query('[name=textfield_23]')[0];\n\nif (checkbox_14.checked == true){\n\ttextfield_23.show();\n}else{\n\ttextfield_23.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Контактный телефон",
+        "name": "textfield_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "anyPhoneNumber",
+        "description": "(по желанию)"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "E-mail",
+        "name": "textfield_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(по желанию)"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "документ, удостоверяющий личность гражданина Российской Федерации (паспорт, свидетельство о рождении)",
+        "name": "fieldset_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "textfield_24",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docseries"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "№",
+        "name": "textfield_25",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docnumber"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "datefield_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issuedate"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "textfield_26",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issueorg"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Прочая информация о заявителе",
+        "name": "fieldset_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Получение паспорта",
+        "name": "combobox_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "первичное"
+                },
+                {
+                    "value": "в дополнение к действующему"
+                },
+                {
+                    "value": "взамен действующего(-их)"
+                },
+                {
+                    "value": "взамен утраченного"
+                },
+                {
+                    "value": "взамен использованного (испорченного)"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_7 = Ext.ComponentQuery.query('[name=combobox_7]')[0];\nvar fileuploadpanel_12 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_12]')[0];\n\nif (combobox_7.getValue() == \"взамен утраченного\") {\n\tfileuploadpanel_12.show();\n}\nelse\n{\n\tfileuploadpanel_12.hide();\n};\n"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Имеются ли обстоятельства, при которых у заявителя может быть ограничено право на выезд из Российской Федерации",
+        "name": "checkbox_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": " (если да, то укажите какие)",
+        "scripts": [
+            "var checkbox_15 = Ext.ComponentQuery.query('[name=checkbox_15]')[0];\nvar checkbox_18 = Ext.ComponentQuery.query('[name=checkbox_18]')[0];\nvar checkbox_19 = Ext.ComponentQuery.query('[name=checkbox_19]')[0];\nvar checkbox_20 = Ext.ComponentQuery.query('[name=checkbox_20]')[0];\nvar checkbox_21 = Ext.ComponentQuery.query('[name=checkbox_21]')[0];\nvar checkbox_22 = Ext.ComponentQuery.query('[name=checkbox_22]')[0];\nvar fieldset_14 = Ext.ComponentQuery.query('[name=fieldset_14]')[0];\nvar fieldset_15 = Ext.ComponentQuery.query('[name=fieldset_15]')[0];\n\ncheckbox_18.hide();\ncheckbox_19.hide();\ncheckbox_20.hide();\ncheckbox_21.hide();\ncheckbox_22.hide();\n\nif (checkbox_15.checked == true){\n\tcheckbox_18.show();\n\tcheckbox_19.show();\n\tcheckbox_20.show();\n\tcheckbox_21.show();\n\tcheckbox_22.show();\n\tfieldset_14.show();\n\tfieldset_15.show();\n}else{\n\tcheckbox_18.hide();\n\tcheckbox_19.hide();\n\tcheckbox_20.hide();\n\tcheckbox_21.hide();\n\tcheckbox_22.hide();\n\tfieldset_14.hide();\n\tfieldset_15.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "&nbsp;",
+        "name": "fieldset_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "заявитель призван на военную службу или направлен на альтернативную гражданскую службу (для мужчин в возрасте от 18 до 27 лет)",
+        "name": "checkbox_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "заявитель осужден за совершение преступления (не указывать после отбытия (исполнения наказания) или освобождения от наказания)",
+        "name": "checkbox_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "заявитель является подозреваемым или обвиняемым",
+        "name": "checkbox_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "заявитель уклоняется от исполнения обязательств, наложенных судом",
+        "name": "checkbox_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "заявитель признан несостоятельным/банкротом",
+        "name": "checkbox_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "&nbsp;",
+        "name": "fieldset_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Был ли у заявителя за период работы (учебы, службы) оформлен допуск к сведениям особой важности или совершенно секретным сведениям, отнесенным к государственной тайне",
+        "name": "checkbox_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_16 = Ext.ComponentQuery.query('[name=checkbox_16]')[0];\nvar textfield_27 = Ext.ComponentQuery.query('[name=textfield_27]')[0];\nvar textfield_28 = Ext.ComponentQuery.query('[name=textfield_28]')[0];\n\nif (checkbox_16.checked == true) {\ntextfield_27.show();\ntextfield_28.show();\n}\nelse {\ntextfield_27.hide();\ntextfield_28.hide();\n};"
+        ],
+        "description": "(если да, то необходимо указить организацию и год)"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Имеются ли у заявителя договорные, контрактные обязательства, препятствующие выезду за границу",
+        "name": "checkbox_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_17 = Ext.ComponentQuery.query('[name=checkbox_17]')[0];\nvar textfield_27 = Ext.ComponentQuery.query('[name=textfield_27]')[0];\nvar textfield_28 = Ext.ComponentQuery.query('[name=textfield_28]')[0];\n\nif (checkbox_17.checked == true) {\ntextfield_27.show();\ntextfield_28.show();\n}\nelse {\ntextfield_27.hide();\ntextfield_28.hide();\n};"
+        ],
+        "description": "(если да, то необходимо указать организацию и год)"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Организация",
+        "name": "textfield_27",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Год",
+        "name": "textfield_28",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_1",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Сведения о трудовой деятельности за последние 10 лет, включая учебу в учебных заведениях и военную службу <div style=\"color:#f00; font-size: 15px;\">(начиная с первого места работы/учебы/службы/проживания за последние 10 лет.)</div>",
+                "isPersonField": true
+            },
+            {
+                "name": "textfield_34",
+                "xtype": "textfield",
+                "fieldLabel": "Месяц и год поступления",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "(например: 01.2015)"
+            },
+            {
+                "name": "textfield_35",
+                "xtype": "textfield",
+                "fieldLabel": "Месяц и год увольнения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "например 06.2016 или по н.в."
+            },
+            {
+                "name": "textfield_36",
+                "xtype": "textfield",
+                "fieldLabel": "Должность и место работы (учебы, службы, номер войсковой части)",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "(заполняется без пропусков, включая периоды без работы, например: не работал)"
+            },
+            {
+                "name": "textfield_37",
+                "xtype": "textfield",
+                "fieldLabel": "Место нахождения организации, учебного заведения (почтовый адрес), войсковой части",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "(если человек не работал - прописывается адрес проживания на тот период)"
+            }
+        ],
+        "prefix": "cloneablePanel_1",
+        "fieldName": "cloneablePanel_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Заявитель может предоставить по собственной инициативе",
+        "name": "fieldset_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Квитанция об оплате государственной пошлины",
+        "name": "checkbox_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var fileuploadpanel_20 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_20]')[0];\nvar checkbox_6 = Ext.ComponentQuery.query('[name=checkbox_6]')[0];\n\nif (checkbox_6.checked == true) {\nfileuploadpanel_20.show();\n}\nelse {\nfileuploadpanel_20.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Справка военного комиссариата",
+        "name": "checkbox_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var fileuploadpanel_21 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_21]')[0];\nvar checkbox_7 = Ext.ComponentQuery.query('[name=checkbox_7]')[0];\n\nif (checkbox_7.checked == true) {\nfileuploadpanel_21.show();\n}\nelse {\nfileuploadpanel_21.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Список документов",
+        "name": "fieldset_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Заявление о выдаче паспорта",
+        "fieldName": "LoadStatement",
+        "name": "LoadStatement",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(в двух экземплярах, <b style=\"color:red;\">заявление распечатывается на одном листе с обеих сторон!</b>)",
+        "allowBlank": false,
+        "flag": "original"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Заявление о выдаче паспорта",
+        "fieldName": "fileuploadpanel_24",
+        "name": "fileuploadpanel_23_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "documentCharacterIdDef": 1,
+        "documentCharacterNameDef": "Оригинал",
+        "description": "(один экземпляр, подпись проставляет законный представитель. <b style=\"color:red\">Заявление распечатывается на одном листе с обеих сторон!</b>)",
+        "allowBlank": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Заявление о выдаче паспорта",
+        "fieldName": "fileuploadpanel_14",
+        "name": "fileuploadpanel_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "flag": "original",
+        "allowBlank": false,
+        "description": "(в двух экземплярах, на лицевой стороне подпись ставит несовершеннолетний от 14 до 18 лет, на оборотной стороне - законный представитель. <b style=\"color:red\">Заявление распечатывается на одном листе с обеих сторон!</b>)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, удостоверяющий личность",
+        "fieldName": "fileuploadpanel_1",
+        "name": "fileuploadpanel_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(Для граждан РФ проживающих на территории РФ, - паспорт гражданина РФ, удостоверяющий личность гражданина РФ на территории РФ (внутренний паспорт).<br /><br />\nДля граждан РФ, проживающих за пределами территории РФ, - загранпаспорт гражданина РФ. В случае если срок действия паспорта (паспорта нового поколения) истек, в качестве документа, удостоверяющего личность, представляется внутренний паспорт)",
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Фото",
+        "fieldName": "fileuploadpanel_2",
+        "name": "fileuploadpanel_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "description": "(3 шт.: в черно-белом или цветном исполнении размером 35 x 45 мм с четким изображением лица строго в анфас без головного убора на матовой бумаге. Допускается представление фотографий в головных уборах, не скрывающих овал лица, гражданами, религиозные убеждения которых не позволяют показываться перед посторонними лицами без головных уборов. Фотографии в форменной одежде не принимаются)",
+        "flag": "original"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Военный билет",
+        "fieldName": "fileuploadpanel_4",
+        "name": "fileuploadpanel_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(военный билет офицера запаса для заявителей, закончивших военную кафедру при федеральной государственной образовательной организации высшего образования по программе военной подготовки и зачисленных в запас с присвоением воинского звания офицера запаса<br /><br />\n\nдля заявителей мужского пола в возрасте от 18 до 27 лет, проживающих на территории РФ:<br /><br />\n- с отметкой об окончании прохождения военной службы по призыву (для прошедших военную службу по призыву либо альтернативную гражданскую службу);<br /><br />\n- с отметкой \"не годен к военной службе\" или \"ограниченно годен к военной службе\" (для признанных не годными или ограниченно годными к военной службе по состоянию здоровья);\n",
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Разрешение командования",
+        "fieldName": "fileuploadpanel_5",
+        "name": "fileuploadpanel_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "flag": "original",
+        "description": "(по форме, установленной Правительством РФ (для военнослужащих Вооруженных Сил РФ, а также федеральных органов исполнительной власти, в которых предусмотрена военная служба, за исключением лиц, проходящих военную службу по призыву))"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Фото",
+        "fieldName": "fileuploadpanel_6",
+        "name": "fileuploadpanel_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "flag": "original",
+        "description": "(по 2 шт.  на каждого несовершеннолетнего ребенка)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о рождении",
+        "fieldName": "fileuploadpanel_7",
+        "name": "fileuploadpanel_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(на каждого несовершеннолетнего гражданина)",
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Приложение 1 (об изменении персональных данных)",
+        "fieldName": "fileuploadpanel_22",
+        "name": "fileuploadpanel_21_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "flag": "original"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Приложение 2 (о трудовой деятельности)",
+        "fieldName": "fileuploadpanel_23",
+        "name": "fileuploadpanel_22_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "flag": "original"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Приложение 3 (о детях)",
+        "fieldName": "fileuploadpanel_8",
+        "name": "fileuploadpanel_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "flag": "original"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Приложение 4 (данные законного представителя)",
+        "fieldName": "fileuploadpanel_25",
+        "name": "fileuploadpanel_24_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Нотариально удостоверенный перевод на русский язык",
+        "fieldName": "fileuploadpanel_9",
+        "name": "fileuploadpanel_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Заявление о внесении сведений буквами латинского алфавита",
+        "fieldName": "fileuploadpanel_10",
+        "name": "fileuploadpanel_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "flag": "original",
+        "description": "(произвольной формы)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ для внесения сведений о владельце паспорта буквами латинского алфавита",
+        "fieldName": "fileuploadpanel_11",
+        "name": "fileuploadpanel_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(паспорт, вид на жительство, виза, свидетельство о рождении, свидетельство о браке)",
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Заявление об утрате",
+        "fieldName": "fileuploadpanel_12",
+        "name": "fileuploadpanel_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "flag": "original",
+        "description": "(произвольной формы)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Талон-уведомление",
+        "fieldName": "fileuploadpanel_13",
+        "name": "fileuploadpanel_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "flag": "original",
+        "description": "(в случае, если заявитель заявлял о краже паспорта)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о рождении",
+        "fieldName": "fileuploadpanel_17",
+        "name": "fileuploadpanel_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Фото",
+        "fieldName": "fileuploadpanel_18",
+        "name": "fileuploadpanel_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "flag": "original",
+        "description": "(2 шт.: в черно-белом или цветном исполнении размером 35 x 45 мм с четким изображением лица строго в анфас без головного убора на матовой бумаге. Допускается представление фотографий в головных уборах, не скрывающих овал лица, гражданами, религиозные убеждения которых не позволяют показываться перед посторонними лицами без головных уборов. Фотографии в форменной одежде не принимаются)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, удостоверяющий наличие гражданства РФ",
+        "fieldName": "fileuploadpanel_19",
+        "name": "fileuploadpanel_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(в случае необходимости, для граждан, не достигших 14-летнего возраста:\n<br /><br />\nНаличие гражданства РФ по выбору законного представителя удостоверяется:\n<br /><br />\n- паспорт (паспорт нового поколения) несовершеннолетнего гражданина;<br /><br />\n- внутренний паспорт, паспорт (паспортом нового поколения) родителя, в который внесены сведения о несовершеннолетнем гражданине;<br /><br />\n- свидетельство о рождении, в которое внесены сведения:\nо гражданстве РФ обоих родителей или единственного родителя (независимо от места рождения ребенка);<br /><br />\nо гражданстве РФ одного из родителей, если другой родитель является лицом без гражданства или признан безвестно отсутствующим либо если место его нахождения неизвестно (независимо от места рождения ребенка);<br /><br />\nо гражданстве РФ одного из родителей и гражданстве иностранного государства другого родителя (если свидетельство о рождении выдано на территории РФ);<br /><br />\n- отметкой на переводе на русский язык документа, выданного компетентным органом иностранного государства в удостоверение акта регистрации рождения ребенка, ФМС России (в пределах компетенции), территориальным органом или подразделением, консульским учреждением РФ или консульским отделом дипломатического представительства РФ;<br /><br />\n- отметкой на свидетельстве о рождении, выданном уполномоченным органом РФ, проставленной ФМС России (в пределах компетенции), территориальным органом или подразделением, консульским учреждением РФ или консульским отделом дипломатического представительства РФ;<br /><br />\n- вкладышем к документу, выданному компетентным органом иностранного государства в удостоверение акта регистрации рождения ребенка, либо к свидетельству о рождении, подтверждающим наличие гражданства РФ, выданным в установленном порядке до 6 февраля 2007 г.)",
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Квитанция об оплате государственной пошлины",
+        "fieldName": "fileuploadpanel_20",
+        "name": "fileuploadpanel_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(2000 рублей для граждан от 14 лет, для несовершеннолетних граждан до 14 лет — 1000 рублей)",
+        "flag": "original"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Справка военного комиссариата",
+        "fieldName": "fileuploadpanel_21",
+        "name": "fileuploadpanel_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(для заявителя мужского пола в возрасте от 18 до 27 лет, проживающего на территории РФ и не прошедшего военную службу по призыву либо альтернативную гражданскую службу (за исключением случаев, когда заявитель признан не годным или ограниченно годным к военной службе по состоянию здоровья)",
+        "flag": "original"
+    }
+]

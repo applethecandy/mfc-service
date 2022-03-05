@@ -231,7 +231,7 @@
 
     <table class="justify" style="font-size: 10pt">
         <tr>
-            <td width="65%">&nbsp;</td>
+            <td width="65%"> </td>
             <td width="35%">
                 <div class="right">Приложение №1</div>
                 <br><br> к Порядку (стандарту) осуществления административных процедур по приему заявлений о предоставлении некоторых мер социальной поддержки в виде денежных выплат и компенсаций военнослужащим и членам их семей через МФЦ
@@ -306,35 +306,35 @@
         </tr>
         <tr>
             <td>Фамилия</td>
-            <td class="underline">${form.surname!"&nbsp;"}</td>
+            <td class="underline">${form.surname!" "}</td>
         </tr>
         <tr>
             <td>Имя</td>
-            <td class="underline">${form.name!"&nbsp;"}</td>
+            <td class="underline">${form.name!" "}</td>
         </tr>
         <tr>
             <td>Отчество (при наличии)</td>
-            <td class="underline">${form.patronymic!"&nbsp;"}</td>
+            <td class="underline">${form.patronymic!" "}</td>
         </tr>
         <tr>
             <td>СНИЛС</td>
-            <td class="underline">${form.snils!"&nbsp;"}</td>
+            <td class="underline">${form.snils!" "}</td>
         </tr>
         <tr>
             <td colspan="2"><br></td>
         </tr>
         <tr>
             <td rowspan="4">Сведения о документе, удостоверяющем личность (вид, дата выдачи, реквизиты)<sup>2</sup></td>
-            <td class="underline">${form.doc1_0!"&nbsp;"}</td>
+            <td class="underline">${form.doc1_0!" "}</td>
         </tr>
         <tr>
-            <td class="underline">${form.doc2_0!"&nbsp;"} ${form.doc3_0!"&nbsp;"}</td>
+            <td class="underline">${form.doc2_0!" "} ${form.doc3_0!" "}</td>
         </tr>
         <tr>
-            <td class="underline">${form.doc4_0!"&nbsp;"}</td>
+            <td class="underline">${form.doc4_0!" "} ${form.doc6_0!" "}</td>
         </tr>
         <tr>
-            <td class="underline">${form.doc5_0!"&nbsp;"}</td>
+            <td class="underline">${form.doc5_0!" "}</td>
         </tr>
     </table>
 
@@ -344,7 +344,7 @@
             <col width="70%">
         </colgroup>
         <tr>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
             <td></td>
         </tr>
         <tr>
@@ -380,43 +380,43 @@
             <td>
                 Дата рождения (дд.мм.гггг)
             </td>
-            <td class="underline">${form.textfield_7!"&nbsp;"}</td>
+            <td class="underline">${form.textfield_7!" "}</td>
         </tr>
         <tr>
             <td>
                 Адрес места жительства<sup>3</sup>
             </td>
-            <td class="underline">${form.KLADR_0FullAddr!"&nbsp;"}</td>
+            <td class="underline">${form.KLADR_0FullAddr!" "}</td>
         </tr>
         <tr>
             <td>
                 Адрес места пребывания<sup>4</sup>
             </td>
-            <td class="underline">${form.KLADR_1FullAddr!"&nbsp;"}</td>
+            <td class="underline">${form.KLADR_1FullAddr!" "}</td>
         </tr>
         <tr>
             <td>
                 Адрес места фактического проживания<sup>5</sup>
             </td>
-            <td class="underline">${form.KLADR_2FullAddr!"&nbsp;"}</td>
+            <td class="underline">${form.KLADR_2FullAddr!" "}</td>
         </tr>
         <tr>
             <td>
                 Контактный телефон
             </td>
-            <td class="underline">${form.textfield_8!"&nbsp;"}</td>
+            <td class="underline">${form.textfield_8!" "}</td>
         </tr>
         <tr>
             <td>
                 Адрес электронной почты
             </td>
-            <td class="underline">${form.textfield_9!"&nbsp;"}</td>
+            <td class="underline">${form.textfield_9!" "}</td>
         </tr>
         <tr>
             <td>
                 Являюсь пенсионером<sup>6</sup>
             </td>
-            <td class="underline">${form.textfield_10!"&nbsp;"}</td>
+            <td class="underline">${form.textfield_10!" "}</td>
         </tr>
     </table>
 
@@ -535,6 +535,7 @@
             </td>
             <td colspan="4" class="center">
                 ${form.declarant_representative_documentAuthority}
+                ${form.textfield_38}
             </td>
         </tr>
     </table>
@@ -553,19 +554,19 @@
             <td>
                 Адрес места жительства<sup>7</sup>
             </td>
-            <td class="underline">${form.declarant_representative_residenceAddressKladrFullAddr!"&nbsp;"}</td>
+            <td class="underline">${form.declarant_representative_residenceAddressKladrFullAddr!" "}</td>
         </tr>
         <tr>
             <td>
                 Адрес места пребывания<sup>8</sup>
             </td>
-            <td class="underline">${form.KLADR_5FullAddr!"&nbsp;"}</td>
+            <td class="underline">${form.KLADR_5FullAddr!" "}</td>
         </tr>
         <tr>
             <td>
                 Адрес места фактического проживания<sup>9</sup>
             </td>
-            <td class="underline">${form.KLADR_6FullAddr!"&nbsp;"}</td>
+            <td class="underline">${form.KLADR_6FullAddr!" "}</td>
         </tr>
     </table>
     <!-- #endregion -->
@@ -576,7 +577,7 @@
             <col width="70%">
         </colgroup>
         <tr>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
             <td></td>
         </tr>
         <tr>
@@ -679,7 +680,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -687,13 +688,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -701,7 +702,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -750,13 +751,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -764,7 +765,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -805,13 +806,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -819,7 +820,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -841,7 +842,7 @@
             <col width="70%">
         </colgroup>
         <tr>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
             <td></td>
         </tr>
         <tr>
@@ -885,7 +886,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -893,13 +894,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -907,7 +908,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -954,7 +955,7 @@
         </tr>
         <tr>
             <td style="padding-left: 4em;">
-                <span class="underline in minw100">&nbsp;</span> граждан
+                <span class="underline in minw100"> </span> граждан
             </td>
         </tr>
     </table>
@@ -974,41 +975,41 @@
         </tr>
         <tr>
             <td>Фамилия</td>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
         </tr>
         <tr>
             <td>Имя</td>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
         </tr>
         <tr>
             <td>Отчество (при наличии)</td>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
         </tr>
         <tr>
             <td>СНИЛС</td>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
         </tr>
         <tr>
             <td colspan="2"><br></td>
         </tr>
         <tr>
             <td rowspan="4">Сведения о документе, удостоверяющем личность (вид, дата выдачи, реквизиты)<sup>12</sup></td>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
         </tr>
         <tr>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
         </tr>
         <tr>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
         </tr>
         <tr>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
         </tr>
         <tr>
             <td>
                 Дата рождения (дд.мм.гггг)
             </td>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
         </tr>
     </table>
 
@@ -1018,7 +1019,7 @@
             <col width="70%">
         </colgroup>
         <tr>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
             <td></td>
         </tr>
         <tr>
@@ -1054,10 +1055,10 @@
             <td rowspan="2">
                 Адрес места жительства<sup>13</sup>
             </td>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
         </tr>
         <tr>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
         </tr>
     </table>
 
@@ -1086,7 +1087,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -1094,13 +1095,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -1108,7 +1109,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -1152,13 +1153,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -1166,7 +1167,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -1202,13 +1203,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -1216,7 +1217,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -1261,7 +1262,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -1269,13 +1270,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -1283,7 +1284,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -1323,7 +1324,7 @@
                 <col width="70%">
             </colgroup>
             <tr>
-                <td class="underline">&nbsp;</td>
+                <td class="underline"> </td>
                 <td></td>
             </tr>
             <tr>
@@ -1389,7 +1390,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -1397,13 +1398,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -1411,7 +1412,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -1462,13 +1463,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -1476,7 +1477,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -1525,7 +1526,7 @@
                             Ф.И.О ребенка
                         </td>
                         <td colspan="4" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -1533,7 +1534,7 @@
                             СНИЛС
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td class="">
                             Пол
@@ -1564,13 +1565,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center" colspan="2">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -1578,7 +1579,7 @@
                             Кем выдан
                         </td>
                         <td colspan="4" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -1617,7 +1618,7 @@
                             Адрес места жительства<sup>14</sup>
                         </td>
                         <td colspan="4" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -1625,7 +1626,7 @@
                             Адрес места пребывания<sup>15</sup>
                         </td>
                         <td colspan="4" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -1695,7 +1696,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                            ${form.doc1_1!"&nbsp;"}
+                            ${form.doc1_1!" "}
                         </td>
                     </tr>
                     <tr>
@@ -1703,13 +1704,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            ${form.doc2_1!"&nbsp;"} ${form.doc3_1!"&nbsp;"}
+                            ${form.doc2_1!" "} ${form.doc3_1!" "}
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            ${form.doc5_1!"&nbsp;"}
+                            ${form.doc5_1!" "}
                         </td>
                     </tr>
                     <tr>
@@ -1717,7 +1718,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            ${form.doc4_1!"&nbsp;"}
+                            ${form.doc4_1!" "}
                         </td>
                     </tr>
                 </table>
@@ -1761,13 +1762,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            ${form.doc2_2!"&nbsp;"} ${form.doc3_2!"&nbsp;"}
+                            ${form.doc2_2!" "} ${form.doc3_2!" "}
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            ${form.doc5_2!"&nbsp;"}
+                            ${form.doc5_2!" "}
                         </td>
                     </tr>
                     <tr>
@@ -1775,7 +1776,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            ${form.doc4_2!"&nbsp;"}
+                            ${form.doc4_2!" "}
                         </td>
                     </tr>
                 </table>
@@ -1818,14 +1819,14 @@
                         <td class="center">
 
 
-                            ${form.doc2_3!"&nbsp;"} ${form.doc3_3!"&nbsp;"}
+                            ${form.doc2_3!" "} ${form.doc3_3!" "}
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
 
-                            ${form.doc5_3!"&nbsp;"}
+                            ${form.doc5_3!" "}
                         </td>
                     </tr>
                     <tr>
@@ -1834,7 +1835,7 @@
                         </td>
                         <td colspan="3" class="center">
 
-                            ${form.doc4_3!"&nbsp;"}
+                            ${form.doc4_3!" "}
                         </td>
                     </tr>
                 </table>
@@ -1848,7 +1849,7 @@
             <col width="70%">
         </colgroup>
         <tr>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
             <td></td>
         </tr>
         <tr>
@@ -1905,13 +1906,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            ${form.doc2_4!"&nbsp;"} ${form.doc3_4!"&nbsp;"}
+                            ${form.doc2_4!" "} ${form.doc3_4!" "}
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            ${form.doc5_4!"&nbsp;"}
+                            ${form.doc5_4!" "}
                         </td>
                     </tr>
                     <tr>
@@ -1919,7 +1920,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            ${form.doc4_4!"&nbsp;"}
+                            ${form.doc4_4!" "}
                         </td>
                     </tr>
                 </table>
@@ -1959,7 +1960,7 @@
         <tr>
             <td style="padding-left: 4em">
                 <span class="underline in minw100">
-                    ${form.textfield_23!"&nbsp;"}
+                    ${form.textfield_23!" "}
                 </span> граждан
             </td>
         </tr>
@@ -2003,7 +2004,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                            ${form.doc1_5!"&nbsp;"}
+                            ${form.doc1_5!" "}
                         </td>
                     </tr>
                     <tr>
@@ -2011,13 +2012,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            ${form.doc2_5!"&nbsp;"} ${form.doc3_5!"&nbsp;"}
+                            ${form.doc2_5!" "} ${form.doc3_5!" "}
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            ${form.doc5_5!"&nbsp;"}
+                            ${form.doc5_5!" "}
                         </td>
                     </tr>
                     <tr>
@@ -2025,7 +2026,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            ${form.doc4_5!"&nbsp;"}
+                            ${form.doc4_5!" "}
                         </td>
                     </tr>
                 </table>
@@ -2102,7 +2103,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -2110,13 +2111,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -2124,7 +2125,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -2162,13 +2163,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -2176,7 +2177,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -2248,7 +2249,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -2256,13 +2257,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -2270,7 +2271,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -2326,7 +2327,7 @@
             <col width="70%">
         </colgroup>
         <tr>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
             <td></td>
         </tr>
         <tr>
@@ -2353,7 +2354,7 @@
                 <span>
                     Военная травма получена в период прохождения военной службы в 
                     <span class="underline in minw150">
-                        &nbsp;
+                         
                     </span> (выпадающий список силовых органов)
                 </span>
             </td>
@@ -2372,7 +2373,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -2380,13 +2381,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -2394,7 +2395,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -2464,13 +2465,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -2478,7 +2479,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -2527,13 +2528,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -2541,7 +2542,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -2590,13 +2591,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -2604,7 +2605,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -2634,7 +2635,7 @@
             <col width="70%">
         </colgroup>
         <tr>
-            <td class="underline">&nbsp;</td>
+            <td class="underline"> </td>
             <td></td>
         </tr>
         <tr>
@@ -2664,7 +2665,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -2672,13 +2673,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -2686,7 +2687,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -2727,13 +2728,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -2741,7 +2742,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -2802,13 +2803,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                     <tr>
@@ -2816,7 +2817,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                            &nbsp;
+                             
                         </td>
                     </tr>
                 </table>
@@ -2859,7 +2860,7 @@
                 <span>
                     Военная травма получена в период прохождения военной службы в 
                     <span class="underline in minw150">
-                        &nbsp;
+                         
                     </span> (выпадающий список силовых органов)
                 </span>
             </td>
@@ -2893,11 +2894,11 @@
         <tr>
             <td class="boxes" style="margin-left: 6em">
                 <smallbox>${form.combobox_5?contains("на адрес электронной почты")?then("V", "")}</smallbox>
-                &nbsp;&nbsp;
+                  
                 <table style="margin: auto">
                     <tr>
                         <td class="ungreedy">на адрес электронной почты</td>
-                        <td class="underline greedy">${form.textfield_27!"&nbsp;"}</td>
+                        <td class="underline greedy">${form.textfield_27!" "}</td>
                     </tr>
                 </table>
             </td>
@@ -2905,11 +2906,11 @@
         <tr>
             <td class="boxes" style="margin-left: 6em">
                 <smallbox>${form.combobox_5?contains("на номер мобильного телефона")?then("V", "")}</smallbox>
-                &nbsp;&nbsp;
+                  
                 <table style="margin: auto">
                     <tr>
                         <td class="ungreedy">на номер мобильного телефона</td>
-                        <td class="underline greedy">${form.textfield_28!"&nbsp;"}</td>
+                        <td class="underline greedy">${form.textfield_28!" "}</td>
                     </tr>
                 </table>
             </td>
@@ -3008,17 +3009,17 @@
                 <table class="no-borders" style="margin: 0">
                     <tr>
                         <td class="underline" style="border-bottom: 1px solid black">
-                            ${form.textfield_29!"&nbsp;"}
+                            ${form.textfield_29!" "}
                         </td>
                     </tr>
                     <tr>
                         <td class="underline" style="border-bottom: 1px solid black">
-                            ${form.textfield_30!"&nbsp;"}
+                            ${form.textfield_30!" "}
                         </td>
                     </tr>
                     <tr>
                         <td class="underline" style="border-bottom: 1px solid black">
-                            ${form.textfield_31!"&nbsp;"}
+                            ${form.textfield_31!" "}
                         </td>
                     </tr>
                 </table>
@@ -3062,12 +3063,12 @@
                 <table class="no-borders" style="margin: 0">
                     <tr>
                         <td class="underline" style="border-bottom: 1px solid black">
-                            ${form.KLADR_3FullAddr!"&nbsp;"}
+                            ${form.KLADR_3FullAddr!" "}
                         </td>
                     </tr>
                     <tr>
                         <td class="underline" style="border-bottom: 1px solid black">
-                            ${form.textfield_33!"&nbsp;"}
+                            ${form.textfield_33!" "}
                         </td>
                     </tr>
                 </table>
@@ -3106,7 +3107,7 @@
                 <table class="no-borders" style="margin: 0">
                     <tr>
                         <td class="underline" style="border-bottom: 1px solid black">
-                            ${form.textfield_34!"&nbsp;"}
+                            ${form.textfield_34!" "}
                         </td>
                     </tr>
                 </table>
@@ -3142,10 +3143,10 @@
                 ${.now?date}
             </td>
             <td>
-                &nbsp;
+                 
             </td>
             <td>
-                &nbsp;
+                 
             </td>
         </tr>
     </table>
@@ -3174,21 +3175,21 @@
                 <div>
                     О принятии заявления и документов на назначение мер социальной поддержки в соответствии с
                     <span class="underline in minw250">
-                        &nbsp;
+                         
                     </span>
                 </div>
                 <div class="underline">
-                    &nbsp;
+                     
                 </div>
                 <div class="subscript center">(указать фамилию, имя, отчество)</div>
                 <div class="underline">
-                    &nbsp;
+                     
                 </div>
                 <div class="subscript center">перечень полученных документов</div>
                 <div style="display: flex; justify-content: space-evenly;">
                     <div style="display: flex; flex-direction: column;">
                         <div class="underline in minw200">
-                            &nbsp;
+                             
                         </div>
                         <div class="subscript">
                             Регистрационный номер заявления
@@ -3196,7 +3197,7 @@
                     </div>
                     <div style="display: flex; flex-direction: column;">
                         <div class="underline in minw200">
-                            &nbsp;
+                             
                         </div>
                         <div class="subscript">
                             Дата приема заявления
@@ -3204,7 +3205,7 @@
                     </div>
                     <div style="display: flex; flex-direction: column;">
                         <div class="underline in minw200">
-                            &nbsp;
+                             
                         </div>
                         <div class="subscript">
                             Подпись специалиста
@@ -3231,21 +3232,21 @@
                 <div>
                     О принятии заявления и документов на назначение мер социальной поддержки в соответствии с
                     <span class="underline in minw250">
-                        &nbsp;
+                         
                     </span>
                 </div>
                 <div class="underline">
-                    &nbsp;
+                     
                 </div>
                 <div class="subscript center">(указать фамилию, имя, отчество)</div>
                 <div class="underline">
-                    &nbsp;
+                     
                 </div>
                 <div class="subscript center">перечень полученных документов</div>
                 <div style="display: flex; justify-content: space-evenly;">
                     <div style="display: flex; flex-direction: column;">
                         <div class="underline in minw200">
-                            &nbsp;
+                             
                         </div>
                         <div class="subscript">
                             Регистрационный номер заявления
@@ -3253,7 +3254,7 @@
                     </div>
                     <div style="display: flex; flex-direction: column;">
                         <div class="underline in minw200">
-                            &nbsp;
+                             
                         </div>
                         <div class="subscript">
                             Дата приема заявления
@@ -3261,7 +3262,7 @@
                     </div>
                     <div style="display: flex; flex-direction: column;">
                         <div class="underline in minw200">
-                            &nbsp;
+                             
                         </div>
                         <div class="subscript">
                             Подпись специалиста

@@ -1,4 +1,5 @@
 #SingleInstance, Ignore
+#Persistent
 
 SetTimer, main, 100
 SetTimer, commit, 300000 
@@ -8,7 +9,6 @@ commit:
 return
 
 main:
-	sleep, 100
 	IfExist, %userprofile%\Downloads\service.txt
 	{
 		sleep, 200
@@ -66,5 +66,3 @@ main:
 		FileDelete, %userprofile%\Downloads\service.txt
 	}
 return
-
-!#^F12::return

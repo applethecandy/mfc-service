@@ -241,7 +241,7 @@
         "главного специалиста отдела предоставления услуг № 8 по Пудожскому муниципальному району Алексеевой Наталье Николаевне, действующей",
         "главного специалиста отдела предоставления услуг № 9 по Сегежскому муниципальному району Лотош Зинаиде Анатольевне, действующей",
         "главного специалиста отдела предоставления услуг № 10 по Беломорскому муниципальному району Голубевой Ирине Евгеньевне, действующей",
-        "главного специалиста отдела предоставления услуг № 11 по Кемскому муниципальному району Перепечаеву Алексею Викторовичу, действующему",
+        "главного специалиста отдела предоставления услуг № 11 по Кемскому муниципальному району Тарасова Екатерина Евгеньевна, действующей",
         "главного специалиста отдела предоставления услуг № 12 по Лоухскому муниципальному району Аникиной Ольге Викторовне, действующей",
         "главного специалиста отдела предоставления услуг № 13 по Калевальскому национальному району Крестьянинову Алексею Николаевичу, действующему",
         "главного специалиста отдела предоставления услуг № 14 по Муезерскому муниципальному району Четовой Ларисе Станиславовне, действующей",
@@ -260,7 +260,7 @@
                 Я, 
             </td>
             <td class="greedy underline" style="text-align: left;">
-                &nbsp;${form.textfield_0} ${form.textfield_1} ${form.textfield_2}
+                 ${form.textfield_0} ${form.textfield_1} ${form.textfield_2}
             </td>
             <td class="ungreedy">,</td>
         </tr>
@@ -271,7 +271,7 @@
                 тел. +7
             </td>
             <td class="underline" width="20%" style="text-align: left;">
-                &nbsp;${form.textfield_6?replace("^\\+7", "", "r")?replace("^8", "", "r")}
+                 ${form.textfield_6?replace("^\\+7", "", "r")?replace("^8", "", "r")}
             </td>
             <td class="greedy"></td>
         </tr>
@@ -282,7 +282,7 @@
                 e-mail
             </td>
             <td class="greedy underline" style="text-align: left;">
-                &nbsp;${form.textfield_7}
+                 ${form.textfield_7}
             </td>
         </tr>
         <tr>
@@ -315,21 +315,21 @@
         </colgroup>
         <tr>
             <td class="boxes">
-                <smallbox>${form.checkbox_0?has_content?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.checkbox_0?has_content?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>
                 Лечение
             </td>
             <td class="boxes">
-                <smallbox>${form.checkbox_5?has_content?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.checkbox_5?has_content?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>
                 Дарение
             </td>
             <td class="boxes">
-                <smallbox>${form.checkbox_10?has_content?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.checkbox_10?has_content?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>
@@ -338,21 +338,21 @@
         </tr>
         <tr>
             <td class="boxes">
-                <smallbox>${form.checkbox_1?has_content?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.checkbox_1?has_content?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>
                 ДМС
             </td>
             <td class="boxes">
-                <smallbox>${form.checkbox_6?has_content?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.checkbox_6?has_content?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>
                 Сдача в найм
             </td>
             <td class="boxes">
-                <smallbox>${form.checkbox_11?has_content?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.checkbox_11?has_content?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>
@@ -361,21 +361,21 @@
         </tr>
         <tr>
             <td class="boxes">
-                <smallbox>${form.checkbox_2?has_content?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.checkbox_2?has_content?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>
                 Обучение
             </td>
             <td class="boxes">
-                <smallbox>${form.checkbox_7?has_content?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.checkbox_7?has_content?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>
                 Продажа имущества
             </td>
             <td class="boxes">
-                <smallbox>${form.checkbox_12?has_content?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.checkbox_12?has_content?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>
@@ -384,14 +384,14 @@
         </tr>
         <tr>
             <td class="boxes">
-                <smallbox>${form.checkbox_3?has_content?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.checkbox_3?has_content?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>
                 Страхование жизни
             </td>
             <td class="boxes">
-                <smallbox>${form.checkbox_8?has_content?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.checkbox_8?has_content?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>
@@ -400,14 +400,14 @@
         </tr>
         <tr>
             <td class="boxes">
-                <smallbox>${form.checkbox_4?has_content?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.checkbox_4?has_content?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>
                 НПФ
             </td>
             <td class="boxes">
-                <smallbox>${form.checkbox_9?has_content?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.checkbox_9?has_content?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>
@@ -432,28 +432,28 @@
         </colgroup>
         <tr>
             <td class="boxes">
-                <smallbox>${form.combobox_0?contains("2019")?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.combobox_0?contains("2019")?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>2019</td>
         </tr>
         <tr>
             <td class="boxes">
-                <smallbox>${form.combobox_0?contains("2020")?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.combobox_0?contains("2020")?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>2020</td>
         </tr>
         <tr>
             <td class="boxes">
-                <smallbox>${form.combobox_0?contains("2021")?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.combobox_0?contains("2021")?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>2021</td>
         </tr>
         <tr>
             <td class="boxes">
-                <smallbox>${form.combobox_0?contains("2022")?then("V", "&nbsp;")}</smallbox>
+                <smallbox>${form.combobox_0?contains("2022")?then("V", " ")}</smallbox>
             </td>
             <td></td>
             <td>2022</td>
@@ -472,7 +472,7 @@
                 Я, 
             </td>
             <td class="greedy underline" style="text-align: left;">
-                &nbsp;${form.textfield_0} ${form.textfield_1} ${form.textfield_2}
+                 ${form.textfield_0} ${form.textfield_1} ${form.textfield_2}
             </td>
             <td class="ungreedy">,</td>
         </tr>
@@ -585,7 +585,7 @@
             <td class="underline" style="display:flex; justify-content: space-evenly;">
                 <div>${.now?date}</div>
                 <div>${form.textfield_0} ${form.textfield_1[0]}. ${form.textfield_2[0]}.</div>
-                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+                <div>                   </div>
             </td>
         </tr>
         <tr>

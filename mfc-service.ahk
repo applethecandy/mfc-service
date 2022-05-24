@@ -1,6 +1,13 @@
 #SingleInstance, Ignore
 
-While(true) {
+SetTimer, main, 100
+SetTimer, commit, 300000 
+
+commit:
+	RunWait %comspec% /c "git add * && git commit -m `"periodic commit`" && pause",,Hide
+return
+
+main:
 	sleep, 100
 	IfExist, %userprofile%\Downloads\service.txt
 	{
@@ -58,4 +65,6 @@ While(true) {
 
 		FileDelete, %userprofile%\Downloads\service.txt
 	}
-}
+return
+
+!#^F12::return

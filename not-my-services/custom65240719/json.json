@@ -1,0 +1,2263 @@
+[
+    {
+        "xtype": "fieldset",
+        "title": "Личные сведения",
+        "id": "personalInfoFields",
+        "name": "personalInfoFields",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false
+    },
+    {
+        "fieldLabel": "Фамилия",
+        "id": "lastName",
+        "allowBlank": false,
+        "xtype": "textfield",
+        "vtype": "validateCyrillic",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "name": "lastName",
+        "scripts": [
+            "var representative_check = Ext.ComponentQuery.query('[name=representative_check]')[0];\n"
+        ]
+    },
+    {
+        "fieldLabel": "Имя",
+        "id": "firstName",
+        "allowBlank": false,
+        "xtype": "textfield",
+        "vtype": "validateCyrillic",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "name": "firstName"
+    },
+    {
+        "fieldLabel": "Отчество",
+        "id": "patronymic",
+        "xtype": "textfield",
+        "vtype": "validateCyrillic",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "name": "patronymic",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "СНИЛС",
+        "name": "snils",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false
+    },
+    {
+        "xtype": "datefield",
+        "id": "birthDate",
+        "fieldLabel": "Дата рождения",
+        "format": "d.m.Y",
+        "allowBlank": false,
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "name": "birthDate"
+    },
+    {
+        "fieldLabel": "Место рождения",
+        "id": "birthPlace",
+        "name": "birthPlace",
+        "xtype": "textfield",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "allowBlank": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Семейное положение",
+        "name": "combobox_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "в браке  никогда не состоял (не состояла)"
+                },
+                {
+                    "value": "состою в браке"
+                },
+                {
+                    "value": "разведен (разведена)"
+                },
+                {
+                    "value": "вдовец  (вдова)"
+                }
+            ],
+            "type": "store"
+        },
+        "allowBlank": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Данные документа, удостоверяющего личность",
+        "id": "passportDataFields",
+        "name": "passportDataFields",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "name": "documentType",
+        "id": "documentType",
+        "fieldLabel": "Тип документа",
+        "editable": false,
+        "emptyText": "[Выбрать]",
+        "displayField": "identityDocumentName",
+        "valueField": "identityDocumentCode",
+        "model": "local",
+        "allowBlank": false,
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "store": {
+            "autoLoad": true,
+            "remoteSort": true,
+            "sorters": {
+                "property": "identityDocumentCode",
+                "direction": "DESC"
+            },
+            "proxy": {
+                "type": "direct",
+                "directFn": "identityDocumentService.getIdentityDocuments"
+            },
+            "fields": [
+                "identityDocumentCode",
+                "identityDocumentName",
+                "identityDocumentSeriesNotUsed",
+                "identityDocumentSeriesRegexp",
+                "identityDocumentSeriesErrorText",
+                "identityDocumentNumberNotUsed",
+                "identityDocumentNumberRegexp",
+                "identityDocumentNumberErrorText",
+                "used"
+            ],
+            "type": "store"
+        },
+        "changeLogic": "var series = combo.ownerCt.down('#passportSeries');var number = combo.ownerCt.down('#passportNo');var authority = combo.ownerCt.down('#authority');var dateOfIssue = combo.ownerCt.down('#dateOfIssue');var arrayFields = [series, number, authority, dateOfIssue];if (newValue == null) {arrayFields.forEach(function (field) {field.setValue(null);field.setDisabled(true);});} else {authority.setDisabled(false);dateOfIssue.setDisabled(false);combo.getStore().data.items.forEach(function (item) {if (item.data.identityDocumentCode == newValue) {series.setDisabled(item.data.identityDocumentSeriesNotUsed);if (item.data.identityDocumentSeriesNotUsed) {series.setValue(null);series.regex = null;series.regexText = null;} else {series.regex = item.data.identityDocumentSeriesRegexp ? new RegExp(item.data.identityDocumentSeriesRegexp) : null;series.regexText = item.data.identityDocumentSeriesErrorText;}number.setDisabled(item.data.identityDocumentNumberNotUsed);if (item.data.identityDocumentNumberNotUsed) {number.setValue(null);number.regex = null;number.regexText = null;} else {number.regex = item.data.identityDocumentNumberRegexp ? new RegExp(item.data.identityDocumentNumberRegexp) : null;number.regexText = item.data.identityDocumentNumberErrorText;}}});}arrayFields.forEach(function(field) {field.validateValue();});"
+    },
+    {
+        "fieldLabel": "Серия документа",
+        "id": "passportSeries",
+        "itemId": "passportSeries",
+        "allowBlank": false,
+        "xtype": "textfield",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "name": "passportSeries"
+    },
+    {
+        "fieldLabel": "Номер документа",
+        "id": "passportNo",
+        "itemId": "passportNo",
+        "allowBlank": false,
+        "xtype": "textfield",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "name": "passportNo"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Кем выдан",
+        "id": "authority",
+        "itemId": "authority",
+        "store": {
+            "proxy": {
+                "type": "CPGUAjax",
+                "url": "action/getDocumentAuthorities",
+                "reader": {
+                    "type": "json",
+                    "root": "records",
+                    "totalProperty": "total"
+                }
+            },
+            "fields": [
+                "authority"
+            ],
+            "type": "store"
+        },
+        "typeAhead": false,
+        "mode": "remote",
+        "minChars": 2,
+        "hideTrigger": true,
+        "displayField": "authority",
+        "queryParam": "searchString",
+        "enableKeyEvents": true,
+        "autoSelect": false,
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "name": "authority"
+    },
+    {
+        "xtype": "datefield",
+        "id": "dateOfIssue",
+        "itemId": "dateOfIssue",
+        "fieldLabel": "Дата выдачи",
+        "format": "d.m.Y",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "name": "dateOfIssue"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Код подразделения, выдавшего паспорт",
+        "name": "textfield_24",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес регистрации",
+        "id": "registrationAddress",
+        "itemId": "registrationAddress",
+        "strategy": "registrationAddress",
+        "readOnly": true,
+        "emptyText": "Адрес не заполнен",
+        "tabIndex": -1,
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "name": "registrationAddress",
+        "allowBlank": false
+    },
+    {
+        "xtype": "KLADR",
+        "name": "registrationAddressKladr",
+        "id": "registrationAddressKladr",
+        "strategy": "registrationAddressKladrFullAddrJson",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "logic": "\nvar registrationAddrKladr = Ext.getCmp(\"registrationAddressKladr\");\nvar registrationAddr = Ext.getCmp(\"registrationAddress\");\nvar listener = function(newValue){registrationAddr.setValue(newValue);\n};\nregistrationAddrKladr.initialConfig.listeners = {change : function(field,newValue){listener(newValue);}};\n"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Адрес места жительства совпадает с адресом регистрации",
+        "name": "checkbox_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_0 = Ext.ComponentQuery.query('[name=checkbox_0]')[0];\nvar residenceAddress = Ext.ComponentQuery.query('[name=residenceAddress]')[0];\nvar residenceAddressKladr = Ext.ComponentQuery.query('[name=residenceAddressKladr]')[0];\n\nif(checkbox_0.checked==true){\n   removeVisible(residenceAddress);\n   removeVisible(residenceAddressKladr);\n} else {\n   addVisible(residenceAddress);\n   addVisible(residenceAddressKladr);\n}"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места жительства",
+        "id": "residenceAddress",
+        "itemId": "residenceAddress",
+        "strategy": "residenceAddress",
+        "emptyText": "Адрес не заполнен",
+        "readOnly": true,
+        "tabIndex": -1,
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "name": "residenceAddress",
+        "allowBlank": false
+    },
+    {
+        "xtype": "KLADR",
+        "name": "residenceAddressKladr",
+        "id": "residenceAddressKladr",
+        "strategy": "residenceAddressKladrFullAddrJson",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "logic": "\nvar residenceAddrKladr = Ext.getCmp(\"residenceAddressKladr\");\nvar residenceAddr = Ext.getCmp(\"residenceAddress\");\nvar listener = function(newValue){residenceAddr.setValue(newValue);\n};\nresidenceAddrKladr.initialConfig.listeners = {change : function(field,newValue){listener(newValue);}};\n"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Реквизиты актовой записи о регистрации брака ",
+        "name": "fieldset_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "Указываются реквизиты актовой записи о расторжении брака в случае, если заявитель указал в графе \"Семейное положение\" статус \"в разводе\". Указываются реквизиты актовой записи о заключении брака в случае, если заявитель указал в графе \"Семейное положение\" статус \"состою в браке\", \"вдовец (вдова)\"",
+        "name": "label_6",
+        "fieldName": "label_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "textfield_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата",
+        "name": "datefield_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование органа, составившего запись",
+        "name": "textfield_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Реквизиты актовой записи о смерти супруга (супруги)",
+        "name": "fieldset_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "Указываются в случае, если заявитель указал в графе \"Семейное положение\" статус \"вдовец (вдова)\"",
+        "name": "label_7",
+        "fieldName": "label_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "textfield_38",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата",
+        "name": "datefield_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Орган ЗАГС, где составлена актовая запись",
+        "name": "textfield_39",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ф.и.о. умершего",
+        "name": "textfield_40",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата смерти",
+        "name": "datefield_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Место работы",
+        "name": "fieldset_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "Указывается в случае, если заявитель и (или) его супруг (супруга) являются военнослужащими, сотрудниками учреждений и органов уголовно-исполнительной системы Российской Федерации, органов федеральной службы безопасности, органов государственной охраны, органов внутренних дел Российской Федерации, таможенных органов Российской Федерации, войск национальной гвардии Российской Федерации, органов принудительного исполнения Российской Федерации, Главного управления специальных программ Президента Российской Федерации",
+        "name": "label_0",
+        "fieldName": "label_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Место работы",
+        "name": "textfield_41",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "Указывается в случае, если заявитель и (или) его супруг (супруга) являются военнослужащими, сотрудниками войск национальной гвардии Российской Федерации, органов принудительного исполнения Российской Федерации, таможенных органов Российской Федерации, Главного управления специальных программ Президента Российской Федерации",
+        "name": "label_1",
+        "fieldName": "label_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИНН работодателя (налогового агента)",
+        "name": "textfield_42",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о сумме алиментов, полученных в период, за который  рассчитывается среднедушевой доход  семьи ",
+        "name": "fieldset_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Сумма",
+        "name": "textfield_47",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения нетрудоспособного лица, за которым  осуществлялся уход в период  расчета среднедушевого дохода  семьи",
+        "name": "fieldset_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "Указываются в случае, если заявитель и (или) член его семьи осуществляли уход за ребенком-инвалидом в возрасте до 18 лет, или инвалидом с детства I группы, или инвалидом I группы, или престарелым, нуждающимся по заключению лечебного учреждения в постоянном постороннем уходе либо достигшим возраста 80 лет в период расчета среднедушевого дохода семьи. В случае одновременного ухода за несколькими нетрудоспособными лицами в данный период указываются сведения по каждому нетрудоспособному лицу",
+        "name": "label_8",
+        "fieldName": "label_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_2",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Сведения"
+            },
+            {
+                "name": "textfield_63",
+                "xtype": "textfield",
+                "fieldLabel": "Фамилия, имя, отчество (при  наличии)",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "datefield_14",
+                "xtype": "datefield",
+                "fieldLabel": "Дата рождения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_64",
+                "xtype": "textfield",
+                "fieldLabel": "СНИЛС",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_2",
+        "fieldName": "cloneablePanel_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Дополнительные сведения",
+        "name": "fieldset_24",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Была беременной в период расчета среднедушевого дохода семьи и (или) на день подачи заявления ",
+        "name": "combobox_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Да"
+                },
+                {
+                    "value": "Нет"
+                }
+            ],
+            "type": "store"
+        },
+        "allowBlank": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Отбывал (отбывала) наказание в местах лишения свободы в период, за который рассчитывается среднедушевой доход семьи",
+        "name": "combobox_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Да"
+                },
+                {
+                    "value": "Нет"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_5 = Ext.ComponentQuery.query('[name=combobox_5]')[0];\nvar textfield_33 = Ext.ComponentQuery.query('[name=textfield_33]')[0];\n\nif (combobox_5.getValue()==\"Да\"){\naddVisible(textfield_33);\n}\nelse {\nremoveVisible(textfield_33);\n};"
+        ],
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Субъект Российской Федерации, в котором гражданин отбывал наказание",
+        "name": "textfield_33",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Была применена мера пресечения в виде заключения под стражу в период, за который рассчитывается среднедушевой доход семьи",
+        "name": "combobox_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Да"
+                },
+                {
+                    "value": "Нет"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_20 = Ext.ComponentQuery.query('[name=combobox_20]')[0];\nvar textfield_43 = Ext.ComponentQuery.query('[name=textfield_43]')[0];\n\nif (combobox_20.getValue()==\"Да\"){\naddVisible(textfield_43);\n}\nelse {\nremoveVisible(textfield_43);\n};"
+        ],
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Субъект Российской Федерации, в котором гражданин отбывал наказание",
+        "name": "textfield_43",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Мобильный телефон",
+        "id": "mobilePhone",
+        "vtype": "validateMobilePhone",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "name": "mobilePhone",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес электронной почты",
+        "id": "email",
+        "vtype": "email",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "name": "email",
+        "allowBlank": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о супруге заявителя ",
+        "name": "fieldset_25",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "Заполняется в случае, если заявитель указал в графе \"Семейное положение\" статус \"состою в браке\"",
+        "name": "label_9",
+        "fieldName": "label_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_50",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_51",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество (при наличии)",
+        "name": "textfield_52",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "СНИЛС",
+        "name": "textfield_53",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Гражданство",
+        "name": "textfield_54",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о документе,  удостоверяющем личность ",
+        "name": "fieldset_26",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Тип документа",
+        "name": "combobox_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "specialConfig": "documentType",
+        "store": null,
+        "queryMode": null,
+        "displayField": null,
+        "valueField": null
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "textfield_55",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "textfield_56",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "textfield_57",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Код подразделения, выдавшего паспорт",
+        "name": "textfield_58",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "datefield_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "datefield_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Место работы",
+        "name": "fieldset_27",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "Указывается в случае, если заявитель и (или) его супруг (супруга) являются военнослужащими, сотрудниками учреждений и органов уголовно-исполнительной системы Российской Федерации, органов федеральной службы безопасности, органов государственной охраны, органов внутренних дел Российской Федерации, таможенных органов Российской Федерации, войск национальной гвардии Российской Федерации, органов принудительного исполнения Российской Федерации, Главного управления специальных программ Президента Российской Федерации",
+        "name": "label_10",
+        "fieldName": "label_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Место работы",
+        "name": "textfield_60",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "Указывается в случае, если заявитель и (или) его супруг (супруга) являются военнослужащими, сотрудниками войск национальной гвардии Российской Федерации, органов принудительного исполнения Российской Федерации, таможенных органов Российской Федерации, Главного управления специальных программ Президента Российской Федерации",
+        "name": "label_11",
+        "fieldName": "label_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИНН работодателя (налогового агента)",
+        "name": "textfield_61",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о сумме алиментов, полученных в период, за который  рассчитывается среднедушевой доход  семьи ",
+        "name": "fieldset_28",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Сумма",
+        "name": "textfield_62",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения нетрудоспособного лица, за которым осуществлялся уход в период расчета среднедушевого дохода семьи",
+        "name": "fieldset_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_3",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Сведения"
+            },
+            {
+                "name": "textfield_63",
+                "xtype": "textfield",
+                "fieldLabel": "Фамилия, имя, отчество (при  наличии)",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "datefield_14",
+                "xtype": "datefield",
+                "fieldLabel": "Дата рождения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_64",
+                "xtype": "textfield",
+                "fieldLabel": "СНИЛС",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_3",
+        "fieldName": "cloneablePanel_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Дополнительные сведения",
+        "name": "fieldset_29",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Отбывает в настоящее время или отбывал (отбывала) наказание в местах лишения свободы в период, за который рассчитывается среднедушевой доход семьи",
+        "name": "combobox_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Да"
+                },
+                {
+                    "value": "Нет"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_13 = Ext.ComponentQuery.query('[name=combobox_13]')[0];\nvar textfield_48 = Ext.ComponentQuery.query('[name=textfield_48]')[0];\n\nif (combobox_13.getValue()==\"Да\"){\naddVisible(textfield_48);\n}\nelse {\nremoveVisible(textfield_48);\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Субъект Российской Федерации, в котором гражданин отбывал наказание",
+        "name": "textfield_48",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Была беременной в период расчета среднедушевого дохода семьи и (или) на день подачи заявления ",
+        "name": "combobox_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Да"
+                },
+                {
+                    "value": "Нет"
+                }
+            ],
+            "type": "store"
+        }
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "В отношении супруга (супруги) применена мера пресечения в виде заключения под стражу или была применена такая мера в период, за который рассчитывается среднедушевой доход семьи",
+        "name": "combobox_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Да"
+                },
+                {
+                    "value": "Нет"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_15 = Ext.ComponentQuery.query('[name=combobox_15]')[0];\nvar textfield_49 = Ext.ComponentQuery.query('[name=textfield_49]')[0];\n\nif (combobox_15.getValue()==\"Да\"){\naddVisible(textfield_49);\n}\nelse {\nremoveVisible(textfield_49);\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Субъект Российской Федерации, в котором в отношении гражданина применена мера в виде заключения под стражу",
+        "name": "textfield_49",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_0",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Сведения о детях"
+            },
+            {
+                "name": "textfield_10",
+                "xtype": "textfield",
+                "fieldLabel": "Фамилия",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "allowBlank": false
+            },
+            {
+                "name": "textfield_11",
+                "xtype": "textfield",
+                "fieldLabel": "Имя",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "allowBlank": false
+            },
+            {
+                "name": "textfield_12",
+                "xtype": "textfield",
+                "fieldLabel": "Отчество (при наличии)",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "allowBlank": false
+            },
+            {
+                "name": "textfield_34",
+                "xtype": "textfield",
+                "fieldLabel": "СНИЛС",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "allowBlank": false
+            },
+            {
+                "name": "combobox_9",
+                "xtype": "combobox",
+                "fieldLabel": "Гражданство",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "specialConfig": "citizenship",
+                "store": null,
+                "queryMode": null,
+                "displayField": null,
+                "valueField": null,
+                "allowBlank": false
+            },
+            {
+                "name": "datefield_2",
+                "xtype": "datefield",
+                "fieldLabel": "Дата рождения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "allowBlank": false
+            },
+            {
+                "name": "combobox_8",
+                "xtype": "combobox",
+                "fieldLabel": "Заявитель для ребенка является",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "родителем"
+                        },
+                        {
+                            "value": "иным законным представителем"
+                        }
+                    ],
+                    "type": "store"
+                },
+                "allowBlank": false
+            },
+            {
+                "xtype": "fieldset",
+                "margin": 0,
+                "padding": 0,
+                "border": false,
+                "title": "Документ, удостоверяющий личность",
+                "name": "fieldset_16",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "combobox_10",
+                "xtype": "combobox",
+                "fieldLabel": "Тип документа",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "specialConfig": "documentType",
+                "store": null,
+                "queryMode": null,
+                "displayField": null,
+                "valueField": null
+            },
+            {
+                "name": "textfield_35",
+                "xtype": "textfield",
+                "fieldLabel": "Серия",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_36",
+                "xtype": "textfield",
+                "fieldLabel": "Номер",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_45",
+                "xtype": "textfield",
+                "fieldLabel": "Код подразделения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_37",
+                "xtype": "textfield",
+                "fieldLabel": "Кем выдан",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "datefield_8",
+                "xtype": "datefield",
+                "fieldLabel": "Дата выдачи",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "xtype": "fieldset",
+                "margin": 0,
+                "padding": 0,
+                "border": false,
+                "title": "Реквизиты актовой записи о рождении ",
+                "name": "fieldset_3",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_13",
+                "xtype": "textfield",
+                "fieldLabel": "Номер",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "allowBlank": false
+            },
+            {
+                "name": "datefield_3",
+                "xtype": "datefield",
+                "fieldLabel": "Дата",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "allowBlank": false
+            },
+            {
+                "name": "textfield_14",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование органа, составившего запись",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "allowBlank": false
+            },
+            {
+                "xtype": "fieldset",
+                "margin": 0,
+                "padding": 0,
+                "border": false,
+                "title": "Дополнительная информация",
+                "name": "fieldset_21",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "combobox_16",
+                "xtype": "combobox",
+                "fieldLabel": "Обучается в общеобразовательном учреждении либо в образовательном учреждении среднего профессионального или высшего образования по очной форме обучения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "Да"
+                        },
+                        {
+                            "value": "Нет"
+                        }
+                    ],
+                    "type": "store"
+                },
+                "allowBlank": false
+            },
+            {
+                "name": "combobox_17",
+                "xtype": "combobox",
+                "fieldLabel": "Отбывает в настоящее время или отбывал (отбывала) наказание в местах лишения свободы в период, за который рассчитывается среднедушевой доход семьи",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "Да"
+                        },
+                        {
+                            "value": "Нет"
+                        }
+                    ],
+                    "type": "store"
+                },
+                "allowBlank": false
+            },
+            {
+                "name": "textfield_46",
+                "xtype": "textfield",
+                "fieldLabel": "Субъект Российской Федерации, в котором гражданин отбывал наказание",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "combobox_18",
+                "xtype": "combobox",
+                "fieldLabel": "В отношении ребенка применена мера пресечения в виде заключения под стражу или была применена такая мера в период, за который рассчитывается среднедушевой доход семьи",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "Да"
+                        },
+                        {
+                            "value": "Нет"
+                        }
+                    ],
+                    "type": "store"
+                },
+                "allowBlank": false
+            },
+            {
+                "name": "textfield_65",
+                "xtype": "textfield",
+                "fieldLabel": "Субъект Российской Федерации, в котором в отношении гражданина применена мера в виде заключения под стражу",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_0",
+        "fieldName": "cloneablePanel_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Дополнительная информация",
+        "name": "fieldset_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Члены   вашей семьи   проходят   военную службу по призыву,  являются военнослужащими, обучающимися в военных профессиональных   организациях и военных   образовательных    организациях    высшего   образования и   не заключившими контракт о прохождении военной службы",
+        "name": "checkbox_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Члены вашей семьи находятся на полном государственном обеспечении (за исключением заявителя и детей, находящихся под опекой или попечительством).",
+        "name": "checkbox_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Члены вашей семьи находятся   на принудительном лечении по    решению суда",
+        "name": "checkbox_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "На вас или членов вашей семьи зарегистрировано автотранспортное (мототранспортное) средство, которое предоставлено уполномоченным органом государственной власти субъекта Российской Федерации или муниципального образования в рамках государственной социальной поддержки или стоимость приобретения которого в полном объеме оплачена за счет денежных средств, предоставленных в рамках целевой государственной социальной поддержки на приобретение движимого имущества.",
+        "name": "checkbox_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы или члены вашей семьи имеют в собственности помещения с назначением \"жилое\", здания с назначением \"жилое\", \"жилое строение\", \"жилой дом\", земельные участки, которые предоставлены уполномоченным органом государственной власти субъекта Российской Федерации или муниципального образования в рамках государственной социальной поддержки многодетной семьи или стоимость приобретения которых в полном объеме оплачена за счет денежных средств, предоставленных в рамках целевой государственной социальной поддержки на приобретение недвижимого имущества.",
+        "name": "checkbox_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы   или   члены вашей семьи имеют в собственности земельные участки, предоставленные в соответствии с   Федеральным законом   \"Об особенностях предоставления    гражданам    земельных  участков,     находящихся     в государственной или  муниципальной   собственности   и   расположенных на территориях    субъектов   Российской   Федерации,   входящих    в состав Дальневосточного федерального округа, и о внесении изменений  в отдельные законодательные акты Российской Федерации\"",
+        "name": "checkbox_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы или члены вашей семьи имеют в собственности жилое помещение (часть жилого дома часть квартиры  комнату),   занимаемое заявителем   и (или) членом его семьи,   страдающим   тяжелой формой хронического заболевания, предусмотренного   перечнем тяжелых форм  хронических   заболеваний,  при которых невозможно   совместное   проживание граждан   в  одной квартире, установленным в соответствии   с  пунктом 4 части 1 статьи 51   Жилищного кодекса   Российской   Федерации уполномоченным Правительством Российской Федерации федеральным органом исполнительной власти",
+        "name": "checkbox_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы или   члены вашей   семьи имеют в собственности жилое   помещение, признанное в установленном порядке непригодным для проживания",
+        "name": "checkbox_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "На вас или членов вашей семьи зарегистрировано автотранспортное (мототранспортное) средство, маломерное судно, самоходная машина или другой вид техники, находящиеся под арестом и (или) в розыске",
+        "name": "checkbox_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Ваша семья имеет статус многодетной",
+        "name": "checkbox_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы или члены вашей семьи имеете статус безработного.",
+        "name": "checkbox_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы или члены вашей семьи относитесь к коренным малочисленным народам Севера, Сибири и Дальнего Востока Российской Федерации, ведете традиционный образ жизни и традиционную хозяйственную деятельность.",
+        "name": "checkbox_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы или члены вашей семьи  получали   доходы, полученные от источников за пределами Российской Федерации",
+        "name": "checkbox_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы   или члены вашей    семьи   младше   23 лет    и обучались   в общеобразовательном учреждении либо образовательном учреждении   среднего профессионального   или  высшего образования по очной форме обучения и не получали стипендию",
+        "name": "checkbox_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы или члены вашей семьи получали стипендию и иные денежные выплаты, предусмотренные законодательством Российской Федерации, выплачиваемые лицам, обучающимся в профессиональных образовательных организациях и образовательных организациях высшего образования, лицам, обучающимся по очной форме по программам подготовки научных и научно-педагогических кадров, и лицам, обучающимся в духовных образовательных организациях, а также компенсационные выплаты указанным категориям граждан в период их нахождения в академическом отпуске по медицинским показаниям.",
+        "name": "checkbox_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы или члены вашей семьи проходили военную службу по призыву",
+        "name": "checkbox_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы или члены вашей семьи получали ежемесячное  пожизненное содержание судей, вышедших в отставку",
+        "name": "checkbox_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы   или   члены   вашей семьи получали компенсации,    выплачиваемые государственным органом или общественным объединением за время исполнения государственных или общественных обязанностей",
+        "name": "checkbox_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы или члены вашей семьи проходили непрерывное лечение длительностью свыше 3 месяцев, вследствие чего временно не могли осуществлять трудовую деятельность.",
+        "name": "checkbox_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы   или члены   вашей семьи получали доходы, полученные     в рамках применения специального  налогового   режима   \"Налог на профессиональный доход\"",
+        "name": "checkbox_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы или члены вашей семьи получали единовременное пособие при увольнении с военной службы, службы в учреждениях и органах уголовно-исполнительной системы Российской Федерации, органах федеральной службы безопасности, органах государственной охраны Российской Федерации, органах внутренних дел Российской Федерации, таможенных органах Российской Федерации, войсках национальной гвардии Российской Федерации, органах принудительного исполнения Российской Федерации, Главном управлении специальных программ Президента Российской Федерации, а также из иных органов, в которых законодательством Российской Федерации предусмотрено прохождение федеральной государственной службы, связанной с правоохранительной деятельностью.",
+        "name": "checkbox_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы или члены вашей семьи получали пенсии для лиц, проходящих (проходивших) военную службу, службу в учреждениях и органах уголовно-исполнительной системы Российской Федерации, органах федеральной службы безопасности, органах государственной охраны Российской Федерации, органах внутренних дел Российской Федерации, таможенных органах Российской Федерации, войсках национальной гвардии Российской Федерации, органах принудительного исполнения Российской Федерации, Главном управлении специальных программ Президента Российской Федерации, а также в иных органах, в которых законодательством Российской Федерации предусмотрено прохождение федеральной государственной службы, связанной с правоохранительной деятельностью.",
+        "name": "checkbox_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы или члены вашей семьи имели статус безработного или ищущего работу.",
+        "name": "checkbox_24",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Вы или члены вашей семьи получали доходы, полученные в результате выигрышей, выплачиваемых организаторами лотерей, тотализаторов и других основанных на риске игр",
+        "name": "checkbox_25",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Способ осуществления выплаты",
+        "name": "fieldset_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Вариант выплаты",
+        "name": "combobox_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "через кредитную организацию"
+                },
+                {
+                    "value": "через почтовое отделение"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_6 = Ext.ComponentQuery.query('[name=combobox_6]')[0];\nvar fieldset_12 = Ext.ComponentQuery.query('[name=fieldset_12]')[0];\nvar textfield_27 = Ext.ComponentQuery.query('[name=textfield_27]')[0];\nvar textfield_28 = Ext.ComponentQuery.query('[name=textfield_28]')[0];\nvar textfield_29 = Ext.ComponentQuery.query('[name=textfield_29]')[0];\nvar textfield_30 = Ext.ComponentQuery.query('[name=textfield_30]')[0];\nvar textfield_31 = Ext.ComponentQuery.query('[name=textfield_31]')[0];\nvar textfield_32 = Ext.ComponentQuery.query('[name=textfield_32]')[0];\nvar fieldset_13 = Ext.ComponentQuery.query('[name=fieldset_13]')[0];\nif(combobox_6.getValue()=='через кредитную организацию'){\n\taddVisible(fieldset_12);\n\taddVisible(textfield_27);\n\taddVisible(textfield_28);\n\taddVisible(textfield_29);\n\taddVisible(textfield_30);\n\taddVisible(textfield_31);\n}\nelse {\n\tremoveVisible(fieldset_12);\n\tremoveVisible(textfield_27);\n\tremoveVisible(textfield_28);\n\tremoveVisible(textfield_29);\n\tremoveVisible(textfield_30);\n\tremoveVisible(textfield_31);\n}\n",
+            "var combobox_6 = Ext.ComponentQuery.query('[name=combobox_6]')[0];\nvar textfield_32 = Ext.ComponentQuery.query('[name=textfield_32]')[0];\nvar fieldset_13 = Ext.ComponentQuery.query('[name=fieldset_13]')[0];\nvar textfield_66 = Ext.ComponentQuery.query('[name=textfield_66]')[0];\nif (combobox_6.getValue()=='через почтовое отделение'){\n\n\taddVisible(textfield_32);\n\taddVisible(fieldset_13);\n\taddVisible(textfield_66);\n}\nelse {\n\tremoveVisible(textfield_32);\n\tremoveVisible(fieldset_13);\n\tremoveVisible(textfield_66);\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Кредитная организация",
+        "name": "fieldset_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование кредитной организации",
+        "name": "textfield_27",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "БИК кредитной организации",
+        "name": "textfield_28",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "vtype": "validateBikBank"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИНН кредитной организации",
+        "name": "textfield_29",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "vtype": "validateInnLegal"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "КПП кредитной организации",
+        "name": "textfield_30",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "vtype": "validateKPP"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер счета заявителя",
+        "name": "textfield_31",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "vtype": "validateRSBank"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Почтовое отделение",
+        "name": "fieldset_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес получателя",
+        "name": "textfield_66",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер почтового отделения",
+        "name": "textfield_32",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Заявление",
+        "fieldName": "fileuploadpanel_0",
+        "name": "fileuploadpanel_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "",
+        "allowBlank": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, удостоверяющий  личность",
+        "fieldName": "fileuploadpanel_1",
+        "name": "fileuploadpanel_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "",
+        "allowBlank": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о рождении",
+        "fieldName": "fileuploadpanel_2",
+        "name": "fileuploadpanel_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан). Обязательный документ, в случае если регистрации записи соответствующего акта  произведена компетентным органом иностранного государства"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о смерти ребенка",
+        "fieldName": "fileuploadpanel_3",
+        "name": "fileuploadpanel_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан). Обязательный документ, в случае если регистрации записи соответствующего акта  произведена компетентным органом иностранного государства"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о смерти члена семьи",
+        "fieldName": "fileuploadpanel_4",
+        "name": "fileuploadpanel_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан). Обязательный документ, в случае если регистрации записи соответствующего акта  произведена компетентным органом иностранного государства"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о заключении (расторжении) брака",
+        "fieldName": "fileuploadpanel_5",
+        "name": "fileuploadpanel_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан). Обязательный документ, в случае если регистрации записи соответствующего акта  произведена компетентным органом иностранного государства"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения, содержащиеся в решении органа опеки и попечительства об установлении опеки или попечительства над ребенком",
+        "fieldName": "fileuploadpanel_6",
+        "name": "fileuploadpanel_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о родителях ребенка",
+        "fieldName": "fileuploadpanel_7",
+        "name": "fileuploadpanel_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан). Обязательный документ, в случае если регистрации записи соответствующего акта  произведена компетентным органом иностранного государства"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения об опекуне (попечителе) ребенка (детей), в отношении которого подано заявление",
+        "fieldName": "fileuploadpanel_8",
+        "name": "fileuploadpanel_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан). Обязательный документ, в случае если регистрации записи соответствующего акта  произведена компетентным органом иностранного государства"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о лишении (ограничении, восстановлении) родительских прав, сведения об отмене ограничения родительских прав, сведения об отобрании ребенка при непосредственной угрозе его жизни или здоровью",
+        "fieldName": "fileuploadpanel_9",
+        "name": "fileuploadpanel_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения об ограничении дееспособности или признании родителя либо иного законного представителя ребенка недееспособным",
+        "fieldName": "fileuploadpanel_10",
+        "name": "fileuploadpanel_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о вознаграждении за выполнение трудовых или иных обязанностей, включая выплаты стимулирующего характера, вознаграждении за выполненную работу, оказанную услугу, совершение действия в рамках гражданско-правового договора, в том числе по договору об осуществлении опеки или попечительства на возмездных условиях (договору о приемной семье, договору о патронатной семье) (в том числе о налоговых вычетах)",
+        "fieldName": "fileuploadpanel_11",
+        "name": "fileuploadpanel_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о доходах военнослужащих, сотрудников войск национальной гвардии РФ, органов принудительного исполнения РФ, таможенных органов РФ, Главного управления специальных программ Президента РФ",
+        "fieldName": "fileuploadpanel_12",
+        "name": "fileuploadpanel_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о доходах сотрудников учреждений и органов уголовно-исполнительной системы РФ, органов федеральной службы безопасности РФ, органов государственной охраны РФ, органов внутренних дел РФ и других органов, в которых законодательством РФ предусмотрено прохождение федеральной государственной службы, связанной с правоохранительной деятельностью (за исключением военнослужащих, сотрудников войск национальной гвардии Российской Федерации, органов принудительного исполнения Российской Федерации, таможенных органов Российской Федерации, Главного управления специальных программ Президента Российской Федерации)",
+        "fieldName": "fileuploadpanel_13",
+        "name": "fileuploadpanel_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о суммах пенсии, пособий и иных аналогичных выплат, в том числе выплат по обязательному социальному страхованию и выплат компенсационного характера, полученных в соответствии с законодательством РФ и (или) законодательством субъекта РФ",
+        "fieldName": "fileuploadpanel_14",
+        "name": "fileuploadpanel_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о размере пенсии, получаемой лицами, проходящими (проходившими) военную службу, службу в учреждениях и органах уголовно-исполнительной системы РФ, органах федеральной службы безопасности РФ, органах государственной охраны РФ, органах внутренних дел РФ, таможенных органах РФ, войсках национальной гвардии РФ, органах принудительного исполнения РФ, Главном управлении специальных программ Президента РФ",
+        "fieldName": "fileuploadpanel_15",
+        "name": "fileuploadpanel_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о выплатах правопреемникам умерших застрахованных лиц в случаях, предусмотренных законодательством РФ об обязательном пенсионном страховании",
+        "fieldName": "fileuploadpanel_16",
+        "name": "fileuploadpanel_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения об осуществлении ухода за нетрудоспособными лицами в период расчета среднедушевого дохода",
+        "fieldName": "fileuploadpanel_17",
+        "name": "fileuploadpanel_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о наличии статуса безработного или ищущего работу на момент подачи заявления и (или) в период, за который рассчитывается среднедушевой доход семьи",
+        "fieldName": "fileuploadpanel_18",
+        "name": "fileuploadpanel_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о дивидендах, процентах и иных доходах, полученных по операциям с ценными бумагами и операциям с производными финансовыми инструментами (с учетом понесенных расходов), а также в связи с участием в управлении собственностью организации",
+        "fieldName": "fileuploadpanel_19",
+        "name": "fileuploadpanel_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о процентах, полученных по вкладам в кредитных учреждениях",
+        "fieldName": "fileuploadpanel_20",
+        "name": "fileuploadpanel_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о доходах от осуществления предпринимательской деятельности, включая доходы, полученные в результате деятельности крестьянского (фермерского) хозяйства, в том числе созданного без образования юридического лица, и доходах от осуществления частной практики",
+        "fieldName": "fileuploadpanel_21",
+        "name": "fileuploadpanel_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан). Обязательный документ, в случае если регистрации записи соответствующего акта  произведена компетентным органом иностранного государства"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о доходах, полученных в рамках применения специального налогового режима «Налог на профессиональный доход» ",
+        "fieldName": "fileuploadpanel_22",
+        "name": "fileuploadpanel_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о доходах по договорам авторского заказа, об отчуждении исключительного права на результаты интеллектуальной деятельности",
+        "fieldName": "fileuploadpanel_23",
+        "name": "fileuploadpanel_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан). Обязательный документ, в случае если регистрации записи соответствующего акта  произведена компетентным органом иностранного государства"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о доходах от реализации недвижимого имущества, находящегося в собственности менее срока владения, указанного в статье 217.1 Налогового кодекса РФ, а также сдачи в аренду (наем, поднаем) имущества",
+        "fieldName": "fileuploadpanel_24",
+        "name": "fileuploadpanel_24",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о недвижимом имуществе, содержащиеся в Едином государственном реестре недвижимости (в том числе находящемся под арестом)",
+        "fieldName": "fileuploadpanel_25",
+        "name": "fileuploadpanel_25",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о регистрации по месту жительства и месту пребывания гражданина РФ в пределах РФ",
+        "fieldName": "fileuploadpanel_26",
+        "name": "fileuploadpanel_26",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о ранее выданных паспортах гражданина РФ, удостоверяющих личность гражданина РФ на территории РФ",
+        "fieldName": "fileuploadpanel_27",
+        "name": "fileuploadpanel_27",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о получаемых алиментах",
+        "fieldName": "fileuploadpanel_28",
+        "name": "fileuploadpanel_28",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан). Сумма получаемых алиментов указывается в заявлении"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения об автотранспортных или мототранспортных средствах",
+        "fieldName": "fileuploadpanel_29",
+        "name": "fileuploadpanel_29",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о маломерных водных судах, год выпуска которых не превышает 5 лет",
+        "fieldName": "fileuploadpanel_30",
+        "name": "fileuploadpanel_30",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения об освобождении из мест лишения свободы заявителя и (или) членов его семьи в период, за который рассчитывается среднедушевой доход семьи",
+        "fieldName": "fileuploadpanel_31",
+        "name": "fileuploadpanel_31",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о пребывании в местах лишения свободы членов семьи заявителя",
+        "fieldName": "fileuploadpanel_32",
+        "name": "fileuploadpanel_32",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о наличии инвалидности и ее группе (при наличии)",
+        "fieldName": "fileuploadpanel_33",
+        "name": "fileuploadpanel_33",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о самоходных машинах и других видах техники, зарегистрированных в соответствии с Правилами",
+        "fieldName": "fileuploadpanel_34",
+        "name": "fileuploadpanel_34",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан). Правила государственной регистрации самоходных машин и других видов техники, утвержденными постановлением Правительства Российской Федерации от 21 сентября 2020 г. № 1507 «Об утверждении Правил государственной регистрации самоходных машин и других видов техники»"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о помещении с назначением «жилое» (его части), занимаемом заявителем и (или) членом его семьи, страдающим тяжелой формой хронического заболевания, предусмотренного перечнем тяжелых форм хронических заболеваний, при которых невозможно совместное проживание граждан в одной квартире , сведения о помещении с назначением «жилое» (его части), признанном в установленном порядке непригодным для проживания",
+        "fieldName": "fileuploadpanel_35",
+        "name": "fileuploadpanel_35",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о зарегистрированном на заявителя или членов его семьи автотранспортном или мототранспортном средстве, которое предоставлено уполномоченным органом субъекта Российской Федерации или муниципального образования в рамках государственной социальной поддержки или стоимость приобретения которого в полном объеме оплачена за счет денежных средств, предоставленных в рамках целевой государственной социальной поддержки на приобретение движимого имущества",
+        "fieldName": "fileuploadpanel_36",
+        "name": "fileuploadpanel_36",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о факте обучения заявителя и (или) членов его семьи младше 23 лет в общеобразовательной организации, профессиональной образовательной организации или образовательной организации высшего образования по очной форме обучения",
+        "fieldName": "fileuploadpanel_37",
+        "name": "fileuploadpanel_37",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о факте обучения заявителя или членов его семьи младше 23 лет в общеобразовательной организации, профессиональной образовательной организации или образовательной организации высшего образования по очной форме обучения и неполучения стипендии в период, за который рассчитывается среднедушевой доход семьи",
+        "fieldName": "fileuploadpanel_38",
+        "name": "fileuploadpanel_38",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о факте прохождения заявителем или членами его семьи непрерывного лечения длительностью свыше 3 месяцев, вследствие чего временно невозможно осуществлять трудовую деятельность, в период, за который рассчитывается среднедушевой доход семьи",
+        "fieldName": "fileuploadpanel_39",
+        "name": "fileuploadpanel_39",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о прохождении заявителем или членами его семьи военной службы по призыву в период, за который рассчитывается среднедушевой доход семьи",
+        "fieldName": "fileuploadpanel_40",
+        "name": "fileuploadpanel_40",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о нахождении заявителя и (или) членов его семьи на полном государственном обеспечении",
+        "fieldName": "fileuploadpanel_41",
+        "name": "fileuploadpanel_41",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о прохождении заявителем и (или) членами его семьи военной службы по призыву, а также о статусе военнослужащего, обучающегося в военной профессиональной образовательной организации и военной образовательной организации высшего образования и не заключившего контракт о прохождении военной службы",
+        "fieldName": "fileuploadpanel_42",
+        "name": "fileuploadpanel_42",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о нахождении заявителя и (или) членов его семьи на принудительном лечении по решению суда",
+        "fieldName": "fileuploadpanel_43",
+        "name": "fileuploadpanel_43",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о применении в отношении заявителя и (или) членов его семьи меры пресечения в виде заключения под стражу",
+        "fieldName": "fileuploadpanel_44",
+        "name": "fileuploadpanel_44",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о размере стипендии и иных денежных выплат, предусмотренных законодательством РФ, выплачиваемых лицам, обучающимся в профессиональных образовательных организациях и образовательных организациях высшего образования, лицам, обучающимся по очной форме по программам подготовки научных и научно-педагогических кадров, лицам, обучающимся в духовных образовательных организациях, а также компенсационные выплаты указанным категориям граждан в период их нахождения в академическом отпуске по медицинским показаниям",
+        "fieldName": "fileuploadpanel_45",
+        "name": "fileuploadpanel_45",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о суммах ежемесячного пожизненного содержания судей, вышедших в отставку",
+        "fieldName": "fileuploadpanel_46",
+        "name": "fileuploadpanel_46",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о суммах единовременной материальной помощи, выплачиваемой за счет средств федерального бюджета, бюджетов субъектов РФ, местных бюджетов и иных источников в связи со стихийным бедствием или другими чрезвычайными обстоятельствами, а также в связи с террористическим актом",
+        "fieldName": "fileuploadpanel_47",
+        "name": "fileuploadpanel_47",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о сумме полученной компенсации, выплачиваемой государственным органом или общественным объединением за время исполнения государственных или общественных обязанностей",
+        "fieldName": "fileuploadpanel_48",
+        "name": "fileuploadpanel_48",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о суммах дохода, полученного от источников за пределами РФ",
+        "fieldName": "fileuploadpanel_49",
+        "name": "fileuploadpanel_49",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о помещениях с назначением «жилое», зданиях с назначением «жилое», «жилое строение» и «жилой дом», земельных участках, которые предоставлены уполномоченным органом субъекта РФ или муниципального образования в рамках государственной социальной поддержки многодетной семьи или стоимость приобретения которых в полном объеме оплачена за счет денежных средств, предоставленных в рамках такой целевой государственной социальной поддержки на приобретение недвижимого имущества, а также земельных участках, предоставленных в соответствии с Федеральным законом ",
+        "fieldName": "fileuploadpanel_50",
+        "name": "fileuploadpanel_50",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о размере единовременного пособия при увольнении с военной службы, службы в учреждениях и органах уголовно-исполнительной системы РФ, органах федеральной службы безопасности, органах государственной охраны, органах внутренних дел РФ, таможенных органах РФ, войсках национальной гвардии РФ, органах принудительного исполнения РФ, Главном управлении специальных программ Президента РФ, а также из иных органов, в которых законодательством РФ предусмотрено прохождение федеральной государственной службы, связанной с правоохранительной деятельностью",
+        "fieldName": "fileuploadpanel_51",
+        "name": "fileuploadpanel_51",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о нахождении автотранспортного (мототранспортного) средства, маломерного судна, самоходной машины или другого вида техники под арестом и (или) в розыске",
+        "fieldName": "fileuploadpanel_52",
+        "name": "fileuploadpanel_52",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о постановке на учет в медицинской организации в связи с беременностью, а также о родоразрешении или прерывании беременности",
+        "fieldName": "fileuploadpanel_53",
+        "name": "fileuploadpanel_53",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан). Заявитель посредством представления подтверждающих документов (в случае отсутствия сведений в распоряжении Фонда социального страхования РФ)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о полученных грантах, субсидиях и других поступлениях, имеющих целевой характер расходования и предоставляемых в рамках поддержки предпринимательства",
+        "fieldName": "fileuploadpanel_54",
+        "name": "fileuploadpanel_54",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "",
+        "allowBlank": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о статусе семьи «многодетная»",
+        "fieldName": "fileuploadpanel_55",
+        "name": "fileuploadpanel_55",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о доходах, полученных в результате выигрышей, выплачиваемых организаторами лотерей, тотализаторов и других основанных на риске игр",
+        "fieldName": "fileuploadpanel_56",
+        "name": "fileuploadpanel_56",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения об отнесении заявителя и (или) членов его семьи к коренным малочисленным народам РФ в соответствии с законодательством РФ и ведении традиционного образа жизни",
+        "fieldName": "fileuploadpanel_57",
+        "name": "fileuploadpanel_57",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о трудовой деятельности",
+        "fieldName": "fileuploadpanel_58",
+        "name": "fileuploadpanel_58",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (при   предоставлении гражданином документов – скан)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие изменение персональных данных заявителя в случае необходимости подтверждения родственных отношений с детьми (например, свидетельство о перемене фамилии (имени, отчества), справки компетентных органов (должностных лиц) иностранных государств.",
+        "fieldName": "fileuploadpanel_59",
+        "name": "fileuploadpanel_59",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    }
+]

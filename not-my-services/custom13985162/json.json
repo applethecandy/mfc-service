@@ -1,0 +1,1885 @@
+[
+    {
+        "xtype": "fieldset",
+        "title": "Информация о заявителе:",
+        "name": "fieldset_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "lastname",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия при рождении",
+        "name": "textfield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "firstname",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "middlename"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Пол",
+        "name": "textfield_38",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "sex",
+        "allowBlank": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Статус заявителя",
+        "name": "combobox_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "мать"
+                },
+                {
+                    "value": "отец"
+                },
+                {
+                    "value": "ребенок"
+                }
+            ],
+            "type": "store"
+        },
+        "allowBlank": false,
+        "scripts": [
+            "var combobox_0 = Ext.ComponentQuery.query('[name=combobox_0]')[0];\nvar combobox_3 = Ext.ComponentQuery.query('[name=combobox_3]')[0];\n\nvar kategory = ['мать','отец','ребенок'].indexOf(combobox_0.getValue());\n\nif (kategory == 0 || kategory == 1){\nremoveVisible(combobox_3)\n}else{\naddVisible(combobox_3)\n};\n\nif (kategory == 2){\naddVisible(combobox_3)\n}else{\nremoveVisible(combobox_3)\n};\n\n\n\n"
+        ]
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Статус ребенка",
+        "name": "combobox_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "несовершеннолетний"
+                },
+                {
+                    "value": "совершеннолетний"
+                }
+            ],
+            "type": "store"
+        }
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "datefield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "birthdate",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Гражданство",
+        "name": "textfield_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "citizenship",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "СНИЛС",
+        "name": "textfield_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "vtype": "validateSnils",
+        "strategy": "snils",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места жительства",
+        "name": "textfield_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "registrationAddress",
+        "allowBlank": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Данные документа, удостоверяющего личность заявителя:",
+        "name": "fieldset_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование",
+        "name": "textfield_25",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "documenttypename"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "textfield_26",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docseries"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "№",
+        "name": "textfield_27",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docnumber"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "textfield_28",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issueorg"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "datefield_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issuedate"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Информация о государственном сертификате на материнский (семейный) капитал:",
+        "name": "fieldset_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "textfield_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "№",
+        "name": "textfield_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "textfield_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Когда выдан",
+        "name": "datefield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о <strong style=\"font-weight:bold;text-decoration:underline;\">втором</strong> рожденном (усыновленном) ребенке:",
+        "name": "fieldset_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Степень родства",
+        "name": "combobox_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "несовершеннолетний ребенок"
+                }
+            ],
+            "type": "store"
+        }
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "datefield_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата усыновления (удочерения)",
+        "name": "datefield_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(при наличии)"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Гражданство",
+        "name": "textfield_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(например: Российская Федерация)"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "СНИЛС",
+        "name": "textfield_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Сведения документа, удостоверяющего личность",
+        "name": "textfield_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(наименование, серия, номер, кем и когда выдан)"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места жительства",
+        "name": "textfield_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(пребывания)"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Реквизиты кредитной организации для перечисления средств:",
+        "name": "fieldset_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование Банка",
+        "name": "textfield_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "БИК",
+        "name": "textfield_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИНН",
+        "name": "textfield_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "КПП",
+        "name": "textfield_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Корреспондентский счет",
+        "name": "textfield_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ФИО получателя",
+        "name": "textfield_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "№ счета",
+        "name": "textfield_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сделать отметки в соответствующих чекбоксах:",
+        "name": "fieldset_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "<font style=\"position:absolute; left:200px;\">родительских прав в отношении ребенка, в связи с рождением которого возникло право на ежемесячную выплату</font>",
+        "name": "label_0",
+        "fieldName": "label_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "не лишалась (ся)",
+        "name": "checkbox_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_0 = Ext.ComponentQuery.query('[name=checkbox_0]')[0];\nvar checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\n\nif (checkbox_0.checked == true){\n\tcheckbox_1.disable();\n}else{\n\tcheckbox_1.enable()\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "лишалась(ся)",
+        "name": "checkbox_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_0 = Ext.ComponentQuery.query('[name=checkbox_0]')[0];\nvar checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\n\nif (checkbox_1.checked == true){\n\tcheckbox_0.disable();\n}else{\n\tcheckbox_0.enable()\n};"
+        ]
+    },
+    {
+        "xtype": "label",
+        "html": "<font style=\"position:absolute; left:200px;\">умышленных преступлений, относящихся к преступлениям против личности в отношении своего ребенка (детей)</font>",
+        "name": "label_1",
+        "fieldName": "label_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "не совершала (не совершал)",
+        "name": "checkbox_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_2 = Ext.ComponentQuery.query('[name=checkbox_2]')[0];\nvar checkbox_3 = Ext.ComponentQuery.query('[name=checkbox_3]')[0];\n\nif (checkbox_2.checked == true){\n\tcheckbox_3.disable();\n}else{\n\tcheckbox_3.enable()\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "совершала (совершал)",
+        "name": "checkbox_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_2 = Ext.ComponentQuery.query('[name=checkbox_2]')[0];\nvar checkbox_3 = Ext.ComponentQuery.query('[name=checkbox_3]')[0];\n\nif (checkbox_3.checked == true){\n\tcheckbox_2.disable();\n}else{\n\tcheckbox_2.enable()\n};"
+        ]
+    },
+    {
+        "xtype": "label",
+        "html": "<font style=\"position:absolute; left:200px;\">решение об отмене усыновления ребенка, в связи с усыновлением которого возникло право на ежемесячную выплату</font>",
+        "name": "label_2",
+        "fieldName": "label_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "не принималось",
+        "name": "checkbox_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_4 = Ext.ComponentQuery.query('[name=checkbox_4]')[0];\nvar checkbox_5 = Ext.ComponentQuery.query('[name=checkbox_5]')[0];\n\nif (checkbox_4.checked == true){\n\tcheckbox_5.disable();\n}else{\n\tcheckbox_5.enable()\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "принималось",
+        "name": "checkbox_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_4 = Ext.ComponentQuery.query('[name=checkbox_4]')[0];\nvar checkbox_5 = Ext.ComponentQuery.query('[name=checkbox_5]')[0];\n\nif (checkbox_5.checked == true){\n\tcheckbox_4.disable();\n}else{\n\tcheckbox_4.enable()\n};"
+        ]
+    },
+    {
+        "xtype": "label",
+        "html": "<font style=\"position:absolute; left:200px;\">решение об ограничении в родительских правах в отношении ребенка, в связи с рождением которого возникло право на дополнительные меры государственной поддержки</font>",
+        "name": "label_3",
+        "fieldName": "label_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "не принималось",
+        "name": "checkbox_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_6 = Ext.ComponentQuery.query('[name=checkbox_6]')[0];\nvar checkbox_7 = Ext.ComponentQuery.query('[name=checkbox_7]')[0];\n\nif (checkbox_6.checked == true){\n\tcheckbox_7.disable();\n}else{\n\tcheckbox_7.enable()\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "принималось",
+        "name": "checkbox_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_6 = Ext.ComponentQuery.query('[name=checkbox_6]')[0];\nvar checkbox_7 = Ext.ComponentQuery.query('[name=checkbox_7]')[0];\n\nif (checkbox_7.checked == true){\n\tcheckbox_6.disable();\n}else{\n\tcheckbox_6.enable()\n};"
+        ]
+    },
+    {
+        "xtype": "label",
+        "html": "<font style=\"position:absolute; left:200px;\">решение об отобрании ребенка, в связи с рождением которого возникло право на дополнительные меры государственной поддержки</font>",
+        "name": "label_4",
+        "fieldName": "label_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "не принималось",
+        "name": "checkbox_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_8 = Ext.ComponentQuery.query('[name=checkbox_8]')[0];\nvar checkbox_9 = Ext.ComponentQuery.query('[name=checkbox_9]')[0];\n\nif (checkbox_8.checked == true){\n\tcheckbox_9.disable();\n}else{\n\tcheckbox_9.enable()\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "принималось",
+        "name": "checkbox_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_8 = Ext.ComponentQuery.query('[name=checkbox_8]')[0];\nvar checkbox_9 = Ext.ComponentQuery.query('[name=checkbox_9]')[0];\n\nif (checkbox_9.checked == true){\n\tcheckbox_8.disable();\n}else{\n\tcheckbox_8.enable()\n};"
+        ]
+    },
+    {
+        "xtype": "label",
+        "html": "<font style=\"position:absolute; left:200px;\">Об ответственности за достоверность указанных в заявлении и представленных сведений предупреждена (предупрежден)</font>",
+        "name": "label_5",
+        "fieldName": "label_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "не предупрежден(а)",
+        "name": "checkbox_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_10 = Ext.ComponentQuery.query('[name=checkbox_10]')[0];\nvar checkbox_11 = Ext.ComponentQuery.query('[name=checkbox_11]')[0];\n\nif (checkbox_11.checked == true){\n\tcheckbox_10.disable();\n}else{\n\tcheckbox_10.enable()\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "предупрежден(а)",
+        "name": "checkbox_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_10 = Ext.ComponentQuery.query('[name=checkbox_10]')[0];\nvar checkbox_11 = Ext.ComponentQuery.query('[name=checkbox_11]')[0];\n\nif (checkbox_10.checked == true){\n\tcheckbox_11.disable();\n}else{\n\tcheckbox_11.enable()\n};"
+        ]
+    },
+    {
+        "xtype": "label",
+        "html": "<font style=\"position:absolute; left:200px;\">Об обязанности сообщать, о наступлении обстоятельств влияющих на установление выплаты не позднее 1 месяца с момента наступления события предупреждена (предупрежден(а))</font>",
+        "name": "label_6",
+        "fieldName": "label_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "не предупрежден(а)",
+        "name": "checkbox_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_12 = Ext.ComponentQuery.query('[name=checkbox_12]')[0];\nvar checkbox_13 = Ext.ComponentQuery.query('[name=checkbox_13]')[0];\n\nif (checkbox_13.checked == true){\n\tcheckbox_12.disable();\n}else{\n\tcheckbox_12.enable()\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "предупрежден(а)",
+        "name": "checkbox_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_12 = Ext.ComponentQuery.query('[name=checkbox_12]')[0];\nvar checkbox_13 = Ext.ComponentQuery.query('[name=checkbox_13]')[0];\n\nif (checkbox_12.checked == true){\n\tcheckbox_13.disable();\n}else{\n\tcheckbox_13.enable()\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о членах семьи (помимо заявителя и второго ребенка)<br /><font style=\"color:red; text-transform:none;\">К членам семьи могут относиться:<br />- родитель (отец) - в случае если мужчина является отцом всех детей<br />- супруг - в случае если мужчина не является отцом детей или является отцом не всех детей<br />- несовершеннолетний (совершеннолетний) ребенок",
+        "name": "fieldset_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_0",
+        "items": [
+            {
+                "name": "combobox_1",
+                "xtype": "combobox",
+                "fieldLabel": "Степень родства",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "родитель (отец)"
+                        },
+                        {
+                            "value": "супруг"
+                        },
+                        {
+                            "value": "несовершеннолетний ребенок"
+                        },
+                        {
+                            "value": "совершеннолетний ребенок"
+                        }
+                    ],
+                    "type": "store"
+                }
+            },
+            {
+                "name": "textfield_29",
+                "xtype": "textfield",
+                "fieldLabel": "ФИО",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_30",
+                "xtype": "textfield",
+                "fieldLabel": "СНИЛС",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_31",
+                "xtype": "textfield",
+                "fieldLabel": "Сведения документа, удостоверяющего личность ",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "(наименование, серия, номер, кем и когда выдан)"
+            },
+            {
+                "name": "textfield_32",
+                "xtype": "textfield",
+                "fieldLabel": "Адрес места жительства",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "(пребывания)"
+            }
+        ],
+        "prefix": "cloneablePanel_0",
+        "fieldName": "cloneablePanel_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "&nbsp;",
+        "name": "fieldset_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Количество членов семьи",
+        "name": "textfield_39",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "description": "<span style=\"color:red\">(указать количество <font style=\"font-weight:bold;text-decoration:underline;\">всех</font> членов семьи, включая заявителя и ребенка)\n<br />Важно! При количестве членов семьи большем, чем 10 - сведения к заявлению необходимо будет заполнить вручную!</span>",
+        "vtype": "validateDigits",
+        "maxLength": 2,
+        "scripts": [
+            "var textfield_39 = Ext.ComponentQuery.query('[name=textfield_39]')[0];\nvar textfield_33 = Ext.ComponentQuery.query('[name=textfield_33]')[0];\nvar textfield_c31 = Ext.ComponentQuery.query('[name=textfield_c31]')[0];\nvar textfield_c32 = Ext.ComponentQuery.query('[name=textfield_c32]')[0];\nvar textfield_c34 = Ext.ComponentQuery.query('[name=textfield_c34]')[0];\nvar textfield_c35 = Ext.ComponentQuery.query('[name=textfield_c35]')[0];\nvar textfield_76 = Ext.ComponentQuery.query('[name=textfield_76]')[0];\nvar textfield_c36 = Ext.ComponentQuery.query('[name=textfield_c36]')[0];\nvar textfield_c37 = Ext.ComponentQuery.query('[name=textfield_c37]')[0];\nvar textfield_c38 = Ext.ComponentQuery.query('[name=textfield_c38]')[0];\nvar textfield_c39 = Ext.ComponentQuery.query('[name=textfield_c39]')[0];\n\nvar cloneablePanel_0 = Ext.ComponentQuery.query('[name=cloneablePanel_0]')[0];\nvar cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\nvar cloneablePanel_10 = Ext.ComponentQuery.query('[name=cloneablePanel_10]')[0];\nvar cloneablePanel_11 = Ext.ComponentQuery.query('[name=cloneablePanel_11]')[0];\nvar cloneablePanel_4 = Ext.ComponentQuery.query('[name=cloneablePanel_4]')[0];\nvar cloneablePanel_5 = Ext.ComponentQuery.query('[name=cloneablePanel_5]')[0];\nvar cloneablePanel_6 = Ext.ComponentQuery.query('[name=cloneablePanel_6]')[0];\nvar cloneablePanel_7 = Ext.ComponentQuery.query('[name=cloneablePanel_7]')[0];\nvar cloneablePanel_8 = Ext.ComponentQuery.query('[name=cloneablePanel_8]')[0];\nvar cloneablePanel_9 = Ext.ComponentQuery.query('[name=cloneablePanel_9]')[0];\nvar cloneablePanel_12 = Ext.ComponentQuery.query('[name=cloneablePanel_12]')[0];\n\nvar label_7 = Ext.ComponentQuery.query('[name=label_7]')[0];\nvar label_8 = Ext.ComponentQuery.query('[name=label_8]')[0];\nvar label_9 = Ext.ComponentQuery.query('[name=label_9]')[0];\nvar label_10 = Ext.ComponentQuery.query('[name=label_10]')[0];\nvar label_11 = Ext.ComponentQuery.query('[name=label_11]')[0];\nvar label_12 = Ext.ComponentQuery.query('[name=label_12]')[0];\nvar label_13 = Ext.ComponentQuery.query('[name=label_13]')[0];\nvar label_14 = Ext.ComponentQuery.query('[name=label_14]')[0];\nvar label_15 = Ext.ComponentQuery.query('[name=label_15]')[0];\nvar label_16 = Ext.ComponentQuery.query('[name=label_16]')[0];\n\nvar checkbox_14 = Ext.ComponentQuery.query('[name=checkbox_14]')[0];\nvar checkbox_15 = Ext.ComponentQuery.query('[name=checkbox_15]')[0];\nvar checkbox_16 = Ext.ComponentQuery.query('[name=checkbox_16]')[0];\nvar checkbox_17 = Ext.ComponentQuery.query('[name=checkbox_17]')[0];\nvar checkbox_18 = Ext.ComponentQuery.query('[name=checkbox_18]')[0];\nvar checkbox_19 = Ext.ComponentQuery.query('[name=checkbox_19]')[0];\nvar checkbox_20 = Ext.ComponentQuery.query('[name=checkbox_20]')[0];\nvar checkbox_21 = Ext.ComponentQuery.query('[name=checkbox_21]')[0];\nvar checkbox_22 = Ext.ComponentQuery.query('[name=checkbox_22]')[0];\nvar checkbox_23 = Ext.ComponentQuery.query('[name=checkbox_23]')[0];\n\nvar textfield_0 = Ext.ComponentQuery.query('[name=textfield_0]')[0];\nvar textfield_2 = Ext.ComponentQuery.query('[name=textfield_2]')[0];\nvar textfield_3 = Ext.ComponentQuery.query('[name=textfield_3]')[0];\nvar textfield_10 = Ext.ComponentQuery.query('[name=textfield_10]')[0];\nvar textfield_11 = Ext.ComponentQuery.query('[name=textfield_11]')[0];\nvar textfield_12 = Ext.ComponentQuery.query('[name=textfield_12]')[0];\n\nvar textfield_77 = Ext.ComponentQuery.query('[name=textfield_77]')[0];\nvar textfield_78 = Ext.ComponentQuery.query('[name=textfield_78]')[0];\nvar textfield_79 = Ext.ComponentQuery.query('[name=textfield_79]')[0];\nvar textfield_80 = Ext.ComponentQuery.query('[name=textfield_80]')[0];\nvar textfield_81 = Ext.ComponentQuery.query('[name=textfield_81]')[0];\nvar textfield_82 = Ext.ComponentQuery.query('[name=textfield_82]')[0];\nvar textfield_83 = Ext.ComponentQuery.query('[name=textfield_83]')[0];\nvar textfield_84 = Ext.ComponentQuery.query('[name=textfield_84]')[0];\nvar textfield_85 = Ext.ComponentQuery.query('[name=textfield_85]')[0];\nvar textfield_86 = Ext.ComponentQuery.query('[name=textfield_86]')[0];\n\ntextfield_33.hide();\ntextfield_c31.hide();\ntextfield_c32.hide();\ntextfield_c34.hide();\ntextfield_c35.hide();\ntextfield_76.hide();\ntextfield_c36.hide();\ntextfield_c37.hide();\ntextfield_c38.hide();\ntextfield_c39.hide();\n\ncloneablePanel_1.hide();\ncloneablePanel_10.hide();\ncloneablePanel_11.hide();\ncloneablePanel_4.hide();\ncloneablePanel_5.hide();\ncloneablePanel_6.hide();\ncloneablePanel_7.hide();\ncloneablePanel_8.hide();\ncloneablePanel_9.hide();\ncloneablePanel_12.hide();\n\nlabel_7.hide();\nlabel_8.hide();\nlabel_9.hide();\nlabel_10.hide();\nlabel_11.hide();\nlabel_12.hide();\nlabel_13.hide();\nlabel_14.hide();\nlabel_15.hide();\nlabel_16.hide();\n\ncheckbox_14.hide();\ncheckbox_15.hide();\ncheckbox_16.hide();\ncheckbox_17.hide();\ncheckbox_18.hide();\ncheckbox_19.hide();\ncheckbox_20.hide();\ncheckbox_21.hide();\ncheckbox_22.hide();\ncheckbox_23.hide();\n\ntextfield_77.hide();\ntextfield_78.hide();\ntextfield_79.hide();\ntextfield_80.hide();\ntextfield_81.hide();\ntextfield_82.hide();\ntextfield_83.hide();\ntextfield_84.hide();\ntextfield_85.hide();\ntextfield_86.hide();\n\nvar number = 1 * textfield_39.getValue();\n\nfunction reds(){\n\tdocument.getElementsByName(\"textfield_39\").style.cssText=\"color: #ff0000;\";\n};\n\nfunction blacks(){\n\tdocument.getElementsByName(\"textfield_39\").style.cssText=\"color: #ffffff;\";\n};\n\nswitch (number) {\n  case 1:\n    textfield_33.show();\n\tcloneablePanel_1.show();\n\tlabel_7.show();\n\tcheckbox_14.show();\n\ttextfield_33.setValue(textfield_0.getValue() + \" \" + textfield_2.getValue() + \" \" + textfield_3.getValue());\n    break;\n  case 2:\n\ttextfield_33.show();\n    textfield_c31.show();\n\tcloneablePanel_1.show();\n\tcloneablePanel_10.show();\n\tlabel_7.show();\n\tlabel_8.show();\n\tcheckbox_14.show();\n\tcheckbox_15.show();\n\ttextfield_33.setValue(textfield_0.getValue() + \" \" + textfield_2.getValue() + \" \" + textfield_3.getValue());\n\ttextfield_c31.setValue(textfield_10.getValue() + \" \" + textfield_11.getValue() + \" \" + textfield_12.getValue());\n    break;\n  case 3:\n    textfield_33.show();\n    textfield_c31.show();\n\ttextfield_c32.show();\n\tcloneablePanel_1.show();\n\tcloneablePanel_10.show();\n\tcloneablePanel_11.show();\n\tlabel_7.show();\n\tlabel_8.show();\n\tlabel_9.show();\n\tcheckbox_14.show();\n\tcheckbox_15.show();\n\tcheckbox_16.show();\n\ttextfield_33.setValue(textfield_0.getValue() + \" \" + textfield_2.getValue() + \" \" + textfield_3.getValue());\n\ttextfield_c31.setValue(textfield_10.getValue() + \" \" + textfield_11.getValue() + \" \" + textfield_12.getValue());\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c32.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0].getValue())\n\t};\n    break;\n  case 4:\n    textfield_33.show();\n    textfield_c31.show();\n\ttextfield_c32.show();\n\ttextfield_c34.show();\n\tcloneablePanel_1.show();\n\tcloneablePanel_10.show();\n\tcloneablePanel_11.show();\n\tcloneablePanel_4.show();\n\tlabel_7.show();\n\tlabel_8.show();\n\tlabel_9.show();\n\tlabel_10.show();\n\tcheckbox_14.show();\n\tcheckbox_15.show();\n\tcheckbox_16.show();\n\tcheckbox_17.show();\n\ttextfield_33.setValue(textfield_0.getValue() + \" \" + textfield_2.getValue() + \" \" + textfield_3.getValue());\n\ttextfield_c31.setValue(textfield_10.getValue() + \" \" + textfield_11.getValue() + \" \" + textfield_12.getValue());\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c32.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[1].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c34.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[1].textfield_29'}\")[0].getValue())\n\t};\n    break;\n  case 5:\n    textfield_33.show();\n    textfield_c31.show();\n\ttextfield_c32.show();\n\ttextfield_c34.show();\n\ttextfield_c35.show();\n\tcloneablePanel_1.show();\n\tcloneablePanel_10.show();\n\tcloneablePanel_11.show();\n\tcloneablePanel_4.show();\n\tcloneablePanel_5.show();\n\tlabel_7.show();\n\tlabel_8.show();\n\tlabel_9.show();\n\tlabel_10.show();\n\tlabel_11.show();\n\tcheckbox_14.show();\n\tcheckbox_15.show();\n\tcheckbox_16.show();\n\tcheckbox_17.show();\n\tcheckbox_18.show();\n\ttextfield_33.setValue(textfield_0.getValue() + \" \" + textfield_2.getValue() + \" \" + textfield_3.getValue());\n\ttextfield_c31.setValue(textfield_10.getValue() + \" \" + textfield_11.getValue() + \" \" + textfield_12.getValue());\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c32.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[1].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c34.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[1].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[2].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c35.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[2].textfield_29'}\")[0].getValue())\n\t};\n    break;\n  case 6:\n    textfield_33.show();\n    textfield_c31.show();\n\ttextfield_c32.show();\n\ttextfield_c34.show();\n\ttextfield_c35.show();\n\ttextfield_76.show();\n\tcloneablePanel_1.show();\n\tcloneablePanel_10.show();\n\tcloneablePanel_11.show();\n\tcloneablePanel_4.show();\n\tcloneablePanel_5.show();\n\tcloneablePanel_6.show();\n\tlabel_7.show();\n\tlabel_8.show();\n\tlabel_9.show();\n\tlabel_10.show();\n\tlabel_11.show();\n\tlabel_12.show();\n\tcheckbox_14.show();\n\tcheckbox_15.show();\n\tcheckbox_16.show();\n\tcheckbox_17.show();\n\tcheckbox_18.show();\n\tcheckbox_19.show();\n\ttextfield_33.setValue(textfield_0.getValue() + \" \" + textfield_2.getValue() + \" \" + textfield_3.getValue());\n\ttextfield_c31.setValue(textfield_10.getValue() + \" \" + textfield_11.getValue() + \" \" + textfield_12.getValue());\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c32.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[1].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c34.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[1].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[2].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c35.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[2].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[3].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_76.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[3].textfield_29'}\")[0].getValue())\n\t};\n    break;\n  case 7:\n    textfield_33.show();\n    textfield_c31.show();\n\ttextfield_c32.show();\n\ttextfield_c34.show();\n\ttextfield_c35.show();\n\ttextfield_76.show();\n\ttextfield_c36.show();\n\tcloneablePanel_1.show();\n\tcloneablePanel_10.show();\n\tcloneablePanel_11.show();\n\tcloneablePanel_4.show();\n\tcloneablePanel_5.show();\n\tcloneablePanel_6.show();\n\tcloneablePanel_7.show();\n\tlabel_7.show();\n\tlabel_8.show();\n\tlabel_9.show();\n\tlabel_10.show();\n\tlabel_11.show();\n\tlabel_12.show();\n\tlabel_13.show();\n\tcheckbox_14.show();\n\tcheckbox_15.show();\n\tcheckbox_16.show();\n\tcheckbox_17.show();\n\tcheckbox_18.show();\n\tcheckbox_19.show();\n\tcheckbox_20.show();\n\ttextfield_33.setValue(textfield_0.getValue() + \" \" + textfield_2.getValue() + \" \" + textfield_3.getValue());\n\ttextfield_c31.setValue(textfield_10.getValue() + \" \" + textfield_11.getValue() + \" \" + textfield_12.getValue());\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c32.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[1].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c34.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[1].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[2].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c35.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[2].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[3].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_76.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[3].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[4].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c36.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[4].textfield_29'}\")[0].getValue())\n\t};\n    break;\n  case 8:\n    textfield_33.show();\n    textfield_c31.show();\n\ttextfield_c32.show();\n\ttextfield_c34.show();\n\ttextfield_c35.show();\n\ttextfield_76.show();\n\ttextfield_c36.show();\n\ttextfield_c37.show();\n\tcloneablePanel_1.show();\n\tcloneablePanel_10.show();\n\tcloneablePanel_11.show();\n\tcloneablePanel_4.show();\n\tcloneablePanel_5.show();\n\tcloneablePanel_6.show();\n\tcloneablePanel_7.show();\n\tcloneablePanel_8.show();\n\tlabel_7.show();\n\tlabel_8.show();\n\tlabel_9.show();\n\tlabel_10.show();\n\tlabel_11.show();\n\tlabel_12.show();\n\tlabel_13.show();\n\tlabel_14.show();\n\tcheckbox_14.show();\n\tcheckbox_15.show();\n\tcheckbox_16.show();\n\tcheckbox_17.show();\n\tcheckbox_18.show();\n\tcheckbox_19.show();\n\tcheckbox_20.show();\n\tcheckbox_21.show();\n\ttextfield_33.setValue(textfield_0.getValue() + \" \" + textfield_2.getValue() + \" \" + textfield_3.getValue());\n\ttextfield_c31.setValue(textfield_10.getValue() + \" \" + textfield_11.getValue() + \" \" + textfield_12.getValue());\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c32.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[1].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c34.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[1].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[2].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c35.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[2].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[3].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_76.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[3].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[4].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c36.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[4].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[5].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c37.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[5].textfield_29'}\")[0].getValue())\n\t};\n    break;\n  case 9:\n    textfield_33.show();\n    textfield_c31.show();\n\ttextfield_c32.show();\n\ttextfield_c34.show();\n\ttextfield_c35.show();\n\ttextfield_76.show();\n\ttextfield_c36.show();\n\ttextfield_c37.show();\n\ttextfield_c38.show();\n\tcloneablePanel_1.show();\n\tcloneablePanel_10.show();\n\tcloneablePanel_11.show();\n\tcloneablePanel_4.show();\n\tcloneablePanel_5.show();\n\tcloneablePanel_6.show();\n\tcloneablePanel_7.show();\n\tcloneablePanel_8.show();\n\tcloneablePanel_9.show();\n\tlabel_7.show();\n\tlabel_8.show();\n\tlabel_9.show();\n\tlabel_10.show();\n\tlabel_11.show();\n\tlabel_12.show();\n\tlabel_13.show();\n\tlabel_14.show();\n\tlabel_15.show();\n\tcheckbox_14.show();\n\tcheckbox_15.show();\n\tcheckbox_16.show();\n\tcheckbox_17.show();\n\tcheckbox_18.show();\n\tcheckbox_19.show();\n\tcheckbox_20.show();\n\tcheckbox_21.show();\n\tcheckbox_22.show();\n\ttextfield_33.setValue(textfield_0.getValue() + \" \" + textfield_2.getValue() + \" \" + textfield_3.getValue());\n\ttextfield_c31.setValue(textfield_10.getValue() + \" \" + textfield_11.getValue() + \" \" + textfield_12.getValue());\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c32.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[1].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c34.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[1].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[2].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c35.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[2].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[3].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_76.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[3].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[4].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c36.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[4].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[5].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c37.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[5].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[6].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c38.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[6].textfield_29'}\")[0].getValue())\n\t};\n    break;\n  case 10:\n    textfield_33.show();\n    textfield_c31.show();\n\ttextfield_c32.show();\n\ttextfield_c34.show();\n\ttextfield_c35.show();\n\ttextfield_76.show();\n\ttextfield_c36.show();\n\ttextfield_c37.show();\n\ttextfield_c38.show();\n\ttextfield_c39.show();\n\tcloneablePanel_1.show();\n\tcloneablePanel_10.show();\n\tcloneablePanel_11.show();\n\tcloneablePanel_4.show();\n\tcloneablePanel_5.show();\n\tcloneablePanel_6.show();\n\tcloneablePanel_7.show();\n\tcloneablePanel_8.show();\n\tcloneablePanel_9.show();\n\tcloneablePanel_12.show();\n\tlabel_7.show();\n\tlabel_8.show();\n\tlabel_9.show();\n\tlabel_10.show();\n\tlabel_11.show();\n\tlabel_12.show();\n\tlabel_13.show();\n\tlabel_14.show();\n\tlabel_15.show();\n\tlabel_16.show();\n\tcheckbox_14.show();\n\tcheckbox_15.show();\n\tcheckbox_16.show();\n\tcheckbox_17.show();\n\tcheckbox_18.show();\n\tcheckbox_19.show();\n\tcheckbox_20.show();\n\tcheckbox_21.show();\n\tcheckbox_22.show();\n\tcheckbox_23.show();\n\ttextfield_33.setValue(textfield_0.getValue() + \" \" + textfield_2.getValue() + \" \" + textfield_3.getValue());\n\ttextfield_c31.setValue(textfield_10.getValue() + \" \" + textfield_11.getValue() + \" \" + textfield_12.getValue());\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c32.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[0].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[1].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c34.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[1].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[2].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c35.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[2].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[3].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_76.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[3].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[4].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c36.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[4].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[5].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c37.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[5].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[6].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c38.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[6].textfield_29'}\")[0].getValue())\n\t};\n\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[7].textfield_29'}\")[0] != undefined) {\n\t\ttextfield_c39.setValue(Ext.ComponentQuery.query(\"{name=='cloneablePanel_0[7].textfield_29'}\")[0].getValue())\n\t};\n    break;\n\tdefault:\n\t if (number > 10) {\n\t\t textfield_39.setValue(10);\n\t }else{\n\t };\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о доходах членов семьи за последние 12 месяцев. (Отсчет указанного 12 – месячного периода начинается за шесть месяцев до даты подачи заявления о назначении  ежемесячной выплаты):",
+        "name": "fieldset_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Начало периода",
+        "name": "datefield_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Окончание периода",
+        "name": "datefield_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "<br /><font style=\"position:absolute; left:0px;font-weight:bold;\">&#8968 Информация о первом члене семьи</font><br />",
+        "name": "label_7",
+        "fieldName": "label_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ФИО члена семьи, чьи доходы учитываются",
+        "name": "textfield_33",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_1",
+        "items": [
+            {
+                "name": "textfield_34",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_35",
+                "xtype": "textfield",
+                "fieldLabel": "Документ, подтверждающий получение дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_36",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в рублях",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits"
+            },
+            {
+                "name": "textfield_37",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в копейках",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "maxLength": 2,
+                "vtype": "validateDigits"
+            }
+        ],
+        "prefix": "cloneablePanel_1",
+        "fieldName": "cloneablePanel_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Итоговая сумма по первому заявителю",
+        "name": "checkbox_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_14 = Ext.ComponentQuery.query('[name=checkbox_14]')[0];\nvar textfield_77 = Ext.ComponentQuery.query('[name=textfield_77]')[0];\n//var cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\n\nvar mass_rub = [];\nvar mass_kop = [];\nsum_rub = 0;\nsum_kop = 0;\n\nif (checkbox_14.checked == true){\n\ttextfield_77.show();\n\n\t//Наполнение массива с рублями из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_1[\"+String(i)+\"].textfield_36'}\")[0] != undefined) {\n\t\t\tmass_rub[mass_rub.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_1[\"+String(i)+\"].textfield_36'}\")[0].getValue();\n\t\t};\n\t};\n\t\n\t// Конец наполнения массива с рублями из клонпанели\t\n\t\n\t//Наполнение массива с копейками из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_1[\"+String(i)+\"].textfield_37'}\")[0] != undefined) {\n\t\t\tmass_kop[mass_kop.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_1[\"+String(i)+\"].textfield_37'}\")[0].getValue();\n\t\t};\n\t};\n\t//Конец наполнения массива с копейками из клонпанелей\n}else{\n\ttextfield_77.hide();\t\n};\n\n// Суммирование рублей\nfor(var i = 0; i <= mass_rub.length; i++){\n\t\tif (mass_rub[i] != undefined){\n\t\t\tsum_rub = sum_rub + 1 * mass_rub[i];\n\t\t};\n\t};\n\n// Суммирование копеек\nfor(var i = 0; i <= mass_kop.length; i++){\n\t\tif (mass_kop[i] != undefined){\n\t\t\tsum_kop = sum_kop + 1 * mass_kop[i];\n\t\t};\n\t};\n\nvar real_rub = Math.floor(sum_kop / 100);\nvar real_kop = sum_kop - real_rub * 100;\n\nvar itogo = sum_rub + real_rub;\nvar str_itogo = String(itogo) + \".\" + String(real_kop);\n\ntextfield_77.setValue(str_itogo);"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИТОГО",
+        "name": "textfield_77",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "<br /><font style=\"position:absolute; left:0px;font-weight:bold;\">&#8968 Информация о втором члене семьи</font><br />",
+        "name": "label_8",
+        "fieldName": "label_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ФИО члена семьи, чьи доходы учитываются",
+        "name": "textfield_c31",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_10",
+        "items": [
+            {
+                "name": "textfield_40",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_41",
+                "xtype": "textfield",
+                "fieldLabel": "Документ, подтверждающий получение дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_42",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в рублях",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits"
+            },
+            {
+                "name": "textfield_43",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в копейках",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits",
+                "maxLength": 2
+            }
+        ],
+        "prefix": "cloneablePanel_10",
+        "fieldName": "cloneablePanel_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Итоговая сумма по второму заявителю",
+        "name": "checkbox_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_15 = Ext.ComponentQuery.query('[name=checkbox_15]')[0];\nvar textfield_78 = Ext.ComponentQuery.query('[name=textfield_78]')[0];\n//var cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\n\nvar mass_rub = [];\nvar mass_kop = [];\nsum_rub = 0;\nsum_kop = 0;\n\nif (checkbox_15.checked == true){\n\ttextfield_78.show();\n\n\t//Наполнение массива с рублями из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_10[\"+String(i)+\"].textfield_42'}\")[0] != undefined) {\n\t\t\tmass_rub[mass_rub.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_10[\"+String(i)+\"].textfield_42'}\")[0].getValue();\n\t\t};\n\t};\n\t\n\t// Конец наполнения массива с рублями из клонпанели\t\n\t\n\t//Наполнение массива с копейками из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_10[\"+String(i)+\"].textfield_43'}\")[0] != undefined) {\n\t\t\tmass_kop[mass_kop.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_10[\"+String(i)+\"].textfield_43'}\")[0].getValue();\n\t\t};\n\t};\n\t//Конец наполнения массива с копейками из клонпанелей\n}else{\n\ttextfield_78.hide();\t\n};\n\n// Суммирование рублей\nfor(var i = 0; i <= mass_rub.length; i++){\n\t\tif (mass_rub[i] != undefined){\n\t\t\tsum_rub = sum_rub + 1 * mass_rub[i];\n\t\t};\n\t};\n\n// Суммирование копеек\nfor(var i = 0; i <= mass_kop.length; i++){\n\t\tif (mass_kop[i] != undefined){\n\t\t\tsum_kop = sum_kop + 1 * mass_kop[i];\n\t\t};\n\t};\n\nvar real_rub = Math.floor(sum_kop / 100);\nvar real_kop = sum_kop - real_rub * 100;\n\nvar itogo = sum_rub + real_rub;\nvar str_itogo = String(itogo) + \".\" + String(real_kop);\n\ntextfield_78.setValue(str_itogo);"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИТОГО",
+        "name": "textfield_78",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "<br /><font style=\"position:absolute; left:0px;font-weight:bold;\">&#8968 Информация о третьем члене семьи</font><br />",
+        "name": "label_9",
+        "fieldName": "label_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ФИО члена семьи, чьи доходы учитываются",
+        "name": "textfield_c32",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_11",
+        "items": [
+            {
+                "name": "textfield_44",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_45",
+                "xtype": "textfield",
+                "fieldLabel": "Документ, подтверждающий получение дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_46",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в рублях",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits"
+            },
+            {
+                "name": "textfield_47",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в копейках",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits",
+                "maxLength": 2
+            }
+        ],
+        "prefix": "cloneablePanel_11",
+        "fieldName": "cloneablePanel_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Итоговая сумма по третьему заявителю",
+        "name": "checkbox_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_16 = Ext.ComponentQuery.query('[name=checkbox_16]')[0];\nvar textfield_79 = Ext.ComponentQuery.query('[name=textfield_79]')[0];\n//var cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\n\nvar mass_rub = [];\nvar mass_kop = [];\nsum_rub = 0;\nsum_kop = 0;\n\nif (checkbox_16.checked == true){\n\ttextfield_79.show();\n\n\t//Наполнение массива с рублями из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_11[\"+String(i)+\"].textfield_46'}\")[0] != undefined) {\n\t\t\tmass_rub[mass_rub.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_11[\"+String(i)+\"].textfield_46'}\")[0].getValue();\n\t\t};\n\t};\n\t\n\t// Конец наполнения массива с рублями из клонпанели\t\n\t\n\t//Наполнение массива с копейками из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_11[\"+String(i)+\"].textfield_47'}\")[0] != undefined) {\n\t\t\tmass_kop[mass_kop.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_11[\"+String(i)+\"].textfield_47'}\")[0].getValue();\n\t\t};\n\t};\n\t//Конец наполнения массива с копейками из клонпанелей\n}else{\n\ttextfield_79.hide();\t\n};\n\n// Суммирование рублей\nfor(var i = 0; i <= mass_rub.length; i++){\n\t\tif (mass_rub[i] != undefined){\n\t\t\tsum_rub = sum_rub + 1 * mass_rub[i];\n\t\t};\n\t};\n\n// Суммирование копеек\nfor(var i = 0; i <= mass_kop.length; i++){\n\t\tif (mass_kop[i] != undefined){\n\t\t\tsum_kop = sum_kop + 1 * mass_kop[i];\n\t\t};\n\t};\n\nvar real_rub = Math.floor(sum_kop / 100);\nvar real_kop = sum_kop - real_rub * 100;\n\nvar itogo = sum_rub + real_rub;\nvar str_itogo = String(itogo) + \".\" + String(real_kop);\n\ntextfield_79.setValue(str_itogo);"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИТОГО",
+        "name": "textfield_79",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "<br /><font style=\"position:absolute; left:0px;font-weight:bold;\">&#8968 Информация о четвертом члене семьи</font><br />",
+        "name": "label_10",
+        "fieldName": "label_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ФИО члена семьи, чьи доходы учитываются",
+        "name": "textfield_c34",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_4",
+        "items": [
+            {
+                "name": "textfield_48",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_49",
+                "xtype": "textfield",
+                "fieldLabel": "Документ, подтверждающий получение дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_50",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в рублях",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits"
+            },
+            {
+                "name": "textfield_51",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в копейках",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits",
+                "maxLength": 2
+            }
+        ],
+        "prefix": "cloneablePanel_4",
+        "fieldName": "cloneablePanel_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Итоговая сумма по четвертому заявителю",
+        "name": "checkbox_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_17 = Ext.ComponentQuery.query('[name=checkbox_17]')[0];\nvar textfield_80 = Ext.ComponentQuery.query('[name=textfield_80]')[0];\n//var cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\n\nvar mass_rub = [];\nvar mass_kop = [];\nsum_rub = 0;\nsum_kop = 0;\n\nif (checkbox_17.checked == true){\n\ttextfield_80.show();\n\n\t//Наполнение массива с рублями из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_4[\"+String(i)+\"].textfield_50'}\")[0] != undefined) {\n\t\t\tmass_rub[mass_rub.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_4[\"+String(i)+\"].textfield_50'}\")[0].getValue();\n\t\t};\n\t};\n\t\n\t// Конец наполнения массива с рублями из клонпанели\t\n\t\n\t//Наполнение массива с копейками из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_4[\"+String(i)+\"].textfield_51'}\")[0] != undefined) {\n\t\t\tmass_kop[mass_kop.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_4[\"+String(i)+\"].textfield_51'}\")[0].getValue();\n\t\t};\n\t};\n\t//Конец наполнения массива с копейками из клонпанелей\n}else{\n\ttextfield_80.hide();\t\n};\n\n// Суммирование рублей\nfor(var i = 0; i <= mass_rub.length; i++){\n\t\tif (mass_rub[i] != undefined){\n\t\t\tsum_rub = sum_rub + 1 * mass_rub[i];\n\t\t};\n\t};\n\n// Суммирование копеек\nfor(var i = 0; i <= mass_kop.length; i++){\n\t\tif (mass_kop[i] != undefined){\n\t\t\tsum_kop = sum_kop + 1 * mass_kop[i];\n\t\t};\n\t};\n\nvar real_rub = Math.floor(sum_kop / 100);\nvar real_kop = sum_kop - real_rub * 100;\n\nvar itogo = sum_rub + real_rub;\nvar str_itogo = String(itogo) + \".\" + String(real_kop);\n\ntextfield_80.setValue(str_itogo);"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИТОГО",
+        "name": "textfield_80",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "<br /><font style=\"position:absolute; left:0px;font-weight:bold;\">&#8968 Информация о пятом члене семьи</font><br />",
+        "name": "label_11",
+        "fieldName": "label_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ФИО члена семьи, чьи доходы учитываются",
+        "name": "textfield_c35",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_5",
+        "items": [
+            {
+                "name": "textfield_52",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_53",
+                "xtype": "textfield",
+                "fieldLabel": "Документ, подтверждающий получение дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_54",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в рублях",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits"
+            },
+            {
+                "name": "textfield_55",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в копейках",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits",
+                "maxLength": 2
+            }
+        ],
+        "prefix": "cloneablePanel_5",
+        "fieldName": "cloneablePanel_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Итоговая сумма по пятому заявителю",
+        "name": "checkbox_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_18 = Ext.ComponentQuery.query('[name=checkbox_18]')[0];\nvar textfield_81 = Ext.ComponentQuery.query('[name=textfield_81]')[0];\n//var cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\n\nvar mass_rub = [];\nvar mass_kop = [];\nsum_rub = 0;\nsum_kop = 0;\n\nif (checkbox_18.checked == true){\n\ttextfield_81.show();\n\n\t//Наполнение массива с рублями из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_5[\"+String(i)+\"].textfield_54'}\")[0] != undefined) {\n\t\t\tmass_rub[mass_rub.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_5[\"+String(i)+\"].textfield_54'}\")[0].getValue();\n\t\t};\n\t};\n\t\n\t// Конец наполнения массива с рублями из клонпанели\t\n\t\n\t//Наполнение массива с копейками из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_5[\"+String(i)+\"].textfield_55'}\")[0] != undefined) {\n\t\t\tmass_kop[mass_kop.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_5[\"+String(i)+\"].textfield_55'}\")[0].getValue();\n\t\t};\n\t};\n\t//Конец наполнения массива с копейками из клонпанелей\n}else{\n\ttextfield_81.hide();\t\n};\n\n// Суммирование рублей\nfor(var i = 0; i <= mass_rub.length; i++){\n\t\tif (mass_rub[i] != undefined){\n\t\t\tsum_rub = sum_rub + 1 * mass_rub[i];\n\t\t};\n\t};\n\n// Суммирование копеек\nfor(var i = 0; i <= mass_kop.length; i++){\n\t\tif (mass_kop[i] != undefined){\n\t\t\tsum_kop = sum_kop + 1 * mass_kop[i];\n\t\t};\n\t};\n\nvar real_rub = Math.floor(sum_kop / 100);\nvar real_kop = sum_kop - real_rub * 100;\n\nvar itogo = sum_rub + real_rub;\nvar str_itogo = String(itogo) + \".\" + String(real_kop);\n\ntextfield_81.setValue(str_itogo);"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИТОГО",
+        "name": "textfield_81",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "<br /><font style=\"position:absolute; left:0px;font-weight:bold;\">&#8968 Информация о шестом члене семьи</font><br />",
+        "name": "label_12",
+        "fieldName": "label_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ФИО члена семьи, чьи доходы учитываются",
+        "name": "textfield_76",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_6",
+        "items": [
+            {
+                "name": "textfield_56",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_57",
+                "xtype": "textfield",
+                "fieldLabel": "Документ, подтверждающий получение дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_58",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в рублях",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits"
+            },
+            {
+                "name": "textfield_59",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в копейках",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits",
+                "maxLength": 2
+            }
+        ],
+        "prefix": "cloneablePanel_6",
+        "fieldName": "cloneablePanel_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Итоговая сумма по шестому заявителю",
+        "name": "checkbox_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_19 = Ext.ComponentQuery.query('[name=checkbox_19]')[0];\nvar textfield_82 = Ext.ComponentQuery.query('[name=textfield_82]')[0];\n//var cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\n\nvar mass_rub = [];\nvar mass_kop = [];\nsum_rub = 0;\nsum_kop = 0;\n\nif (checkbox_19.checked == true){\n\ttextfield_82.show();\n\n\t//Наполнение массива с рублями из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_6[\"+String(i)+\"].textfield_58'}\")[0] != undefined) {\n\t\t\tmass_rub[mass_rub.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_6[\"+String(i)+\"].textfield_58'}\")[0].getValue();\n\t\t};\n\t};\n\t\n\t// Конец наполнения массива с рублями из клонпанели\t\n\t\n\t//Наполнение массива с копейками из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_6[\"+String(i)+\"].textfield_59'}\")[0] != undefined) {\n\t\t\tmass_kop[mass_kop.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_6[\"+String(i)+\"].textfield_59'}\")[0].getValue();\n\t\t};\n\t};\n\t//Конец наполнения массива с копейками из клонпанелей\n}else{\n\ttextfield_82.hide();\t\n};\n\n// Суммирование рублей\nfor(var i = 0; i <= mass_rub.length; i++){\n\t\tif (mass_rub[i] != undefined){\n\t\t\tsum_rub = sum_rub + 1 * mass_rub[i];\n\t\t};\n\t};\n\n// Суммирование копеек\nfor(var i = 0; i <= mass_kop.length; i++){\n\t\tif (mass_kop[i] != undefined){\n\t\t\tsum_kop = sum_kop + 1 * mass_kop[i];\n\t\t};\n\t};\n\nvar real_rub = Math.floor(sum_kop / 100);\nvar real_kop = sum_kop - real_rub * 100;\n\nvar itogo = sum_rub + real_rub;\nvar str_itogo = String(itogo) + \".\" + String(real_kop);\n\ntextfield_82.setValue(str_itogo);"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИТОГО",
+        "name": "textfield_82",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "<br /><font style=\"position:absolute; left:0px;font-weight:bold;\">&#8968 Информация о седьмом члене семьи</font><br />",
+        "name": "label_13",
+        "fieldName": "label_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ФИО члена семьи, чьи доходы учитываются",
+        "name": "textfield_c36",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_7",
+        "items": [
+            {
+                "name": "textfield_60",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_61",
+                "xtype": "textfield",
+                "fieldLabel": "Документ, подтверждающий получение дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_62",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в рублях",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits"
+            },
+            {
+                "name": "textfield_63",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в копейках",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits",
+                "maxLength": 2
+            }
+        ],
+        "prefix": "cloneablePanel_7",
+        "fieldName": "cloneablePanel_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Итоговая сумма по седьмому заявителю",
+        "name": "checkbox_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_20 = Ext.ComponentQuery.query('[name=checkbox_20]')[0];\nvar textfield_83 = Ext.ComponentQuery.query('[name=textfield_83]')[0];\n//var cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\n\nvar mass_rub = [];\nvar mass_kop = [];\nsum_rub = 0;\nsum_kop = 0;\n\nif (checkbox_20.checked == true){\n\ttextfield_83.show();\n\n\t//Наполнение массива с рублями из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_7[\"+String(i)+\"].textfield_62'}\")[0] != undefined) {\n\t\t\tmass_rub[mass_rub.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_7[\"+String(i)+\"].textfield_62'}\")[0].getValue();\n\t\t};\n\t};\n\t\n\t// Конец наполнения массива с рублями из клонпанели\t\n\t\n\t//Наполнение массива с копейками из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_7[\"+String(i)+\"].textfield_63'}\")[0] != undefined) {\n\t\t\tmass_kop[mass_kop.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_7[\"+String(i)+\"].textfield_63'}\")[0].getValue();\n\t\t};\n\t};\n\t//Конец наполнения массива с копейками из клонпанелей\n}else{\n\ttextfield_83.hide();\t\n};\n\n// Суммирование рублей\nfor(var i = 0; i <= mass_rub.length; i++){\n\t\tif (mass_rub[i] != undefined){\n\t\t\tsum_rub = sum_rub + 1 * mass_rub[i];\n\t\t};\n\t};\n\n// Суммирование копеек\nfor(var i = 0; i <= mass_kop.length; i++){\n\t\tif (mass_kop[i] != undefined){\n\t\t\tsum_kop = sum_kop + 1 * mass_kop[i];\n\t\t};\n\t};\n\nvar real_rub = Math.floor(sum_kop / 100);\nvar real_kop = sum_kop - real_rub * 100;\n\nvar itogo = sum_rub + real_rub;\nvar str_itogo = String(itogo) + \".\" + String(real_kop);\n\ntextfield_83.setValue(str_itogo);"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИТОГО",
+        "name": "textfield_83",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "<br /><font style=\"position:absolute; left:0px;font-weight:bold;\">&#8968 Информация о восьмом члене семьи</font><br />",
+        "name": "label_14",
+        "fieldName": "label_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ФИО члена семьи, чьи доходы учитываются",
+        "name": "textfield_c37",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_8",
+        "items": [
+            {
+                "name": "textfield_64",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_65",
+                "xtype": "textfield",
+                "fieldLabel": "Документ, подтверждающий получение дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_66",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в рублях",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits"
+            },
+            {
+                "name": "textfield_67",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в копейках",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits",
+                "maxLength": 2
+            }
+        ],
+        "prefix": "cloneablePanel_8",
+        "fieldName": "cloneablePanel_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Итоговая сумма по восьмому заявителю",
+        "name": "checkbox_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_21 = Ext.ComponentQuery.query('[name=checkbox_21]')[0];\nvar textfield_84 = Ext.ComponentQuery.query('[name=textfield_84]')[0];\n//var cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\n\nvar mass_rub = [];\nvar mass_kop = [];\nsum_rub = 0;\nsum_kop = 0;\n\nif (checkbox_21.checked == true){\n\ttextfield_84.show();\n\n\t//Наполнение массива с рублями из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_8[\"+String(i)+\"].textfield_66'}\")[0] != undefined) {\n\t\t\tmass_rub[mass_rub.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_8[\"+String(i)+\"].textfield_66'}\")[0].getValue();\n\t\t};\n\t};\n\t\n\t// Конец наполнения массива с рублями из клонпанели\t\n\t\n\t//Наполнение массива с копейками из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_8[\"+String(i)+\"].textfield_67'}\")[0] != undefined) {\n\t\t\tmass_kop[mass_kop.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_8[\"+String(i)+\"].textfield_67'}\")[0].getValue();\n\t\t};\n\t};\n\t//Конец наполнения массива с копейками из клонпанелей\n}else{\n\ttextfield_84.hide();\t\n};\n\n// Суммирование рублей\nfor(var i = 0; i <= mass_rub.length; i++){\n\t\tif (mass_rub[i] != undefined){\n\t\t\tsum_rub = sum_rub + 1 * mass_rub[i];\n\t\t};\n\t};\n\n// Суммирование копеек\nfor(var i = 0; i <= mass_kop.length; i++){\n\t\tif (mass_kop[i] != undefined){\n\t\t\tsum_kop = sum_kop + 1 * mass_kop[i];\n\t\t};\n\t};\n\nvar real_rub = Math.floor(sum_kop / 100);\nvar real_kop = sum_kop - real_rub * 100;\n\nvar itogo = sum_rub + real_rub;\nvar str_itogo = String(itogo) + \".\" + String(real_kop);\n\ntextfield_84.setValue(str_itogo);"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИТОГО",
+        "name": "textfield_84",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "<br /><font style=\"position:absolute; left:0px;font-weight:bold;\">&#8968 Информация о девятом члене семьи</font><br />",
+        "name": "label_15",
+        "fieldName": "label_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ФИО члена семьи, чьи доходы учитываются",
+        "name": "textfield_c38",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_9",
+        "items": [
+            {
+                "name": "textfield_68",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_70",
+                "xtype": "textfield",
+                "fieldLabel": "Документ, подтверждающий получение дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_71",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в рублях",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits"
+            },
+            {
+                "name": "textfield_72",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в копейках",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits",
+                "maxLength": 2
+            }
+        ],
+        "prefix": "cloneablePanel_9",
+        "fieldName": "cloneablePanel_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Итоговая сумма по девятому заявителю",
+        "name": "checkbox_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_22 = Ext.ComponentQuery.query('[name=checkbox_22]')[0];\nvar textfield_85 = Ext.ComponentQuery.query('[name=textfield_85]')[0];\n//var cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\n\nvar mass_rub = [];\nvar mass_kop = [];\nsum_rub = 0;\nsum_kop = 0;\n\nif (checkbox_22.checked == true){\n\ttextfield_85.show();\n\n\t//Наполнение массива с рублями из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_9[\"+String(i)+\"].textfield_71'}\")[0] != undefined) {\n\t\t\tmass_rub[mass_rub.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_9[\"+String(i)+\"].textfield_71'}\")[0].getValue();\n\t\t};\n\t};\n\t\n\t// Конец наполнения массива с рублями из клонпанели\t\n\t\n\t//Наполнение массива с копейками из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_9[\"+String(i)+\"].textfield_72'}\")[0] != undefined) {\n\t\t\tmass_kop[mass_kop.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_9[\"+String(i)+\"].textfield_72'}\")[0].getValue();\n\t\t};\n\t};\n\t//Конец наполнения массива с копейками из клонпанелей\n}else{\n\ttextfield_85.hide();\t\n};\n\n// Суммирование рублей\nfor(var i = 0; i <= mass_rub.length; i++){\n\t\tif (mass_rub[i] != undefined){\n\t\t\tsum_rub = sum_rub + 1 * mass_rub[i];\n\t\t};\n\t};\n\n// Суммирование копеек\nfor(var i = 0; i <= mass_kop.length; i++){\n\t\tif (mass_kop[i] != undefined){\n\t\t\tsum_kop = sum_kop + 1 * mass_kop[i];\n\t\t};\n\t};\n\nvar real_rub = Math.floor(sum_kop / 100);\nvar real_kop = sum_kop - real_rub * 100;\n\nvar itogo = sum_rub + real_rub;\nvar str_itogo = String(itogo) + \".\" + String(real_kop);\n\ntextfield_85.setValue(str_itogo);"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИТОГО",
+        "name": "textfield_85",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "label",
+        "html": "<br /><font style=\"position:absolute; left:0px;font-weight:bold;\">&#8968 Информация о десятом члене семьи</font><br />",
+        "name": "label_16",
+        "fieldName": "label_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ФИО члена семьи, чьи доходы учитываются",
+        "name": "textfield_c39",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_12",
+        "items": [
+            {
+                "name": "textfield_69",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_73",
+                "xtype": "textfield",
+                "fieldLabel": "Документ, подтверждающий получение дохода",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_74",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в рублях",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits"
+            },
+            {
+                "name": "textfield_75",
+                "xtype": "textfield",
+                "fieldLabel": "Сумма дохода в копейках",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateDigits",
+                "maxLength": 2
+            }
+        ],
+        "prefix": "cloneablePanel_12",
+        "fieldName": "cloneablePanel_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Итоговая сумма по десятому заявителю",
+        "name": "checkbox_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_23 = Ext.ComponentQuery.query('[name=checkbox_23]')[0];\nvar textfield_86 = Ext.ComponentQuery.query('[name=textfield_86]')[0];\n//var cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\n\nvar mass_rub = [];\nvar mass_kop = [];\nsum_rub = 0;\nsum_kop = 0;\n\nif (checkbox_23.checked == true){\n\ttextfield_86.show();\n\n\t//Наполнение массива с рублями из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_12[\"+String(i)+\"].textfield_74'}\")[0] != undefined) {\n\t\t\tmass_rub[mass_rub.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_12[\"+String(i)+\"].textfield_74'}\")[0].getValue();\n\t\t};\n\t};\n\t\n\t// Конец наполнения массива с рублями из клонпанели\t\n\t\n\t//Наполнение массива с копейками из клонпанелей\n\tfor(var i = 0; i < 20; i++){\n\t\tif (Ext.ComponentQuery.query(\"{name=='cloneablePanel_12[\"+String(i)+\"].textfield_75'}\")[0] != undefined) {\n\t\t\tmass_kop[mass_kop.length] = Ext.ComponentQuery.query(\"{name=='cloneablePanel_12[\"+String(i)+\"].textfield_75'}\")[0].getValue();\n\t\t};\n\t};\n\t//Конец наполнения массива с копейками из клонпанелей\n}else{\n\ttextfield_86.hide();\t\n};\n\n// Суммирование рублей\nfor(var i = 0; i <= mass_rub.length; i++){\n\t\tif (mass_rub[i] != undefined){\n\t\t\tsum_rub = sum_rub + 1 * mass_rub[i];\n\t\t};\n\t};\n\n// Суммирование копеек\nfor(var i = 0; i <= mass_kop.length; i++){\n\t\tif (mass_kop[i] != undefined){\n\t\t\tsum_kop = sum_kop + 1 * mass_kop[i];\n\t\t};\n\t};\n\nvar real_rub = Math.floor(sum_kop / 100);\nvar real_kop = sum_kop - real_rub * 100;\n\nvar itogo = sum_rub + real_rub;\nvar str_itogo = String(itogo) + \".\" + String(real_kop);\n\ntextfield_86.setValue(str_itogo);"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИТОГО",
+        "name": "textfield_86",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Список документов:",
+        "name": "fieldset_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Заявление",
+        "fieldName": "fileuploadpanel_0",
+        "name": "fileuploadpanel_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "documentCharacterIdDef": 1,
+        "documentCharacterNameDef": "Оригинал",
+        "allowBlank": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения к заявлению",
+        "fieldName": "fileuploadpanel_26",
+        "name": "fileuploadpanel_26",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "documentCharacterIdDef": 1,
+        "documentCharacterNameDef": "Оригинал"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Согласие на обработку персональных данных",
+        "fieldName": "fileuploadpanel_27",
+        "name": "fileuploadpanel_27",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "documentCharacterIdDef": 1,
+        "documentCharacterNameDef": "Оригинал",
+        "description": "(для лица старше 18 лет, не являющегося заявителем)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, удостоверяющий личность заявителя",
+        "fieldName": "fileuploadpanel_1",
+        "name": "fileuploadpanel_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о рождении (усыновлении) ребенка (детей)",
+        "fieldName": "fileuploadpanel_2",
+        "name": "fileuploadpanel_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "description": "(документ, подтверждающий факт рождения и регистрации ребенка, выданный компетентным органом иностранного государства + перевод на русский язык)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "\t Выписка из решения органа опеки и попечительства об установлении над ребенком опеки",
+        "fieldName": "fileuploadpanel_3",
+        "name": "fileuploadpanel_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о расторжении брака",
+        "fieldName": "fileuploadpanel_4",
+        "name": "fileuploadpanel_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Решение суда о расторжении брака",
+        "fieldName": "fileuploadpanel_5",
+        "name": "fileuploadpanel_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о заключении брака",
+        "fieldName": "fileuploadpanel_6",
+        "name": "fileuploadpanel_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Справка из военного комиссариата о призыве родителя (супруга родителя) на военную службу",
+        "fieldName": "fileuploadpanel_7",
+        "name": "fileuploadpanel_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий реквизиты счета в кредитной организации, открытого на заявителя",
+        "fieldName": "fileuploadpanel_8",
+        "name": "fileuploadpanel_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(договор банковского вклада (счета), справка кредитной организации о реквизитах счета или другие документы, содержащие сведения о реквизитах счета)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие приобретение несовершеннолетним ребенком дееспособности в полном объеме до достижения совершеннолетия",
+        "fieldName": "fileuploadpanel_9",
+        "name": "fileuploadpanel_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(свидетельство о браке, решение органа опеки и попечительства или решение суда об объявлении несовершеннолетнего полностью дееспособным), - в случае подачи заявления несовершеннолетним ребенком"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Справка об осуждении члена семьи заявителя к лишению свободы или о применении в отношении него меры пресечения в виде заключения под стражу",
+        "fieldName": "fileuploadpanel_10",
+        "name": "fileuploadpanel_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(в случае отбывания наказания в виде лишения свободы указанного лица либо применения в отношении указанного лица меры пресечения в виде заключения под стражу)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Решение суда о нахождении члена семьи заявителя на принудительном лечении",
+        "fieldName": "fileuploadpanel_11",
+        "name": "fileuploadpanel_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Решение суда о лишении родительских прав члена семьи заявителя",
+        "fieldName": "fileuploadpanel_12",
+        "name": "fileuploadpanel_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о нахождении члена семьи заявителя на полном государственном обеспечении",
+        "fieldName": "fileuploadpanel_13",
+        "name": "fileuploadpanel_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Решение суда и иные документы, содержащие сведения об объявлении члена семьи умершим, о признании безвозвратно отсутствующим",
+        "fieldName": "fileuploadpanel_14",
+        "name": "fileuploadpanel_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Решение суда об отмене решения суда об объявлении гражданина умершим, о признании его безвозвратно отсутствующим, или о лишении его родительских прав",
+        "fieldName": "fileuploadpanel_15",
+        "name": "fileuploadpanel_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Решение суда о восстановлении в родительских правах",
+        "fieldName": "fileuploadpanel_16",
+        "name": "fileuploadpanel_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Справка с места работы (службы, учебы) либо иной документ, подтверждающий доход каждого члена семьи",
+        "fieldName": "fileuploadpanel_17",
+        "name": "fileuploadpanel_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о пособиях и выплатах гражданину (члену семьи заявителя) в соответствии с нормативными правовыми актами РФ, нормативными актами субъектов РФ в качестве мер социальной поддержки",
+        "fieldName": "fileuploadpanel_18",
+        "name": "fileuploadpanel_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о получении пенсии, компенсационных выплат дополнительного ежемесячного обеспечения пенсионера",
+        "fieldName": "fileuploadpanel_19",
+        "name": "fileuploadpanel_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Справка (сведения) о выплачиваемых студентам стипендии и иных денежных выплат студентам, аспирантам, ординаторам, ассистентам-стажерам, докторантам, слушателям подготовительных отделений",
+        "fieldName": "fileuploadpanel_20",
+        "name": "fileuploadpanel_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Справка (сведения) о выплате пособия по безработице",
+        "fieldName": "fileuploadpanel_21",
+        "name": "fileuploadpanel_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(материальной помощи и иных выплат безработным гражданам, о стипендии и материальной помощи, выплачиваемой гражданам в период прохождения профессионального обучения или получения дополнительного профессионального образования по направлению органов службы занятости; о выплате безработным гражданам, принимающим участие в общественных работах, и безработным гражданам, особо нуждающимся в социальной защите, в период их участия во временных работах, а также о выплате несовершеннолетним гражданам в возрасте от 14 до 18 лет в период их участия во временных работах)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о ежемесячных страховых выплатах по обязательному социальному страхованию от несчастных случаев на производстве и профессиональных заболеваний",
+        "fieldName": "fileuploadpanel_22",
+        "name": "fileuploadpanel_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о получении пособия по временной нетрудоспособности, пособия по беременности и родам, а также единовременного пособия женщинам, вставшим на учет в медицинских организациях в ранние сроки беременности, за счет средств ФСС РФ",
+        "fieldName": "fileuploadpanel_23",
+        "name": "fileuploadpanel_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие смерть женщины, объявление ее умершей, лишение ее родительских прав, отмену усыновления",
+        "fieldName": "fileuploadpanel_24",
+        "name": "fileuploadpanel_24",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(отцам (усыновителям), либо опекунам ребенка, в случае смерти женщины, объявления ее умершей, лишения ее родительских прав, а также в случае отмены усыновления)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Выписка из правового акта органа местного самоуправления о назначении ребенку опекуна (попечителя) (договор о приемной семье и акт органа опеки и попечительства о назначении опекуна или попечителя, удостоверение опекуна",
+        "fieldName": "fileuploadpanel_25",
+        "name": "fileuploadpanel_25",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(гражданам, обратившимися за предоставлением ежемесячной выплаты в связи с рождением (усыновлением) первого ребенка, находящегося под опекой (попечительством))"
+    }
+]

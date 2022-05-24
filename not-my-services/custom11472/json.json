@@ -1,0 +1,1025 @@
+[
+    {
+        "xtype": "checkbox",
+        "boxLabel": "В роли заявителя выступает доверенное лицо",
+        "name": "representative_check",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "В роли заявителя выступает доверенное лицо",
+        "name": "checkbox_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var representative_check = Ext.ComponentQuery.query('[name=representative_check]')[0];\nvar checkbox_12 = Ext.ComponentQuery.query('[name=checkbox_12]')[0];\n\n\nif (checkbox_12.checked == true)\n{\nrepresentative_check.setVisible(false);\nrepresentative_check.setValue(true);\n}\nelse\n{\nrepresentative_check.setVisible(false);\nrepresentative_check.setValue(false);\n}",
+            "var checkbox_12 = Ext.ComponentQuery.query('[name=checkbox_12]')[0];\nvar fileuploadpanel_10 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_10]')[0];\nvar checkbox_13 = Ext.ComponentQuery.query('[name=checkbox_13]')[0];\n\ncheckbox_13.hide();\n\nif (checkbox_12.checked == true){\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_10']);\ncheckbox_13.show();\n}else{\nFileUploadGrid.setUploadVisibility(['fileuploadpanel_10'], []);\ncheckbox_13.hide();\n};"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Законным представителем или доверенным лицом является юридическое лицо",
+        "name": "checkbox_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_13 = Ext.ComponentQuery.query('[name=checkbox_13]')[0];\nvar textfield_17 = Ext.ComponentQuery.query('[name=textfield_17]')[0];\nvar textfield_18 = Ext.ComponentQuery.query('[name=textfield_18]')[0];\nvar textfield_19 = Ext.ComponentQuery.query('[name=textfield_19]')[0];\nvar textfield_20 = Ext.ComponentQuery.query('[name=textfield_20]')[0];\n\ntextfield_17.hide();\ntextfield_18.hide();\ntextfield_19.hide();\ntextfield_20.hide();\n\nif (checkbox_13.checked == true){\ntextfield_17.show();\ntextfield_18.show();\ntextfield_19.show();\ntextfield_20.show();\n\n} else {\ntextfield_17.hide();\ntextfield_18.hide();\ntextfield_19.hide();\ntextfield_20.hide();\n}\n"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Полное наименование юридического лица",
+        "name": "textfield_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИНН юридического лица",
+        "name": "textfield_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Юридический адрес",
+        "name": "textfield_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Банковские реквизиты юридического лица",
+        "name": "textfield_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Категория заявителя:",
+        "name": "combobox_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Женщина, являющейся гражданкой Российской Федерации, родившей (усыновившей) второго, третьего ребенка или последующих детей начиная с 1 января 2007 года, если ранее она не воспользовалась правом на дополнительные меры государственной поддержки"
+                },
+                {
+                    "value": "Мужчина, являющийся гражданином Российской Федерации и единственным усыновителем второго, третьего ребенка или последующих детей, ранее не воспользовавшегося правом на дополнительные меры государственной поддержки, если решение суда об усыновлении вступило в законную силу, начиная с 1 января 2007 года"
+                },
+                {
+                    "value": "Отец (усыновитель) ребенка независимо от его гражданства или статуса лица без гражданства, в случаях смерти женщины, объявления ее умершей, лишения родительских прав в отношении ребенка, в связи с рождением которого возникло право на дополнительные меры государственной поддержки, совершения в отношении своего ребенка (детей) умышленного преступления, относящегося к преступлениям против личности, а также в случае отмены усыновления ребенка, в связи с усыновлением которого возникло право на дополнительные меры государственной поддержки"
+                },
+                {
+                    "value": "Ребенок (дети в равных долях), не достигшего совершеннолетия, и (или) совершеннолетнего ребенка (детей в равных долях), обучающегося по очной форме в образовательных учреждениях любого типа и вида независимо от их организационно-правовой формы (за исключением образовательных учреждений дополнительного образования), до окончания такого обучения, но не более чем до достижения им возраста 23 лет"
+                },
+                {
+                    "value": "мужчина, являющийся единственным усыновителем первого ребенка, ранее не воспользовавшегося правом на дополнительные меры государственной поддержки, если решение суда об усыновлении вступило в законную силу начиная с 1 января 2020 года"
+                },
+                {
+                    "value": "женщина, являющаяся гражданкой Российской Федерации, родившей (усыновившей) первого ребенка начиная с 1 января 2020 года"
+                }
+            ],
+            "type": "store"
+        },
+        "editable": false,
+        "scripts": [
+            "var combobox_0 = Ext.ComponentQuery.query('[name=combobox_0]')[0];\nvar fileuploadpanel_2 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_2]')[0];\nvar fileuploadpanel_7 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_7]')[0];\nvar fileuploadpanel_17 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_17]')[0];\nvar fileuploadpanel_18 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_18]')[0];\nvar fileuploadpanel_19 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_19]')[0];\nvar fileuploadpanel_20 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_20]')[0];\nvar kat=['Женщина, являющейся гражданкой Российской Федерации, родившей (усыновившей) второго, третьего ребенка или последующих детей начиная с 1 января 2007 года, если ранее она не воспользовалась правом на дополнительные меры государственной поддержки', 'Мужчина, являющийся гражданином Российской Федерации и единственным усыновителем второго, третьего ребенка или последующих детей, ранее не воспользовавшегося правом на дополнительные меры государственной поддержки, если решение суда об усыновлении вступило в законную силу, начиная с 1 января 2007 года','Отец (усыновитель) ребенка независимо от его гражданства или статуса лица без гражданства, в случаях смерти женщины, объявления ее умершей, лишения родительских прав в отношении ребенка, в связи с рождением которого возникло право на дополнительные меры государственной поддержки, совершения в отношении своего ребенка (детей) умышленного преступления, относящегося к преступлениям против личности, а также в случае отмены усыновления ребенка, в связи с усыновлением которого возникло право на дополнительные меры государственной поддержки','Ребенок (дети в равных долях), не достигшего совершеннолетия, и (или) совершеннолетнего ребенка (детей в равных долях), обучающегося по очной форме в образовательных учреждениях любого типа и вида независимо от их организационно-правовой формы (за исключением образовательных учреждений дополнительного образования), до окончания такого обучения, но не более чем до достижения им возраста 23 лет','мужчина, являющийся единственным усыновителем первого ребенка, ранее не воспользовавшегося правом на дополнительные меры государственной поддержки, если решение суда об усыновлении вступило в законную силу начиная с 1 января 2020 года','женщина, являющаяся гражданкой Российской Федерации, родившей (усыновившей) первого ребенка начиная с 1 января 2020 года'].indexOf(combobox_0.getValue());\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_2']);\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_7']);\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_17']);\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_18']);\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_19']);\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_20']);\n\nif ((kat==1)||(kat==1)){\nFileUploadGrid.setUploadVisibility(['fileuploadpanel_2'], []);\nFileUploadGrid.setUploadVisibility(['fileuploadpanel_7'], []);\nFileUploadGrid.setUploadVisibility(['fileuploadpanel_17'], []);\n} else {\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_2']);\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_7']);\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_17']);\n};\nif (kat==3){\nFileUploadGrid.setUploadVisibility(['fileuploadpanel_18'], []);\nFileUploadGrid.setUploadVisibility(['fileuploadpanel_19'], []);\nFileUploadGrid.setUploadVisibility(['fileuploadpanel_20'], []);\n} else {\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_18']);\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_19']);\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_20']);\n}"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Усыновление ребенка (детей)",
+        "name": "checkbox_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_9 = Ext.ComponentQuery.query('[name=checkbox_9]')[0];\nvar fileuploadpanel_8 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_8]')[0];\n\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_8']);\n\nif (checkbox_9.checked == true) {\nFileUploadGrid.setUploadVisibility(['fileuploadpanel_8'], []);\n} else {\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_8']);\n};"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Изменение персональных данных заявителя в случае необходимости подтверждения родственных отношений с детьми",
+        "name": "checkbox_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_8 = Ext.ComponentQuery.query('[name=checkbox_8]')[0];\nvar fileuploadpanel_5 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_5]')[0];\nvar fileuploadpanel_15 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_15]')[0];\nvar fileuploadpanel_16 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_16]')[0];\n\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_5']);\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_15']);\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_16']);\n\nif (checkbox_8.checked == true) {\nFileUploadGrid.setUploadVisibility(['fileuploadpanel_5'], []);\nFileUploadGrid.setUploadVisibility(['fileuploadpanel_15'], []);\nFileUploadGrid.setUploadVisibility(['fileuploadpanel_16'], []);\n} else {\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_5']);\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_15']);\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_16']);\n};"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Изменение персональных данных ребенка (детей)",
+        "name": "checkbox_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_7 = Ext.ComponentQuery.query('[name=checkbox_7]')[0];\nvar fileuploadpanel_6 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_6]')[0];\n\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_6']);\n\nif (checkbox_7.checked == true) {\nFileUploadGrid.setUploadVisibility(['fileuploadpanel_6'], []);\n} else {\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_6']);\n};"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Предъявлен вкладыш о наличии гражданства к свидетельству о рождении",
+        "name": "checkbox_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_5 = Ext.ComponentQuery.query('[name=checkbox_5]')[0];\nvar fileuploadpanel_3 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_3]')[0];\n\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_3']);\n\nif (checkbox_5.checked == true) {\nFileUploadGrid.setUploadVisibility(['fileuploadpanel_3'], []);\n} else {\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_3']);\n};"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Предъявлено свидетельство о рождении ребенка (детей) выданное в иностранном государстве",
+        "name": "checkbox_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_11 = Ext.ComponentQuery.query('[name=checkbox_11]')[0];\nvar fileuploadpanel_12 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_12]')[0];\n\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_12']);\n\nif (checkbox_11.checked == true) {\nFileUploadGrid.setUploadVisibility(['fileuploadpanel_12'], []);\n} else {\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_12']);\n};"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Обращение по месту пребывания",
+        "name": "checkbox_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_4 = Ext.ComponentQuery.query('[name=checkbox_4]')[0];\nvar fileuploadpanel_0 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_0]')[0];\n\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_0']);\n\nif (checkbox_4.checked == true) {\nFileUploadGrid.setUploadVisibility(['fileuploadpanel_0'], []);\n} else {\nFileUploadGrid.setUploadVisibility([], ['fileuploadpanel_0']);\n};"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "strategy": "lastname",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия,которая была при рождении",
+        "name": "textfield_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "strategy": "firstname",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "middlename",
+        "description": "(при наличии)",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Статус",
+        "name": "combobox_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Мать"
+                },
+                {
+                    "value": "Отец"
+                },
+                {
+                    "value": "Ребенок"
+                },
+                {
+                    "value": "Единственный усыновитель"
+                }
+            ],
+            "type": "store"
+        },
+        "allowBlank": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Пол",
+        "name": "combobox_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Женский"
+                },
+                {
+                    "value": "Мужской"
+                }
+            ],
+            "type": "store"
+        },
+        "strategy": "sex",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "datefield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "strategy": "birthdate"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Место рождения",
+        "name": "textfield_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "strategy": "birthPlace",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Документ, удостоверяющий личность",
+        "name": "textfield_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "strategy": "documenttypename",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "textfield_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "strategy": "docseries",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "textfield_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "strategy": "docnumber",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "textfield_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "strategy": "issueorg",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "datefield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "strategy": "issuedate"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Принадлежность к гражданству",
+        "name": "textfield_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "strategy": "citizenship",
+        "description": "Гражданка(ин) Российской Федерации, иностранный гражданин, лицо без гражданства",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Страховой номер индивидуального лицевого счета",
+        "name": "textfield_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": " (СНИЛС)",
+        "strategy": "snils",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес регистрации",
+        "name": "textfield_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "registrationAddress",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес пребывания",
+        "name": "textfield_50",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес фактического проживания",
+        "name": "textfield_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "residenceAddress",
+        "hidden": true,
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Контактный номер",
+        "name": "textfield_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "person_mobile",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_0",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Информация о ребенке"
+            },
+            {
+                "name": "textfield_56",
+                "xtype": "textfield",
+                "fieldLabel": "ФИО ребенка",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "combobox_17",
+                "xtype": "combobox",
+                "fieldLabel": "Пол ребенка",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "specialConfig": "gender",
+                "store": null,
+                "queryMode": null,
+                "displayField": null,
+                "valueField": null
+            },
+            {
+                "name": "textfield_54",
+                "xtype": "textfield",
+                "fieldLabel": "Реквизиты свидетельства о рождении",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "(серия, номер, дата выдачи, кем выдано)"
+            },
+            {
+                "name": "textfield_21",
+                "xtype": "textfield",
+                "fieldLabel": "номер, дата и место регистрации акта о рождении",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+            },
+            {
+                "name": "datefield_10",
+                "xtype": "datefield",
+                "fieldLabel": "Дата рождения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_52",
+                "xtype": "textfield",
+                "fieldLabel": "Место рождения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_51",
+                "xtype": "textfield",
+                "fieldLabel": "Гражданство ребенка",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "(<span style=\"color:red; font-weight:bold;\">писать РФ</span>, если гражданство Российской Федерации)"
+            }
+        ],
+        "prefix": "cloneablePanel_0",
+        "fieldName": "cloneablePanel_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Право на МСК возникло в связи с рождением ребенка",
+        "name": "checkbox_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_21 = Ext.ComponentQuery.query('[name=checkbox_21]')[0];\nvar checkbox_22 = Ext.ComponentQuery.query('[name=checkbox_22]')[0];\n\nif (checkbox_21.checked == true) {\ncheckbox_22.hide();\n} else {\ncheckbox_22.show();\n};"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Право на МСК возникло в связи с усыновлением ребенка",
+        "name": "checkbox_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_21 = Ext.ComponentQuery.query('[name=checkbox_21]')[0];\nvar checkbox_22 = Ext.ComponentQuery.query('[name=checkbox_22]')[0];\n\nif (checkbox_22.checked == true) {\ncheckbox_21.hide();\n} else {\ncheckbox_21.show();\n};"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Умышленных преступлений, относящихся к преступлениям против личности, в отношении своего ребенка",
+        "name": "combobox_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "совершала (совершал)"
+                },
+                {
+                    "value": "не совершала (не совершал)"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_14 = Ext.ComponentQuery.query('[name=combobox_14]')[0];\n\nif (combobox_14.getValue() == null){\n\ncombobox_14.setValue('не совершала (не совершал)');\n} else {\n};\n"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Указать очередность рождения (усыновления) ребенка",
+        "name": "combobox_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(см. поля выше)",
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "1"
+                },
+                {
+                    "value": "2"
+                },
+                {
+                    "value": "3"
+                },
+                {
+                    "value": "4"
+                },
+                {
+                    "value": "5"
+                },
+                {
+                    "value": "6"
+                },
+                {
+                    "value": "7"
+                }
+            ],
+            "type": "store"
+        },
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Государственный сертификат на материнский (семейный) капитал ранее",
+        "name": "combobox_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Не выдавался"
+                },
+                {
+                    "value": "Выдавался"
+                }
+            ],
+            "type": "store"
+        },
+        "editable": false,
+        "scripts": [
+            "var combobox_3 = Ext.ComponentQuery.query('[name=combobox_3]')[0];\n\nif (combobox_3.getValue() == null){\n\ncombobox_3.setValue('Не выдавался');\n} else {\n};\n"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Родительских прав в отношении ребенка (детей)",
+        "name": "combobox_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Не лишалась"
+                },
+                {
+                    "value": "Лишалась"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_4 = Ext.ComponentQuery.query('[name=combobox_4]')[0];\n\nif (combobox_4.getValue() == null){\n\ncombobox_4.setValue('Не лишалась');\n} else {\n};"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Оформление и выдача МСК",
+        "name": "fieldset_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Сертификат на МСК оформить",
+        "name": "combobox_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "description": "(выбрать нужное)",
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "на бумажном носителе"
+                },
+                {
+                    "value": "в форме электронного документа"
+                }
+            ],
+            "type": "store"
+        },
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Способ получения государственного сертификата:",
+        "name": "combobox_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "по почте"
+                },
+                {
+                    "value": "посредством федеральной государственной информационной системы Единый портал государственных и муниципальных услуг (функций)"
+                },
+                {
+                    "value": "посредством информационной системы Пенсионного фонда Российской Федерации Личный кабинет застрахованного лица"
+                },
+                {
+                    "value": "лично"
+                },
+                {
+                    "value": "через многофункциональный центр"
+                }
+            ],
+            "type": "store"
+        },
+        "description": "(выбрать нужное)",
+        "scripts": [
+            "var combobox_16 = Ext.ComponentQuery.query('[name=combobox_16]')[0];\nvar textfield_49 = Ext.ComponentQuery.query('[name=textfield_49]')[0];\n\ntextfield_49.hide();\n\nvar dostavka=['по почте','посредством федеральной государственной информационной системы Единый портал государственных и муниципальных услуг (функций)','посредством информационной системы Пенсионного фонда Российской Федерации Личный кабинет застрахованного лица','в ПФР РФ','в территориальный орган Пенсионного фонда Российской Федерации','в МФЦ'].indexOf(combobox_16.getValue())\nif (dostavka ==0) {\ntextfield_49.show();\n} else {\ntextfield_49.hide();\n}"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Почтовый адрес получателя",
+        "name": "textfield_49",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "description": "(при нахождении почтового адреса получателя за пределами территории Российской Федерации адрес заполняется латинскими буквами)",
+        "strategy": "residenceAddress",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "О ходе и результатах рассмотрения данного заявления прошу информировать:",
+        "name": "combobox_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "меня лично"
+                },
+                {
+                    "value": "моего представителя"
+                }
+            ],
+            "type": "store"
+        },
+        "description": "(выбрать нужное)",
+        "allowBlank": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Путем передачи текстовых сообщений:",
+        "name": "combobox_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "на адрес электронной почты"
+                },
+                {
+                    "value": "на абонентский номер устройства подвижной радиотелефонной связи"
+                }
+            ],
+            "type": "store"
+        },
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес электронной почты",
+        "name": "textfield_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "номер телефона",
+        "name": "textfield_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на адрес электронной почты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_22\"]}]},{\"fields\":[{\"name\":\"combobox_10\",\"value\":\"на абонентский номер устройства подвижной радиотелефонной связи\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_23\"]},{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_21\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кодовое слово",
+        "name": "textfield_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"color:red; font-weight:bold;float:left;\">Сканируем все представленные документы!</span>",
+        "name": "fieldset_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Представленные документы:",
+        "name": "fieldset_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Заявление о выдаче государственного сертификата на материнский (семейный) капитал",
+        "fieldName": "LoadStatement",
+        "name": "LoadStatement",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "flag": "original"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, удостоверяющий личность заявителя",
+        "fieldName": "fileuploadpanel_10",
+        "name": "fileuploadpanel_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Нотариально удостоверенный перевод",
+        "fieldName": "fileuploadpanel_12",
+        "name": "fileuploadpanel_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о заключении брака",
+        "fieldName": "fileuploadpanel_5",
+        "name": "fileuploadpanel_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о расторжении брака",
+        "fieldName": "fileuploadpanel_15",
+        "name": "fileuploadpanel_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о перемене имени",
+        "fieldName": "fileuploadpanel_16",
+        "name": "fileuploadpanel_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о регистрации по месту пребывания",
+        "fieldName": "fileuploadpanel_0",
+        "name": "fileuploadpanel_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о смерти женщины, родившей (усыновившей) детей",
+        "fieldName": "fileuploadpanel_2",
+        "name": "fileuploadpanel_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Вкладыш о наличии гражданства",
+        "fieldName": "fileuploadpanel_3",
+        "name": "fileuploadpanel_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true,
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство об установлении отцовства/Постановление об изменении имени",
+        "fieldName": "fileuploadpanel_6",
+        "name": "fileuploadpanel_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Решение суда",
+        "fieldName": "fileuploadpanel_7",
+        "name": "fileuploadpanel_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия",
+        "description": "(Например: решение суда о признании женщины, родившей (усыновившей) детей, умершей; решение суда о лишении женщины, родившей (усыновившей) детей, родительских прав)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Приговора суда о признании женщины, родившей (усыновившей) детей, виновной в совершении умышленного преступления, относящегося к преступлениям против личности",
+        "fieldName": "fileuploadpanel_17",
+        "name": "fileuploadpanel_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство об усыновление (удочерении)",
+        "fieldName": "fileuploadpanel_8",
+        "name": "fileuploadpanel_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о смерти родителей (усыновителей) или единственного родителя (усыновителя)",
+        "fieldName": "fileuploadpanel_18",
+        "name": "fileuploadpanel_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Решение суда",
+        "fieldName": "fileuploadpanel_19",
+        "name": "fileuploadpanel_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(Например: решение суда о признании родителей (усыновителей) или единственного родителя (усыновителя) умершими (умершим); решение суда о лишении родителей (усыновителей) или единственного родителя (усыновителя) родительских прав)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Приговора суда о признании родителей (усыновителей) или единственного родителя (усыновителя) виновными (виновным) в совершении умышленного преступления, относящегося к преступлениям против личности",
+        "fieldName": "fileuploadpanel_20",
+        "name": "fileuploadpanel_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    }
+]

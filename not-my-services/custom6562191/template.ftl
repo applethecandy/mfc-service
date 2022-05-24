@@ -345,7 +345,7 @@ text-align: justify;
 				<col />
 			</colspan>
 			<tr>
-				<td class="no_top" style="height:34px;">${form.textfield_4!''}</td>
+				<td class="no_top ten" style="height:34px;">${form.textfield_4!''}</td>
 			</tr>
 		</table>
 		<table class="main_2">

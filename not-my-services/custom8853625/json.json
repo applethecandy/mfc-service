@@ -1,0 +1,2420 @@
+[
+    {
+        "xtype": "checkbox",
+        "boxLabel": "В роли заявителя выступает доверенное лицо",
+        "name": "checkbox_51",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var combobox_2 = Ext.ComponentQuery.query('[name=combobox_2]')[0];\nvar representative_check = Ext.ComponentQuery.query('[name=representative_check]')[0];\nvar checkbox_51 = Ext.ComponentQuery.query('[name=checkbox_51]')[0];\n\nif (checkbox_51.checked == true){\n\trepresentative_check.setValue(true);\n\tcombobox_2.show();\n\trepresentative_check.hide();\n}\nelse{\n\trepresentative_check.setValue(false);\n\tcombobox_2.hide();\n\trepresentative_check.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Вид представителя",
+        "name": "combobox_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "законный представитель несовершеннолетнего или недееспособного лица"
+                },
+                {
+                    "value": "организация, на которую возложено исполнение обязанностей опекуна или попечителя"
+                },
+                {
+                    "value": "доверенное лицо"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_2 = Ext.ComponentQuery.query('[name=combobox_2]')[0];\nvar textfield_33 = Ext.ComponentQuery.query('[name=textfield_33]')[0];\nvar textfield_17 = Ext.ComponentQuery.query('[name=textfield_17]')[0];\nvar textfield_15 = Ext.ComponentQuery.query('[name=textfield_15]')[0];\nvar datefield_3 = Ext.ComponentQuery.query('[name=datefield_3]')[0];\n\nvar ix = ['законный представитель несовершеннолетнего или недееспособного лица','организация, на которую возложено исполнение обязанностей опекуна или попечителя','доверенное лицо'].indexOf(combobox_2.getValue());\n\nif (ix == 0 || ix == 2){\n\ttextfield_15.show();\n\tdatefield_3.show();\n}\nelse{\n\ttextfield_15.hide();\n\tdatefield_3.hide();\n};\n\nif (ix == 1){\n\ttextfield_33.show();\n\ttextfield_17.show();\n}\nelse{\n\ttextfield_33.hide();\n\ttextfield_17.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование организации",
+        "name": "textfield_33",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(на которую возложено исполнение обязанностей опекуна или попечителя)"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места нахождения организации",
+        "name": "textfield_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(на которую возложено исполнение обязанностей опекуна или попечителя)"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места пребывания представителя",
+        "name": "textfield_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Срок действия полномочий представителя",
+        "name": "datefield_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(по доверенности)"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left\"><b style=\"font-size:12px\"> <font color=\"red\"> С ЗАЯВЛЕНИЕМ О НАЗНАЧЕНИИ ПЕНСИИ ОДНОВРЕМЕННО ПРИНИМАЮТСЯ УСЛУГИ «ПРИЁМ ЗАЯВЛЕНИЙ О ДОСТАВКЕ ПЕНСИИ», «УСТАНОВЛЕНИЕ ЕЖЕМЕСЯЧНОЙ ДЕНЕЖНОЙ ВЫПЛАТЫ ОТДЕЛЬНЫМ КАТЕГОРИЯМ ГРАЖДАН В РОССИЙСКОЙ ФЕДЕРАЦИИ».  ЕДВ СОСТОИТ ИЗ ДВУХ СОСТАВЛЯЮЩИХ: ДЕНЕЖНАЯ ВЫПЛАТА И НАБОР СОЦ УСЛУГ. ЕСЛИ ГРАЖДАНИН ХОЧЕТ ПОЛУЧАТЬ ВЕСЬ ОБЪЕМ ЕДВ ТОЛЬКО В ДЕНЕЖНОЙ ФОРМЕ, ТОГДА ДОПОЛНИТЕЛЬНО К ЭТИМ ДВУМ УСЛУГАМ ПРИНИМАЕТСЯ УСЛУГУ «Установление ежемесячной денежной выплаты отдельным категориям граждан в Российской Федерации: Прием заявления о предоставлении набора социальных услуг, об отказе от набора социальных услуг или о возобновлении предоставления набора социальных услуг» (ОТКАЗ ОТ НСУ)» </b></font></div>",
+        "name": "fieldset_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left;text-transform:none;\">Информация о заявителе</div>",
+        "name": "fieldset_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Вид пенсии",
+        "name": "combobox_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "назначить страховую пенсию по старости"
+                },
+                {
+                    "value": "назначить долю страховой пенсии по старости"
+                },
+                {
+                    "value": "назначить пенсию по старости по государственному пенсионному обеспечению"
+                },
+                {
+                    "value": "назначить социальную пенсию по старости"
+                },
+                {
+                    "value": "назначить пенсию по старости, предусмотренную Законом Российской Федерации от 15 мая 1991 г N 1244-1 О социальной защите граждан, подвергшихся воздействию радиации вследствие катастрофы на Чернобыльской АЭС"
+                },
+                {
+                    "value": "назначить страховую пенсию по инвалидности"
+                },
+                {
+                    "value": "назначить пенсию по инвалидности по государственному пенсионному обеспечению"
+                },
+                {
+                    "value": "назначить социальную пенсию по инвалидности"
+                },
+                {
+                    "value": "назначить страховую пенсию по случаю потери кормильца"
+                },
+                {
+                    "value": "назначить пенсию по случаю потери кормильца по государственному пенсионному обеспечению"
+                },
+                {
+                    "value": "назначить социальную пенсию по случаю потери кормильца"
+                },
+                {
+                    "value": "назначить накопительную пенсию"
+                },
+                {
+                    "value": "назначить пенсию за выслугу лет по государственному пенсионному обеспечению"
+                },
+                {
+                    "value": "назначить пенсию, предусмотренную Законом Российской Федерации от 19 апреля 1991 г. N 1032-1 О занятости населения в Российской Федерации"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_1 = Ext.ComponentQuery.query('[name=combobox_1]')[0];\nvar cloneablePanel_0 = Ext.ComponentQuery.query('[name=cloneablePanel_0]')[0];\nvar checkbox_12 = Ext.ComponentQuery.query('[name=checkbox_12]')[0];\nvar checkbox_15 = Ext.ComponentQuery.query('[name=checkbox_15]')[0];\nvar checkbox_16 = Ext.ComponentQuery.query('[name=checkbox_16]')[0];\nvar fieldset_16 = Ext.ComponentQuery.query('[name=fieldset_16]')[0];\nvar checkbox_41 = Ext.ComponentQuery.query('[name=checkbox_41]')[0];\nvar checkbox_42 = Ext.ComponentQuery.query('[name=checkbox_42]')[0];\nvar checkbox_17 = Ext.ComponentQuery.query('[name=checkbox_17]')[0];\nvar checkbox_18 = Ext.ComponentQuery.query('[name=checkbox_18]')[0];\nvar checkbox_19 = Ext.ComponentQuery.query('[name=checkbox_19]')[0];\nvar checkbox_20 = Ext.ComponentQuery.query('[name=checkbox_20]')[0];\nvar checkbox_21 = Ext.ComponentQuery.query('[name=checkbox_21]')[0];\nvar checkbox_22 = Ext.ComponentQuery.query('[name=checkbox_22]')[0];\nvar checkbox_26 = Ext.ComponentQuery.query('[name=checkbox_26]')[0];\nvar checkbox_27 = Ext.ComponentQuery.query('[name=checkbox_27]')[0];\nvar checkbox_28 = Ext.ComponentQuery.query('[name=checkbox_28]')[0];\nvar checkbox_38 = Ext.ComponentQuery.query('[name=checkbox_38]')[0];\nvar checkbox_39 = Ext.ComponentQuery.query('[name=checkbox_39]')[0];\nvar checkbox_40 = Ext.ComponentQuery.query('[name=checkbox_40]')[0];\nvar checkbox_35 = Ext.ComponentQuery.query('[name=checkbox_35]')[0];\nvar checkbox_36 = Ext.ComponentQuery.query('[name=checkbox_36]')[0];\nvar checkbox_37 = Ext.ComponentQuery.query('[name=checkbox_37]')[0];\nvar fieldset_15 = Ext.ComponentQuery.query('[name=fieldset_15]')[0];\nvar fieldset_12 = Ext.ComponentQuery.query('[name=fieldset_12]')[0];\nvar checkbox_29 = Ext.ComponentQuery.query('[name=checkbox_29]')[0];\nvar checkbox_30 = Ext.ComponentQuery.query('[name=checkbox_30]')[0];\nvar fieldset_14 = Ext.ComponentQuery.query('[name=fieldset_14]')[0];\nvar checkbox_33 = Ext.ComponentQuery.query('[name=checkbox_33]')[0];\nvar checkbox_34 = Ext.ComponentQuery.query('[name=checkbox_34]')[0];\nvar fileuploadpanel_1 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_1]')[0];\nvar fileuploadpanel_2 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_2]')[0];\nvar fileuploadpanel_43 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_43]')[0];\nvar fileuploadpanel_37 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_37]')[0];\nvar fileuploadpanel_32 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_32]')[0];\nvar fileuploadpanel_29 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_29]')[0];\nvar fileuploadpanel_5 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_5]')[0];\nvar fileuploadpanel_31 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_31]')[0];\nvar fileuploadpanel_35 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_35]')[0];\nvar fileuploadpanel_36 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_36]')[0];\nvar fileuploadpanel_6 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_6]')[0];\nvar fileuploadpanel_7 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_7]')[0];\nvar fileuploadpanel_8 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_8]')[0];\nvar fileuploadpanel_30 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_30]')[0];\nvar fileuploadpanel_9 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_9]')[0];\nvar fileuploadpanel_10 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_10]')[0];\nvar fileuploadpanel_11 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_11]')[0];\nvar fileuploadpanel_12 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_12]')[0];\nvar fileuploadpanel_13 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_13]')[0];\nvar fileuploadpanel_42 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_42]')[0];\nvar fileuploadpanel_14 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_14]')[0];\nvar fileuploadpanel_15 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_15]')[0];\nvar fileuploadpanel_16 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_16]')[0];\nvar fileuploadpanel_17 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_17]')[0];\nvar fileuploadpanel_18 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_18]')[0];\nvar fileuploadpanel_19 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_19]')[0];\nvar fileuploadpanel_20 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_20]')[0];\nvar fileuploadpanel_21 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_21]')[0];\nvar fileuploadpanel_22 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_22]')[0];\nvar fileuploadpanel_23 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_23]')[0];\nvar fileuploadpanel_24 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_24]')[0];\nvar fileuploadpanel_25 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_25]')[0];\nvar fileuploadpanel_26 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_26]')[0];\nvar fileuploadpanel_34 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_34]')[0];\nvar fileuploadpanel_38 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_38]')[0];\nvar fileuploadpanel_39 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_39]')[0];\nvar fileuploadpanel_40 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_40]')[0];\nvar fileuploadpanel_41 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_41]')[0];\nvar fileuploadpanel_44 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_44]')[0];\nvar fileuploadpanel_45 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_45]')[0];\nvar fileuploadpanel_46 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_46]')[0];\nvar fileuploadpanel_47 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_47]')[0];\nvar fileuploadpanel_48 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_48]')[0];\nvar fileuploadpanel_49 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_49]')[0];\nvar fileuploadpanel_50 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_50]')[0];\nvar fileuploadpanel_51 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_51]')[0];\nvar fileuploadpanel_52 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_52]')[0];\nvar fileuploadpanel_53 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_53]')[0];\nvar fileuploadpanel_54 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_54]')[0];\nvar fileuploadpanel_55 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_55]')[0];\nvar fileuploadpanel_56 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_56]')[0];\nvar fileuploadpanel_57 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_57]')[0];\nvar fileuploadpanel_58 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_58]')[0];\nvar fileuploadpanel_59 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_59]')[0];\nvar fileuploadpanel_60 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_60]')[0];\nvar fileuploadpanel_61 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_61]')[0];\nvar fileuploadpanel_62 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_62]')[0];\nvar fileuploadpanel_64 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_64]')[0];\nvar fileuploadpanel_65 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_65]')[0];\nvar fileuploadpanel_66 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_66]')[0];\nvar fileuploadpanel_67 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_67]')[0];\nvar fileuploadpanel_68 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_68]')[0];\nvar fileuploadpanel_73 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_73]')[0];\nvar fileuploadpanel_69 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_69]')[0];\nvar fileuploadpanel_70 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_70]')[0];\nvar fileuploadpanel_71 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_71]')[0];\nvar fileuploadpanel_72 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_72]')[0];\nvar fieldset_18 = Ext.ComponentQuery.query('[name=fieldset_18]')[0];\nvar fieldset_19 = Ext.ComponentQuery.query('[name=fieldset_19]')[0];\nvar fieldset_20 = Ext.ComponentQuery.query('[name=fieldset_20]')[0];\nvar checkbox_43 = Ext.ComponentQuery.query('[name=checkbox_43]')[0];\nvar checkbox_44 = Ext.ComponentQuery.query('[name=checkbox_44]')[0];\nvar checkbox_46 = Ext.ComponentQuery.query('[name=checkbox_46]')[0];\nvar checkbox_47 = Ext.ComponentQuery.query('[name=checkbox_47]')[0];\nvar checkbox_52 = Ext.ComponentQuery.query('[name=checkbox_52]')[0];\nvar checkbox_53 = Ext.ComponentQuery.query('[name=checkbox_53]')[0];\nvar checkbox_54 = Ext.ComponentQuery.query('[name=checkbox_54]')[0];\nvar checkbox_55 = Ext.ComponentQuery.query('[name=checkbox_55]')[0];\nvar checkbox_56 = Ext.ComponentQuery.query('[name=checkbox_56]')[0];\nvar checkbox_57 = Ext.ComponentQuery.query('[name=checkbox_57]')[0];\nvar checkbox_58 = Ext.ComponentQuery.query('[name=checkbox_58]')[0];\nvar checkbox_59 = Ext.ComponentQuery.query('[name=checkbox_59]')[0];\nvar checkbox_60 = Ext.ComponentQuery.query('[name=checkbox_60]')[0];\nvar checkbox_61 = Ext.ComponentQuery.query('[name=checkbox_61]')[0];\nvar checkbox_62 = Ext.ComponentQuery.query('[name=checkbox_62]')[0];\nvar checkbox_63 = Ext.ComponentQuery.query('[name=checkbox_63]')[0];\nvar checkbox_64 = Ext.ComponentQuery.query('[name=checkbox_64]')[0];\nvar checkbox_65 = Ext.ComponentQuery.query('[name=checkbox_65]')[0];\nvar checkbox_66 = Ext.ComponentQuery.query('[name=checkbox_66]')[0];\nvar checkbox_67 = Ext.ComponentQuery.query('[name=checkbox_67]')[0];\nvar fieldset_21 = Ext.ComponentQuery.query('[name=fieldset_21]')[0];\nvar fieldset_22 = Ext.ComponentQuery.query('[name=fieldset_22]')[0];\nvar fieldset_23 = Ext.ComponentQuery.query('[name=fieldset_23]')[0];\nvar fieldset_24 = Ext.ComponentQuery.query('[name=fieldset_24]')[0];\nvar fileuploadpanel_63 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_63]')[0];\nvar fieldset_25 = Ext.ComponentQuery.query('[name=fieldset_25]')[0];\nvar combobox_10 = Ext.ComponentQuery.query('[name=combobox_10]')[0];\n\nvar documents = [2, 43, 37, 32, 29, 5, 31, 35, 36, 6, 7, 8, 30, 9, 10, 11, 12, 13, 42, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 34, 38, 39, 40, 41, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 64, 65, 66, 67, 68, 73, 69, 70, 71, 72];\n\nfor (var i = 0; i < documents.length; i++) {\n\tstr = \"fileuploadpanel_\"+documents[i];\n\tclear_document(str);\n};\n\nfunction clear_document(param){\n\teval(param).hide();\n};\n\nvar eta = ['назначить страховую пенсию по старости','назначить долю страховой пенсии по старости','назначить пенсию по старости по государственному пенсионному обеспечению','назначить социальную пенсию по старости','назначить пенсию по старости, предусмотренную Законом Российской Федерации от 15 мая 1991 г N 1244-1 О социальной защите граждан, подвергшихся воздействию радиации вследствие катастрофы на Чернобыльской АЭС','назначить страховую пенсию по инвалидности','назначить пенсию по инвалидности по государственному пенсионному обеспечению','назначить социальную пенсию по инвалидности','назначить страховую пенсию по случаю потери кормильца','назначить пенсию по случаю потери кормильца по государственному пенсионному обеспечению','назначить социальную пенсию по случаю потери кормильца','назначить накопительную пенсию','назначить пенсию за выслугу лет по государственному пенсионному обеспечению','назначить пенсию, предусмотренную Законом Российской Федерации от 19 апреля 1991 г. N 1032-1 О занятости населения в Российской Федерации'].indexOf(combobox_1.getValue());\n\nif (eta == 0 || eta == 5 || eta == 11){\n\tcloneablePanel_0.show();\n\tcheckbox_12.show();\n\tcheckbox_15.show();\n\tcheckbox_16.show();\n}\nelse{\n\tcloneablePanel_0.hide();\n\tcheckbox_12.hide();\n\tcheckbox_15.hide();\n\tcheckbox_16.hide();\n};\n\nif (eta == 0 || eta == 1 || eta == 5 || eta == 8 || eta == 11){\n\tfieldset_16.show();\n\tcheckbox_41.show();\n\tcheckbox_42.show();\n}\nelse{\n\tcloneablePanel_0.hide();\n\tfieldset_16.hide();\n\tcheckbox_41.hide();\n\tcheckbox_42.hide();\n};\n\nif (eta == 8){\n\tcheckbox_17.show();\n\tcheckbox_18.show();\n\tcheckbox_19.show();\n\tcheckbox_20.show();\n\tcheckbox_21.show();\n\tcheckbox_22.show();\n\tcheckbox_26.show();\n\tcheckbox_27.show();\n\tcheckbox_28.show();\n\tcheckbox_38.show();\n\tcheckbox_39.show();\n\tcheckbox_40.show();\n\tcheckbox_62.show();\n\tcheckbox_63.show();\n\tfileuploadpanel_35.show();\n\tfileuploadpanel_63.show();\n}\nelse{\n\tcheckbox_17.hide();\n\tcheckbox_18.hide();\n\tcheckbox_19.hide();\n\tcheckbox_20.hide();\n\tcheckbox_21.hide();\n\tcheckbox_22.hide();\n\tcheckbox_26.hide();\n\tcheckbox_27.hide();\n\tcheckbox_28.hide();\n\tcheckbox_38.hide();\n\tcheckbox_39.hide();\n\tcheckbox_40.hide();\n\tcheckbox_62.hide();\n\tcheckbox_63.hide();\n\tfileuploadpanel_35.hide();\n\tfileuploadpanel_63.hide();\n};\n\nif (eta == 0 || eta == 11){\n\tcheckbox_35.show();\n\tcheckbox_36.show();\n\tcheckbox_37.show();\n}\nelse{\n\tcheckbox_35.hide();\n\tcheckbox_36.hide();\n\tcheckbox_37.hide();\n};\n\nif (eta == 0 || eta == 11 || eta == 8){\n\tfieldset_15.show();\n}\nelse{\n\tfieldset_15.hide();\n};\n\nif (eta == 8 || eta == 9){\n\tfieldset_12.show();\n\tcheckbox_29.show();\n\tcheckbox_30.show();\n\tcheckbox_57.show();\n\tcheckbox_58.show();\n\tcheckbox_59.show();\n\tcheckbox_60.show();\n\tcheckbox_61.show();\n}\nelse{\n\tfieldset_12.hide();\n\tcheckbox_29.hide();\n\tcheckbox_30.hide();\n\tcheckbox_57.hide();\n\tcheckbox_58.hide();\n\tcheckbox_59.hide();\n\tcheckbox_60.hide();\n\tcheckbox_61.hide();\n};\n\nif (eta == 12 || eta == 6){\n\tfieldset_14.show();\n\tcheckbox_34.show();\n\tcheckbox_33.show();\n}\nelse{\n\tfieldset_14.hide();\n\tcheckbox_33.hide();\n\tcheckbox_34.hide();\n};\n\nif (eta == 5){\n\tfieldset_18.show();\n}\nelse{\n\tfieldset_18.hide();\n};\n\nif (eta == 6){\n\tfieldset_19.show();\n\tfileuploadpanel_32.show();\n}\nelse{\n\tfieldset_19.hide();\n\tfileuploadpanel_32.hide();\n};\nif (eta == 7){\n\tfieldset_20.show();\n}\nelse{\n\tfieldset_20.hide();\n};\n\nif (eta == 5 || eta == 6 || eta == 7){\n\tfileuploadpanel_29.show();\n\tfileuploadpanel_30.show();\n\tcheckbox_43.show();\n\tcheckbox_44.show();\n}\nelse{\n\tfileuploadpanel_29.hide();\n\tfileuploadpanel_30.hide();\n\tcheckbox_43.hide();\n\tcheckbox_44.hide();\n};\n\nif (eta == 8 || eta == 9 || eta == 10){\n\tfileuploadpanel_34.show();\n\tfileuploadpanel_36.show();\n\tcheckbox_46.show();\n\tcheckbox_47.show();\n\tcheckbox_52.show();\n\tcheckbox_53.show();\n\tcheckbox_54.show();\n\tcheckbox_55.show();\n\tcheckbox_56.show();\n}\nelse{\n\tfileuploadpanel_34.hide();\n\tfileuploadpanel_36.hide();\n\tcheckbox_46.hide();\n\tcheckbox_47.hide();\n\tcheckbox_52.hide();\n\tcheckbox_53.hide();\n\tcheckbox_54.hide();\n\tcheckbox_55.hide();\n\tcheckbox_56.hide();\n};\n\nif (eta == 9){\n\tcheckbox_64.show();\n\tcheckbox_65.show();\n\tcheckbox_66.show();\n}\nelse{\n\tcheckbox_64.hide();\n\tcheckbox_65.hide();\n\tcheckbox_66.hide();\n};\n\nif (eta == 10){\n\tcheckbox_67.show();\n\tfieldset_21.show();\n}\nelse{\n\tcheckbox_67.hide();\n\tfieldset_21.hide();\n};\n\nif (eta == 0 || eta == 2 || eta == 1 || eta == 4 || eta == 13 || eta == 11){\n\tfileuploadpanel_2.show();\n}\nelse{\n\tfileuploadpanel_2.hide();\n};\n\nif (eta == 0 || eta == 1 || eta == 4 || eta == 13 || eta == 11){\n\tfileuploadpanel_5.show();\n\tfileuploadpanel_6.show();\n\tfileuploadpanel_7.show();\n\tfileuploadpanel_10.show();\n\tfileuploadpanel_11.show();\n\tfileuploadpanel_12.show();\n\tfileuploadpanel_13.show();\n\tfileuploadpanel_14.show();\n\tfileuploadpanel_15.show();\n\tfileuploadpanel_16.show();\n}\nelse{\n\tfileuploadpanel_5.hide();\n\tfileuploadpanel_6.hide();\n\tfileuploadpanel_7.hide();\n\tfileuploadpanel_10.hide();\n\tfileuploadpanel_11.hide();\n\tfileuploadpanel_12.hide();\n\tfileuploadpanel_13.hide();\n\tfileuploadpanel_14.hide();\n\tfileuploadpanel_15.hide();\n\tfileuploadpanel_16.hide();\n};\n\nif (eta == 0 || eta == 1 || eta == 4 || eta == 13 || eta == 2 || eta == 11){\n\tfileuploadpanel_9.show();\n}\nelse{\n\tfileuploadpanel_9.hide();\n};\n\nif (eta == 0){\n\tfileuploadpanel_17.show();\n}\nelse{\n\tfileuploadpanel_17.hide();\n};\n\nif (eta == 13){\n\tfileuploadpanel_18.show();\n}\nelse{\n\tfileuploadpanel_18.hide();\n};\n\nif (eta == 13){\n\tfileuploadpanel_19.show();\n}\nelse{\n\tfileuploadpanel_19.hide();\n};\n\nif (eta == 2){\n\tfileuploadpanel_20.show();\n\tfileuploadpanel_21.show();\n\tfileuploadpanel_22.show();\n\tfileuploadpanel_23.show();\n\tfileuploadpanel_24.show();\n\tfileuploadpanel_25.show();\n\tfileuploadpanel_26.show();\n\tfieldset_23.show();\n}\nelse{\n\tfileuploadpanel_20.hide();\n\tfileuploadpanel_21.hide();\n\tfileuploadpanel_22.hide();\n\tfileuploadpanel_23.hide();\n\tfileuploadpanel_24.hide();\n\tfileuploadpanel_25.hide();\n\tfileuploadpanel_26.hide();\n\tfieldset_23.hide();\n};\n\nif (eta == 1){\n\tfieldset_22.show();\n}\nelse{\n\tfieldset_22.hide();\n};\n\nif (eta == 3){\n\tfieldset_24.show();\n}\nelse{\n\tfieldset_24.hide();\n};\n\nif (eta == 0 || eta == 1 || eta == 2 || eta == 4 || eta == 5 || eta == 6 || eta == 7 || eta == 13 || eta == 11){\n\tfileuploadpanel_8.show();\n}\nelse{\n\tfileuploadpanel_8.hide();\n};\n\nif (eta == 12){\n\tfieldset_25.show();\n\tcombobox_10.show();\n}\nelse{\n\tfieldset_25.hide();\n\tcombobox_10.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<em style=\"color:red;text-transform:none;\">страховая пенсия по инвалидности назначается инвалидам I, II или III группы при наличии страхового стажа</em>",
+        "name": "fieldset_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<em style=\"color:red;text-transform:none;\">государственная пенсия по инвалидности назначается военнослужащим; гражданам, пострадавшим в результате радиационных или техногенных катастроф; участникам Великой Отечественной войны; гражданам, награжденным знаком «Жителю блокадного Ленинграда»; космонавтам)</em>",
+        "name": "fieldset_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<em style=\"color:red;text-transform:none;\">социальная пенсия по инвалидности устанавливается инвалидам 1, 2 и 3 группы (без стажа), в том числе инвалидам с детства; детям-инвалидам)</em>",
+        "name": "fieldset_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<em style=\"color:red;text-transform:none;\">для назначения социальной пенсии необходим документ о постоянном проживании в РФ!</em>",
+        "name": "fieldset_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<em style=\"color:red;text-transform:none;\">назначается к пенсии за выслугу лет федеральным государственным гражданским служащим и гражданам из числа работников летно-испытательного состава</em>",
+        "name": "fieldset_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<em style=\"color:red;text-transform:none;\">назначается пострадавшим в результате радиационных или техногенных катастроф</em>",
+        "name": "fieldset_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<em style=\"color:red;text-transform:none;\">назначается при отсутствии стажа</em>",
+        "name": "fieldset_24",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<em style=\"color:red;text-transform:none;\">назначается гражданам из числа космонавтов и гражданам из числа работников летно-испытательного состава</em>",
+        "name": "fieldset_25",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Категория граждан",
+        "name": "combobox_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "заявитель из числа космонавтов"
+                },
+                {
+                    "value": "заявитель из числа работников летно-испытательного состава"
+                }
+            ],
+            "type": "store"
+        },
+        "allowBlank": false,
+        "scripts": [
+            "var combobox_10 = Ext.ComponentQuery.query('[name=combobox_10]')[0];\nvar fileuploadpanel_64 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_64]')[0];\nvar fileuploadpanel_65 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_65]')[0];\nvar fileuploadpanel_66 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_66]')[0];\nvar fileuploadpanel_67 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_67]')[0];\nvar fileuploadpanel_68 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_68]')[0];\nvar fileuploadpanel_73 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_73]')[0];\nvar fileuploadpanel_69 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_69]')[0];\nvar fileuploadpanel_70 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_70]')[0];\nvar fileuploadpanel_71 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_71]')[0];\nvar fileuploadpanel_72 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_72]')[0];\nvar fileuploadpanel_6 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_6]')[0];\nvar fileuploadpanel_7 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_7]')[0];\nvar fileuploadpanel_43 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_43]')[0];\n\nvar tetta = ['заявитель из числа космонавтов','заявитель из числа работников летно-испытательного состава'].indexOf(combobox_10.getValue());\n\nif (tetta == 0){\n\tfileuploadpanel_64.show();\n\tfileuploadpanel_65.show();\n\tfileuploadpanel_66.show();\n\tfileuploadpanel_67.show();\n\tfileuploadpanel_68.show();\n\tfileuploadpanel_6.show();\n\tfileuploadpanel_7.show();\n}\nelse{\n\tfileuploadpanel_64.hide();\n\tfileuploadpanel_65.hide();\n\tfileuploadpanel_66.hide();\n\tfileuploadpanel_67.hide();\n\tfileuploadpanel_68.hide();\n\tfileuploadpanel_6.hide();\n\tfileuploadpanel_7.hide();\n};\n\nif (tetta == 1){\n\tfileuploadpanel_69.show();\n\tfileuploadpanel_71.show();\n\tfileuploadpanel_70.show();\n\tfileuploadpanel_72.show();\n}\nelse{\n\tfileuploadpanel_69.hide();\n\tfileuploadpanel_71.hide();\n\tfileuploadpanel_70.hide();\n\tfileuploadpanel_72.hide();\n};\n\nif (tetta == 0 || tetta == 1){\n\tfileuploadpanel_43.show();\n\tfileuploadpanel_73.show();\n}\nelse{\n\tfileuploadpanel_43.hide();\n\tfileuploadpanel_73.hide();\n};\n\n"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "lastname",
+        "scripts": [
+            "setTimeout(fuk, 1000);\nfunction fuk(){\n\tdocument.getElementById('mfcCombo-triggerWrap').onmouseover = function() {\n\t//confirm(\"Получение результата по данной услуге исключительно в ОВ!!!\");\n\tvar div = document.createElement('div');\n\tdiv.setAttribute(\"id\", \"output_documents\");\n\tdocument.getElementById('mfcCombo-triggerWrap').appendChild(div);\n\tdocument.getElementById('output_documents').style.cssText=\"width: 100%;\\\n\theight: 89px;\\\n\tbackground-color: #f0724a;\\\n\tposition: absolute;\\\n\toverflow: hidden;\\\n\tclear: both;\\\n\tz-index: 1000;\\\n\ttop: 45px;\\\n\tright: 0px;\\\n\tdisplay: block;\\\n\tborder:2px dashed #ff3f05;\\\n\tmargin:0 auto;\\\n\ttext-align:center;\\\n\tpadding-top:22px;\\\n\t\";\n\tdocument.getElementById('output_documents').innerHTML = \"<p>Место выдачи результата услуги -<br />исключительно орган власти!</p>\"\n\t};\n\n\n\tdocument.getElementById('mfcCombo-triggerWrap').onmouseout = function() {\n\tvar div = document.createElement('div');\n\tdiv.setAttribute(\"id\", \"output_documents\");\n\tdocument.getElementById('mfcCombo-triggerWrap').appendChild(div);\n\tdocument.getElementById('output_documents').style.cssText=\"display: none;\";\n\t};\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "firstname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(при наличии)",
+        "strategy": "middlename"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Пол",
+        "name": "textfield_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "sex"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "СНИЛС",
+        "name": "textfield_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "snils"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Принадлежность к гражданству",
+        "name": "textfield_27",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "citizenship"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер телефона",
+        "name": "textfield_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "anyPhoneNumber"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left; margin-left:50px;text-transform:none;\">Проживающий(ая) в Российской Федерации:",
+        "name": "fieldset_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места жительства",
+        "name": "textfield_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "registrationAddress"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места пребывания",
+        "name": "textfield_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места фактического проживания",
+        "name": "textfield_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "residenceAddress"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left; margin-left:50px;text-transform:none;\">Проживающий(ая) за пределами территории Российской Федерации:</div>",
+        "name": "fieldset_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места жительства на территории другого государства",
+        "name": "textfield_28",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(указывается на русском языке)"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места жительства на территории другого государства",
+        "name": "textfield_29",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(указывается на иностранном языке)"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left; margin-left:50px;text-transform:none;\">Проживавший в Российской Федерации</div>",
+        "name": "fieldset_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места жительства",
+        "name": "textfield_30",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(указывается адрес до выезда за пределы Российской Федерации)"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места пребывания",
+        "name": "textfield_31",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(указывается адрес до выезда за пределы Российской Федерации)"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места фактического проживания",
+        "name": "textfield_32",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(указывается адрес до выезда за пределы Российской Федерации)"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left;text-transform:none;\">Данные документа, удостоверяющего личность заявителя</div>",
+        "name": "fieldset_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование документа, удостоверяющего личность",
+        "name": "textfield_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "documenttypename"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "textfield_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docseries"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "№",
+        "name": "textfield_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docnumber"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "datefield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issuedate"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "textfield_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issueorg"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "datefield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "birthdate"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Место рождения",
+        "name": "textfield_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "birthPlace"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Срок действия документа",
+        "name": "datefield_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(при наличии)"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left;text-transform:none;\">Заявитель сообщает о себе следующую информацию:</div>",
+        "name": "fieldset_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "работает",
+        "name": "checkbox_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\nvar checkbox_2 = Ext.ComponentQuery.query('[name=checkbox_2]')[0];\n\nif (checkbox_1.checked == true) {\ncheckbox_2.disable();\n} else {\ncheckbox_2.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "не работает",
+        "name": "checkbox_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\nvar checkbox_2 = Ext.ComponentQuery.query('[name=checkbox_2]')[0];\n\nif (checkbox_2.checked == true) {\ncheckbox_1.disable();\n} else {\ncheckbox_1.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Количество нетрудоспособных членов семьи",
+        "name": "combobox_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "нет"
+                },
+                {
+                    "value": "1"
+                },
+                {
+                    "value": "2"
+                },
+                {
+                    "value": "3"
+                },
+                {
+                    "value": "4"
+                },
+                {
+                    "value": "5"
+                },
+                {
+                    "value": "6"
+                },
+                {
+                    "value": "7"
+                },
+                {
+                    "value": "8"
+                },
+                {
+                    "value": "9"
+                },
+                {
+                    "value": "10"
+                },
+                {
+                    "value": "11"
+                },
+                {
+                    "value": "12"
+                },
+                {
+                    "value": "13"
+                },
+                {
+                    "value": "14"
+                },
+                {
+                    "value": "15"
+                },
+                {
+                    "value": "16"
+                },
+                {
+                    "value": "17"
+                },
+                {
+                    "value": "18"
+                },
+                {
+                    "value": "19"
+                },
+                {
+                    "value": "20"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_8 = Ext.ComponentQuery.query('[name=combobox_8]')[0];\nvar cloneablePanel_0 = Ext.ComponentQuery.query('[name=cloneablePanel_0]')[0];\n\nif (combobox_8.getValue() == \"нет\"){\ncloneablePanel_0.hide();\n}\nelse{\ncloneablePanel_0.show();\n};"
+        ]
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_0",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Сведения о детях",
+                "isPersonField": true
+            },
+            {
+                "name": "textfield_34",
+                "xtype": "textfield",
+                "fieldLabel": "Ф.И.О.",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "(в соответствии со свидетельством о рождении)"
+            },
+            {
+                "name": "datefield_4",
+                "xtype": "datefield",
+                "fieldLabel": "Дата рождения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_35",
+                "xtype": "textfield",
+                "fieldLabel": "СНИЛС",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_0",
+        "fieldName": "cloneablePanel_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "проходил военную службу по призыву",
+        "name": "checkbox_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(можно не заполнять (в случае отсутствия подтверждающих документов))",
+        "scripts": [
+            "var checkbox_12 = Ext.ComponentQuery.query('[name=checkbox_12]')[0];\nvar datefield_5 = Ext.ComponentQuery.query('[name=datefield_5]')[0];\nvar datefield_6 = Ext.ComponentQuery.query('[name=datefield_6]')[0];\n\nif (checkbox_12.checked == true){\n\tdatefield_5.show();\n\tdatefield_6.show();\n}\nelse{\n\tdatefield_5.hide();\n\tdatefield_6.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "С",
+        "name": "datefield_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "По",
+        "name": "datefield_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "проходил(а) военную службу, другую приравненную к ней службу, предусмотренную Законом Российской Федерации от 12 февраля 1993 г. N 4468-1 \"О пенсионном обеспечении лиц, проходивших военную службу, службу в органах внутренних дел, Государственной противопожарной службе, органах по контролю за оборотом наркотических средств и психотропных веществ, учреждениях и органах уголовно-исполнительной системы, Федеральной службе войск национальной гвардии Российской Федерации, и их семей\"",
+        "name": "checkbox_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(можно не заполнять (в случае отсутствия подтверждающих документов))",
+        "scripts": [
+            "var checkbox_15 = Ext.ComponentQuery.query('[name=checkbox_15]')[0];\nvar datefield_7 = Ext.ComponentQuery.query('[name=datefield_7]')[0];\nvar datefield_8 = Ext.ComponentQuery.query('[name=datefield_8]')[0];\nvar datefield_9 = Ext.ComponentQuery.query('[name=datefield_9]')[0];\nvar datefield_10 = Ext.ComponentQuery.query('[name=datefield_10]')[0];\n\nif (checkbox_15.checked == true){\n\tdatefield_7.show();\n\tdatefield_8.show();\n\tdatefield_9.show();\n\tdatefield_10.show();\n}\nelse{\n\tdatefield_7.hide();\n\tdatefield_8.hide();\n\tdatefield_9.hide();\n\tdatefield_10.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "С",
+        "name": "datefield_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "По",
+        "name": "datefield_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "С",
+        "name": "datefield_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(при нескольких сроках службы)"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "По",
+        "name": "datefield_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(при нескольких сроках службы)"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "осуществлял(а) уход за инвалидом I группы, ребенком-инвалидом в возрасте до 18 лет или за лицом, достигшим возраста 80 лет",
+        "name": "checkbox_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\nvar checkbox_16 = Ext.ComponentQuery.query('[name=checkbox_16]')[0];\n\n\nif (checkbox_16.checked == true){\n\tcloneablePanel_1.show();\n}\nelse{\n\tcloneablePanel_1.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_1",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Сведения об инвалиде",
+                "isPersonField": true
+            },
+            {
+                "name": "textfield_36",
+                "xtype": "textfield",
+                "fieldLabel": "Ф.И.О.",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_37",
+                "xtype": "textfield",
+                "fieldLabel": "СНИЛС",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "vtype": "validateSnils"
+            },
+            {
+                "name": "datefield_11",
+                "xtype": "datefield",
+                "fieldLabel": "В период с",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "datefield_12",
+                "xtype": "datefield",
+                "fieldLabel": "В период по",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_1",
+        "fieldName": "cloneablePanel_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left; margin-left:50px;text-transform:none;\">Получателем пенсии в соответствии с законодательством иностранного государства</div>",
+        "name": "fieldset_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "является",
+        "name": "checkbox_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_3 = Ext.ComponentQuery.query('[name=checkbox_3]')[0];\nvar checkbox_4 = Ext.ComponentQuery.query('[name=checkbox_4]')[0];\nvar textfield_22 = Ext.ComponentQuery.query('[name=textfield_22]')[0];\n\n\nif (checkbox_3.checked == true) {\ncheckbox_4.disable();\ntextfield_22.show();\n} else {\ncheckbox_4.enable();\ntextfield_22.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Государство",
+        "name": "textfield_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "не является",
+        "name": "checkbox_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_3 = Ext.ComponentQuery.query('[name=checkbox_3]')[0];\nvar checkbox_4 = Ext.ComponentQuery.query('[name=checkbox_4]')[0];\n\nif (checkbox_4.checked == true) {\ncheckbox_3.disable();\n} else {\ncheckbox_3.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "умерший кормилец являлся",
+        "name": "checkbox_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_18 = Ext.ComponentQuery.query('[name=checkbox_18]')[0];\nvar checkbox_17 = Ext.ComponentQuery.query('[name=checkbox_17]')[0];\nvar checkbox_19 = Ext.ComponentQuery.query('[name=checkbox_19]')[0];\nvar textfield_38 = Ext.ComponentQuery.query('[name=textfield_38]')[0];\n\n\nif (checkbox_18.checked == true) {\ncheckbox_17.disable();\ncheckbox_19.disable();\ntextfield_38.show();\n} else {\ncheckbox_17.enable();\ncheckbox_19.enable();\ntextfield_38.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Государство",
+        "name": "textfield_38",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "умерший кормилец не являлся",
+        "name": "checkbox_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_18 = Ext.ComponentQuery.query('[name=checkbox_18]')[0];\nvar checkbox_17 = Ext.ComponentQuery.query('[name=checkbox_17]')[0];\nvar checkbox_19 = Ext.ComponentQuery.query('[name=checkbox_19]')[0];\n\n\nif (checkbox_17.checked == true) {\ncheckbox_18.disable();\ncheckbox_19.disable();\n} else {\ncheckbox_18.enable();\ncheckbox_19.enable();\n\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "сведений не имею",
+        "name": "checkbox_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_18 = Ext.ComponentQuery.query('[name=checkbox_18]')[0];\nvar checkbox_17 = Ext.ComponentQuery.query('[name=checkbox_17]')[0];\nvar checkbox_19 = Ext.ComponentQuery.query('[name=checkbox_19]')[0];\n\n\nif (checkbox_19.checked == true) {\ncheckbox_17.disable();\ncheckbox_18.disable();\n} else {\ncheckbox_18.enable();\ncheckbox_17.enable();\n\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left; margin-left:50px;text-transform:none;\">Получателем пенсии в соответствии с Законом Российской Федерации от 12 февраля 1993 г. N 4468-1 \"О пенсионном обеспечении лиц, проходивших военную службу, службу в органах внутренних дел, Государственной противопожарной службе, органах по контролю за оборотом наркотических средств и психотропных веществ, учреждениях и органах уголовно-исполнительной системы, и их семей\"</div>",
+        "name": "fieldset_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "является",
+        "name": "checkbox_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_5 = Ext.ComponentQuery.query('[name=checkbox_5]')[0];\nvar checkbox_6 = Ext.ComponentQuery.query('[name=checkbox_6]')[0];\nvar checkbox_7 = Ext.ComponentQuery.query('[name=checkbox_7]')[0];\nvar textfield_23 = Ext.ComponentQuery.query('[name=textfield_23]')[0];\n\n\nif (checkbox_5.checked == true) {\ncheckbox_6.disable();\ncheckbox_7.disable();\ntextfield_23.show();\n} else {\ncheckbox_6.enable();\ncheckbox_7.enable();\ntextfield_23.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Вид пенсии",
+        "name": "textfield_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "не является",
+        "name": "checkbox_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_5 = Ext.ComponentQuery.query('[name=checkbox_5]')[0];\nvar checkbox_6 = Ext.ComponentQuery.query('[name=checkbox_6]')[0];\nvar checkbox_7 = Ext.ComponentQuery.query('[name=checkbox_7]')[0];\n\n\n\nif (checkbox_6.checked == true) {\ncheckbox_5.disable();\ncheckbox_7.disable();\n\n} else {\ncheckbox_5.enable();\ncheckbox_7.enable();\n\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "являлся",
+        "name": "checkbox_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_5 = Ext.ComponentQuery.query('[name=checkbox_5]')[0];\nvar checkbox_6 = Ext.ComponentQuery.query('[name=checkbox_6]')[0];\nvar checkbox_7 = Ext.ComponentQuery.query('[name=checkbox_7]')[0];\n\nvar textfield_24 = Ext.ComponentQuery.query('[name=textfield_24]')[0];\n\n\nif (checkbox_7.checked == true) {\ncheckbox_5.disable();\ncheckbox_6.disable();\ntextfield_24.show();\n} else {\ncheckbox_5.enable();\ncheckbox_6.enable();\ntextfield_24.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Орган, осуществлявший пенсионное обеспечение",
+        "name": "textfield_24",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "умерший кормилец являлся",
+        "name": "checkbox_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_21 = Ext.ComponentQuery.query('[name=checkbox_21]')[0];\nvar checkbox_20 = Ext.ComponentQuery.query('[name=checkbox_20]')[0];\nvar checkbox_22 = Ext.ComponentQuery.query('[name=checkbox_22]')[0];\nvar textfield_39 = Ext.ComponentQuery.query('[name=textfield_39]')[0];\n\nif (checkbox_21.checked == true) {\ncheckbox_20.disable();\ncheckbox_22.disable();\ntextfield_39.show();\n} else {\ncheckbox_20.enable();\ncheckbox_22.enable();\ntextfield_39.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Орган, осуществлявший пенсионное обеспечение",
+        "name": "textfield_39",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "умерший кормилец не являлся",
+        "name": "checkbox_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_21 = Ext.ComponentQuery.query('[name=checkbox_21]')[0];\nvar checkbox_20 = Ext.ComponentQuery.query('[name=checkbox_20]')[0];\nvar checkbox_22 = Ext.ComponentQuery.query('[name=checkbox_22]')[0];\n\nif (checkbox_20.checked == true) {\ncheckbox_21.disable();\ncheckbox_22.disable();\n} else {\ncheckbox_21.enable();\ncheckbox_22.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "сведений не имею",
+        "name": "checkbox_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_21 = Ext.ComponentQuery.query('[name=checkbox_21]')[0];\nvar checkbox_20 = Ext.ComponentQuery.query('[name=checkbox_20]')[0];\nvar checkbox_22 = Ext.ComponentQuery.query('[name=checkbox_22]')[0];\n\nif (checkbox_22.checked == true) {\ncheckbox_21.disable();\ncheckbox_20.disable();\n} else {\ncheckbox_21.enable();\ncheckbox_20.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left; margin-left:50px;text-transform:none;\">Получателем ежемесячного пожизненного содержания (ежемесячного возмещения) в соответствии с Законом Российской Федерации от 26 июня 1992 г. N 3132-1 \"О статусе судей в Российской Федерации\"</div>",
+        "name": "fieldset_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "является",
+        "name": "checkbox_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_23 = Ext.ComponentQuery.query('[name=checkbox_23]')[0];\nvar checkbox_24 = Ext.ComponentQuery.query('[name=checkbox_24]')[0];\nvar checkbox_25 = Ext.ComponentQuery.query('[name=checkbox_25]')[0];\n\nif (checkbox_23.checked == true) {\ncheckbox_24.disable();\ncheckbox_25.disable();\n} else {\ncheckbox_24.enable();\ncheckbox_25.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "не является",
+        "name": "checkbox_24",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_23 = Ext.ComponentQuery.query('[name=checkbox_23]')[0];\nvar checkbox_24 = Ext.ComponentQuery.query('[name=checkbox_24]')[0];\nvar checkbox_25 = Ext.ComponentQuery.query('[name=checkbox_25]')[0];\n\nif (checkbox_24.checked == true) {\ncheckbox_23.disable();\ncheckbox_25.disable();\n} else {\ncheckbox_23.enable();\ncheckbox_25.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "являлся",
+        "name": "checkbox_25",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_23 = Ext.ComponentQuery.query('[name=checkbox_23]')[0];\nvar checkbox_24 = Ext.ComponentQuery.query('[name=checkbox_24]')[0];\nvar checkbox_25 = Ext.ComponentQuery.query('[name=checkbox_25]')[0];\n\nif (checkbox_25.checked == true) {\ncheckbox_23.disable();\ncheckbox_24.disable();\n} else {\ncheckbox_23.enable();\ncheckbox_24.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "умерший кормилец являлся",
+        "name": "checkbox_26",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_26 = Ext.ComponentQuery.query('[name=checkbox_26]')[0];\nvar checkbox_27 = Ext.ComponentQuery.query('[name=checkbox_27]')[0];\nvar checkbox_28 = Ext.ComponentQuery.query('[name=checkbox_28]')[0];\n\nif (checkbox_26.checked == true) {\ncheckbox_27.disable();\ncheckbox_28.disable();\n} else {\ncheckbox_27.enable();\ncheckbox_28.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "умерший кормилец не являлся",
+        "name": "checkbox_27",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_26 = Ext.ComponentQuery.query('[name=checkbox_26]')[0];\nvar checkbox_27 = Ext.ComponentQuery.query('[name=checkbox_27]')[0];\nvar checkbox_28 = Ext.ComponentQuery.query('[name=checkbox_28]')[0];\n\nif (checkbox_27.checked == true) {\ncheckbox_26.disable();\ncheckbox_28.disable();\n} else {\ncheckbox_26.enable();\ncheckbox_28.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "сведений не имею",
+        "name": "checkbox_28",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_26 = Ext.ComponentQuery.query('[name=checkbox_26]')[0];\nvar checkbox_27 = Ext.ComponentQuery.query('[name=checkbox_27]')[0];\nvar checkbox_28 = Ext.ComponentQuery.query('[name=checkbox_28]')[0];\n\nif (checkbox_28.checked == true) {\ncheckbox_26.disable();\ncheckbox_27.disable();\n} else {\ncheckbox_26.enable();\ncheckbox_27.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left; margin-left:50px;text-transform:none;\">В новый брак</div>",
+        "name": "fieldset_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "вступал(а)",
+        "name": "checkbox_29",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_29 = Ext.ComponentQuery.query('[name=checkbox_29]')[0];\nvar checkbox_30 = Ext.ComponentQuery.query('[name=checkbox_30]')[0];\n\nif (checkbox_29.checked == true) {\ncheckbox_30.disable();\n} else {\ncheckbox_30.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "не вступал(а)",
+        "name": "checkbox_30",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_29 = Ext.ComponentQuery.query('[name=checkbox_29]')[0];\nvar checkbox_30 = Ext.ComponentQuery.query('[name=checkbox_30]')[0];\n\nif (checkbox_30.checked == true) {\ncheckbox_29.disable();\n} else {\ncheckbox_29.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left; margin-left:50px;text-transform:none;\">Одновременно с постоянным местом жительства на территории Российской Федерации постоянное место жительства на территории иностранного государства</div>",
+        "name": "fieldset_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "имеет",
+        "name": "checkbox_31",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_31 = Ext.ComponentQuery.query('[name=checkbox_31]')[0];\nvar checkbox_32 = Ext.ComponentQuery.query('[name=checkbox_32]')[0];\n\nif (checkbox_31.checked == true) {\ncheckbox_32.disable();\n} else {\ncheckbox_32.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "не имеет",
+        "name": "checkbox_32",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_31 = Ext.ComponentQuery.query('[name=checkbox_31]')[0];\nvar checkbox_32 = Ext.ComponentQuery.query('[name=checkbox_32]')[0];\n\nif (checkbox_32.checked == true) {\ncheckbox_31.disable();\n} else {\ncheckbox_31.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left; margin-left:50px;text-transform:none;\">Согласен на перерасчет размера пенсии в сторону увеличения в связи с установлением I группы инвалидности, достижением возраста 80 лет при наступлении впоследствии указанных обстоятельств</div>",
+        "name": "fieldset_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "да",
+        "name": "checkbox_33",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_33 = Ext.ComponentQuery.query('[name=checkbox_33]')[0];\nvar checkbox_34 = Ext.ComponentQuery.query('[name=checkbox_34]')[0];\n\nif (checkbox_33.checked == true) {\ncheckbox_34.disable();\n} else {\ncheckbox_34.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "нет",
+        "name": "checkbox_34",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_33 = Ext.ComponentQuery.query('[name=checkbox_33]')[0];\nvar checkbox_34 = Ext.ComponentQuery.query('[name=checkbox_34]')[0];\n\nif (checkbox_34.checked == true) {\ncheckbox_33.disable();\n} else {\ncheckbox_33.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left; margin-left:50px;text-transform:none;\">Государственные должности Российской Федерации, на постоянной основе государственные должности субъектов Российской Федерации, на постоянной основе муниципальные должности, должности государственной гражданской службы Российской Федерации, должности муниципальной службы</div>",
+        "name": "fieldset_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "замещает",
+        "name": "checkbox_35",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_35 = Ext.ComponentQuery.query('[name=checkbox_35]')[0];\nvar checkbox_36 = Ext.ComponentQuery.query('[name=checkbox_36]')[0];\nvar checkbox_37 = Ext.ComponentQuery.query('[name=checkbox_37]')[0];\n\nif (checkbox_35.checked == true) {\ncheckbox_36.disable();\ncheckbox_37.disable();\n} else {\ncheckbox_36.enable();\ncheckbox_37.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "не замещает",
+        "name": "checkbox_36",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_35 = Ext.ComponentQuery.query('[name=checkbox_35]')[0];\nvar checkbox_36 = Ext.ComponentQuery.query('[name=checkbox_36]')[0];\nvar checkbox_37 = Ext.ComponentQuery.query('[name=checkbox_37]')[0];\n\nif (checkbox_36.checked == true) {\ncheckbox_35.disable();\ncheckbox_37.disable();\n} else {\ncheckbox_35.enable();\ncheckbox_37.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "замещал",
+        "name": "checkbox_37",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_35 = Ext.ComponentQuery.query('[name=checkbox_35]')[0];\nvar checkbox_36 = Ext.ComponentQuery.query('[name=checkbox_36]')[0];\nvar checkbox_37 = Ext.ComponentQuery.query('[name=checkbox_37]')[0];\n\nif (checkbox_37.checked == true) {\ncheckbox_36.disable();\ncheckbox_35.disable();\n} else {\ncheckbox_36.enable();\ncheckbox_35.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "умерший кормилец замещал",
+        "name": "checkbox_38",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_38 = Ext.ComponentQuery.query('[name=checkbox_38]')[0];\nvar checkbox_39 = Ext.ComponentQuery.query('[name=checkbox_39]')[0];\nvar checkbox_40 = Ext.ComponentQuery.query('[name=checkbox_40]')[0];\n\nif (checkbox_38.checked == true) {\ncheckbox_39.disable();\ncheckbox_40.disable();\n} else {\ncheckbox_39.enable();\ncheckbox_40.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "умерший кормилец не замещал",
+        "name": "checkbox_39",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_38 = Ext.ComponentQuery.query('[name=checkbox_38]')[0];\nvar checkbox_39 = Ext.ComponentQuery.query('[name=checkbox_39]')[0];\nvar checkbox_40 = Ext.ComponentQuery.query('[name=checkbox_40]')[0];\n\nif (checkbox_39.checked == true) {\ncheckbox_38.disable();\ncheckbox_40.disable();\n} else {\ncheckbox_38.enable();\ncheckbox_40.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "сведений не имею",
+        "name": "checkbox_40",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_38 = Ext.ComponentQuery.query('[name=checkbox_38]')[0];\nvar checkbox_39 = Ext.ComponentQuery.query('[name=checkbox_39]')[0];\nvar checkbox_40 = Ext.ComponentQuery.query('[name=checkbox_40]')[0];\n\nif (checkbox_40.checked == true) {\ncheckbox_38.disable();\ncheckbox_39.disable();\n} else {\ncheckbox_38.enable();\ncheckbox_39.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left; margin-left:50px;text-transform:none;\">С принятием решения о назначении пенсии по имеющимся в распоряжении территориального органа Пенсионного фонда Российской Федерации сведениям индивидуального (персонифицированного) учета без представления дополнительных документов о стаже и заработке</div>",
+        "name": "fieldset_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "согласен",
+        "name": "checkbox_41",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_41 = Ext.ComponentQuery.query('[name=checkbox_41]')[0];\nvar checkbox_42 = Ext.ComponentQuery.query('[name=checkbox_42]')[0];\n\nif (checkbox_41.checked == true) {\ncheckbox_42.disable();\n} else {\ncheckbox_42.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "не согласен",
+        "name": "checkbox_42",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_41 = Ext.ComponentQuery.query('[name=checkbox_41]')[0];\nvar checkbox_42 = Ext.ComponentQuery.query('[name=checkbox_42]')[0];\n\nif (checkbox_42.checked == true) {\ncheckbox_41.disable();\n} else {\ncheckbox_41.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"text-align:left; margin-left:50px;text-transform:none;\">Для идентификации личности гражданина при обращении в территориальный орган Пенсионного фонда Российской Федерации посредством телефонной связи за имеющейся в распоряжении территориального органа Пенсионного фонда Российской Федерации информацией, относящейся к его персональным данным, использовать контрольную информацию</div>",
+        "name": "fieldset_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Варианты",
+        "name": "combobox_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "ответ на секретный вопрос"
+                },
+                {
+                    "value": "секретный код"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_3 = Ext.ComponentQuery.query('[name=combobox_3]')[0];\nvar combobox_9 = Ext.ComponentQuery.query('[name=combobox_9]')[0];\nvar textfield_40 = Ext.ComponentQuery.query('[name=textfield_40]')[0];\nvar textfield_41 = Ext.ComponentQuery.query('[name=textfield_41]')[0];\n\nvar betta = ['ответ на секретный вопрос','секретный код'].indexOf(combobox_3.getValue());\n\nif (betta == 0){\n\tcombobox_9.show();\n\ttextfield_40.show();\n}\nelse{\n\tcombobox_9.hide();\n\ttextfield_40.hide();\n};\n\nif (betta == 1){\n\ttextfield_41.show();\n}\nelse{\n\ttextfield_41.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Секретный вопрос",
+        "name": "combobox_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "девичья фамилия матери"
+                },
+                {
+                    "value": "кличка домашнего питомца"
+                },
+                {
+                    "value": "номер школы, которую Вы закончили"
+                },
+                {
+                    "value": "любимое блюдо"
+                },
+                {
+                    "value": "Ваш любимый писатель"
+                }
+            ],
+            "type": "store"
+        }
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Ответ на секретный вопрос",
+        "name": "textfield_40",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Код, состоящий из букв и (или) цифр",
+        "name": "textfield_41",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "minLength": 1,
+        "maxLength": 20
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Способ получения направить уведомления, подтверждающего факт и дату приема территориальным ОПФ РФ настоящего заявления и представленных документов",
+        "name": "combobox_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "e-mail"
+                },
+                {
+                    "value": "в ОГВ"
+                },
+                {
+                    "value": "почтовым отправлением по адресу"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_4 = Ext.ComponentQuery.query('[name=combobox_4]')[0];\nvar combobox_6 = Ext.ComponentQuery.query('[name=combobox_6]')[0];\nvar textfield_48 = Ext.ComponentQuery.query('[name=textfield_48]')[0];\n\nvar delta = ['e-mail','в ОГВ','почтовым отправлением по адресу'].indexOf(combobox_4.getValue());\n\nif (delta == 0){\n\tcombobox_6.show();\n}\nelse{\n\tcombobox_6.hide();\n};\n\nif (delta == 2){\n\ttextfield_48.show();\n}\nelse{\n\ttextfield_48.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "E-mail",
+        "name": "combobox_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "E-mail заявителя"
+                },
+                {
+                    "value": "E-mail представителя"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_6 = Ext.ComponentQuery.query('[name=combobox_6]')[0];\nvar textfield_42 = Ext.ComponentQuery.query('[name=textfield_42]')[0];\nvar textfield_43 = Ext.ComponentQuery.query('[name=textfield_43]')[0];\n\nvar alpha = ['E-mail заявителя','E-mail представителя'].indexOf(combobox_6.getValue());\n\nif (alpha == 0){\n\ttextfield_43.show();\n}\nelse{\n\ttextfield_43.hide();\n};\n\nif (alpha == 1){\n\ttextfield_42.show();\n}\nelse{\n\ttextfield_42.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "E-mail заявителя",
+        "name": "textfield_43",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "E-mail представителя",
+        "name": "textfield_42",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Почтовый адрес",
+        "name": "textfield_48",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "осуществлять информирование о ходе предоставления государственной услуги путем передачи текстовых сообщений",
+        "name": "checkbox_48",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_48 = Ext.ComponentQuery.query('[name=checkbox_48]')[0];\nvar checkbox_49 = Ext.ComponentQuery.query('[name=checkbox_49]')[0];\nvar checkbox_50 = Ext.ComponentQuery.query('[name=checkbox_50]')[0];\n\nif (checkbox_48.checked == true) {\ncheckbox_49.show();\ncheckbox_50.show();\n} else {\ncheckbox_49.hide();\ncheckbox_50.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "на адрес электронной почты",
+        "name": "checkbox_49",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_49 = Ext.ComponentQuery.query('[name=checkbox_49]')[0];\nvar checkbox_50 = Ext.ComponentQuery.query('[name=checkbox_50]')[0];\nvar combobox_5 = Ext.ComponentQuery.query('[name=combobox_5]')[0];\n\nif (checkbox_49.checked == true) {\ncombobox_5.show();\ncheckbox_50.disable();\n} else {\ncombobox_5.hide();\ncheckbox_50.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "E-mail",
+        "name": "combobox_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "E-mail заявителя"
+                },
+                {
+                    "value": "E-mail представителя"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_5 = Ext.ComponentQuery.query('[name=combobox_5]')[0];\nvar textfield_44 = Ext.ComponentQuery.query('[name=textfield_44]')[0];\nvar textfield_45 = Ext.ComponentQuery.query('[name=textfield_45]')[0];\n\nvar epsilon = ['E-mail заявителя','E-mail представителя'].indexOf(combobox_5.getValue());\n\nif (epsilon == 0){\n\ttextfield_44.show();\n}\nelse{\n\ttextfield_44.hide();\n};\n\nif (epsilon == 1){\n\ttextfield_45.show();\n}\nelse{\n\ttextfield_45.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "E-mail заявителя",
+        "name": "textfield_44",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "E-mail представителя",
+        "name": "textfield_45",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "на абонентский номер устройства подвижной радиотелефонной связи",
+        "name": "checkbox_50",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_49 = Ext.ComponentQuery.query('[name=checkbox_49]')[0];\nvar checkbox_50 = Ext.ComponentQuery.query('[name=checkbox_50]')[0];\nvar combobox_7 = Ext.ComponentQuery.query('[name=combobox_7]')[0];\n\nif (checkbox_50.checked == true) {\ncombobox_7.show();\ncheckbox_49.disable();\n} else {\ncombobox_7.hide();\ncheckbox_49.enable();\n};"
+        ]
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Абонентский номер",
+        "name": "combobox_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "абонентский номер гражданина"
+                },
+                {
+                    "value": "абонентский номер представителя"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var combobox_7 = Ext.ComponentQuery.query('[name=combobox_7]')[0];\nvar textfield_46 = Ext.ComponentQuery.query('[name=textfield_46]')[0];\nvar textfield_47 = Ext.ComponentQuery.query('[name=textfield_47]')[0];\n\nvar zita = ['абонентский номер гражданина','абонентский номер представителя'].indexOf(combobox_7.getValue());\n\nif (zita == 0){\n\ttextfield_46.show();\n}\nelse{\n\ttextfield_46.hide();\n};\n\nif (zita == 1){\n\ttextfield_47.show();\n}\nelse{\n\ttextfield_47.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Абонентский номер заявителя",
+        "name": "textfield_46",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Абонентский номер представителя",
+        "name": "textfield_47",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"color:red; font-weight:bold;float:left;\">Сканируем все представленные документы!</span>",
+        "name": "fieldset_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Для подтверждения дополнительных обстоятельств прилагаются документы",
+        "name": "checkbox_44",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_44 = Ext.ComponentQuery.query('[name=checkbox_44]')[0];\nvar fileuploadpanel_7 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_7]')[0];\nvar fileuploadpanel_6 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_6]')[0];\n\nif (checkbox_44.checked == true){\n\tfileuploadpanel_6.show();\n\tfileuploadpanel_7.show();\n}\nelse{\n\tfileuploadpanel_6.hide();\n\tfileuploadpanel_7.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Заявитель предоставил документы, подтверждающие продолжительность стажа",
+        "name": "checkbox_43",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_43 = Ext.ComponentQuery.query('[name=checkbox_43]')[0];\nvar fileuploadpanel_2 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_2]')[0];\n\nif (checkbox_43.checked == true){\n\tfileuploadpanel_2.show();\n}\nelse{\n\tfileuploadpanel_2.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Свидетельство о регистрации по месту жительства",
+        "name": "checkbox_46",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_46 = Ext.ComponentQuery.query('[name=checkbox_46]')[0];\nvar fileuploadpanel_30 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_30]')[0];\n\nif (checkbox_46.checked == true){\n\tfileuploadpanel_30.show();\n}\nelse{\n\tfileuploadpanel_30.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Свидетельство о регистрации по месту пребывания",
+        "name": "checkbox_47",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_47 = Ext.ComponentQuery.query('[name=checkbox_47]')[0];\nvar fileuploadpanel_8 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_8]')[0];\n\nif (checkbox_47.checked == true){\n\tfileuploadpanel_8.show();\n}\nelse{\n\tfileuploadpanel_8.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Свидетельство о смерти другого родителя ",
+        "name": "checkbox_52",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_52 = Ext.ComponentQuery.query('[name=checkbox_52]')[0];\nvar fileuploadpanel_38 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_38]')[0];\n\nif (checkbox_52.checked == true){\n\tfileuploadpanel_38.show();\n}\nelse{\n\tfileuploadpanel_38.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Документы, подтверждающие, что умершая являлась одинокой матерью",
+        "name": "checkbox_53",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_53 = Ext.ComponentQuery.query('[name=checkbox_53]')[0];\nvar fileuploadpanel_39 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_39]')[0];\n\nif (checkbox_53.checked == true){\n\tfileuploadpanel_39.show();\n}\nelse{\n\tfileuploadpanel_39.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Справка образовательного учреждения об обучении по очной форме",
+        "name": "checkbox_54",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_54 = Ext.ComponentQuery.query('[name=checkbox_54]')[0];\nvar fileuploadpanel_40 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_40]')[0];\n\nif (checkbox_54.checked == true){\n\tfileuploadpanel_40.show();\n}\nelse{\n\tfileuploadpanel_40.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Документы, подтверждающие, что направление на обучение в иностранное образовательное учреждение, расположенное за пределами РФ, произведено в соответствии с международными договорами РФ",
+        "name": "checkbox_55",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_55 = Ext.ComponentQuery.query('[name=checkbox_55]')[0];\nvar fileuploadpanel_41 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_41]')[0];\n\nif (checkbox_55.checked == true){\n\tfileuploadpanel_41.show();\n}\nelse{\n\tfileuploadpanel_41.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Выписка из акта освидетельствования гражданина, признанного инвалидом",
+        "name": "checkbox_56",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_56 = Ext.ComponentQuery.query('[name=checkbox_56]')[0];\nvar fileuploadpanel_13 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_13]')[0];\n\nif (checkbox_56.checked == true){\n\tfileuploadpanel_13.show();\n}\nelse{\n\tfileuploadpanel_13.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Документ, выданный   дипломатическим представительством или консульским учреждением РФ либо другим компетентным органом иностранного государства, подтверждающий место постоянного жительства гражданина РФ за пределами территории РФ",
+        "name": "checkbox_57",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_57 = Ext.ComponentQuery.query('[name=checkbox_57]')[0];\nvar fileuploadpanel_9 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_9]')[0];\n\nif (checkbox_57.checked == true){\n\tfileuploadpanel_9.show();\n}\nelse{\n\tfileuploadpanel_9.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Справка жилищных органов, справки о доходах всех членов семьи иные документы, подтверждающие нахождение нетрудоспособных членов семьи на иждивении умершего кормильца, в необходимых случаях – решение суда об установлении данного факта",
+        "name": "checkbox_58",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_58 = Ext.ComponentQuery.query('[name=checkbox_58]')[0];\nvar fileuploadpanel_26 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_26]')[0];\n\nif (checkbox_58.checked == true){\n\tfileuploadpanel_26.show();\n}\nelse{\n\tfileuploadpanel_26.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Справка жилищных органов, справки о доходах всех членов семьи, иные документы, подтверждающие факт нахождения пасынка (падчерицы) на воспитании и содержании умершего (умершей) отчима (мачехи), в необходимых случаях – решение суда об установлении данного факта",
+        "name": "checkbox_59",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_59 = Ext.ComponentQuery.query('[name=checkbox_59]')[0];\nvar fileuploadpanel_52 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_52]')[0];\n\nif (checkbox_59.checked == true){\n\tfileuploadpanel_52.show();\n}\nelse{\n\tfileuploadpanel_52.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Документ, подтверждающий, что нетрудоспособный член семьи занят уходом за детьми, братьями, сестрами или внуками умершего кормильца, не достигшими 14 лет, и не работает",
+        "name": "checkbox_60",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_60 = Ext.ComponentQuery.query('[name=checkbox_60]')[0];\nvar fileuploadpanel_53 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_53]')[0];\n\nif (checkbox_60.checked == true){\n\tfileuploadpanel_53.show();\n}\nelse{\n\tfileuploadpanel_53.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Документ об утрате источника средств к существованию",
+        "name": "checkbox_61",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_61 = Ext.ComponentQuery.query('[name=checkbox_61]')[0];\nvar fileuploadpanel_45 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_45]')[0];\n\nif (checkbox_61.checked == true){\n\tfileuploadpanel_45.show();\n}\nelse{\n\tfileuploadpanel_45.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Документ о среднемесячном заработке умершего кормильца",
+        "name": "checkbox_62",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_62 = Ext.ComponentQuery.query('[name=checkbox_62]')[0];\nvar fileuploadpanel_5 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_5]')[0];\n\nif (checkbox_62.checked == true){\n\tfileuploadpanel_5.show();\n}\nelse{\n\tfileuploadpanel_5.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Документы о других получателях пенсии по случаю потери кормильца ",
+        "name": "checkbox_63",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_63 = Ext.ComponentQuery.query('[name=checkbox_63]')[0];\nvar fileuploadpanel_54 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_54]')[0];\n\nif (checkbox_63.checked == true){\n\tfileuploadpanel_54.show();\n}\nelse{\n\tfileuploadpanel_54.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Назначение государственной пенсии по случаю потери кормильца членам семей погибших (умерших) космонавтов",
+        "name": "checkbox_64",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_64 = Ext.ComponentQuery.query('[name=checkbox_64]')[0];\nvar fileuploadpanel_55 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_55]')[0];\nvar fileuploadpanel_44 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_44]')[0];\nvar fileuploadpanel_49 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_49]')[0];\nvar fileuploadpanel_48 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_48]')[0];\nvar fileuploadpanel_56 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_56]')[0];\nvar fileuploadpanel_43 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_43]')[0];\n\nif (checkbox_64.checked == true){\n\tfileuploadpanel_55.show();\n\tfileuploadpanel_44.show();\n\tfileuploadpanel_49.show();\n\tfileuploadpanel_48.show();\n\tfileuploadpanel_56.show();\n\tfileuploadpanel_43.show();\n}\nelse{\n\tfileuploadpanel_55.hide();\n\tfileuploadpanel_44.hide();\n\tfileuploadpanel_49.hide();\n\tfileuploadpanel_48.hide();\n\tfileuploadpanel_56.hide();\n\tfileuploadpanel_43.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Назначение государственной пенсии по случаю потери кормильца членам семей военнослужащих, погибших (умерших) в период прохождения военной службы по призыву в качестве солдат, матросов, сержантов и старшин или не позднее трех месяцев после увольнения с военной службы либо в случае наступления смерти позднее этого срока, но вследствие военной травмы или заболевания",
+        "name": "checkbox_65",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_65 = Ext.ComponentQuery.query('[name=checkbox_65]')[0];\nvar fileuploadpanel_57 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_57]')[0];\nvar fileuploadpanel_50 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_50]')[0];\nvar fileuploadpanel_51 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_51]')[0];\nvar fileuploadpanel_58 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_58]')[0];\n\nif (checkbox_65.checked == true){\n\tfileuploadpanel_57.show();\n\tfileuploadpanel_50.show();\n\tfileuploadpanel_51.show();\n\tfileuploadpanel_58.show();\n}\nelse{\n\tfileuploadpanel_57.hide();\n\tfileuploadpanel_50.hide();\n\tfileuploadpanel_51.hide();\n\tfileuploadpanel_58.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Назначение государственной пенсии по случаю потери кормильца членам семей граждан, пострадавших в результате радиационных или техногенных катастроф",
+        "name": "checkbox_66",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_66 = Ext.ComponentQuery.query('[name=checkbox_66]')[0];\nvar fileuploadpanel_59 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_59]')[0];\nvar fileuploadpanel_47 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_47]')[0];\n\nif (checkbox_66.checked == true){\n\tfileuploadpanel_59.show();\n\tfileuploadpanel_47.show();\n}\nelse{\n\tfileuploadpanel_59.hide();\n\tfileuploadpanel_47.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Документ о причинно-следственной связи смерти кормильца с совершением гражданином умышленного уголовно наказуемого деяния, повлекшего за собой смерть кормильца ",
+        "name": "checkbox_67",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_67 = Ext.ComponentQuery.query('[name=checkbox_67]')[0];\nvar fileuploadpanel_46 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_46]')[0];\n\nif (checkbox_67.checked == true){\n\tfileuploadpanel_46.show();\n}\nelse{\n\tfileuploadpanel_46.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Список документов",
+        "name": "fieldset_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Заявление",
+        "fieldName": "LoadStatement",
+        "name": "fileuploadpanel_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "flag": "original",
+        "allowBlank": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, удостоверяющий личность заявителя",
+        "fieldName": "fileuploadpanel_1",
+        "name": "fileuploadpanel_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "description": "(паспорт РФ. Копия 2-3 стр. + стр. с регистрацией, для иностранных граждан и лиц без гражданства – вид на жительство, временное удостоверение личности)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие стаж",
+        "fieldName": "fileuploadpanel_2",
+        "name": "fileuploadpanel_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(трудовая книжка; письменный трудовой договор; договор гражданско-правового характера и документ работодателя об уплате обязательных платежей и акт о приеме-сдаче работ; трудовые книжки колхозников; справки, которые выдают работодатели или государственные (муниципальные) органы; выписки из приказов; лицевые счета и ведомости на выдачу заработной платы; военный билет)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ об отнесении к кругу лиц, предусмотренных статьей 45 Закона от 12 февраля 1993 года №4468-1",
+        "fieldName": "fileuploadpanel_43",
+        "name": "fileuploadpanel_43",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие условия, предусмотренные статьей 46 Закона от 12 февраля 1993 г. № 4468-1",
+        "fieldName": "fileuploadpanel_73",
+        "name": "fileuploadpanel_69_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство обязательного пенсионного страхования",
+        "fieldName": "fileuploadpanel_37",
+        "name": "fileuploadpanel_37",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы,  подтверждающие категорию гражданина, имеющего право на назначение государственной пенсии по инвалидности",
+        "fieldName": "fileuploadpanel_32",
+        "name": "fileuploadpanel_32",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(военнослужащие, ставшие инвалидами в период прохождения ими военной службы по призыву в качестве солдат, матросов, сержантов и старшин или не позднее трех месяцев после увольнения с военной службы. Инвалидность может наступить и позднее этого срока, но вследствие ранения, контузии, увечья или заболевания, которые получены в период прохождения военной службы;<br /><br />\nграждане, награжденные знаком \"Жителю блокадного Ленинграда\";<br /><br />\nинвалиды I, II и III группы;<br /><br />\nучастники ВОВ;<br /><br />\nграждане, ставшие инвалидами вследствие катастрофы на Чернобыльской АЭС;<br /><br />\nкосмонавты, ставшие инвалидами вследствие ранения, контузии, увечья или заболевания, связанных с подготовкой или выполнением космического полета, независимо от продолжительности выслуги (работы))"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие инвалидность",
+        "fieldName": "fileuploadpanel_29",
+        "name": "fileuploadpanel_29",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий изменение Ф.И.О.",
+        "fieldName": "fileuploadpanel_4",
+        "name": "fileuploadpanel_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(свидетельство о заключении брака, свидетельство о перемене имени, свидетельство о расторжении брака)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о среднемесячном заработке",
+        "fieldName": "fileuploadpanel_5",
+        "name": "fileuploadpanel_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(справка за любые 60 месяцев работы подряд до 1 января 2002 года; расчетные книжки или справки, выданные профсоюзными органами; лицевые счета, выдаваемые архивными организациями)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о среднемесячном заработке умершего кормильца",
+        "fieldName": "fileuploadpanel_31",
+        "name": "fileuploadpanel_31",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий продолжительность стажа умершего кормильца",
+        "fieldName": "fileuploadpanel_35",
+        "name": "fileuploadpanel_35",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий родственные отношения с умершим кормильцем",
+        "fieldName": "fileuploadpanel_36",
+        "name": "fileuploadpanel_36",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы о нетрудоспособных членах семьи",
+        "fieldName": "fileuploadpanel_6",
+        "name": "fileuploadpanel_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(подтверждающие личность, родственные отношения и нетрудоспособность членов семьи)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие нахождение нетрудоспособных членов семьи на иждивении",
+        "fieldName": "fileuploadpanel_7",
+        "name": "fileuploadpanel_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(справка жилищных органов, справка о доходах всех членов семьи и иные документы, содержащие требуемые сведения, а в необходимых случаях – решение суда об установлении данного факта)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о регистрации по месту пребывания",
+        "fieldName": "fileuploadpanel_8",
+        "name": "fileuploadpanel_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о регистрации по месту жительства",
+        "fieldName": "fileuploadpanel_30",
+        "name": "fileuploadpanel_30",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(для граждан, не достигших 14-летнего возраста)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий место постоянного жительства гражданина РФ за пределами территории РФ",
+        "fieldName": "fileuploadpanel_9",
+        "name": "fileuploadpanel_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(документ, выданный дипломатическим представительством или консульским учреждением РФ либо другим компетентным органом иностранного государства, подтверждающий место постоянного жительства гражданина РФ за пределами территории РФ)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие стаж на соответствующих видах работ",
+        "fieldName": "fileuploadpanel_10",
+        "name": "fileuploadpanel_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(справки, уточняющие особый характер и условия работы)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о рождении ребенка",
+        "fieldName": "fileuploadpanel_11",
+        "name": "fileuploadpanel_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о воспитании ребенка до восьмилетнего возраста",
+        "fieldName": "fileuploadpanel_12",
+        "name": "fileuploadpanel_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(справка жилищных органов и иные документы, содержащие требуемые сведения, а в необходимых случаях – решение суда об установлении данного факта)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие, что ребенок признавался инвалидом с детства или ребенком-инвалидом",
+        "fieldName": "fileuploadpanel_13",
+        "name": "fileuploadpanel_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(выписка из акта освидетельствования МСЭ)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о признании инвалидом лица, которому назначается пенсия",
+        "fieldName": "fileuploadpanel_42",
+        "name": "fileuploadpanel_42",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие родственные отношения с инвалидом с детства",
+        "fieldName": "fileuploadpanel_14",
+        "name": "fileuploadpanel_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(свидетельство о рождении, свидетельство об усыновлении (удочерении), свидетельство о заключении брака, свидетельство о расторжении брака)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о наличии заболевания, предусмотренного подпунктом 5 пункта 1 статьи 28 Федерального закона от 17 декабря 2001 г. N 173-ФЗ",
+        "fieldName": "fileuploadpanel_15",
+        "name": "fileuploadpanel_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(выданный медицинской организацией)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о работе в районах Крайнего Севера и приравненных к ним местностях",
+        "fieldName": "fileuploadpanel_16",
+        "name": "fileuploadpanel_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Справка из органа, который осуществляет пенсионное обеспечение по линии силового ведомства",
+        "fieldName": "fileuploadpanel_17",
+        "name": "fileuploadpanel_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "flag": "original"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Предложение Службы занятости",
+        "fieldName": "fileuploadpanel_18",
+        "name": "fileuploadpanel_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Удостоверение установленного образца",
+        "fieldName": "fileuploadpanel_19",
+        "name": "fileuploadpanel_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, удостоверяющий участие в ликвидации последствий катастрофы на Чернобыльской АЭС либо других радиационных или техногенных катастроф",
+        "fieldName": "fileuploadpanel_20",
+        "name": "fileuploadpanel_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(удостоверение установленного образца)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий проживание или работу в определенных зонах радиоактивного загрязнения",
+        "fieldName": "fileuploadpanel_21",
+        "name": "fileuploadpanel_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(удостоверение установленного образца, документы, подтверждающие проживание в указанных зонах (регистрация по месту жительства или месту пребывания), трудовая книжка с записью о факте работы в организации, расположенной в зоне радиоактивного загрязнения)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о получении или перенесении лучевой болезни и других заболеваний, связанных с радиационным воздействием вследствие катастрофы на Чернобыльской АЭС или работами по ликвидации указанной катастрофы",
+        "fieldName": "fileuploadpanel_22",
+        "name": "fileuploadpanel_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(удостоверение лица, перенесшего лучевую болезнь или другие заболевания, связанные с радиационным воздействием вследствие катастрофы на Чернобыльской АЭС, и ставшего инвалидом)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий, что гражданин является инвалидом вследствие катастрофы на Чернобыльской АЭС",
+        "fieldName": "fileuploadpanel_23",
+        "name": "fileuploadpanel_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(удостоверение лица, перенесшего лучевую болезнь или другие заболевания, связанные с радиационным воздействием вследствие катастрофы на Чернобыльской АЭС, и ставшего инвалидом)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий, что гражданин является инвалидом в результате других радиационных и техногенных катастроф",
+        "fieldName": "fileuploadpanel_24",
+        "name": "fileuploadpanel_24",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(заключение федерального учреждения медико-социальной экспертизы)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы о нетрудоспособных членах семьи",
+        "fieldName": "fileuploadpanel_25",
+        "name": "fileuploadpanel_25",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(подтверждающие личность, родственные отношения и нетрудоспособность членов семьи)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие нахождение нетрудоспособных членов семьи на иждивении",
+        "fieldName": "fileuploadpanel_26",
+        "name": "fileuploadpanel_26",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(справка жилищных органов, справка о доходах всех членов семьи и иные документы, содержащие требуемые сведения, а в необходимых случаях – решение суда об установлении данного факта)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о смерти кормильца",
+        "fieldName": "fileuploadpanel_34",
+        "name": "fileuploadpanel_34",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о смерти другого родителя",
+        "fieldName": "fileuploadpanel_38",
+        "name": "fileuploadpanel_38",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий, что умершая являлась одинокой матерью",
+        "fieldName": "fileuploadpanel_39",
+        "name": "fileuploadpanel_39",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(свидетельство о рождении ребенка, в котором отсутствует запись об отце ребенка либо сведения об отце ребенка внесены по указанию материи + справка органов записи актов гражданского состояния о том, что данные сведения внесены по указанию матери (при наличии))"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий, что лицо, на которое назначается пенсия, обучается по очной форме в образовательном учреждении",
+        "fieldName": "fileuploadpanel_40",
+        "name": "fileuploadpanel_40",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(справка образовательного учреждения об обучении по очной форме)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий, что направление на обучение в иностранное образовательное учреждение, расположенное за пределами России, произведено в соответствии с международными договорами Российской Федерации",
+        "fieldName": "fileuploadpanel_41",
+        "name": "fileuploadpanel_41",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий отнесение погибшего (умершего) кормильца к числу космонавтов-испытателей, космонавтов-исследователей, инструкторов-космонавтов-испытателей, инструкторов-космонавтов-исследователей, имевших звание Летчик-космонавт СССР или Летчик-космонавт Российской Федерации",
+        "fieldName": "fileuploadpanel_44",
+        "name": "fileuploadpanel_44",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ об утрате источника средств к существованию",
+        "fieldName": "fileuploadpanel_45",
+        "name": "fileuploadpanel_45",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о причинно-следственной связи смерти кормильца с совершением гражданином умышленного уголовно наказуемого деяния, повлекшего за собой смерть кормильца",
+        "fieldName": "fileuploadpanel_46",
+        "name": "fileuploadpanel_46",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о трудовом стаже",
+        "fieldName": "fileuploadpanel_47",
+        "name": "fileuploadpanel_47",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, удостоверяющий причинную связь гибели космонавта с исполнением служебных обязанностей, связанных с подготовкой или выполнением космического полета",
+        "fieldName": "fileuploadpanel_48",
+        "name": "fileuploadpanel_48",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий отнесение погибшего кормильца к числу кандидатов в космонавты-испытатели, космонавты-исследователи, космонавтов-испытателей, космонавтов-исследователей, инструкторов-космонавтов-испытателей, инструкторов-космонавтов-исследователей",
+        "fieldName": "fileuploadpanel_49",
+        "name": "fileuploadpanel_49",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, удостоверяющий причинную связь смерти бывшего военнослужащего с военной травмой или заболеванием, полученными в период прохождения военной службы",
+        "fieldName": "fileuploadpanel_50",
+        "name": "fileuploadpanel_50",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(заключение федерального учреждения медико-социальной экспертизы, военно-врачебной комиссии)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий период прохождения военной службы по призыву в качестве солдат, матросов, сержантов и старшин",
+        "fieldName": "fileuploadpanel_51",
+        "name": "fileuploadpanel_51",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий факт нахождения пасынка (падчерицы) на воспитании и содержании умершего (умершей) отчима (мачехи)",
+        "fieldName": "fileuploadpanel_52",
+        "name": "fileuploadpanel_52",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий, что нетрудоспособный член семьи занят уходом за детьми, братьями, сестрами или внуками умершего кормильца, не достигшими 14 лет, и не работает",
+        "fieldName": "fileuploadpanel_53",
+        "name": "fileuploadpanel_53",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы о других получателях пенсии по случаю потери кормильца, установленных в связи со смертью этого кормильца",
+        "fieldName": "fileuploadpanel_54",
+        "name": "fileuploadpanel_54",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий наличие гражданства РФ у погибшего (умершего) кормильца",
+        "fieldName": "fileuploadpanel_55",
+        "name": "fileuploadpanel_55",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о денежном довольствии (заработке) кормильца, определяемом в соответствии с Положением о материальном обеспечении космонавтов в Российской Федерации, утверждаемым Правительством Российской Федерации",
+        "fieldName": "fileuploadpanel_56",
+        "name": "fileuploadpanel_56",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий факт и причину гибели (смерти) военнослужащего",
+        "fieldName": "fileuploadpanel_57",
+        "name": "fileuploadpanel_57",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий, что вдова военнослужащего, погибшего в период прохождения военной службы по призыву вследствие военной травмы, не вступила в новый брак",
+        "fieldName": "fileuploadpanel_58",
+        "name": "fileuploadpanel_58",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий причинную связь смерти кормильца с катастрофой на Чернобыльской АЭС или другими радиационными и техногенными катастрофами",
+        "fieldName": "fileuploadpanel_59",
+        "name": "fileuploadpanel_59",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(заключение федерального учреждения медико-социальной экспертизы)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий изменение количества нетрудоспособных членов семьи",
+        "fieldName": "fileuploadpanel_60",
+        "name": "fileuploadpanel_60",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий изменение категории нетрудоспособного члена семьи умершего кормильца",
+        "fieldName": "fileuploadpanel_61",
+        "name": "fileuploadpanel_61",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий изменение категории получателей страховой пенсии по случаю потери кормильца",
+        "fieldName": "fileuploadpanel_62",
+        "name": "fileuploadpanel_62",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие периоды работы и (или) иной деятельности и иные периоды, включаемые (засчитываемые) в страховой стаж умершего кормильца",
+        "fieldName": "fileuploadpanel_63",
+        "name": "fileuploadpanel_60_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о денежном довольствии (заработке)",
+        "fieldName": "fileuploadpanel_64",
+        "name": "fileuploadpanel_60_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ об оставлении работы в должностях космонавтов-испытателей, космонавтов-исследователей, инструкторов-космонавтов-испытателей, инструкторов-космонавтов-исследователей в отрядах (группах) космонавтов, являющихся летно-испытательными (летно-исследовательскими) подразделениями нацчно-испытательных, научно-исследовательских центров и других организаций федеральных органов исполнительной власти и иных организаций",
+        "fieldName": "fileuploadpanel_65",
+        "name": "fileuploadpanel_61_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ об оставлении работы по состоянию здоровья (болезни)",
+        "fieldName": "fileuploadpanel_66",
+        "name": "fileuploadpanel_62_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о том, что гражданин не работает",
+        "fieldName": "fileuploadpanel_67",
+        "name": "fileuploadpanel_63_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(трудовая книжка)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о нуждаемости в постоянном постороннем уходе (помощи, надзоре)",
+        "fieldName": "fileuploadpanel_68",
+        "name": "fileuploadpanel_64_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие выполнение испытательных полетов на штатных рабочих местах членов летных экипажей летательных аппаратов и парашютно-десантной техники",
+        "fieldName": "fileuploadpanel_69",
+        "name": "fileuploadpanel_65_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о периодах работы (деятельности), засчитываемых в выслугу лет, с учетом которой назначается указанная пенсия",
+        "fieldName": "fileuploadpanel_70",
+        "name": "fileuploadpanel_66_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ об оставлении летной работы по состоянию здоровья",
+        "fieldName": "fileuploadpanel_71",
+        "name": "fileuploadpanel_67_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о том, что гражданин является летчиком-испытателем I класса",
+        "fieldName": "fileuploadpanel_72",
+        "name": "fileuploadpanel_68_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    }
+]

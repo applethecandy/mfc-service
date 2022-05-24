@@ -1,5 +1,13 @@
 [
     {
+        "xtype": "combobox",
+        "fieldLabel": "Выпадающий список",
+        "name": "lifesituation",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
         "xtype": "textfield",
         "fieldLabel": "Код подразделения представителя",
         "name": "textfield_28",
@@ -8,7 +16,8 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "allowBlank": false
+        "allowBlank": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
     },
     {
         "xtype": "fieldset",
@@ -675,8 +684,7 @@
         "isLegalField": false,
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
-        "documentCharacterNameDef": "Скан-копия",
-        "allowBlank": false
+        "documentCharacterNameDef": "Скан-копия"
     },
     {
         "xtype": "fileuploadpanel",
@@ -701,7 +709,7 @@
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
-        "description": "(детей, в том числе предыдущих)<br>В случае если регистрация рождения (усыновления) ребенка (детей) произведена компетентными органами иностранных государств,  предоставляются оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке"
+        "description": "Обязательный  документ, если регистрация произведена компетентными органами иностранных государств (оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)"
     },
     {
         "xtype": "fileuploadpanel",
@@ -714,7 +722,7 @@
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
-        "description": "(детей, в том числе предыдущих)"
+        "description": "(детей, в том числе предыдущих)<br>Обязательный  документ, если регистрация произведена компетентными органами иностранных государств (оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)"
     },
     {
         "xtype": "fileuploadpanel",
@@ -727,7 +735,18 @@
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
-        "description": "(в случае если они являются несовершеннолетними)"
+        "description": "(в случае если они являются несовершеннолетними)<br>\nОбязательный  документ, если регистрация произведена компетентными органами иностранных государств (оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Свидетельство о смерти родителей",
+        "fieldName": "fileuploadpanel_18",
+        "name": "fileuploadpanel_16_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный  документ, если регистрация произведена компетентными органами иностранных государств (оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)"
     },
     {
         "xtype": "fileuploadpanel",
@@ -739,11 +758,23 @@
         "isLegalField": false,
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
-        "documentCharacterNameDef": "Скан-копия"
+        "documentCharacterNameDef": "Скан-копия",
+        "description": "Обязательный  документ, если регистрация произведена компетентными органами иностранных государств (оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Выписка из решения об установлении над ребенком опеки",
+        "text": "Свидетельство об усыновлении ребенка (детей)",
+        "fieldName": "fileuploadpanel_19",
+        "name": "fileuploadpanel_17_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств - копия решения суда об усыновлении + если регистрация произведена компетентными органами иностранных государств, предоставляются оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке."
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ об установлении опеки над ребенком, а также над несовершеннолетним родителем ребенка",
         "fieldName": "fileuploadpanel_8",
         "name": "fileuploadpanel_8",
         "isPersonField": true,
@@ -752,9 +783,229 @@
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
-        "description": "для лица, заменяющего родителей (опекуна, усыновителя, приемного родителя)",
+        "description": "необязательный документ, скан если заявитель предоставил документ",
         "hidden": true,
         "disabled": true
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий ограничение дееспособности или признание родителя либо иного законного представителя ребенка недееспособным (ограниченно дееспособным)",
+        "fieldName": "fileuploadpanel_20",
+        "name": "fileuploadpanel_18_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о лишении родителей родительских прав (об ограничении в родительских правах)",
+        "fieldName": "fileuploadpanel_21",
+        "name": "fileuploadpanel_19_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ о признании родителей безвестно отсутствующими или умершими",
+        "fieldName": "fileuploadpanel_22",
+        "name": "fileuploadpanel_20_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ до 31.12.2024 (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий нахождение родителей ребенка под стражей или отбывание ими наказания в виде лишения свободы",
+        "fieldName": "fileuploadpanel_23",
+        "name": "fileuploadpanel_21_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ об установлении материнства и (или) отцовства (для несовершеннолетних родителей ребенка, не состоящих в браке)",
+        "fieldName": "fileuploadpanel_24",
+        "name": "fileuploadpanel_22_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий обучение по очной форме обучения, о ранее выплаченном матери ребенка пособии по беременности и родам",
+        "fieldName": "fileuploadpanel_25",
+        "name": "fileuploadpanel_23_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие невозможность матери ухаживать за ребенком по состоянию здоровья",
+        "fieldName": "fileuploadpanel_26",
+        "name": "fileuploadpanel_24_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о трудовой деятельности по последнему месту работы и основаниях увольнения",
+        "fieldName": "fileuploadpanel_27",
+        "name": "fileuploadpanel_25_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о последнем месте службы",
+        "fieldName": "fileuploadpanel_28",
+        "name": "fileuploadpanel_26_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения с места службы отца (матери, обоих родителей) ребенка о том, что он (она, они) не использует отпуск по уходу за ребенком и не получает пособия",
+        "fieldName": "fileuploadpanel_29",
+        "name": "fileuploadpanel_27_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о прекращении физическими лицами деятельности в качестве индивидуальных предпринимателей",
+        "fieldName": "fileuploadpanel_30",
+        "name": "fileuploadpanel_28_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о прекращении полномочий нотариусами, занимающимися частной практикой",
+        "fieldName": "fileuploadpanel_31",
+        "name": "fileuploadpanel_29_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения из решений территориальных органов федеральной налоговой службы о государственной регистрации прекращения статуса адвоката и прекращения деятельности иными физическими лицами, профессиональная деятельность которых в соответствии с федеральными законами подлежит государственной регистрации и (или) лицензированию",
+        "fieldName": "fileuploadpanel_32",
+        "name": "fileuploadpanel_30_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о предоставлении отпуска по уходу за ребенком (для лиц, из числа уволенных в период отпуска по уходу за ребенком)",
+        "fieldName": "fileuploadpanel_33",
+        "name": "fileuploadpanel_31_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о размере ранее выплаченного пособия по беременности и родам, ежемесячного пособия по уходу за ребенком (для лиц, из числа уволенных в период отпуска по уходу за ребенком)",
+        "fieldName": "fileuploadpanel_34",
+        "name": "fileuploadpanel_32_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения с места работы отца (матери, обоих родителей) ребенка о том, что он (она, они) не использует указанный отпуск и не получает пособия (для лиц, фактически осуществляющих уход за ребенком вместо матери (отца, обоих родителей) ребенка)",
+        "fieldName": "fileuploadpanel_35",
+        "name": "fileuploadpanel_33_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о среднем заработке исчисленном в порядке, установленном Положением об исчислении среднего заработка (дохода, денежного довольствия) при назначении пособия по беременности и родам и ежемесячного пособия по уходу за ребенком отдельным категориям граждан, утвержденным постановлением Правительства Российской Федерации от 29 декабря 2009 г. № 1100 (для лиц, из числа уволенных в период отпуска по беременности и родам)",
+        "fieldName": "fileuploadpanel_39",
+        "name": "fileuploadpanel_37_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о невыплате пособия по безработице",
+        "fieldName": "fileuploadpanel_36",
+        "name": "fileuploadpanel_34_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения об отсутствии регистрации в качестве страхователя и неполучении пособия за счет средств ФСС РФ (для физических лиц, осуществляющих деятельность в качестве индивидуальных предпринимателей, адвокатов, нотариусов, иных физических лиц, профессиональная деятельность которых в соответствии с федеральными законами подлежит государственной регистрации и (или) лицензированию)",
+        "fieldName": "fileuploadpanel_37",
+        "name": "fileuploadpanel_35_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о регистрации по месту жительства и месту пребывания (о постановке на учет по месту пребывания) заявителя и ребенка  в пределах РФ",
+        "fieldName": "fileuploadpanel_38",
+        "name": "fileuploadpanel_36_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
     },
     {
         "xtype": "fileuploadpanel",
@@ -832,7 +1083,8 @@
         "isLegalField": false,
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
-        "documentCharacterNameDef": "Скан-копия"
+        "documentCharacterNameDef": "Скан-копия",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
     },
     {
         "xtype": "fileuploadpanel",
@@ -844,7 +1096,8 @@
         "isLegalField": false,
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
-        "documentCharacterNameDef": "Скан-копия"
+        "documentCharacterNameDef": "Скан-копия",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
     },
     {
         "xtype": "fileuploadpanel",
@@ -856,7 +1109,8 @@
         "isLegalField": false,
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
-        "documentCharacterNameDef": "Скан-копия"
+        "documentCharacterNameDef": "Скан-копия",
+        "description": "необязательный документ, скан если заявитель предоставил документ"
     },
     {
         "xtype": "fileuploadpanel",
@@ -870,5 +1124,38 @@
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
         "description": "в случае необходимости подтверждения родственных отношений с детьми (например, свидетельство о перемене фамилии (имени, отчества), справки компетентных органов (должностных лиц) иностранных государств"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о полученных грантах, субсидиях и других поступлениях, имеющих целевой характер расходования и предоставляемых в рамках поддержки предпринимательства",
+        "fieldName": "fileuploadpanel_40",
+        "name": "fileuploadpanel_38_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)\n\n"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о доходах от осуществления предпринимательской деятельности, включая доходы, полученные в результате деятельности крестьянского (фермерского) хозяйства, в том числе созданного без образования юридического лица, и доходах от осуществления частной практики",
+        "fieldName": "fileuploadpanel_41",
+        "name": "fileuploadpanel_39_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "ПФР посредством единой системы межведомственного электронного взаимодействия либо представляет заявитель подтверждающий документ"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о доходах по договорам авторского заказа, об отчуждении исключительного права на результаты интеллектуальной деятельности",
+        "fieldName": "fileuploadpanel_42",
+        "name": "fileuploadpanel_40_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "ПФР посредством единой системы межведомственного электронного взаимодействия либо представляет заявитель подтверждающий документ"
     }
 ]

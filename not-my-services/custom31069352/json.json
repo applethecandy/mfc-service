@@ -1,0 +1,553 @@
+[
+    {
+        "xtype": "fieldset",
+        "title": "1. СВЕДЕНИЯ О ЛИЦЕ, ПОДЛЕЖАЩЕМ СНЯТИЮ С УЧЕТА ПО МЕСТУ ПРЕБЫВАНИЯ",
+        "name": "fieldset_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "allowBlank": false,
+        "upperCase": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "allowBlank": false,
+        "upperCase": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_34",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "description": "(при наличии)"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "datefield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата убытия",
+        "name": "datefield_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Гражданство",
+        "name": "combobox_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "specialConfig": "citizenship",
+        "store": null,
+        "queryMode": null,
+        "displayField": null,
+        "valueField": null
+    },
+    {
+        "xtype": "fieldset",
+        "title": "2. Сведения о месте пребывания",
+        "name": "fieldset_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Область, край, республика, АО",
+        "name": "combobox_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "upperCase": true,
+        "editable": true,
+        "strategy": "passportDepCode"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Город или другой населенный пункт",
+        "name": "combobox_c6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "upperCase": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Район",
+        "name": "textfield_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "upperCase": true,
+        "strategy": "passportDepCode"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Город или другой населенный пункт",
+        "name": "combobox_c7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "upperCase": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Улица",
+        "name": "textfield_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "upperCase": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Дом",
+        "name": "textfield_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "upperCase": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Корпус",
+        "name": "textfield_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "upperCase": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Строение",
+        "name": "textfield_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Квартира",
+        "name": "textfield_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Основание для снятия с учета по месту пребывания",
+        "name": "combobox_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "description": "(указывается одно из оснований, предусмотренных подпунктом «в» пункта 37 Правил осуществления миграционного учета иностранных граждан и лиц без гражданства в Российской Федерации, утвержденных постановлением Правительства Российской Федерации от 15 января 2007 г. № 9)",
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "после получения от органов записи актов гражданского состояния либо от заинтересованного физического или юридического лица документа, подтверждающего смерть иностранного гражданина; "
+                },
+                {
+                    "value": "после получения от заинтересованного физического или юридического лица заверенной в установленном порядке копии вступившего в законную силу решения суда о признании иностранного гражданина, находившегося в Российской Федерации, безвестно отсутствующим или об объявлении его умершим. "
+                }
+            ],
+            "type": "store"
+        }
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Жизненная ситуация",
+        "name": "combobox_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "снятие иностранного гражданина с учета по месту пребывания принимающей стороной"
+                },
+                {
+                    "value": "наступила смерть"
+                },
+                {
+                    "value": "признан безвестно отсутствующим (без вести пропавший)"
+                },
+                {
+                    "value": "объявлен умершим"
+                }
+            ],
+            "type": "store"
+        }
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование документа, подтверждающего основание для снятия с учета по месту пребывания",
+        "name": "textfield_29",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Реквизиты документа, подтверждающего основание для снятия с учета по месту пребывания",
+        "name": "textfield_30",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "3. СВЕДЕНИЯ О ПРИНИМАЮЩЕЙ СТОРОНЕ",
+        "name": "fieldset_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "lastname",
+        "upperCase": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "firstname",
+        "upperCase": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_24",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "middlename"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "datefield_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "birthdate"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Гражданство",
+        "name": "combobox_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "specialConfig": "citizenship",
+        "store": null,
+        "queryMode": null,
+        "displayField": null,
+        "valueField": null
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Место жительства",
+        "name": "textfield_28",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Документ, удостоверяющий личность принимающей стороны",
+        "name": "fieldset_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Вид",
+        "name": "combobox_c8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "documenttypename",
+        "scripts": [
+            "var combobox_c8 = Ext.ComponentQuery.query('[name=combobox_c8]')[0];\n\nif (combobox_c8.getValue() == \"Паспорт гражданина Российской Федерации\"){\n\tcombobox_c8.setValue(\"ПАСПОРТ РФ\")\n}\nelse{\nconsole.log(combobox_c8.getValue())\n};"
+        ],
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "ПАСПОРТ РФ"
+                },
+                {
+                    "value": "ВИД НА ЖИТЕЛЬСТВО В РОССИЙСКОЙ ФЕДЕРАЦИИ"
+                },
+                {
+                    "value": "ВОДИТЕЛЬСКОЕ УДОСТОВЕРЕНИЕ РОССИЙСКОЙ ФЕДЕРАЦИИ"
+                },
+                {
+                    "value": "ВОЕННЫЙ БИЛЕТ"
+                },
+                {
+                    "value": "ВРЕМЕННОЕ УДОСТОВЕРЕНИЕ ЛИЧНОСТИ ГРАЖДАНИНА РОССИЙСКОЙ ФЕДЕРАЦИИ"
+                },
+                {
+                    "value": "ДИПЛОМАТИЧЕСКИЙ ПАСПОРТ ГРАЖДАНИНА РОССИЙСКОЙ ФЕДЕРАЦИИ"
+                },
+                {
+                    "value": "ДОКУМЕНТ УДОСТОВЕРЯЮЩИЙ ЛИЧНОСТЬ ПРЕДЪЯВЛЕННЫЙ ПРИ ПЕРЕСЕЧЕНИИ ГРАНИЦЫ РОССИЙСКОЙ ФЕДЕРАЦИИ"
+                },
+                {
+                    "value": "ЗАГРАНИЧНЫЙ ПАСПОРТ ГРАЖДАНИНА РОССИЙСКОЙ ФЕДЕРАЦИИ"
+                },
+                {
+                    "value": "МИГРАЦИОННАЯ КАРТА"
+                },
+                {
+                    "value": "ПАСПОРТ ГРАЖДАНИНА КЫРГЫЗСКОЙ РЕСПУБЛИКИ"
+                },
+                {
+                    "value": "ПАСПОРТ ГРАЖДАНИНА РЕСПУБЛИКИ АЗЕРБАЙДЖАН"
+                },
+                {
+                    "value": "ПАСПОРТ ГРАЖДАНИНА РЕСПУБЛИКИ АРМЕНИЯ"
+                },
+                {
+                    "value": "ПАСПОРТ ГРАЖДАНИНА РЕСПУБЛИКИ БЕЛАРУСЬ"
+                },
+                {
+                    "value": "ПАСПОРТ ГРАЖДАНИНА РЕСПУБЛИКИ КАЗАХСТАН"
+                },
+                {
+                    "value": "ПАСПОРТ ГРАЖДАНИНА РЕСПУБЛИКИ ТАДЖИКИСТАН"
+                },
+                {
+                    "value": "ПАСПОРТ ГРАЖДАНИНА РЕСПУБЛИКИ УЗБЕКИСТАН"
+                },
+                {
+                    "value": "ПАСПОРТ ГРАЖДАНИНА СССР ОБРАЗЦА 1974 ГОДА"
+                },
+                {
+                    "value": "ПАСПОРТ ГРАЖДАНИНА УКРАИНЫ"
+                },
+                {
+                    "value": "ПАСПОРТ ИНОСТРАННОГО ГРАЖДАНИНА"
+                },
+                {
+                    "value": "ПАСПОРТ МОРЯКА (УДОСТОВЕРЕНИЕ ЛИЧНОСТИ МОРЯКА)"
+                },
+                {
+                    "value": "ПОЛИС ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ"
+                },
+                {
+                    "value": "РАЗРЕШЕНИЕ НА ВРЕМЕННОЕ ПРОЖИВАНИЕ"
+                },
+                {
+                    "value": "СВИДЕТЕЛЬСТВО О ПРЕДОСТАВЛЕНИИ ВРЕМЕННОГО УБЕЖИЩА НА ТЕРРИТОРИИ РОССИЙСКОЙ ФЕДЕРАЦИИ"
+                },
+                {
+                    "value": "СВИДЕТЕЛЬСТВО О РОЖДЕНИИ"
+                },
+                {
+                    "value": "СВИДЕТЕЛЬСТВО О РОЖДЕНИИ ИНОСТРАННОГО ГРАЖДАНИНА"
+                },
+                {
+                    "value": "СПРАВКА ОБ ОСВОБОЖДЕНИИ ИЗ МЕСТ ЛИШЕНИЯ СВОБОДЫ"
+                },
+                {
+                    "value": "УДОСТОВЕРЕНИЕ БЕЖЕНЦА"
+                },
+                {
+                    "value": "УДОСТОВЕРЕНИЕ ЛИЧНОСТИ ВОЕННОСЛУЖАЩЕГО РОССИЙСКОЙ ФЕДЕРАЦИИ"
+                },
+                {
+                    "value": "УДОСТОВЕРЕНИЕ ЛИЧНОСТИ ГРАЖДАНИНА РЕСПУБЛИКИ КАЗАХСТАН"
+                }
+            ],
+            "type": "store"
+        },
+        "specialConfig": null
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "textfield_26",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docseries"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "textfield_27",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docnumber"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "datefield_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issuedate"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "textfield_25",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Действителен до",
+        "name": "datefield_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "validdate"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Телефон",
+        "name": "textfield_36",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "person_mobile"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование документа, подтверждающего полномочия представителя юридического лица",
+        "name": "textfield_31",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Реквизиты документа, подтверждающего полномочия представителя юридического лица",
+        "name": "fieldset_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "серия",
+        "name": "textfield_32",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "description": "(при наличии)"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "номер",
+        "name": "textfield_33",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "description": "(при наличии)"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование организации",
+        "name": "textfield_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "strategy": "organizationbrief_orgfullname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес организации",
+        "name": "textfield_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "strategy": "legalAddress"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИНН",
+        "name": "textfield_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "strategy": "organizationbrief_inn"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Список документов:",
+        "name": "fieldset_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Уведомление",
+        "fieldName": "LoadStatement",
+        "name": "LoadStatement",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": true,
+        "flag": "original",
+        "description": "(в программу необходимо приложить скан-копию документа с подписью заявителя и специалиста МФЦ, а в ОГВ отправить оригинал)",
+        "scanDocumentWithdraw": ""
+    }
+]

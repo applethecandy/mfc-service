@@ -37,15 +37,16 @@ margin:none;
 padding:none;}
 
 #tbl td{
+padding: 0;
 width:50%;
-font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
-font-size: 10pt;
+font-size: 7pt;
+line-height: 6pt;
 font-style: normal;
 font-variant: normal;
 font-weight: 500;}
 
 .little{
-font-size:10pt!important;
+font-size:6pt!important;
 text-decoration:none;}
 
 .centr{
@@ -571,7 +572,7 @@ text-indent:0px;
 							</tr>
 							<tr>
 								<td class="clear-top clear-bottom" style="padding-top:0px;">
-									<div class="centr" style="padding-left:247px;position: relative;top: -4px;">(указывается наименование организации, осуществляющей доставку пенсии)</div>
+									<div class="centr" style="padding-left:247px;position: relative;top: 2px;">(указывается наименование организации, осуществляющей доставку пенсии)</div>
 								</td>
 							</tr>
 							<tr>
@@ -621,7 +622,7 @@ text-indent:0px;
 							</tr>
 							<tr>
 								<td class="clear-top">
-									<center><font style="padding-left:203px; position: relative;top: -4px;">(указывается номер счета получателя)</font></center>
+									<center><font style="padding-left:203px; position: relative;top: -0px;">(указывается номер счета получателя)</font></center>
 								</td>
 							</tr>
 						</table>
@@ -709,7 +710,7 @@ text-indent:0px;
 							</tr>
 							<tr>
 								<td class="clear-top clear-bottom" style="padding-top:0px;">
-									<div class="centr" style="padding-left:247px;position: relative;top: -4px;">(указывается наименование организации, осуществляющей доставку пенсии)</div>
+									<div class="centr" style="padding-left:247px;position: relative;top: 2px;">(указывается наименование организации, осуществляющей доставку пенсии)</div>
 								</td>
 							</tr>
 							<tr>
@@ -751,7 +752,7 @@ text-indent:0px;
 							</tr>
 							<tr>
 								<td class="clear-top">
-									<center><font style="padding-left:203px; position: relative;top: -4px;">(указывается номер счета получателя)</font></center>
+									<center><font style="padding-left:203px; position: relative;top: -0px;">(указывается номер счета получателя)</font></center>
 								</td>
 							</tr>
 						</table>

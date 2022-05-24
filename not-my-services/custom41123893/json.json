@@ -1,0 +1,646 @@
+[
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Обработчик",
+        "name": "processor",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true,
+        "scripts": [
+            "// предустановки бизнес данных(полей МЭВ)\nvar orderId = Ext.ComponentQuery.query('[name=SR_dataRequest.orderId]')[0];\norderId.setValue(\"${order.getOrderNumber()}\");\norderId.hide();\n\nvar serviceCode = Ext.ComponentQuery.query('[name=SR_dataRequest.serviceCode]')[0];\nserviceCode.setValue(\"342453758\");\nserviceCode.hide();\n\nvar targetCode = Ext.ComponentQuery.query('[name=SR_dataRequest.targetCode]')[0];\ntargetCode.setValue(\"342453805\");\ntargetCode.hide();\n\nvar applicationDate = Ext.ComponentQuery.query('[name=SR_dataRequest.applicationDate]')[0];\napplicationDate.setValue(new Date());\napplicationDate.hide();\n\n\nvar oktmo = Ext.ComponentQuery.query('[name=SR_dataRequest.OKTMO]')[0];\noktmo.setValue(\"${order.getCreationMfc().getOktmo()?right_pad(11,'0')}\");\noktmo.hide();\n\n\nvar initiator = Ext.ComponentQuery.query('[name=SR_dataRequest.initiator]')[0];\ninitiator.setValue(\"${order.getCreationMfc().getName()}\");\ninitiator.hide();\n\nvar SR_attachmentFile = Ext.ComponentQuery.query('[fieldName=SR_attachmentFile]')[0];\nFileUploadGrid.setUploadVisibility([], ['SR_attachmentFile']);\n\nvar processor = Ext.ComponentQuery.query('[name=processor]')[0];\nprocessor.hide();",
+            "var Email = Ext.ComponentQuery.query('[name=Email2]')[0];\nvar requesterType = Ext.ComponentQuery.query('[name=requesterType]')[0];\n\n\n\nif(requesterType.value == 'COMPANY') {\n\tvar EmailUl = Ext.ComponentQuery.query(\"{name=='additionalRequesters[0].EmailUl'}\")[0]\nEmail.setValue(EmailUl.value);\n} else {\n\tvar EmailFl = Ext.ComponentQuery.query(\"{name=='additionalRequesters[0].email'}\")[0]\nEmail.setValue(EmailFl.value);\n}\n",
+            "var Email = Ext.ComponentQuery.query('[name=Email]')[0];\nvar requesterType = Ext.ComponentQuery.query('[name=requesterType]')[0];\n\n\n\nif(requesterType.value == 'COMPANY') {\n\tvar EmailUl = Ext.ComponentQuery.query(\"{name=='additionalRequesters[0].EmailUl'}\")[0]\nEmail.setValue(EmailUl.value);\n} else {\n\tvar EmailFl = Ext.ComponentQuery.query(\"{name=='additionalRequesters[0].email'}\")[0]\nEmail.setValue(EmailFl.value);\n}\n"
+        ]
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Вложение",
+        "fieldName": "SR_attachmentFile",
+        "name": "fileuploadpanel_0",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Код цели",
+        "name": "SR_dataRequest.targetCode",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false,
+        "maxLength": 50,
+        "value": "342453805"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Код услуги",
+        "name": "SR_dataRequest.serviceCode",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false,
+        "maxLength": 50,
+        "value": "342453758"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата заявления",
+        "name": "SR_dataRequest.applicationDate",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер заявления",
+        "name": "SR_dataRequest.orderId",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ОКТМО",
+        "name": "SR_dataRequest.OKTMO",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false,
+        "maxLength": 11
+    },
+    {
+        "xtype": "textarea",
+        "fieldLabel": "Наименование отправителя заявления",
+        "name": "SR_dataRequest.initiator",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false,
+        "maxLength": 500
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИНН",
+        "name": "innFL",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": false,
+        "allowBlank": false,
+        "strategy": "inn",
+        "vtype": "validateInnInd",
+        "maxLength": 12
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИНН",
+        "name": "innUL",
+        "isPersonField": false,
+        "isSoleField": false,
+        "isLegalField": true,
+        "allowBlank": false,
+        "maxLength": 10,
+        "strategy": "organizationbrief_inn",
+        "vtype": "validateInnLegal"
+    },
+    {
+        "xtype": "label",
+        "html": "<div style=\"font-size: 20px; color:#black; font-weight: bold;\">Характеристики для подбора информации</div>",
+        "name": "label_2",
+        "fieldName": "label_2",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_0",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "ОКПД2"
+            },
+            {
+                "name": "OKPD2",
+                "xtype": "textfield",
+                "fieldLabel": "Код продукции по ОКПД2",
+                "isPersonField": false,
+                "isSoleField": true,
+                "isLegalField": true,
+                "allowBlank": false
+            }
+        ],
+        "prefix": "cloneablePanel_0",
+        "fieldName": "cloneablePanel_0",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "name": "GoodsDeliveryRegion",
+        "xtype": "combobox",
+        "fieldLabel": "Регион поставки товаров, выполнения работ, оказания услуг",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true,
+        "editable": false,
+        "queryMode": "local",
+        "displayField": "name",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value",
+                "name"
+            ],
+            "data": [
+                {
+                    "value": "01",
+                    "name": "Республика Адыгея (Адыгея)"
+                },
+                {
+                    "value": "02",
+                    "name": "Республика Башкортостан"
+                },
+                {
+                    "value": "03",
+                    "name": "Республика Бурятия"
+                },
+                {
+                    "value": "04",
+                    "name": "Республика Алтай"
+                },
+                {
+                    "value": "05",
+                    "name": "Республика Дагестан"
+                },
+                {
+                    "value": "06",
+                    "name": "Республика Ингушетия"
+                },
+                {
+                    "value": "07",
+                    "name": "Кабардино-Балкарская Республика"
+                },
+                {
+                    "value": "08",
+                    "name": "Республика Калмыкия"
+                },
+                {
+                    "value": "09",
+                    "name": "Карачаево-Черкесская Республика"
+                },
+                {
+                    "value": "10",
+                    "name": "Республика Карелия"
+                },
+                {
+                    "value": "11",
+                    "name": "Республика Коми"
+                },
+                {
+                    "value": "12",
+                    "name": "Республика Марий Эл"
+                },
+                {
+                    "value": "13",
+                    "name": "Республика Мордовия"
+                },
+                {
+                    "value": "14",
+                    "name": "Республика Саха (Якутия)"
+                },
+                {
+                    "value": "15",
+                    "name": "Республика Северная Осетия – Алания"
+                },
+                {
+                    "value": "16",
+                    "name": "Республика Татарстан (Татарстан)"
+                },
+                {
+                    "value": "17",
+                    "name": "Республика Тыва"
+                },
+                {
+                    "value": "18",
+                    "name": "Удмуртская Республика"
+                },
+                {
+                    "value": "19",
+                    "name": "Республика Хакасия"
+                },
+                {
+                    "value": "20",
+                    "name": "Чеченская Республика"
+                },
+                {
+                    "value": "21",
+                    "name": "Чувашская Республика - Чувашия"
+                },
+                {
+                    "value": "22",
+                    "name": "Алтайский край"
+                },
+                {
+                    "value": "23",
+                    "name": "Краснодарский край"
+                },
+                {
+                    "value": "24",
+                    "name": "Красноярский край"
+                },
+                {
+                    "value": "25",
+                    "name": "Приморский край"
+                },
+                {
+                    "value": "26",
+                    "name": "Ставропольский край"
+                },
+                {
+                    "value": "27",
+                    "name": "Хабаровский край"
+                },
+                {
+                    "value": "28",
+                    "name": "Амурская область"
+                },
+                {
+                    "value": "29",
+                    "name": "Архангельская область"
+                },
+                {
+                    "value": "30",
+                    "name": "Астраханская область"
+                },
+                {
+                    "value": "31",
+                    "name": "Белгородская область"
+                },
+                {
+                    "value": "32",
+                    "name": "Брянская область"
+                },
+                {
+                    "value": "33",
+                    "name": "Владимирская область"
+                },
+                {
+                    "value": "34",
+                    "name": "Волгоградская область"
+                },
+                {
+                    "value": "35",
+                    "name": "Вологодская область"
+                },
+                {
+                    "value": "36",
+                    "name": "Воронежская область"
+                },
+                {
+                    "value": "37",
+                    "name": "Ивановская область"
+                },
+                {
+                    "value": "38",
+                    "name": "Иркутская область"
+                },
+                {
+                    "value": "39",
+                    "name": "Калининградская область"
+                },
+                {
+                    "value": "40",
+                    "name": "Калужская область"
+                },
+                {
+                    "value": "41",
+                    "name": "Камчатский край"
+                },
+                {
+                    "value": "42",
+                    "name": "Кемеровская область"
+                },
+                {
+                    "value": "43",
+                    "name": "Кировская область"
+                },
+                {
+                    "value": "44",
+                    "name": "Костромская область"
+                },
+                {
+                    "value": "45",
+                    "name": "Курганская область"
+                },
+                {
+                    "value": "46",
+                    "name": "Курская область"
+                },
+                {
+                    "value": "47",
+                    "name": "Ленинградская область"
+                },
+                {
+                    "value": "48",
+                    "name": "Липецкая область"
+                },
+                {
+                    "value": "49",
+                    "name": "Магаданская область"
+                },
+                {
+                    "value": "50",
+                    "name": "Московская область"
+                },
+                {
+                    "value": "51",
+                    "name": "Мурманская область"
+                },
+                {
+                    "value": "52",
+                    "name": "Нижегородская область"
+                },
+                {
+                    "value": "53",
+                    "name": "Новгородская область"
+                },
+                {
+                    "value": "54",
+                    "name": "Новосибирская область"
+                },
+                {
+                    "value": "55",
+                    "name": "Омская область"
+                },
+                {
+                    "value": "56",
+                    "name": "Оренбургская область"
+                },
+                {
+                    "value": "57",
+                    "name": "Орловская область"
+                },
+                {
+                    "value": "58",
+                    "name": "Пензенская область"
+                },
+                {
+                    "value": "59",
+                    "name": "Пермский край"
+                },
+                {
+                    "value": "60",
+                    "name": "Псковская область"
+                },
+                {
+                    "value": "61",
+                    "name": "Ростовская область"
+                },
+                {
+                    "value": "62",
+                    "name": "Рязанская область"
+                },
+                {
+                    "value": "63",
+                    "name": "Самарская область"
+                },
+                {
+                    "value": "64",
+                    "name": "Саратовская область"
+                },
+                {
+                    "value": "65",
+                    "name": "Сахалинская область"
+                },
+                {
+                    "value": "66",
+                    "name": "Свердловская область"
+                },
+                {
+                    "value": "67",
+                    "name": "Смоленская область"
+                },
+                {
+                    "value": "68",
+                    "name": "Тамбовская область"
+                },
+                {
+                    "value": "69",
+                    "name": "Тверская область"
+                },
+                {
+                    "value": "70",
+                    "name": "Томская область"
+                },
+                {
+                    "value": "71",
+                    "name": "Тульская область"
+                },
+                {
+                    "value": "72",
+                    "name": "Тюменская область"
+                },
+                {
+                    "value": "73",
+                    "name": "Ульяновская область"
+                },
+                {
+                    "value": "74",
+                    "name": "Челябинская область"
+                },
+                {
+                    "value": "75",
+                    "name": "Забайкальский край"
+                },
+                {
+                    "value": "76",
+                    "name": "Ярославская область"
+                },
+                {
+                    "value": "77",
+                    "name": "Город Москва"
+                },
+                {
+                    "value": "78",
+                    "name": "Город Санкт-Петербург"
+                },
+                {
+                    "value": "79",
+                    "name": "Еврейская автономная область"
+                },
+                {
+                    "value": "83",
+                    "name": "Ненецкий автономный округ"
+                },
+                {
+                    "value": "86",
+                    "name": "Ханты-Мансийский автономный округ - Югра"
+                },
+                {
+                    "value": "87",
+                    "name": "Чукотский автономный округ"
+                },
+                {
+                    "value": "89",
+                    "name": "Ямало-Ненецкий автономный округ"
+                },
+                {
+                    "value": "91",
+                    "name": "Республика Крым"
+                },
+                {
+                    "value": "92",
+                    "name": "Город Севастополь"
+                },
+                {
+                    "value": "98",
+                    "name": "Неопределено"
+                },
+                {
+                    "value": "99",
+                    "name": "Значение отсутствует"
+                }
+            ],
+            "type": "store"
+        }
+    },
+    {
+        "xtype": "label",
+        "html": "<div style=\"font-size: 20px; color:#black; font-weight: bold;\">Информация о заказчике</div>",
+        "name": "label_4",
+        "fieldName": "label_4",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование",
+        "name": "Name",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИНН Заказчика",
+        "name": "INN",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "label",
+        "html": "<div style=\"font-size: 20px; color:#black; font-weight: bold;\">Способ предоставления информации</div> <br> <div style=\"font-size: 14px; color:#BA2F39; width: 1000px; text-align:left\">*один из объектов должен быть отмечен обязательно</div>",
+        "name": "label_0",
+        "fieldName": "label_0",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Электронная почта",
+        "name": "checkbox_9",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true,
+        "scripts": [
+            "var checkbox_9 = Ext.ComponentQuery.query('[name=checkbox_9]')[0];\nvar Email = Ext.ComponentQuery.query('[name=Email]')[0];\n\nif (checkbox_9.checked == true) { \naddVisible(Email); \n} else {\nremoveVisible(Email); \n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес электронной почты",
+        "name": "Email",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "МФЦ",
+        "name": "MFC",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Другое",
+        "name": "checkbox_11",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true,
+        "scripts": [
+            "var checkbox_11 = Ext.ComponentQuery.query('[name=checkbox_11]')[0];\nvar Other3 = Ext.ComponentQuery.query('[name=Other3]')[0];\n\nif (checkbox_11.checked == true) { \naddVisible(Other3); \n} else {\nremoveVisible(Other3); \n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Другое",
+        "name": "Other3",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "label",
+        "html": "<div style=\"font-size: 20px; color:#black; font-weight: bold;\">Способ информирования о результате оказания услуги</div> <br> <div style=\"font-size: 14px; color:#BA2F39; width: 1000px; text-align:left\">*один из объектов должен быть отмечен обязательно</div>",
+        "name": "label_1",
+        "fieldName": "label_1",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес электронной почты",
+        "name": "Email2",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Телефон",
+        "name": "Phone",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "anyPhoneNumber",
+        "vtype": "validateMobilePhone"
+    },
+    {
+        "xtype": "label",
+        "html": "<div style=\"font-size: 20px; color:#black; font-weight: bold;\">Нужна подписка на результат услуги?</div>",
+        "name": "label_3",
+        "fieldName": "label_3",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Нужна подписка на результат услуги?",
+        "name": "IsSubscribe",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Дата окончания подписки",
+        "name": "SubscriptionEndDate",
+        "isPersonField": false,
+        "isSoleField": true,
+        "isLegalField": true,
+        "scripts": [
+            "var SubscriptionEndDate = Ext.ComponentQuery.query('[name=SubscriptionEndDate]')[0];\nSubscriptionEndDate.hide();\n\n"
+        ]
+    }
+]

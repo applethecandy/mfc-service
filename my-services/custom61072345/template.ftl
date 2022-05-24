@@ -1,4 +1,15 @@
 <style>
+
+.boxes smallbox {
+    width: 12px !important;
+    height: 12px !important;
+}
+* {
+    font-size: 7pt !important;
+    line-height: 6pt !important;
+}
+
+
 .subscript {
     font-size: 8pt;
     text-decoration: none;
@@ -189,10 +200,12 @@ tr.inline td:last-child {
 			<td>Принадлежность к гражданству</td>
 			<td class="underline">${form.textfield_4!" "}</td>
 		</tr>
-		<tr>
+		<!--
+                <tr>
 			<td>Номер полиса ОМС</td>
 			<td class="underline">${form.textfield_5!" "}</td>
 		</tr>
+                -->
 		<tr>
 			<td>Сведения о документе, удостоверяющем личность (вид, дата выдачи, реквизиты)<sup>1</sup></td>
 			<td class="underline"><#if form.combobox_1?has_content>${form.combobox_1!" "}, ${form.textfield_11} ${form.textfield_12}, выдан ${form.textfield_32} ${form.textfield_13} от ${form.datefield_1}<#else> </#if></td>

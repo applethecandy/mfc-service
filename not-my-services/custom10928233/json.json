@@ -1,0 +1,1053 @@
+[
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Обращается представитель заявителя",
+        "name": "checkbox_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var representative_check = Ext.ComponentQuery.query('[name=representative_check]')[0];\nvar checkbox_3 = Ext.ComponentQuery.query('[name=checkbox_3]')[0];\nvar fileuploadpanel_1 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_1]')[0];\n\n\nif (checkbox_3.checked == true)\n{\nrepresentative_check.setVisible(false);\nrepresentative_check.setValue(true);\nfileuploadpanel_1.hide();\n}\nelse\n{\nrepresentative_check.setVisible(false);\nrepresentative_check.setValue(false);\nfileuploadpanel_1.show();\n}"
+        ]
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Жизненная ситуация",
+        "name": "combobox_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Заявитель пришел с заполненным заявлением"
+                },
+                {
+                    "value": "Заявление заполняется в АИС"
+                }
+            ],
+            "type": "store"
+        },
+        "allowBlank": false,
+        "scripts": [
+            "var combobox_1 = Ext.ComponentQuery.query('[name=combobox_1]')[0];\n\nvar fieldset_5 = Ext.ComponentQuery.query('[name=fieldset_5]')[0];\n\nvar checkbox_0 = Ext.ComponentQuery.query('[name=checkbox_0]')[0];\nvar checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\nvar checkbox_2 = Ext.ComponentQuery.query('[name=checkbox_2]')[0];\n\nvar cloneablePanel_0 = Ext.ComponentQuery.query('[name=cloneablePanel_0]')[0];\nvar cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\nvar cloneablePanel_2 = Ext.ComponentQuery.query('[name=cloneablePanel_2]')[0];\n\n\tcheckbox_0.hide();\n\tcheckbox_1.hide();\n\tcheckbox_2.hide();\n\t\n\tcloneablePanel_0.hide();\n\tcloneablePanel_1.hide();\n\tcloneablePanel_2.hide();\n\t\n\tfieldset_5.hide();\n\nif (combobox_1.getValue() == \"Заявление заполняется в АИС\"){\n\tcheckbox_0.show();\n\tcheckbox_1.show();\n\tcheckbox_2.show();\n\tfieldset_5.show();\n}else{\n\tcheckbox_0.hide();\n\tcheckbox_1.hide();\n\tcheckbox_2.hide();\n\tfieldset_5.hide();\n};\n",
+            "setTimeout(fuk, 1000);\nfunction fuk(){\n\tdocument.getElementById('mfcCombo-triggerWrap').onmouseover = function() {\n\t//confirm(\"Получение результата по данной услуге исключительно в ОВ!!!\");\n\tvar div = document.createElement('div');\n\tdiv.setAttribute(\"id\", \"output_documents\");\n\tdocument.getElementById('mfcCombo-triggerWrap').appendChild(div);\n\tdocument.getElementById('output_documents').style.cssText=\"width: 100%;\\\n\theight: 89px;\\\n\tbackground-color: #f0724a;\\\n\tposition: absolute;\\\n\toverflow: hidden;\\\n\tclear: both;\\\n\tz-index: 1000;\\\n\ttop: 45px;\\\n\tright: 0px;\\\n\tdisplay: block;\\\n\tborder:2px dashed #ff3f05;\\\n\tmargin:0 auto;\\\n\ttext-align:center;\\\n\tpadding-top:22px;\\\n\t\";\n\tdocument.getElementById('output_documents').innerHTML = \"<p>Место выдачи результата услуги -<br />исключительно орган власти!</p>\"\n\t};\n\n\n\tdocument.getElementById('mfcCombo-triggerWrap').onmouseout = function() {\n\tvar div = document.createElement('div');\n\tdiv.setAttribute(\"id\", \"output_documents\");\n\tdocument.getElementById('mfcCombo-triggerWrap').appendChild(div);\n\tdocument.getElementById('output_documents').style.cssText=\"display: none;\";\n\t};\n};"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<div style=\"display:block;text-align:left;margin-left:200px;\"><font style=\"font-weight:normal;color:black;text-transform:none;\">Прием заявлений осуществляется по экстерриториальному принципу (т.е. по месту обращения, независимо от места регистрации объекта налогообложения)</font></div>",
+        "name": "fieldset_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<font color=\"red\">Управление ФНС России по Республике Карелия (ТОРМ г.Петрозаводск): г. Петрозаводск, г. Олонец Олонецкий р-н,пгт.Пряжа, г.Суоярви, Прионежский р-н, Пряжинский р-н, Суоярвский р-н</font>",
+        "name": "subdeps_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<font color=\"red\">Управление ФНС России по Республике Карелия (ТОРМ г.Кемь): г. Кемь, п. Лоухи, п Кемский р-н, Лоухский р-н</font>",
+        "name": "subdeps_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<font color=\"red\">Управление ФНС России по Республике Карелия (ТОРМ г.Костомукша): г.Костомукша, Калевала, г. Калевальский р-н</font>",
+        "name": "subdeps_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<font color=\"red\">Управление ФНС России по Республике Карелия (ТОРМ г.Сегежа): г. Сегежа, г. Беломорск,  п. Муезерский, Сегежский р-н, Беломорский р-н, Муезерский р-н н</font>",
+        "name": "subdeps_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<font color=\"red\">Управление ФНС России по Республике Карелия (ТОРМ г.Сортавала): г. Сортавала, г. Лахденпохья, г. Питкяранта, , Лахденпохский р-н, Питкярантский р-н</font>",
+        "name": "subdeps_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<font color=\"red\">Управление ФНС России по Республике Карелия (ТОРМ г.Медвежьегорск): г. Медвежьегорск, г. Пудож, Медвежьегорск р-н, Пудожский р-н</font>",
+        "name": "subdeps_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<font color=\"red\">Управление ФНС России по Республике Карелия (ТОРМ г.Кондопога): г.Кондопожский р-н Кондопога</font>",
+        "name": "subdeps_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Цели",
+        "name": "fieldset_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Предоставление налоговой льготы по транспортному налогу",
+        "name": "checkbox_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_0 = Ext.ComponentQuery.query('[name=checkbox_0]')[0];\nvar cloneablePanel_0 = Ext.ComponentQuery.query('[name=cloneablePanel_0]')[0];\nvar fieldset_8 = Ext.ComponentQuery.query('[name=fieldset_8]')[0];\n\nif (checkbox_0.checked == true){\n\tcloneablePanel_0.show();\n\tfieldset_8.show();\n}else{\n\tcloneablePanel_0.hide();\n\tfieldset_8.hide();\n};\n"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Предоставление налоговой льготы по земельному налогу",
+        "name": "checkbox_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\nvar cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\nvar fieldset_10 = Ext.ComponentQuery.query('[name=fieldset_10]')[0];\n\nif (checkbox_1.checked == true){\n\tcloneablePanel_1.show();\n\tfieldset_10.show();\n}else{\n\tcloneablePanel_1.hide();\n\tfieldset_10.hide();\n};"
+        ]
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Предоставление налоговой льготы на имущество физических лиц",
+        "name": "checkbox_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var checkbox_2 = Ext.ComponentQuery.query('[name=checkbox_2]')[0];\nvar cloneablePanel_2 = Ext.ComponentQuery.query('[name=cloneablePanel_2]')[0];\nvar fieldset_12 = Ext.ComponentQuery.query('[name=fieldset_12]')[0];\n\nif (checkbox_2.checked == true){\n\tcloneablePanel_2.show();\n\tfieldset_12.show();\n}else{\n\tcloneablePanel_2.hide();\n\tfieldset_12.hide();\n};\n"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Данные налогоплательщика",
+        "name": "fieldset_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "lastname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "firstname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "middlename",
+        "description": "(при наличии)"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес регистрации",
+        "name": "textfield_24",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "registrationAddress"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "datefield_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "birthdate"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Место рождения",
+        "name": "textfield_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "birthPlace"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИНН",
+        "name": "textfield_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "inn"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о документе, удостоверяющем личность",
+        "name": "fieldset_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование",
+        "name": "textfield_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "documenttypename"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Код вида документа",
+        "name": "textfield_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var textfield_19 = Ext.ComponentQuery.query('[name=textfield_19]')[0];\nvar textfield_20 = Ext.ComponentQuery.query('[name=textfield_20]')[0];\n\nstr = textfield_19.getValue();\nswitch (str) {\n  case \"Паспорт гражданина Российской Федерации\":\n    textfield_20.setValue(\"21\");\n    break;\n  case \"Свидетельство о рождении гражданина РФ\":\n    textfield_20.setValue(\"03\");\n    break;\n  case \"Временное удостоверение личности гражданина Российской Федерации\":\n    textfield_20.setValue(\"14\");\n    break;\n  case \"Военный билет\":\n    textfield_20.setValue(\"07\");\n    break;\n  case \"Удостоверение личности военнослужащего Российской Федерации\":\n    textfield_20.setValue(\"24\");\n    break;\n  case \"Паспорт иностранного гражданина\":\n    textfield_20.setValue(\"10\");\n    break;\n  case \"Свидетельство о предоставлении временного убежища на территории Российской Федерации\":\n    textfield_20.setValue(\"18\");\n    break;\n  case \"Вид на жительство в Российской Федерации\":\n    textfield_20.setValue(\"12\");\n    break;\n  case \"Удостоверение беженца\":\n    textfield_20.setValue(\"13\");\n    break;\n  case \"Разрешение на временное проживание\":\n    textfield_20.setValue(\"15\");\n    break;\n  case \"Свидетельство о рождении иностранного гражданина\":\n    textfield_20.setValue(\"23\");\n    break;\n  default:\n    textfield_20.setValue(\"91\");\n}\n"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "textfield_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docseries"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "textfield_34",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docnumber"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "datefield_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issuedate"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "textfield_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issueorg"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Контактный телефон",
+        "name": "textfield_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "anyPhoneNumber"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Способ информирования о результатах рассмотрения",
+        "name": "combobox_0",
+        "isPersonField": false,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(за исключением налогоплательщиков - ФЛ, получивших доступ к личному кабинету налогоплательщика и не направивших в налоговый орган уведомление о необходимости получения документов на бумажном носителе)",
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "1 - в налоговом органе или в многофункциональном центре предоставления государственных и муниципальных услуг, через который подано настоящее заявление"
+                },
+                {
+                    "value": "2 - по почте по имеющемуся у налогового органа адресу места жительства (места пребывания) налогоплательщика - физического лица, подавшего заявление, или по предоставленному налоговому органу адресу для направления по почте документов, которые используются налоговыми органами при реализации своих полномочий в отношениях, регулируемых законодательством о налогах и сборах"
+                }
+            ],
+            "type": "store"
+        }
+    },
+    {
+        "xtype": "fieldset",
+        "title": "&nbsp;",
+        "name": "fieldset_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_0",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Сведения о ТС",
+                "isPersonField": true
+            },
+            {
+                "name": "combobox_1",
+                "xtype": "combobox",
+                "fieldLabel": "Вид ТС",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "01 - легковой автомобиль"
+                        },
+                        {
+                            "value": "02 - грузовой автомобиль"
+                        },
+                        {
+                            "value": "03 - автобус"
+                        },
+                        {
+                            "value": "04 - мотоцикл"
+                        },
+                        {
+                            "value": "05 - мотороллер"
+                        },
+                        {
+                            "value": "06 - снегоход"
+                        },
+                        {
+                            "value": "07 - трактор"
+                        },
+                        {
+                            "value": "08 - мотосани"
+                        },
+                        {
+                            "value": "09 - вертолет"
+                        },
+                        {
+                            "value": "10 - самолет"
+                        },
+                        {
+                            "value": "11 - теплоход"
+                        },
+                        {
+                            "value": "12 - яхта"
+                        },
+                        {
+                            "value": "13 - катер"
+                        },
+                        {
+                            "value": "14 - гидроцикл"
+                        },
+                        {
+                            "value": "15 - моторная лодка"
+                        },
+                        {
+                            "value": "16 - иное"
+                        }
+                    ],
+                    "type": "store"
+                }
+            },
+            {
+                "name": "textfield_14",
+                "xtype": "textfield",
+                "fieldLabel": "Марка (модель)",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "(например: Ситроен С3)"
+            },
+            {
+                "name": "textfield_15",
+                "xtype": "textfield",
+                "fieldLabel": "Гос. рег. знак (№)",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "combobox_2",
+                "xtype": "combobox",
+                "fieldLabel": "Срок предоставления налоговой льготы",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "1 - бессрочно"
+                        },
+                        {
+                            "value": "2 - срок ограничен"
+                        }
+                    ],
+                    "type": "store"
+                }
+            },
+            {
+                "name": "datefield_5",
+                "xtype": "datefield",
+                "fieldLabel": "С",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "<font style=\"color:red;\">(не заполняется в случае бессрочного срока)</font>"
+            },
+            {
+                "name": "datefield_6",
+                "xtype": "datefield",
+                "fieldLabel": "По",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "<font style=\"color:red;\">(не заполняется в случае бессрочного срока)</font>"
+            },
+            {
+                "xtype": "fieldset",
+                "margin": 0,
+                "padding": 0,
+                "border": false,
+                "title": "Право на налоговую льготу подтверждается следующим документом",
+                "name": "fieldset_6",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_16",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование документа",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "(пенсионное удостоверение, удостоверение ветерана боевых действий, справка, подтверждающая факт установления инвалидности, иное)",
+                "allowBlank": false
+            },
+            {
+                "name": "textfield_17",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование органа, выдавшего документ",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "allowBlank": false
+            },
+            {
+                "name": "datefield_7",
+                "xtype": "datefield",
+                "fieldLabel": "Дата выдачи",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "allowBlank": false
+            },
+            {
+                "name": "combobox_3",
+                "xtype": "combobox",
+                "fieldLabel": "Период действия документа",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "1 - бессрочно"
+                        },
+                        {
+                            "value": "2 - срок ограничен"
+                        }
+                    ],
+                    "type": "store"
+                }
+            },
+            {
+                "name": "datefield_8",
+                "xtype": "datefield",
+                "fieldLabel": "С",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "<font style=\"color:red;\">(не заполняется в случае бессрочного срока)</font>"
+            },
+            {
+                "name": "datefield_9",
+                "xtype": "datefield",
+                "fieldLabel": "По",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "<font style=\"color:red;\">(не заполняется в случае бессрочного срока)</font>"
+            },
+            {
+                "name": "textfield_25",
+                "xtype": "textfield",
+                "fieldLabel": "Серия и номер документа",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_0",
+        "fieldName": "cloneablePanel_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "&nbsp;",
+        "name": "fieldset_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_1",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Сведения о земельном участке",
+                "isPersonField": true
+            },
+            {
+                "name": "textfield_26",
+                "xtype": "textfield",
+                "fieldLabel": "Кадастровый номер земельного участка",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "combobox_4",
+                "xtype": "combobox",
+                "fieldLabel": "Срок предоставления налоговой льготы",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "1 - бессрочно"
+                        },
+                        {
+                            "value": "2 - срок ограничен"
+                        }
+                    ],
+                    "type": "store"
+                }
+            },
+            {
+                "name": "datefield_10",
+                "xtype": "datefield",
+                "fieldLabel": "С",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "<font style=\"color:red;\">(не заполняется в случае бессрочного срока)</font>"
+            },
+            {
+                "name": "datefield_11",
+                "xtype": "datefield",
+                "fieldLabel": "По",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "<font style=\"color:red;\">(не заполняется в случае бессрочного срока)</font>"
+            },
+            {
+                "xtype": "fieldset",
+                "margin": 0,
+                "padding": 0,
+                "border": false,
+                "title": "Право на налоговую льготу подтверждается следующим документом",
+                "name": "fieldset_9",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_27",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "(пенсионное удостоверение, удостоверение ветерана боевых действий, справка, подтверждающая факт установления инвалидности, иное)",
+                "allowBlank": false
+            },
+            {
+                "name": "textfield_28",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование органа, выдавшего документ",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "allowBlank": false
+            },
+            {
+                "name": "datefield_12",
+                "xtype": "datefield",
+                "fieldLabel": "Дата выдачи",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "allowBlank": false
+            },
+            {
+                "name": "combobox_5",
+                "xtype": "combobox",
+                "fieldLabel": "Период действия документа",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "1 - бессрочно"
+                        },
+                        {
+                            "value": "2 - срок ограничен"
+                        }
+                    ],
+                    "type": "store"
+                }
+            },
+            {
+                "name": "datefield_13",
+                "xtype": "datefield",
+                "fieldLabel": "С",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "<font style=\"color:red;\">(не заполняется в случае бессрочного срока)</font>"
+            },
+            {
+                "name": "datefield_14",
+                "xtype": "datefield",
+                "fieldLabel": "По",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "<font style=\"color:red;\">(не заполняется в случае бессрочного срока)</font>"
+            },
+            {
+                "name": "textfield_29",
+                "xtype": "textfield",
+                "fieldLabel": "Серия и номер документа",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_1",
+        "fieldName": "cloneablePanel_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_2",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Сведения об имуществе",
+                "isPersonField": true
+            },
+            {
+                "name": "combobox_6",
+                "xtype": "combobox",
+                "fieldLabel": "Вид объекта НИ",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "1 - жилой дом"
+                        },
+                        {
+                            "value": "2 - квартира"
+                        },
+                        {
+                            "value": "3 - комната"
+                        },
+                        {
+                            "value": "4 - гараж (машино-место)"
+                        },
+                        {
+                            "value": "5 - хозяйственное строение или сооружение"
+                        },
+                        {
+                            "value": "6 - жилое строение"
+                        },
+                        {
+                            "value": "7 - садовый дом"
+                        },
+                        {
+                            "value": "8 - иной объект"
+                        }
+                    ],
+                    "type": "store"
+                }
+            },
+            {
+                "name": "combobox_7",
+                "xtype": "combobox",
+                "fieldLabel": "№ объекта НИ",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "1 - кадастровый номер"
+                        },
+                        {
+                            "value": "2 - условный номер"
+                        },
+                        {
+                            "value": "3 - инвентарный номер"
+                        }
+                    ],
+                    "type": "store"
+                }
+            },
+            {
+                "name": "textfield_30",
+                "xtype": "textfield",
+                "fieldLabel": "№",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "combobox_8",
+                "xtype": "combobox",
+                "fieldLabel": "Срок предоставления налоговой льготы",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "1 - бессрочно"
+                        },
+                        {
+                            "value": "2 - срок ограничен"
+                        }
+                    ],
+                    "type": "store"
+                }
+            },
+            {
+                "name": "datefield_15",
+                "xtype": "datefield",
+                "fieldLabel": "С",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "<font style=\"color:red;\">(не заполняется в случае бессрочного срока)</font>"
+            },
+            {
+                "name": "datefield_16",
+                "xtype": "datefield",
+                "fieldLabel": "По",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "<font style=\"color:red;\">(не заполняется в случае бессрочного срока)</font>"
+            },
+            {
+                "xtype": "fieldset",
+                "margin": 0,
+                "padding": 0,
+                "border": false,
+                "title": "Право на налоговую льготу подтверждается следующим документом",
+                "name": "fieldset_11",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_31",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование документа",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "(пенсионное удостоверение, удостоверение ветерана боевых действий, справка, подтверждающая факт установления инвалидности, иное)",
+                "allowBlank": false
+            },
+            {
+                "name": "textfield_32",
+                "xtype": "textfield",
+                "fieldLabel": "Орган, выдавший документ",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "allowBlank": false
+            },
+            {
+                "name": "datefield_17",
+                "xtype": "datefield",
+                "fieldLabel": "Дата выдачи",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "allowBlank": false
+            },
+            {
+                "name": "combobox_9",
+                "xtype": "combobox",
+                "fieldLabel": "Период действия документа",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "1 - бессрочно"
+                        },
+                        {
+                            "value": "2 - срок ограничен"
+                        }
+                    ],
+                    "type": "store"
+                }
+            },
+            {
+                "name": "datefield_18",
+                "xtype": "datefield",
+                "fieldLabel": "С",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "<font style=\"color:red;\">(не заполняется в случае бессрочного срока)</font>"
+            },
+            {
+                "name": "datefield_19",
+                "xtype": "datefield",
+                "fieldLabel": "По",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "<font style=\"color:red;\">(не заполняется в случае бессрочного срока)</font>"
+            },
+            {
+                "name": "textfield_33",
+                "xtype": "textfield",
+                "fieldLabel": "Серия и номер документа",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_2",
+        "fieldName": "cloneablePanel_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "&nbsp;",
+        "name": "fieldset_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Способ информирования",
+        "name": "combobox_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "в налоговом органе, через который подано настоящее заявление"
+                },
+                {
+                    "value": "по почте по имеющемуся у налогового органа адресу места жительства (места пребывания) налогоплательщика - физического лица, подавшего заявление, или по предоставленному налоговому органу адресу для направления по почте документов, которые используюся налоговыми органами при реализации своих полномочий в отношениях, регулируемых законодательством о налогах и сборах"
+                },
+                {
+                    "value": "в многофункциональном центре предоставления государственных и муниципальных услуг (далее - МФЦ), через который подано настоящее заявление, для чего выражаю согласие на передачу мне документов, составляющих налоговую тайну, на бумажном носителе через МФЦ"
+                }
+            ],
+            "type": "store"
+        },
+        "description": "рекомендуется выбирать \"по почте\""
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Список документов",
+        "name": "fieldset_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Заявление",
+        "fieldName": "LoadStatement",
+        "name": "LoadStatement",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "documentCharacterIdDef": 1,
+        "documentCharacterNameDef": "Оригинал",
+        "allowBlank": false,
+        "scanDocumentWithdraw": "",
+        "description": "односторонняя печать"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, удостоверяющий личность заявителя",
+        "fieldName": "fileuploadpanel_1",
+        "name": "fileuploadpanel_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "для удостоверения личности, копия не требуется:<br /><br />паспорт гражданина РФ,<br />удостоверение личности военнослужащего,<br />военный билет,<br />паспорт моряка,<br />паспорт иностранного гражданина,<br />вид на жительство,<br />разрешение на временное проживание.",
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия",
+        "scanDocumentWithdraw": ""
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, подтверждающий право на льготу",
+        "fieldName": "fileuploadpanel_2",
+        "name": "fileuploadpanel_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(пенсионное удостоверение, удостоверение ветерана боевых действий, справка, подтверждающая факт установления инвалидности, иное)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Согласие на обработку персональных данных",
+        "fieldName": "fileuploadpanel_3",
+        "name": "fileuploadpanel_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "<span style=\"color:red\">(при отсутствии копий документов, подтверждающих право на льготу)</span>",
+        "scanDocumentWithdraw": "",
+        "documentCharacterIdDef": 1,
+        "documentCharacterNameDef": "Оригинал",
+        "hidden": true,
+        "disabled": true
+    }
+]

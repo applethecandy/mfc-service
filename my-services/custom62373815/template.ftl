@@ -11,6 +11,19 @@
 <body>
     <!-- #region Стиль -->
     <style>
+
+
+.boxes smallbox {
+    min-width: 12px !important;
+    width: 12px !important;
+    height: 12px !important;
+}
+* {
+    font-size: 7pt !important;
+    line-height: 6pt !important;
+}
+
+
         .subscript {
             font-size: 8pt;
             text-decoration: none;
@@ -221,6 +234,14 @@
         table.borders td {
             padding: 2px 6px;
         }
+
+        table.borders tr {
+            page-break-inside: avoid;
+        }
+
+        tr.nobreak {
+            page-break-inside: avoid;
+        }
         
         u {
             text-decoration: none;
@@ -270,13 +291,13 @@
                 1. <span class="underline">Я являюсь:</span><sup>1</sup>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes">
                 <smallbox>${form.declarant_representative_lastName?has_content?then("", "V")}</smallbox>
                 <span>получателем услуги;</span>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes">
                 <smallbox>${form.declarant_representative_lastName?has_content?then("V", "")}</smallbox>
                 <span>представителем</span>
@@ -337,39 +358,6 @@
             <td class="underline">${form.doc5_0!" "}</td>
         </tr>
     </table>
-
-    <table class="indent justify" style="font-size: 10pt">
-        <colgroup>
-            <col width="30%">
-            <col width="70%">
-        </colgroup>
-        <tr>
-            <td class="underline"> </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td colspan="2" style="text-indent: 0">
-                <sup>1</sup> Блоки 2.1, 2.2, 2.3 заполняются в случае подачи заявления представителем.
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <sup>2</sup> В случае указания в качестве документа, удостоверяющего личность, паспорта гражданина Российской Федерации указывается серия и номер, дата выдачи паспорта, код подразделения, выдавшего паспорт, наименование органа, выдавшего
-                паспорт.
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                В случае указания в качестве документа, удостоверяющего личность, свидетельства о рождении указываются реквизиты записи акта о рождении: номер записи акта, дата составления записи акта, наименование органа, которым произведена государственная регистрация
-                акта гражданского состояния.
-            </td>
-        </tr>
-    </table>
-
-    <!-- Разрыв страницы -->
-    <p><br></p>
-    <div style="page-break-after: always;" contenteditable="false" title="Разрыв страницы" aria-label="Разрыв страницы" data-cke-display-name="pagebreak" class="cke_pagebreak"></div>
-    <p><br></p>
 
     <table>
         <colgroup>
@@ -534,8 +522,7 @@
                 Кем выдан
             </td>
             <td colspan="4" class="center">
-                ${form.declarant_representative_documentAuthority}
-                ${form.textfield_38}
+                ${form.declarant_representative_documentAuthority} ${form.textfield_38}
             </td>
         </tr>
     </table>
@@ -571,55 +558,6 @@
     </table>
     <!-- #endregion -->
 
-    <table class="indent justify" style="font-size: 10pt; line-height: 9pt">
-        <colgroup>
-            <col width="30%">
-            <col width="70%">
-        </colgroup>
-        <tr>
-            <td class="underline"> </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <sup>3</sup> В строке «адрес места жительства» указывается полный адрес места жительства гражданина, в случае его отсутствия ставится прочерк.
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <sup>4</sup> Строка «адрес места пребывания» заполняется, если гражданин имеет подтвержденное регистрацией место пребывания, в том числе при наличии подтвержденного регистрацией места жительства. В строке «адрес места пребывания» указывается
-                полный адрес места пребывания гражданина, в случае его отсутствия ставится прочерк.
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <sup>5</sup> Строка «адрес фактического проживания» заполняется, если адрес места фактического проживания гражданина не совпадает с местом жительства или местом пребывания, либо гражданин не имеет подтвержденного регистрацией места жительства
-                и места пребывания.
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <sup>6</sup> В строке «Я являюсь пенсионером» указывается ведомство, осуществляющее пенсионное обеспечение.
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <sup>7</sup> В строке «адрес места жительства» указывается полный адрес места жительства получателя услуг, в случае его отсутствия ставится прочерк.
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <sup>8</sup> Строка «адрес места пребывания» заполняется, если получатель услуг имеет подтвержденное регистрацией место пребывания, в том числе при наличии подтвержденного регистрацией места жительства. В строке «адрес места пребывания»
-                указывается полный адрес места пребывания гражданина, в случае его отсутствия ставится прочерк.
-            </td>
-        </tr>
-    </table>
-
-    <!-- Разрыв страницы -->
-    <p><br></p>
-    <div style="page-break-after: always;" contenteditable="false" title="Разрыв страницы" aria-label="Разрыв страницы" data-cke-display-name="pagebreak" class="cke_pagebreak"></div>
-    <p><br></p>
-
     <table class="center">
         <tr>
             <td>
@@ -635,7 +573,7 @@
                 3.
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox></smallbox>
                 <span>
@@ -648,7 +586,7 @@
                 3.1
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox></smallbox>
                 <span>
@@ -680,7 +618,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -688,13 +626,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -702,7 +640,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
@@ -723,7 +661,7 @@
                 3.3.1
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
                 <smallbox></smallbox>
                 <span>
@@ -751,13 +689,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -765,7 +703,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
@@ -776,7 +714,7 @@
                 3.3.2
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
                 <smallbox></smallbox>
                 <span>
@@ -806,13 +744,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -820,13 +758,13 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox></smallbox>
                 <span>
@@ -836,35 +774,8 @@
         </tr>
     </table>
 
-    <table class="indent justify" style="font-size: 10pt">
-        <colgroup>
-            <col width="30%">
-            <col width="70%">
-        </colgroup>
-        <tr>
-            <td class="underline"> </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <sup>9</sup> Строка «адрес фактического проживания» заполняется, если адрес места фактического проживания получателя услуг не совпадает с местом жительства или местом пребывания, либо получатель услуг не имеет подтвержденного регистрацией
-                места жительства и места пребывания.
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <sup>10</sup> При проставлении отметки в квадрате, соответствующем какому-либо утверждению, далее заполняются дополнительные поля для каждого отмеченного утверждения.
-            </td>
-        </tr>
-    </table>
-
-    <!-- Разрыв страницы -->
-    <p><br></p>
-    <div style="page-break-after: always;" contenteditable="false" title="Разрыв страницы" aria-label="Разрыв страницы" data-cke-display-name="pagebreak" class="cke_pagebreak"></div>
-    <p><br></p>
-
     <table>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox></smallbox>
                 <span>
@@ -886,7 +797,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -894,13 +805,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -908,13 +819,13 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox></smallbox>
                 <span>
@@ -927,7 +838,7 @@
                 3.3.3
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 6em">
                 <smallbox></smallbox>
                 <span>
@@ -935,7 +846,7 @@
                 </span>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 7em">
                 <smallbox></smallbox>
                 <span>
@@ -1013,38 +924,6 @@
         </tr>
     </table>
 
-    <table class="indent justify" style="font-size: 10pt">
-        <colgroup>
-            <col width="30%">
-            <col width="70%">
-        </colgroup>
-        <tr>
-            <td class="underline"> </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <sup>11</sup> Блок 3.5 заполняется на каждого члена семьи отдельно.
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <sup>12</sup> В случае указания в качестве документа, удостоверяющего личность, паспорта гражданина Российской Федерации указывается серия и номер, дата выдачи паспорта, код подразделения, выдавшего паспорт, наименование органа, выдавшего
-                паспорт.
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                В случае указания в качестве документа, удостоверяющего личность, свидетельства о рождении указываются реквизиты записи акта о рождении: номер записи акта, дата составления записи акта, наименование органа, которым произведена государственная регистрация
-                акта гражданского состояния.
-            </td>
-        </tr>
-    </table>
-
-    <!-- Разрыв страницы -->
-    <p><br></p>
-    <div style="page-break-after: always;" contenteditable="false" title="Разрыв страницы" aria-label="Разрыв страницы" data-cke-display-name="pagebreak" class="cke_pagebreak"></div>
-    <p><br></p>
 
     <table>
         <colgroup>
@@ -1087,7 +966,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -1095,13 +974,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -1109,7 +988,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
@@ -1125,7 +1004,7 @@
                 Степень родства:
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 6em">
                 <smallbox></smallbox>
                 <span>
@@ -1153,13 +1032,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -1167,13 +1046,13 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 6em">
                 <smallbox></smallbox>
                 <span>
@@ -1203,13 +1082,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -1217,13 +1096,13 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox></smallbox>
                 <span>
@@ -1231,7 +1110,7 @@
                 </span>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox></smallbox>
                 <span>
@@ -1239,7 +1118,7 @@
                 </span>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox></smallbox>
                 <span>
@@ -1262,7 +1141,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -1270,13 +1149,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -1284,13 +1163,13 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox></smallbox>
                 <span>
@@ -1301,7 +1180,7 @@
         <tr>
             <td><br></td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 6em">
                 <smallbox></smallbox>
                 <span>
@@ -1309,7 +1188,7 @@
                 </span>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 7em">
                 <smallbox></smallbox>
                 <span>
@@ -1318,28 +1197,9 @@
             </td>
         </tr>
 
-        <table class="indent justify" style="font-size: 10pt">
-            <colgroup>
-                <col width="30%">
-                <col width="70%">
-            </colgroup>
-            <tr>
-                <td class="underline"> </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <sup>13</sup> В строке «адрес места жительства» указывается полный адрес места жительства гражданина, в случае его отсутствия ставится прочерк.
-                </td>
-            </tr>
-        </table>
     </table>
     <!-- #endregion -->
 
-    <!-- Разрыв страницы -->
-    <p><br></p>
-    <div style="page-break-after: always;" contenteditable="false" title="Разрыв страницы" aria-label="Разрыв страницы" data-cke-display-name="pagebreak" class="cke_pagebreak"></div>
-    <p><br></p>
 
     <!-- #region Раздел 4 -->
     <table>
@@ -1348,7 +1208,7 @@
                 4.
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox></smallbox>
                 <span>
@@ -1390,7 +1250,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -1398,13 +1258,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -1412,7 +1272,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
@@ -1423,7 +1283,7 @@
                 4.1.2
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox></smallbox>
                 <span>
@@ -1463,13 +1323,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -1477,7 +1337,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
@@ -1488,7 +1348,7 @@
                 4.1.4
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox></smallbox>
                 <span>
@@ -1526,7 +1386,7 @@
                             Ф.И.О ребенка
                         </td>
                         <td colspan="4" class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -1534,7 +1394,7 @@
                             СНИЛС
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td class="">
                             Пол
@@ -1565,13 +1425,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center" colspan="2">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -1579,7 +1439,7 @@
                             Кем выдан
                         </td>
                         <td colspan="4" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
@@ -1587,10 +1447,6 @@
         </tr>
     </table>
 
-    <!-- Разрыв страницы -->
-    <p><br></p>
-    <div style="page-break-after: always;" contenteditable="false" title="Разрыв страницы" aria-label="Разрыв страницы" data-cke-display-name="pagebreak" class="cke_pagebreak"></div>
-    <p><br></p>
 
     <table>
         <tr>
@@ -1598,7 +1454,7 @@
                 4.2.2
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 6em">
                 <smallbox></smallbox>
                 <span>
@@ -1618,7 +1474,7 @@
                             Адрес места жительства<sup>14</sup>
                         </td>
                         <td colspan="4" class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -1626,7 +1482,7 @@
                             Адрес места пребывания<sup>15</sup>
                         </td>
                         <td colspan="4" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
@@ -1637,7 +1493,7 @@
                 4.2.3
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox></smallbox>
                 <span>
@@ -1656,7 +1512,7 @@
                 5.
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox>V</smallbox>
                 <span>
@@ -1669,7 +1525,7 @@
                 5.1
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox>${form.checkbox_1?has_content?then("V", "")}</smallbox>
                 <span>
@@ -1734,7 +1590,7 @@
                 5.1.1
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 6em">
                 <smallbox>${form.checkbox_2?has_content?then("V", "")}</smallbox>
                 <span>
@@ -1787,7 +1643,7 @@
                 5.1.2
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 6em">
                 <smallbox>${form.checkbox_3?has_content?then("V", "")}</smallbox>
                 <span>
@@ -1843,40 +1699,13 @@
         </tr>
     </table>
 
-    <table class="indent justify" style="font-size: 10pt">
-        <colgroup>
-            <col width="30%">
-            <col width="70%">
-        </colgroup>
-        <tr>
-            <td class="underline"> </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <sup>14</sup> В строке «адрес места жительства» указывается полный адрес места жительства ребенка, в случае его отсутствия ставится прочерк.
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <sup>15</sup> Строка «адрес места пребывания» заполняется, если ребенок имеет подтвержденное регистрацией место пребывания, в том числе при наличии подтвержденного регистрацией места жительства. В строке «адрес места пребывания» указывается
-                полный адрес места пребывания ребенка, в случае его отсутствия ставится прочерк.
-            </td>
-        </tr>
-    </table>
-
-    <!-- Разрыв страницы -->
-    <p><br></p>
-    <div style="page-break-after: always;" contenteditable="false" title="Разрыв страницы" aria-label="Разрыв страницы" data-cke-display-name="pagebreak" class="cke_pagebreak"></div>
-    <p><br></p>
-
     <table>
         <tr>
             <td style="text-indent: 4em">
                 5.1.3
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 6em">
                 <smallbox>${form.checkbox_4?has_content?then("V", "")}</smallbox>
                 <span>
@@ -1931,7 +1760,7 @@
                 5.1.4
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 6em">
                 <smallbox>${form.checkbox_5?has_content?then("V", "")}</smallbox>
                 <span>
@@ -1939,7 +1768,7 @@
                 </span>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 7em">
                 <smallbox>${form.combobox_2?contains("Решение суда о нахождении на иждивении погибшего (умершего) военнослужащего, сотрудника федерального органа исполнительной власти")?then("V", "")}</smallbox>
                 <span>
@@ -1969,7 +1798,7 @@
                 5.3
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox>${form.checkbox_6?has_content?then("V", "")}</smallbox>
                 <span>
@@ -1982,7 +1811,7 @@
                 5.4
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox>${form.checkbox_7?has_content?then("V", "")}</smallbox>
                 <span>
@@ -2037,7 +1866,7 @@
                 5.5
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox>${form.checkbox_8?has_content?then("V", "")}</smallbox>
                 <span>
@@ -2053,7 +1882,7 @@
                 6.
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox></smallbox>
                 <span>
@@ -2078,10 +1907,6 @@
         </tr>
     </table>
 
-    <!-- Разрыв страницы -->
-    <p><br></p>
-    <div style="page-break-after: always;" contenteditable="false" title="Разрыв страницы" aria-label="Разрыв страницы" data-cke-display-name="pagebreak" class="cke_pagebreak"></div>
-    <p><br></p>
 
     <table>
         <tr>
@@ -2103,7 +1928,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -2111,13 +1936,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -2125,7 +1950,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
@@ -2163,13 +1988,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -2177,7 +2002,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
@@ -2188,7 +2013,7 @@
                 6.1.4
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox></smallbox>
                 <span>
@@ -2201,7 +2026,7 @@
                 6.1.5
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox></smallbox>
                 <span>
@@ -2214,7 +2039,7 @@
                 6.2
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox></smallbox>
                 <span>
@@ -2227,7 +2052,7 @@
                 6.3
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox></smallbox>
                 <span>
@@ -2249,7 +2074,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -2257,13 +2082,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -2271,7 +2096,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
@@ -2282,7 +2107,7 @@
                 6.4
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox></smallbox>
                 <span>
@@ -2298,7 +2123,7 @@
                 7.
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 0em">
                 <smallbox></smallbox>
                 <span>
@@ -2311,7 +2136,7 @@
                 7.1
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox></smallbox>
                 <span>
@@ -2321,26 +2146,6 @@
         </tr>
     </table>
 
-    <table class="indent justify" style="font-size: 10pt">
-        <colgroup>
-            <col width="30%">
-            <col width="70%">
-        </colgroup>
-        <tr>
-            <td class="underline"> </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <sup>16</sup> При проставлении отметки о том, что заявитель является инвалидом вследствие военной травмы, заполняются блоки 7.1.2, 7.1.3, 7.1.4
-            </td>
-        </tr>
-    </table>
-
-    <!-- Разрыв страницы -->
-    <p><br></p>
-    <div style="page-break-after: always;" contenteditable="false" title="Разрыв страницы" aria-label="Разрыв страницы" data-cke-display-name="pagebreak" class="cke_pagebreak"></div>
-    <p><br></p>
 
     <table class="no-gap">
         <tr>
@@ -2348,7 +2153,7 @@
                 7.1.2
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox></smallbox>
                 <span>
@@ -2373,7 +2178,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -2381,13 +2186,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -2395,7 +2200,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
@@ -2406,7 +2211,7 @@
                 7.1.3
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox></smallbox>
                 <span>
@@ -2419,7 +2224,7 @@
                 7.2
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox></smallbox>
                 <span>
@@ -2437,7 +2242,7 @@
                 7.2.1
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
                 <smallbox></smallbox>
                 <span>
@@ -2465,13 +2270,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -2479,13 +2284,13 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
                 <smallbox></smallbox>
                 <span>
@@ -2498,7 +2303,7 @@
                 7.2.2
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
                 <smallbox></smallbox>
                 <span>
@@ -2528,13 +2333,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -2542,13 +2347,13 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
                 <smallbox></smallbox>
                 <span>
@@ -2561,7 +2366,7 @@
                 7.2.3
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
                 <smallbox></smallbox>
                 <span>
@@ -2591,13 +2396,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -2605,13 +2410,13 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
                 <smallbox></smallbox>
                 <span>
@@ -2619,7 +2424,7 @@
                 </span>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 6em">
                 <smallbox></smallbox>
                 <span>
@@ -2629,26 +2434,6 @@
         </tr>
     </table>
 
-    <table class="indent justify" style="font-size: 10pt">
-        <colgroup>
-            <col width="30%">
-            <col width="70%">
-        </colgroup>
-        <tr>
-            <td class="underline"> </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <sup>17</sup> При проставлении отметки о том, что заявитель является членом семьи погибшего (умершего), заполняются блоки с 7.2.1 по 7.2.4
-            </td>
-        </tr>
-    </table>
-
-    <!-- Разрыв страницы -->
-    <p><br></p>
-    <div style="page-break-after: always;" contenteditable="false" title="Разрыв страницы" aria-label="Разрыв страницы" data-cke-display-name="pagebreak" class="cke_pagebreak"></div>
-    <p><br></p>
 
     <table class="no-gap">
         <tr>
@@ -2665,7 +2450,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -2673,13 +2458,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -2687,7 +2472,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
@@ -2698,7 +2483,7 @@
                 7.2.4
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
                 <smallbox></smallbox>
                 <span>
@@ -2728,13 +2513,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -2742,7 +2527,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
@@ -2753,7 +2538,7 @@
                 7.3
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox></smallbox>
                 <span>
@@ -2803,13 +2588,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-                             
+
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -2817,7 +2602,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-                             
+
                         </td>
                     </tr>
                 </table>
@@ -2828,7 +2613,7 @@
                 7.4.2
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox></smallbox>
                 <span>
@@ -2841,7 +2626,7 @@
                 7.4.3
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox></smallbox>
                 <span>
@@ -2854,7 +2639,7 @@
                 7.4.4
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox></smallbox>
                 <span>
@@ -2875,7 +2660,7 @@
                 <br> О ходе и результатах рассмотрения данного заявления прошу информировать:
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox>${form.combobox_4?contains("через ЕПГУ")?then("V", "")}</smallbox>
                 <span>
@@ -2883,7 +2668,7 @@
                 </span>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox>${form.combobox_4?contains("путем передачи текстовых сообщений")?then("V", "")}</smallbox>
                 <span>
@@ -2891,10 +2676,10 @@
                 </span>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 6em">
                 <smallbox>${form.combobox_5?contains("на адрес электронной почты")?then("V", "")}</smallbox>
-                  
+
                 <table style="margin: auto">
                     <tr>
                         <td class="ungreedy">на адрес электронной почты</td>
@@ -2903,10 +2688,10 @@
                 </table>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 6em">
                 <smallbox>${form.combobox_5?contains("на номер мобильного телефона")?then("V", "")}</smallbox>
-                  
+
                 <table style="margin: auto">
                     <tr>
                         <td class="ungreedy">на номер мобильного телефона</td>
@@ -2924,7 +2709,7 @@
                 9. Достоверность сведений, указанных в заявлении, подтверждаю.
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox>${form.checkbox_11?has_content?then("V", "")}</smallbox>
                 <span class="justify">
@@ -2941,7 +2726,7 @@
                 10. Я предупрежден(а):
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox>${form.checkbox_9?has_content?then("V", "")}</smallbox>
                 <span class="indent justify">
@@ -2949,7 +2734,7 @@
                 </span>
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
                 <smallbox>${form.checkbox_10?has_content?then("V", "")}</smallbox>
                 <span class="indent justify">
@@ -2974,7 +2759,7 @@
                 11.1
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox>${form.combobox_6?contains("через кредитную организацию")?then("V", "")}</smallbox>
                 <span class="justify">
@@ -3033,7 +2818,7 @@
                 11.2
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox>${form.combobox_6?contains("через почтовое отделение")?then("V", "")}</smallbox>
                 <span class="justify">
@@ -3082,7 +2867,7 @@
                 11.3
             </td>
         </tr>
-        <tr>
+        <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
                 <smallbox>${form.combobox_6?contains("через иную организацию, осуществляющую доставку пенсии и иных выплат")?then("V", "")}</smallbox>
                 <span class="justify">
@@ -3143,14 +2928,133 @@
                 ${.now?date}
             </td>
             <td>
-                 
+
             </td>
             <td>
-                 
+
             </td>
         </tr>
     </table>
     <!-- #endregion -->
+
+
+    <!-- #region Подсказки -->
+    <table class="indent justify" style="font-size: 10pt">
+        <colgroup>
+            <col width="30%">
+            <col width="70%">
+        </colgroup>
+        <tr>
+            <td class="underline"> </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-indent: 0">
+                <sup>1</sup> Блоки 2.1, 2.2, 2.3 заполняются в случае подачи заявления представителем.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>2</sup> В случае указания в качестве документа, удостоверяющего личность, паспорта гражданина Российской Федерации указывается серия и номер, дата выдачи паспорта, код подразделения, выдавшего паспорт, наименование органа, выдавшего
+                паспорт.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                В случае указания в качестве документа, удостоверяющего личность, свидетельства о рождении указываются реквизиты записи акта о рождении: номер записи акта, дата составления записи акта, наименование органа, которым произведена государственная регистрация
+                акта гражданского состояния.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>3</sup> В строке «адрес места жительства» указывается полный адрес места жительства гражданина, в случае его отсутствия ставится прочерк.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>4</sup> Строка «адрес места пребывания» заполняется, если гражданин имеет подтвержденное регистрацией место пребывания, в том числе при наличии подтвержденного регистрацией места жительства. В строке «адрес места пребывания» указывается
+                полный адрес места пребывания гражданина, в случае его отсутствия ставится прочерк.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>5</sup> Строка «адрес фактического проживания» заполняется, если адрес места фактического проживания гражданина не совпадает с местом жительства или местом пребывания, либо гражданин не имеет подтвержденного регистрацией места жительства
+                и места пребывания.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>6</sup> В строке «Я являюсь пенсионером» указывается ведомство, осуществляющее пенсионное обеспечение.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>7</sup> В строке «адрес места жительства» указывается полный адрес места жительства получателя услуг, в случае его отсутствия ставится прочерк.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>8</sup> Строка «адрес места пребывания» заполняется, если получатель услуг имеет подтвержденное регистрацией место пребывания, в том числе при наличии подтвержденного регистрацией места жительства. В строке «адрес места пребывания»
+                указывается полный адрес места пребывания гражданина, в случае его отсутствия ставится прочерк.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>9</sup> Строка «адрес фактического проживания» заполняется, если адрес места фактического проживания получателя услуг не совпадает с местом жительства или местом пребывания, либо получатель услуг не имеет подтвержденного регистрацией
+                места жительства и места пребывания.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>10</sup> При проставлении отметки в квадрате, соответствующем какому-либо утверждению, далее заполняются дополнительные поля для каждого отмеченного утверждения.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>11</sup> Блок 3.5 заполняется на каждого члена семьи отдельно.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>12</sup> В случае указания в качестве документа, удостоверяющего личность, паспорта гражданина Российской Федерации указывается серия и номер, дата выдачи паспорта, код подразделения, выдавшего паспорт, наименование органа, выдавшего
+                паспорт.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                В случае указания в качестве документа, удостоверяющего личность, свидетельства о рождении указываются реквизиты записи акта о рождении: номер записи акта, дата составления записи акта, наименование органа, которым произведена государственная регистрация
+                акта гражданского состояния.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>13</sup> В строке «адрес места жительства» указывается полный адрес места жительства гражданина, в случае его отсутствия ставится прочерк.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>14</sup> В строке «адрес места жительства» указывается полный адрес места жительства ребенка, в случае его отсутствия ставится прочерк.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>15</sup> Строка «адрес места пребывания» заполняется, если ребенок имеет подтвержденное регистрацией место пребывания, в том числе при наличии подтвержденного регистрацией места жительства. В строке «адрес места пребывания» указывается
+                полный адрес места пребывания ребенка, в случае его отсутствия ставится прочерк.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>16</sup> При проставлении отметки о том, что заявитель является инвалидом вследствие военной травмы, заполняются блоки 7.1.2, 7.1.3, 7.1.4
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>17</sup> При проставлении отметки о том, что заявитель является членом семьи погибшего (умершего), заполняются блоки с 7.2.1 по 7.2.4
+            </td>
+        </tr>
+    </table>
+    <!-- #endregion -->
+
 
     <!-- Разрыв страницы -->
     <p><br></p>
@@ -3179,17 +3083,17 @@
                     </span>
                 </div>
                 <div class="underline">
-                     
+
                 </div>
                 <div class="subscript center">(указать фамилию, имя, отчество)</div>
                 <div class="underline">
-                     
+
                 </div>
                 <div class="subscript center">перечень полученных документов</div>
                 <div style="display: flex; justify-content: space-evenly;">
                     <div style="display: flex; flex-direction: column;">
                         <div class="underline in minw200">
-                             
+
                         </div>
                         <div class="subscript">
                             Регистрационный номер заявления
@@ -3197,7 +3101,7 @@
                     </div>
                     <div style="display: flex; flex-direction: column;">
                         <div class="underline in minw200">
-                             
+
                         </div>
                         <div class="subscript">
                             Дата приема заявления
@@ -3205,7 +3109,7 @@
                     </div>
                     <div style="display: flex; flex-direction: column;">
                         <div class="underline in minw200">
-                             
+
                         </div>
                         <div class="subscript">
                             Подпись специалиста
@@ -3236,17 +3140,17 @@
                     </span>
                 </div>
                 <div class="underline">
-                     
+
                 </div>
                 <div class="subscript center">(указать фамилию, имя, отчество)</div>
                 <div class="underline">
-                     
+
                 </div>
                 <div class="subscript center">перечень полученных документов</div>
                 <div style="display: flex; justify-content: space-evenly;">
                     <div style="display: flex; flex-direction: column;">
                         <div class="underline in minw200">
-                             
+
                         </div>
                         <div class="subscript">
                             Регистрационный номер заявления
@@ -3254,7 +3158,7 @@
                     </div>
                     <div style="display: flex; flex-direction: column;">
                         <div class="underline in minw200">
-                             
+
                         </div>
                         <div class="subscript">
                             Дата приема заявления
@@ -3262,7 +3166,7 @@
                     </div>
                     <div style="display: flex; flex-direction: column;">
                         <div class="underline in minw200">
-                             
+
                         </div>
                         <div class="subscript">
                             Подпись специалиста

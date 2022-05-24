@@ -1,0 +1,578 @@
+[
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Обработчик",
+        "name": "processor",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "scripts": [
+            "var processor = Ext.ComponentQuery.query('[name=processor]')[0];\nprocessor.hide();\n\nvar SR_snils = Ext.ComponentQuery.query('[name=SR_snils]')[0];\nSR_snils.hide();\n\nvar SR_targetCode= Ext.ComponentQuery.query('[name=SR_targetCode]')[0];\nSR_targetCode.setValue(\"385104396\");\nSR_targetCode.hide();\n\nvar SR_docTypeCode= Ext.ComponentQuery.query('[name=SR_docTypeCode]')[0];\nSR_docTypeCode.setValue(\"VHC\");\nSR_docTypeCode.hide();\n\nvar SR_docTypeVersion= Ext.ComponentQuery.query('[name=SR_docTypeVersion]')[0];\nSR_docTypeVersion.setValue(\"20200101\");\nSR_docTypeVersion.hide();\n\nvar SR_attachmentFile = Ext.ComponentQuery.query('[fieldName=SR_attachmentFile]')[0];\nFileUploadGrid.setUploadVisibility([], ['SR_attachmentFile']);\n\nvar Number = Ext.ComponentQuery.query('[name=Number]')[0];\nNumber.hide();\n\nvar Date = Ext.ComponentQuery.query('[name=Date]')[0];\nDate.hide();",
+            "\n\n\n\nvar repLastName = Ext.ComponentQuery.query('[name=RepLastName]')[0];\nvar declarantRepresentative = Ext.ComponentQuery.query('[name=declarant_representative_lastName]')[0].value;\n\nvar Representative = Ext.ComponentQuery.query('[name=Representative]')[0];\n\nrepLastName.setValue(declarantRepresentative);\n\nRepresentative.addListener('change', function(){\n  if (Representative.getValue() == true) {\n    repLastName.setValue(declarantRepresentative);\n  }\n})",
+            "var SR_snils = Ext.ComponentQuery.query('[name=SR_snils]')[0];\nvar PFRSnils = Ext.ComponentQuery.query('[name=PFRSnils]')[0];\n\n\nPFRSnils.addListener('change', function(){\n\tSR_snils.setValue(PFRSnils.getValue());\n})\n\n\n",
+            "var representative_check = Ext.ComponentQuery.query('[name=representative_check]')[0];\nrepresentative_check.hide();"
+        ]
+    },
+    {
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "xtype": "textfield",
+        "fieldLabel": "СНИЛС",
+        "name": "SR_snils",
+        "allowBlank": false,
+        "maxLength": 14,
+        "minLength": 14,
+        "strategy": "snils",
+        "vtype": "validateSnils"
+    },
+    {
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "xtype": "textfield",
+        "fieldLabel": "Код цели услуги",
+        "name": "SR_targetCode",
+        "allowBlank": false,
+        "maxLength": 20
+    },
+    {
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "xtype": "textfield",
+        "fieldLabel": "Код передаваемых данных",
+        "name": "SR_docTypeCode",
+        "allowBlank": false
+    },
+    {
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "xtype": "textfield",
+        "fieldLabel": "Версия сведений (в формате даты)",
+        "name": "SR_docTypeVersion",
+        "allowBlank": false,
+        "maxLength": 8,
+        "minLength": 8
+    },
+    {
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "xtype": "fileuploadpanel",
+        "text": "Вложение (только в формате zip)",
+        "name": "SR_attachmentFile",
+        "fieldName": "SR_attachmentFile",
+        "scanDocumentWithdraw": ""
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер зарегистрированного заявления о подаче сведений о ТС",
+        "name": "Number",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата подачи заявления о подаче сведений о ТС",
+        "name": "Date",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения об инвалиде/ребенке-инвалиде",
+        "name": "Person",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "СНИЛС инвалида/ребенка-инвалида",
+        "name": "PFRSnils",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "textMask": {
+            "text": "999-999-999 99",
+            "placeholder": "#",
+            "includeInValue": true,
+            "regexp": [
+                {},
+                {},
+                {},
+                null,
+                {},
+                {},
+                {},
+                null,
+                {},
+                {},
+                {},
+                null,
+                {},
+                {}
+            ],
+            "partialPosition": 14,
+            "firstNonMaskPos": 0,
+            "length": 14,
+            "buffer": [
+                "#",
+                "#",
+                "#",
+                "-",
+                "#",
+                "#",
+                "#",
+                "-",
+                "#",
+                "#",
+                "#",
+                " ",
+                "#",
+                "#"
+            ]
+        },
+        "vtype": "validateSnils",
+        "allowBlank": false,
+        "strategy": "snils"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "PFRlastName",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "allowBlank": false,
+        "strategy": "lastname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "PFRfirstName",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false,
+        "strategy": "firstname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "PFRpatronymic",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "middlename"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "BirthDate",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false,
+        "strategy": "birthdate",
+        "vtype": "validateCurrent"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Место рождения",
+        "name": "BirthPlace",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false,
+        "strategy": "birthPlace"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Данные документа, удостоверяющего личность инвалида/ребенка-инвалида",
+        "name": "IdentityDoc",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "combobox",
+        "name": "documentType",
+        "id": "documentType",
+        "fieldLabel": "Тип документа",
+        "editable": false,
+        "emptyText": "[Выбрать]",
+        "displayField": "identityDocumentName",
+        "valueField": "identityDocumentCode",
+        "model": "local",
+        "allowBlank": false,
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "store": {
+            "autoLoad": true,
+            "remoteSort": true,
+            "sorters": {
+                "property": "identityDocumentCode",
+                "direction": "DESC"
+            },
+            "proxy": {
+                "type": "direct",
+                "directFn": "identityDocumentService.getIdentityDocuments"
+            },
+            "fields": [
+                "identityDocumentCode",
+                "identityDocumentName",
+                "identityDocumentSeriesNotUsed",
+                "identityDocumentSeriesRegexp",
+                "identityDocumentSeriesErrorText",
+                "identityDocumentNumberNotUsed",
+                "identityDocumentNumberRegexp",
+                "identityDocumentNumberErrorText",
+                "used"
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var docType = {\n   \"RUS_PASSPORT\" : \"Паспорт гражданина РФ\",\n    \"RESIDENCE_PERMIT\" : \"Вид на жительство в Российской Федерации\",\n    \"DRIVER_LICENSE\" : \"Другой документ, удостоверяющий личность\",\n    \"MILITARY_ID\" : \"Военный билет\",\n    \"TEMPORARY_ID_CARD\" : \"Временное удостоверение личности гражданина РФ \",\n    \"DIP_PASPORT\" : \"Другой документ, удостоверяющий личность\",\n    \"DOC_ON_BORDER\" : \"Другой документ, удостоверяющий личность\",\n    \"INT_PASSPORT\" : \"Загранпаспорт гражданина РФ\",\n    \"MIGRATION_CARD\" : \"Другой документ, удостоверяющий личность\",\n    \"KGZ_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"AZE_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"BLR_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"KAZ_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"TJK_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"UZB_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"USSR_PASSPORT_1974\" : \"Другой документ, удостоверяющий личность\",\n    \"UKR_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"FOREIGN_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"SEAMAN_PASSPORT\" : \"Другой документ, удостоверяющий личность\",\n    \"MED_POLICY\" : \"Другой документ, удостоверяющий личность\",\n    \"TEMP_RESIDENCE_PERMIT\" : \"Разрешение на временное проживание в Российской Федерации\",\n    \"FOREIGN_BIRTH_CERTIFICATE\" : \"Свидетельство о рождении, выданное уполномоченным органом иностранного государства\",\n    \"PRISON_CERTIFICATE\" : \"Другой документ, удостоверяющий личность\",\n    \"REFUGEE_CERTIFICATE\" : \"Удостоверение личности лица, признанного беженцем\",\n    \"MILITARY_CERTIFICATION\" : \"Удостоверение личности военнослужащего РФ\",\n    \"KAZ_ID_CARD\" : \"Паспорт иностранного гражданина\",\n    \"Свидетельство о рождении гражданина РФ\": \"Свидетельство о рождении\",\n    \"BIRTH_CERTIFICATE\": \"Свидетельство о рождении\"\n};\n\nvar documentType = Ext.ComponentQuery.query('[name=documentType]')[0];\n"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "passportSeries",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "maxLength": 8
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "passportNo",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false,
+        "maxLength": 8
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "IssueDate",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "issuedate",
+        "vtype": "validateCurrent"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Орган, выдавший документ",
+        "name": "Issuer",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false,
+        "maxLength": 200,
+        "strategy": "issueorg"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Блок сведений о представителе инвалида/ребенка-инвалида",
+        "name": "Representative",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "scripts": [
+            "\nvar Representative = Ext.ComponentQuery.query('[name=Representative]')[0];\nvar RepType = Ext.ComponentQuery.query('[name=RepType]')[0];\nvar RepLastName = Ext.ComponentQuery.query('[name=RepLastName]')[0];\nvar RepFirstName = Ext.ComponentQuery.query('[name=RepFirstName]')[0];\nvar RepMiddleName = Ext.ComponentQuery.query('[name=RepMiddleName]')[0];\nvar RepDoc = Ext.ComponentQuery.query('[name=RepDoc]')[0];\nvar RepName = Ext.ComponentQuery.query('[name=RepName]')[0];\nvar RepSeriesdoc = Ext.ComponentQuery.query('[name=RepSeriesdoc]')[0];\nvar RepNumberdoc = Ext.ComponentQuery.query('[name=RepNumberdoc]')[0];\nvar RepIssuerdoc = Ext.ComponentQuery.query('[name=RepIssuerdoc]')[0];\nvar RepIssueDatedoc = Ext.ComponentQuery.query('[name=RepIssueDatedoc]')[0];\nvar RepIdentityDoc = Ext.ComponentQuery.query('[name=RepIdentityDoc]')[0];\nvar RepdocumentType = Ext.ComponentQuery.query('[name=RepdocumentType]')[0];\nvar RepSeries = Ext.ComponentQuery.query('[name=RepSeries]')[0];\nvar RepNumber = Ext.ComponentQuery.query('[name=RepNumber]')[0];\nvar RepIssueDate = Ext.ComponentQuery.query('[name=RepIssueDate]')[0];\nvar RepIssuer = Ext.ComponentQuery.query('[name=RepIssuer]')[0];\nvar RepIssuerCode = Ext.ComponentQuery.query('[name=RepIssuerCode]')[0];\nvar RepSnils = Ext.ComponentQuery.query('[name=RepSnils]')[0];\nvar fieldset_5 = Ext.ComponentQuery.query('[name=fieldset_5]')[0];\n\nif (Representative.checked == true) { \naddVisible(RepType); \naddVisible(RepLastName); \naddVisible(RepFirstName); \naddVisible(RepMiddleName); \naddVisible(RepDoc); \naddVisible(RepName); \naddVisible(RepSeriesdoc); \naddVisible(RepNumberdoc); \naddVisible(RepIssuerdoc); \naddVisible(RepIssueDatedoc); \naddVisible(RepIdentityDoc); \naddVisible(RepdocumentType); \naddVisible(RepSeries); \naddVisible(RepNumber); \naddVisible(RepIssueDate); \naddVisible(RepIssuer); \naddVisible(RepIssuerCode); \naddVisible(RepSnils); \naddVisible(fieldset_5); \n} else {\nremoveVisible(RepType); \nremoveVisible(RepLastName); \nremoveVisible(RepFirstName); \nremoveVisible(RepMiddleName); \nremoveVisible(RepDoc); \nremoveVisible(RepName); \nremoveVisible(RepSeriesdoc); \nremoveVisible(RepNumberdoc); \nremoveVisible(RepIssuerdoc); \nremoveVisible(RepIssueDatedoc); \nremoveVisible(RepIdentityDoc); \nremoveVisible(RepdocumentType); \nremoveVisible(RepSeries); \nremoveVisible(RepNumber); \nremoveVisible(RepIssueDate); \nremoveVisible(RepIssuer); \nremoveVisible(RepIssuerCode); \nremoveVisible(RepSnils); \nremoveVisible(fieldset_5);\n};"
+        ]
+    },
+    {
+        "xtype": "label",
+        "html": "<div style=\"font-size: 14px; color:#ff0000; font-weight: bold;\">В случае обращения представителя необходимо заполнить</br> Блок сведений о представителе инвалида/ребенка-инвалида</div>",
+        "name": "label_1",
+        "fieldName": "label_1",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "сведения о ЗАКОННОм (УПОЛНОМОЧЕННОм) ПРЕДСТАВИТЕЛе ИНВАЛИДА (РЕБЕНКА-ИНВАЛИДА)",
+        "name": "fieldset_5",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "xtype": "combobox",
+        "fieldLabel": "Тип представителя инвалида (ребенка-инвалида)",
+        "name": "RepType",
+        "allowBlank": false,
+        "displayField": "key",
+        "valueField": "value",
+        "editable": false,
+        "store": {
+            "type": "store",
+            "fields": [
+                "key",
+                "value"
+            ],
+            "data": [
+                {
+                    "key": "законный",
+                    "value": "1"
+                },
+                {
+                    "key": "уполномоченный",
+                    "value": "2"
+                }
+            ]
+        }
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "RepLastName",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false,
+        "strategy": "passportDepCode"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "RepFirstName",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "RepMiddleName",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Документ, удостоверяющий полномочия законного (уполномоченного) представителя инвалида (ребенка-инвалида)",
+        "name": "RepDoc",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Тип документа",
+        "name": "RepName",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "RepSeriesdoc",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "RepNumberdoc",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "RepIssuerdoc",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Когда выдан",
+        "name": "RepIssueDatedoc",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Документ, удостоверяющий личность законного (уполномоченного) представителя инвалида (ребенка-инвалида)",
+        "name": "RepIdentityDoc",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "combobox",
+        "name": "RepdocumentType",
+        "id": "RepdocumentType",
+        "fieldLabel": "Тип документа",
+        "editable": false,
+        "emptyText": "[Выбрать]",
+        "displayField": "identityDocumentName",
+        "valueField": "identityDocumentCode",
+        "model": "local",
+        "allowBlank": false,
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "store": {
+            "autoLoad": true,
+            "remoteSort": true,
+            "sorters": {
+                "property": "identityDocumentCode",
+                "direction": "DESC"
+            },
+            "proxy": {
+                "type": "direct",
+                "directFn": "identityDocumentService.getIdentityDocuments"
+            },
+            "fields": [
+                "identityDocumentCode",
+                "identityDocumentName",
+                "identityDocumentSeriesNotUsed",
+                "identityDocumentSeriesRegexp",
+                "identityDocumentSeriesErrorText",
+                "identityDocumentNumberNotUsed",
+                "identityDocumentNumberRegexp",
+                "identityDocumentNumberErrorText",
+                "used"
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var docType = {\n   \"RUS_PASSPORT\" : \"Паспорт гражданина РФ\",\n    \"RESIDENCE_PERMIT\" : \"Вид на жительство в Российской Федерации\",\n    \"DRIVER_LICENSE\" : \"Другой документ, удостоверяющий личность\",\n    \"MILITARY_ID\" : \"Военный билет\",\n    \"TEMPORARY_ID_CARD\" : \"Временное удостоверение личности гражданина РФ \",\n    \"DIP_PASPORT\" : \"Другой документ, удостоверяющий личность\",\n    \"DOC_ON_BORDER\" : \"Другой документ, удостоверяющий личность\",\n    \"INT_PASSPORT\" : \"Загранпаспорт гражданина РФ\",\n    \"MIGRATION_CARD\" : \"Другой документ, удостоверяющий личность\",\n    \"KGZ_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"AZE_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"BLR_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"KAZ_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"TJK_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"UZB_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"USSR_PASSPORT_1974\" : \"Другой документ, удостоверяющий личность\",\n    \"UKR_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"FOREIGN_PASSPORT\" : \"Паспорт иностранного гражданина\",\n    \"SEAMAN_PASSPORT\" : \"Другой документ, удостоверяющий личность\",\n    \"MED_POLICY\" : \"Другой документ, удостоверяющий личность\",\n    \"TEMP_RESIDENCE_PERMIT\" : \"Разрешение на временное проживание в Российской Федерации\",\n    \"FOREIGN_BIRTH_CERTIFICATE\" : \"Свидетельство о рождении, выданное уполномоченным органом иностранного государства\",\n    \"PRISON_CERTIFICATE\" : \"Другой документ, удостоверяющий личность\",\n    \"REFUGEE_CERTIFICATE\" : \"Удостоверение личности лица, признанного беженцем\",\n    \"MILITARY_CERTIFICATION\" : \"Удостоверение личности военнослужащего РФ\",\n    \"KAZ_ID_CARD\" : \"Паспорт иностранного гражданина\",\n    \"Свидетельство о рождении гражданина РФ\": \"Свидетельство о рождении\",\n    \"BIRTH_CERTIFICATE\": \"Свидетельство о рождении\"\n};\n\nvar RepdocumentType = Ext.ComponentQuery.query('[name=RepdocumentType]')[0];\n"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия документа",
+        "name": "RepSeries",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер документа",
+        "name": "RepNumber",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "RepIssueDate",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Орган, выдавший документ",
+        "name": "RepIssuer",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер/код подразделения, выдавшего документ, удостоверяющий личность",
+        "name": "RepIssuerCode",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Блок сведений о транспортном средстве",
+        "name": "VehicleData",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер транспортного средства",
+        "name": "VehicleNumber",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Марка и (или) модель транспортного средства",
+        "name": "VehicleModel",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false
+    },
+    {
+        "xtype": "label",
+        "html": "<div style=\"font-size: 14px; color:#ff0000; font-weight: bold;\">Дата начала эксплуатации ТС не должна быть раньше текущей.</br>Иначе сведения будут отклонены.</div>",
+        "name": "label_0",
+        "fieldName": "label_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата начала эксплуатации транспортного средства",
+        "name": "FromDate",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false,
+        "strategy": "current_date"
+    },
+    {
+        "xtype": "label",
+        "html": "<div style=\"font-size: 14px; color:#ff0000; font-weight: bold;\"> Дату окончания эксплуатации ТС в случае </br> бессрочной инвалидности указываем  31.12.2999 </div>",
+        "name": "label_2",
+        "fieldName": "label_2",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата окончания эксплуатации транспортного средства",
+        "name": "ToDate",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "allowBlank": false
+    }
+]

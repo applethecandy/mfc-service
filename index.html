@@ -1,0 +1,262 @@
+<!-- Костыль после лютейших косяков http://jira.at-sibir.ru/browse/MFC-5915 -->
+<#function getProvidedCount form>
+    <#local fileUploadCounter = 0/>
+    <#list form?keys as key>
+        <#if key?ends_with("_documentProvided") && form[key?replace("_documentProvided", "_document")]?has_content>
+            <#if form[key?replace("_documentProvided", "_pageCount")]?has_content >
+                <#local fileUploadCounter = fileUploadCounter+form[key?replace("_documentProvided","_pageCount")]?number/>
+            <#elseif form[key?replace("_documentProvided", "_pageCountOfOriginal")]?has_content>
+                <#local fileUploadCounter = fileUploadCounter+form[key?replace("_documentProvided","_pageCountOfOriginal")]?number/>
+            </#if>
+        </#if>
+        <#if form[key]?has_content && form[key]?is_sequence>
+            <#list form[key] as clonekey>
+                <#if clonekey?is_hash>
+                    <#list clonekey?keys as field>
+                        <#if field?ends_with("_documentProvided") && clonekey[field?replace("_documentProvided", "_document")]?has_content>
+                            <#if clonekey[field?replace("_documentProvided","_pageCount")]?has_content>
+                                <#local fileUploadCounter = fileUploadCounter+clonekey[field?replace("_documentProvided","_pageCount")]?number/>
+                            <#elseif clonekey[field?replace("_documentProvided","_pageCountOfOriginal")]?has_content>
+                                <#local fileUploadCounter = fileUploadCounter+clonekey[field?replace("_documentProvided","_pageCountOfOriginal")]?number/>
+                            </#if>
+
+                        </#if>
+                    </#list>
+                </#if>
+            </#list>
+        </#if>
+    </#list>
+    <#return fileUploadCounter/>
+</#function>
+
+
+
+<#import "coveringLetterUtils.ftl" as utils>
+<#import "packages/packageUtils.ftl" as packageUtils>
+<#import "utils.ftl" as utils1>
+<#setting date_format="dd.MM.yyyy">
+<#import "receipt_documents_table_10.ftl" as receiptDocuments>
+<#import "receipt_by_warrant.ftl" as warrant>
+<#import "receipt_statics.ftl" as statics>
+
+<table border="0" cellpadding="0" cellspacing="0" style="width: 800px;">
+    <tbody>
+    <tr>
+        <td>
+            <img align="center" width="140px" height="100px" src="images/logo_my-doc.jpg"/></td>
+        <td>
+            <div style="text-align: right;">
+                <strong><span style="font-family: 'times new roman', times, serif;"><span style="font-size: 20px;">ГБУ РК "Многофункциональный центр Республики Карелия"<br>
+					<strong><span style="font-family: 'times new roman', times, serif;"><span
+                            style="font-size: 14px;">${orderPackage.getMfc().getName()!""}<br>
+					<strong><span style="font-family: 'times new roman', times, serif;"><span
+                            style="font-size: 12px;">${orderPackage.getMfc().getAddress()!""}
+                        , телефон: ${orderPackage.getMfc().getPhoneNumber()!""}
+                        , e-mail: ${orderPackage.getMfc().getEmail()!""}</div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<br/>
+<div style="text-align: center;">
+    <strong><span style="font-family: 'times new roman', times, serif;"><span style="font-size: 18px;">Реестр приема-передачи дел № ${orderPackage.getNumber()}
+    </strong></span></span><br>
+    <span style="font-family: 'times new roman', times, serif;"><span style="font-size: 14px;">в получении документов на предоставление услуги</span></span><br>
+    <strong><span style="font-family: 'times new roman', times, serif;"><span style="font-size: 14px;">"
+    <#assign serviceTitles = []/>
+    <#list orderPackage.orders?sort as order>
+        <#if !serviceTitles?seq_contains(order.getServiceTitle())>
+            <#assign serviceTitles = serviceTitles+[order.getServiceTitle()]/>
+        ${order.getServiceTitle()}
+        </#if>
+    </#list>
+        "</strong></span></span></div>
+<br/>
+<br/>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 800px;">
+    <tbody>
+    <tr>
+        <td style="text-align: left;font-family: 'times new roman', times, serif;font-size: 14px;">
+            <strong></strong></td>
+        <td style="text-align: right;font-family: 'times new roman', times, serif;font-size: 14px;">
+        ${utils1.toTextDate(cDate)}
+        </td>
+        </td>
+    </tr>
+    </tbody>
+</table><br/>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 800px;">
+    <tbody>
+    <tr>
+        <td style="text-align: left;font-family: 'times new roman', times, serif;font-size: 18px;">
+            Отправитель:
+        </td>
+        <td style="text-align: center;font-family: 'times new roman', times, serif;font-size: 18px;border-bottom: 1px solid;">
+        ${orderPackage.getMfc().getName()!""}</td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong></strong></td>
+        <td style="text-align: center;font-family: 'times new roman', times, serif;font-size: 10px;">
+            (Наименование учреждения)
+        </td>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: left;font-family: 'times new roman', times, serif;font-size: 18px;">
+            Приемщик:
+        </td>
+        <td style="text-align: center;font-family: 'times new roman', times, serif;font-size: 18px;border-bottom: 1px solid;">
+        ${utils.getOrganizationTitle()}</td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong></strong></td>
+        <td style="text-align: center;font-family: 'times new roman', times, serif;font-size: 10px;">
+            (Наименование органа власти, учреждения)
+        </td>
+        </td>
+    </tr>
+    </tbody>
+</table><br/><br/>
+
+
+<table style="border:1px solid black;border-collapse:collapse; width:650;">
+    <thead>
+    <tr>
+        <th style="border:1px solid black; width:4%;font-size:16px;font-family:times new roman,times,serif;">№ п/п</th>
+        <!--		<th style="border:1px solid black; width:49%;font-size:16px;font-family:times new roman,times,serif;">Услуга</th> -->
+        <th style="border:1px solid black; width:15%;font-size:16px;font-family:times new roman,times,serif;">Номер
+            дела
+        </th>
+        <th style="border:1px solid black; width:25%;font-size:16px;font-family:times new roman,times,serif;">ФИО
+            заявителя
+        </th>
+        <th style="border:1px solid black; width:7%;font-size:16px;font-family:times new roman,times,serif;">Кол-во
+            листов
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <#assign orderCounter = 0/>
+    <#assign totalListCounter = 0/> <!-- @starodubam -->
+    <#list orderPackage.orders?sort as order>
+        <#assign form = packageUtils.getOrderForm(order)/>
+        <#assign orderCounter = orderCounter+1/>
+    <tr>
+        <td style="border:1px solid black;font-size:16px;font-family:times new roman,times,serif;"
+            align="center">${orderCounter}</td>
+        <!--				<td style="border:1px solid black;font-size:13px;font-family:times new roman,times,serif;" align="center">${order.getServiceTitle()?substring(0,111)?capitalize}</td> -->
+        <td style="border:1px solid black;font-size:16px;font-family:times new roman,times,serif;"
+            align="center">${order.getOrderNumber()}</td>
+        <td style="border:1px solid black;font-size:16px;font-family:times new roman,times,serif;"
+            align="center"><#if order.requester.getRequesterType()=="COMPANY"><#if order.requester.incorporationForm?has_content && order.requester.incorporationForm !='Не выбрано'>${order.requester.incorporationForm!''} </#if>${order.requester.companyFullName!}
+        ${form['additionalRequesters']?first['AgentLastNameUl']} <#if form['additionalRequesters']?first['AgentFirstNameUl']?has_content>${form['additionalRequesters']?first['AgentFirstNameUl']}
+                . </#if><#if form['additionalRequesters']?first['AgentSecondNameUl']?has_content>${form['additionalRequesters']?first['AgentSecondNameUl']}
+                . </#if>
+        <#else>
+        ${(order.requester.lastName!"")?upper_case}
+            <#if order.requester.firstName?has_content>${(order.requester.firstName!'')?upper_case}
+            </#if>
+            <#if order.requester.patronymic?has_content>${(order.requester.patronymic!'')?upper_case}
+            </#if>
+            <#if form.representative_check?? && form.representative_check =="on">в лице представителя:
+            ${form.declarant_representative_lastName!''}
+                <#if form.declarant_representative_firstName?has_content>${(form.declarant_representative_firstName!'')?upper_case} </#if>
+                <#if form.declarant_representative_patronymic?has_content>${(form.declarant_representative_patronymic!' ')?upper_case}</#if></#if></#if></td>
+        <td style="border:1px solid black;font-size:16px;font-family:times new roman,times,serif;" align="center">
+            <#assign count = getProvidedCount(form) />
+				${count}
+        </td>
+        <#assign totalListCounter = totalListCounter + count />
+    </tr>
+    </#list>
+    </tbody>
+</table>
+<br/>
+
+<span style="font-size:18px;"><span style="font-family: times new roman,times,serif;"> <br/>
+Итого:      <#assign packageCounter = 0/>
+<#list  orderPackage.getOrders() as order>
+    <#assign form = packageUtils.getOrderForm(order)/>
+    <#assign packageCounter = packageCounter+1/>
+
+
+</#list>${packageCounter} (дел), ${totalListCounter} (листов) <!-- @starodubam -->
+<#assign packageCounter = 0/></span></span>
+<br/>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 800px;">
+    <tbody>
+    <tr>
+        <br>
+        <br>
+        <td style="text-align: left;width: 100px;">
+            <span style="font-size:14px;"><span style="font-family: 'times new roman', times, serif;">${cpguUser.getPosition()} <!-- должность текущего специалиста --> <br> ГБУ РК "МФЦ РК" </span>
+        </td>
+        <td style="text-align: center;width: 450px;border-bottom: 1px solid;">
+            <span style="font-size:16px;"><span
+                    style="font-family: 'times new roman', times, serif;">${cpguUser.getDisplayName()!""}</span></span>
+        </td>
+        <td style="text-align: center;width: 150px;border-bottom: 1px solid;">
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: center;width: 150px;">
+            <span style="font-size:10px;"><span style="font-family: 'times new roman', times, serif;"></span></td>
+        <td style="text-align: center;width: 00px;">
+            <span style="font-size:10px;"><span style="font-family: 'times new roman', times, serif;">(Фамилия, инициалы)</span></span>
+        </td>
+        <td style="text-align: center;width: 300px;">
+            <span style="font-size:10px;"><span
+                    style="font-family: 'times new roman', times, serif;">(подпись)</span></span></td>
+    </tr>
+    <td style="text-align: left;width: 100px;">
+        <span style="font-size:14px;"><span style="font-family: 'times new roman', times, serif;">Представитель органа власти</span>
+    </td>
+    <td style="text-align: center;width: 450px;border-bottom: 1px solid;">
+        <span style="font-size:16px;"><span style="font-family: 'times new roman', times, serif;"></span></span></td>
+    <td style="text-align: center;width: 150px;border-bottom: 1px solid;">
+    </td>
+    </tr>
+    <tr>
+        <td style="text-align: center;width: 100px;">
+            <span style="font-size:10px;"><span style="font-family: 'times new roman', times, serif;"></span></td>
+        <td style="text-align: right;width: 600px;">
+            <span style="font-size:10px;"><span style="font-family: 'times new roman', times, serif;">(должность)</span></span>
+        </td>
+    </tr>
+    </tr>
+    <td style="text-align: left;width: 100px;">
+        <span style="font-size:14px;"><span style="font-family: 'times new roman', times, serif;"></span></td>
+    <td style="text-align: center;width: 450px;border-bottom: 1px solid;">
+        <span style="font-size:16px;"><span style="font-family: 'times new roman', times, serif;"></span></span></td>
+    <td style="text-align: center;width: 150px;border-bottom: 1px solid;">
+    </td>
+    </tr>
+    <tr>
+        <td style="text-align: center;width: 150px;">
+            <span style="font-size:10px;"><span style="font-family: 'times new roman', times, serif;"></span></td>
+        <td style="text-align: center;width: 00px;">
+            <span style="font-size:10px;"><span style="font-family: 'times new roman', times, serif;">(Фамилия, инициалы)</span></span>
+        </td>
+        <td style="text-align: center;width: 300px;">
+            <span style="font-size:10px;"><span
+                    style="font-family: 'times new roman', times, serif;">(подпись)</span></span></td>
+    </tr>
+    </tr>
+    <td style="text-align: left;width: 300px;">
+        <span style="font-size:14px;"><span style="font-family: 'times new roman', times, serif;"></span></td>
+    <td style="text-align: right;width: 150px;border-bottom: 0px solid;">
+        <span style="font-size:16px;"><span style="font-family: 'times new roman', times, serif;">Дата принятия:</span></span>
+    </td>
+    <td style="text-align: center;width: 150px;border-bottom: 0px solid;">
+        <span style="font-size:16px;"><span style="font-family: 'times new roman', times, serif;"> _________________________ г.</span></span>
+    </td>
+    </td>
+    </tr>
+
+    </tbody>
+</table>

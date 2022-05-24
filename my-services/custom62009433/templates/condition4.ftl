@@ -1,4 +1,4 @@
-<!-- # combobox_0 -> заявление об отказе в получении государственной услуги # -->
+<!-- # combobox_0 -> Заявление об исправлении опечаток (ошибок) # -->
 
 <style>
     .subscript {
@@ -192,13 +192,12 @@
     }
 </style>
 
-
 <#import "applethecandy-macros.ftl" as macros>
 
 <table class="header right">
     <tr>
         <td></td>
-        <td>Приложение N 9<br> к Административному регламенту предоставления государственной услуги по учету лиц,
+        <td>Приложение N 12<br> к Административному регламенту предоставления государственной услуги по учету лиц,
             относящихся к коренным малочисленным народам Российской Федерации
             <br><br>Форма
         </td>
@@ -228,7 +227,7 @@
 <table class="title">
     <tr>
         <td>
-            Заявление<br>об отказе в получении государственной услуги
+            Заявление<br>об исправлении опечаток (ошибок)
         </td>
     </tr>
 </table>
@@ -236,17 +235,33 @@
 <table>
     <tr>
         <td>
-            Отказываюсь от получения государственной услуги по
+            Прошу исправить допущенную(ые) опечатку(и) (ошибку) в документах, выданных в результате предоставления
+            государственной услуги по
         </td>
     </tr>
     <tr>
         <td class="underline">
-            ${form.ls4_combobox_10?has_content?then(form.ls4_combobox_10, "")}
+            ${form.ls5_combobox_10?has_content?then(form.ls5_combobox_10, "")}
         </td>
     </tr>
     <tr>
         <td class="subscript center">
             (указать наименование государственной услуги)
+        </td>
+    </tr>
+    <tr>
+        <td class="underline">
+             <@macros.splitComma form.textarea_0 1 />
+        </td>
+    </tr>
+    <tr>
+        <td class="subscript center">
+            (описывается допущенная опечатка (ошибка)
+        </td>
+    </tr>
+    <tr>
+        <td class="underline">
+             <@macros.splitComma form.textarea_0 2 />
         </td>
     </tr>
 </table>
@@ -256,7 +271,7 @@
         <td>
             Дата <@macros.printDate .now?date/>
         </td>
-        <td class="underline">&nbsp;</td>
+        <td class="underline"> </td>
     </tr>
     <tr>
         <td></td>

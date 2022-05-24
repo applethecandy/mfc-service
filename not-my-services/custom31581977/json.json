@@ -1,0 +1,298 @@
+[
+    {
+        "xtype": "fieldset",
+        "title": "<font color=\"red\">Управление ФНС России по Республике Карелия (ТОРМ г.Петрозаводск): г. Петрозаводск, г. Олонец Олонецкий р-н,пгт.Пряжа, г.Суоярви, Прионежский р-н, Пряжинский р-н, Суоярвский р-н</font>",
+        "name": "subdeps_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<font color=\"red\">Управление ФНС России по Республике Карелия (ТОРМ г.Кемь): г. Кемь, п. Лоухи, п Кемский р-н, Лоухский р-н</font>",
+        "name": "subdeps_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<font color=\"red\">Управление ФНС России по Республике Карелия (ТОРМ г.Костомукша): г.Костомукша, Калевала, г. Калевальский р-н</font>",
+        "name": "subdeps_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<font color=\"red\">Управление ФНС России по Республике Карелия (ТОРМ г.Сегежа): г. Сегежа, г. Беломорск,  п. Муезерский, Сегежский р-н, Беломорский р-н, Муезерский р-н н</font>",
+        "name": "subdeps_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<font color=\"red\">Управление ФНС России по Республике Карелия (ТОРМ г.Сортавала): г. Сортавала, г. Лахденпохья, г. Питкяранта, , Лахденпохский р-н, Питкярантский р-н</font>",
+        "name": "subdeps_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<font color=\"red\">Управление ФНС России по Республике Карелия (ТОРМ г.Медвежьегорск): г. Медвежьегорск, г. Пудож, Медвежьегорск р-н, Пудожский р-н</font>",
+        "name": "subdeps_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<font color=\"red\">Управление ФНС России по Республике Карелия (ТОРМ г.Кондопога): г.Кондопожский р-н Кондопога</font>",
+        "name": "subdeps_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Обращается представитель заявителя",
+        "name": "checkbox_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "var representative_check = Ext.ComponentQuery.query('[name=representative_check]')[0];\nvar checkbox_5 = Ext.ComponentQuery.query('[name=checkbox_5]')[0];\nvar fileuploadpanel_1 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_1]')[0];\n\n\nif (checkbox_5.checked == true)\n{\nrepresentative_check.setVisible(false);\nrepresentative_check.setValue(true);\nfileuploadpanel_1.hide();\n}\nelse\n{\nrepresentative_check.setVisible(false);\nrepresentative_check.setValue(false);\nfileuploadpanel_1.show();\n}"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о налогоплательщике:",
+        "name": "fieldset_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИНН",
+        "name": "textfield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "inn"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "lastname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "firstname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "middlename"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "datefield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "birthdate"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Место рождения",
+        "name": "textfield_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "birthPlace"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места жительства",
+        "name": "textfield_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "residenceAddress"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер телефона",
+        "name": "textfield_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "person_mobile"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Документ, удостоверяющий личность заявителя",
+        "name": "fieldset_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование документа",
+        "name": "textfield_31",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "documenttypename"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "textfield_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docseries"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "№",
+        "name": "textfield_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docnumber"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "datefield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issuedate"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "textfield_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issueorg"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Код вида документа",
+        "name": "textfield_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "passportDepCode",
+        "scripts": [
+            "var textfield_31 = Ext.ComponentQuery.query('[name=textfield_31]')[0];\nvar textfield_8 = Ext.ComponentQuery.query('[name=textfield_8]')[0];\n\nstr = textfield_31.getValue();\nswitch (str) {\n  case \"Паспорт гражданина Российской Федерации\":\n    textfield_8.setValue(\"21\");\n    break;\n  case \"Свидетельство о рождении гражданина РФ\":\n    textfield_8.setValue(\"03\");\n    break;\n  case \"Временное удостоверение личности гражданина Российской Федерации\":\n    textfield_8.setValue(\"14\");\n    break;\n  case \"Военный билет\":\n    textfield_8.setValue(\"07\");\n    break;\n  case \"Удостоверение личности военнослужащего Российской Федерации\":\n    textfield_8.setValue(\"24\");\n    break;\n  case \"Паспорт иностранного гражданина\":\n    textfield_8.setValue(\"10\");\n    break;\n  case \"Свидетельство о предоставлении временного убежища на территории Российской Федерации\":\n    textfield_8.setValue(\"18\");\n    break;\n  case \"Вид на жительство в Российской Федерации\":\n    textfield_8.setValue(\"12\");\n    break;\n  case \"Удостоверение беженца\":\n    textfield_8.setValue(\"13\");\n    break;\n  case \"Разрешение на временное проживание\":\n    textfield_8.setValue(\"15\");\n    break;\n  case \"Свидетельство о рождении иностранного гражданина\":\n    textfield_8.setValue(\"23\");\n    break;\n  default:\n    textfield_8.setValue(\"21\");\n}\n"
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения об объекте(-ах)",
+        "name": "fieldset_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кадастровый номер ЗУ",
+        "name": "textfield_42",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Способ информирования о результате",
+        "name": "combobox_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "в налоговом органе, через который подано настоящее уведомление"
+                },
+                {
+                    "value": "по почте по имеющемуся у налогового органа адресу места жительства (места пребывания) налогоплательщика - физического лица, подавшего уведомление, или по предоставленному налоговому органу адресу для направления по почте документов, которые используются налоговыми органами при реализации своих полномочий в отношениях, регулируемых законодательством о налогах и сборах"
+                },
+                {
+                    "value": "в многофункциональном центре предоставления государственных и муниципальных услуг (далее - МФЦ), через который подано настоящее уведомление, для чего выражаю согласие на передачу мне документов, составляющих налоговую тайну, на бумажном носителе через МФЦ"
+                }
+            ],
+            "type": "store"
+        }
+    },
+    {
+        "xtype": "fieldset",
+        "title": "",
+        "name": "fieldset_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Список документов:",
+        "name": "fieldset_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Заявление",
+        "fieldName": "LoadStatement",
+        "name": "LoadStatement",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "documentCharacterIdDef": 1,
+        "documentCharacterNameDef": "Оригинал",
+        "scanDocumentWithdraw": "",
+        "description": "односторонняя печать"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, удостоверяющий личность заявителя",
+        "fieldName": "fileuploadpanel_1",
+        "name": "fileuploadpanel_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "для удостоверения личности, копия не требуется:<br /><br />\nпаспорт гражданина РФ,<br />удостоверение личности военнослужащего,<br />военный билет,<br />паспорт моряка,<br />паспорт иностранного гражданина,<br />вид на жительство,<br /> разрешение на временное проживание",
+        "scanDocumentWithdraw": ""
+    }
+]

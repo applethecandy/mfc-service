@@ -1,0 +1,1100 @@
+[
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о заявителе",
+        "name": "fieldset_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "surname",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}",
+        "strategy": "lastname",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "name",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}",
+        "strategy": "firstname",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "patronymic",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}",
+        "strategy": "middlename"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Данные ФИО были изменены",
+        "name": "checkbox_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}"
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_0",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Прежние данные"
+            },
+            {
+                "name": "old_surname",
+                "xtype": "textfield",
+                "fieldLabel": "Прежняя фамилия",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "old_name",
+                "xtype": "textfield",
+                "fieldLabel": "Прежнее имя",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "old_patronymic",
+                "xtype": "textfield",
+                "fieldLabel": "Прежнее отчество",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_0",
+        "fieldName": "cloneablePanel_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "datefield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "birthdate",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Место рождения",
+        "name": "KLADR_0FullAddr",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "birthPlace",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "СНИЛС",
+        "name": "textfield_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}",
+        "strategy": "snils",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИНН",
+        "name": "textfield_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}",
+        "strategy": "inn",
+        "maxLength": 12,
+        "minLength": 12
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер телефона",
+        "name": "textfield_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}",
+        "strategy": "person_mobile"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес электронной почты",
+        "name": "textfield_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}",
+        "strategy": "person_email"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Документ удостоверяющий личность",
+        "name": "fieldset_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Вид документа",
+        "name": "combobox_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "specialConfig": "documentType",
+        "store": null,
+        "queryMode": null,
+        "displayField": null,
+        "valueField": null,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "textfield_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}",
+        "strategy": "docseries",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "textfield_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}",
+        "strategy": "docnumber",
+        "allowBlank": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "адрес регистрации по месту жительства в Российской Федерации (при наличии регистрации по месту жительства в пределах Российской Федерации)",
+        "name": "fieldset_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "KLADR",
+        "fieldLabel": "Адрес регистрации по месту жительства в Российской Федерации (при наличии регистрации по месту жительства в пределах Российской Федерации)",
+        "name": "KLADR_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "registrationAddressKladrFullAddrJson",
+        "allowBlank": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Обращение заявителя по месту пребывания",
+        "name": "checkbox_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}"
+    },
+    {
+        "xtype": "KLADR",
+        "fieldLabel": "Адрес регистрации по месту пребывания в Российской Федерации (при обращении с заявлением о признании гражданина банкротом во внесудебном порядке по месту пребывания)",
+        "name": "KLADR_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true,
+        "strategy": "residenceAddressKladrFullAddrJson"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о регистрации в качестве ИП",
+        "name": "fieldset_5",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Регистрация в качестве ИП",
+        "name": "combobox_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "не зарегистрирован и не был зарегистрирован"
+                },
+                {
+                    "value": "зарегистрирован или был зарегистрирован"
+                }
+            ],
+            "type": "store"
+        },
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}",
+        "allowBlank": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"text-transform:none;\"><b style=\"color:red\">При прекращении или завершении процедуры внесудебного банкротства необходимо дополнительно сделать рассылку уведомления о опубликовании этого сообщения. Смотри инструкцию.</b></span>",
+        "name": "fieldset_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_1",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Сведения о кредитных организациях"
+            },
+            {
+                "xtype": "fieldset",
+                "margin": 0,
+                "padding": 0,
+                "border": false,
+                "title": "<span style=\"text-transform:none;\"><b style=\"color:red\">Как узнать БИК, смотри базу знаний к услуге.</b></span>",
+                "name": "fieldset_7",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_3",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование кредитной организации",
+                "isPersonField": true,
+                "isSoleField": true,
+                "isLegalField": false,
+                "allowBlank": false
+            },
+            {
+                "name": "textfield_4",
+                "xtype": "textfield",
+                "fieldLabel": "БИК",
+                "isPersonField": true,
+                "isSoleField": true,
+                "isLegalField": false,
+                "vtype": "validateBikBank",
+                "allowBlank": false
+            }
+        ],
+        "prefix": "cloneablePanel_1",
+        "fieldName": "cloneablePanel_1",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Сведения о кредиторах гражданина (по денежным обязательствам и (или) обязанности  по уплате обязательных платежей, за исключением возникших в результате осуществления гражданином предпринимательской деятельности)",
+        "name": "checkbox_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "I. Сведения о кредиторах гражданина (по денежным обязательствам и (или) обязанности  по уплате обязательных платежей, за исключением возникших в результате осуществления гражданином предпринимательской деятельности)",
+        "name": "fieldset_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_2_1",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Заголовок",
+                "hidden": true,
+                "disabled": true
+            },
+            {
+                "name": "textfield_13",
+                "xtype": "textfield",
+                "fieldLabel": "Содержание обязательства",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Например: заем, кредит, алименты, коммунальные платежи, компенсация морального вреда",
+                "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}"
+            },
+            {
+                "name": "textfield_14",
+                "xtype": "textfield",
+                "fieldLabel": "Кредитор",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Если физ.лицо, то указывается полностью фамилия, имя, отчество. Если юр.лицо – наименование юр.лица, как в документах"
+            },
+            {
+                "xtype": "KLADR",
+                "fieldLabel": "Место нахождения (место жительства) кредитора",
+                "name": "KLADR_3",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_15",
+                "xtype": "textfield",
+                "fieldLabel": "Основание возникновения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Указывается наименование основания (кредитный договор, акт, решение суда), ДАТА и номер договора (последнее – при наличии)"
+            },
+            {
+                "xtype": "fieldset",
+                "title": "Сумма обязательства",
+                "name": "fieldset_9",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_16",
+                "xtype": "textfield",
+                "fieldLabel": "Всего",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_17",
+                "xtype": "textfield",
+                "fieldLabel": "В том числе задолженность",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Общая сумма «В том числе задолженность» и «недоимка» должна составлять от 50 тыс до 500 тыс. рублей. УЧИТЫВАЮТСЯ И ВОЗНИКШИЕ В РЕЗУЛЬТАТЕ ИП",
+                "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}"
+            },
+            {
+                "name": "textfield_18",
+                "xtype": "textfield",
+                "fieldLabel": "Штрафы, пени и иные санкции",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_2_1",
+        "fieldName": "cloneablePanel_2_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_2_2",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Обязательные платежи",
+                "name": "fieldset_10",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_19",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование налога, сбора или иного обязательного платежа",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Обязательные платежи в бюджет РФ. Например, налог, штраф"
+            },
+            {
+                "name": "textfield_20",
+                "xtype": "textfield",
+                "fieldLabel": "Недоимка",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Общая сумма «В том числе задолженность» и «недоимка» должна составлять от 50 тыс до 500 тыс. рублей"
+            },
+            {
+                "name": "textfield_21",
+                "xtype": "textfield",
+                "fieldLabel": "Штрафы, пени и иные санкции",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_2_2",
+        "fieldName": "cloneablePanel_2_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Сведения о неденежных обязательствах",
+        "name": "textfield_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "Например, передача имущества в собственность, выполнение работ, оказание услуг и т.п.). Если отсутствуют – указать «неденежные обязательства отсутствуют»"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Сведения о должниках гражданина (по денежным обязательствам и (или) обязанности по уплате обязательных платежей, за исключением возникших в результате осуществления гражданином предпринимательской деятельности)",
+        "name": "checkbox_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "III. Сведения о <span style=color:red>должниках</span> гражданина (по денежным обязательствам и (или) обязанности по уплате обязательных платежей, за исключением возникших в результате осуществления гражданином предпринимательской деятельности)",
+        "name": "fieldset_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Денежные обязательства",
+        "name": "fieldset_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_3_1",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Заголовок",
+                "hidden": true,
+                "disabled": true
+            },
+            {
+                "name": "textfield_13",
+                "xtype": "textfield",
+                "fieldLabel": "Содержание обязательства",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Например: заем, кредит, алименты, коммунальные платежи, компенсация морального вреда"
+            },
+            {
+                "name": "textfield_14",
+                "xtype": "textfield",
+                "fieldLabel": "Должник",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Если физ.лицо, то указывается полностью фамилия, имя, отчество. Если юр.лицо – наименование юр.лица, как в документах"
+            },
+            {
+                "xtype": "KLADR",
+                "fieldLabel": "Место нахождения (место жительства) должника",
+                "name": "KLADR_3",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_15",
+                "xtype": "textfield",
+                "fieldLabel": "Основание возникновения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Указывается наименование основания (кредитный договор, акт, решение суда), ДАТА и номер договора (последнее – при наличии)"
+            },
+            {
+                "xtype": "fieldset",
+                "title": "Сумма обязательства",
+                "name": "fieldset_9",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_16",
+                "xtype": "textfield",
+                "fieldLabel": "Всего",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_17",
+                "xtype": "textfield",
+                "fieldLabel": "В том числе задолженность",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_18",
+                "xtype": "textfield",
+                "fieldLabel": "Штрафы, пени и иные санкции",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_3_1",
+        "fieldName": "cloneablePanel_3_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_3_2",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Обязательные платежи",
+                "name": "fieldset_10",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_19",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование налога, сбора или иного обязательного платежа",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Обязательные платежи в бюджет РФ. Например, налог, штраф"
+            },
+            {
+                "name": "textfield_20",
+                "xtype": "textfield",
+                "fieldLabel": "Всего",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_21",
+                "xtype": "textfield",
+                "fieldLabel": "Проценты",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Заполняется в случае, если возврат суммы излишне уплаченного налога осуществляется с нарушением сроков, установленных Налоговым кодексом Российской Федерации"
+            }
+        ],
+        "prefix": "cloneablePanel_3_2",
+        "fieldName": "cloneablePanel_3_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Сведения о неденежных обязательствах",
+        "name": "textfield_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "Например, передача имущества в собственность, выполнение работ, оказание услуг и т.п.). Если отсутствуют – указать «неденежные обязательства отсутствуют»"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Сведения о кредиторах гражданина (по денежным обязательствам и (или) обязанности по уплате обязательных платежей, которые возникли в результате осуществления гражданином предпринимательской деятельности)",
+        "name": "checkbox_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "II. Сведения о кредиторах гражданина (по денежным обязательствам и (или) обязанности по уплате обязательных платежей, которые возникли в результате осуществления гражданином предпринимательской деятельности)",
+        "name": "fieldset_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_4_1",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Заголовок",
+                "hidden": true,
+                "disabled": true
+            },
+            {
+                "name": "textfield_13",
+                "xtype": "textfield",
+                "fieldLabel": "Содержание обязательства",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Например: заем, кредит, алименты, коммунальные платежи, компенсация морального вреда"
+            },
+            {
+                "name": "textfield_14",
+                "xtype": "textfield",
+                "fieldLabel": "Кредитор",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Если физ.лицо, то указывается полностью фамилия, имя, отчество. Если юр.лицо – наименование юр.лица, как в документах"
+            },
+            {
+                "xtype": "KLADR",
+                "fieldLabel": "Место нахождения (место жительства) кредитора",
+                "name": "KLADR_3",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_15",
+                "xtype": "textfield",
+                "fieldLabel": "Основание возникновения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Указывается наименование основания (кредитный договор, акт, решение суда), ДАТА и номер договора (последнее – при наличии)"
+            },
+            {
+                "xtype": "fieldset",
+                "title": "Сумма обязательства",
+                "name": "fieldset_9",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_16",
+                "xtype": "textfield",
+                "fieldLabel": "Всего",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_17",
+                "xtype": "textfield",
+                "fieldLabel": "В том числе задолженность",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Общая сумма «В том числе задолженность» и «недоимка» должна составлять от 50 тыс до 500 тыс. рублей"
+            },
+            {
+                "name": "textfield_18",
+                "xtype": "textfield",
+                "fieldLabel": "Штрафы, пени и иные санкции",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_4_1",
+        "fieldName": "cloneablePanel_4_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_4_2",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Обязательные платежи",
+                "name": "fieldset_10",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_19",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование налога, сбора или иного обязательного платежа",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Обязательные платежи в бюджет РФ. Например, налог, штраф, взносы в ФФОМС, ПФР"
+            },
+            {
+                "name": "textfield_20",
+                "xtype": "textfield",
+                "fieldLabel": "Недоимка",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Общая сумма «В том числе задолженность» и «недоимка» должна составлять от 50 тыс до 500 тыс. рублей"
+            },
+            {
+                "name": "textfield_21",
+                "xtype": "textfield",
+                "fieldLabel": "Штрафы, пени и иные санкции",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_4_2",
+        "fieldName": "cloneablePanel_4_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Сведения о неденежных обязательствах",
+        "name": "textfield_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "Например, передача имущества в собственность, выполнение работ, оказание услуг и т.п.). Если отсутствуют – указать «неденежные обязательства отсутствуют»",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Сведения о должниках гражданина (по денежным обязательствам и (или) обязанности по уплате обязательных платежей, которые возникли в результате осуществления гражданином предпринимательской деятельности)",
+        "name": "checkbox_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "IV. Сведения о <span style=color:red>должниках</span> гражданина (по денежным обязательствам и (или) обязанности по уплате обязательных платежей, которые возникли в результате осуществления гражданином предпринимательской деятельности)",
+        "name": "fieldset_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Денежные обязательства",
+        "name": "fieldset_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_5_1",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Заголовок",
+                "hidden": true,
+                "disabled": true
+            },
+            {
+                "name": "textfield_13",
+                "xtype": "textfield",
+                "fieldLabel": "Содержание обязательства",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Например: заем, кредит, алименты, коммунальные платежи, компенсация морального вреда"
+            },
+            {
+                "name": "textfield_14",
+                "xtype": "textfield",
+                "fieldLabel": "Должник",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Если физ.лицо, то указывается полностью фамилия, имя, отчество. Если юр.лицо – наименование юр.лица, как в документах"
+            },
+            {
+                "xtype": "KLADR",
+                "fieldLabel": "Место нахождения (место жительства) должника",
+                "name": "KLADR_3",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_15",
+                "xtype": "textfield",
+                "fieldLabel": "Основание возникновения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Указывается наименование основания (кредитный договор, акт, решение суда), ДАТА и номер договора (последнее – при наличии)"
+            },
+            {
+                "xtype": "fieldset",
+                "title": "Сумма обязательства",
+                "name": "fieldset_9",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_16",
+                "xtype": "textfield",
+                "fieldLabel": "Всего",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_17",
+                "xtype": "textfield",
+                "fieldLabel": "В том числе задолженность",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_18",
+                "xtype": "textfield",
+                "fieldLabel": "Штрафы, пени и иные санкции",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_5_1",
+        "fieldName": "cloneablePanel_5_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_5_2",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Заголовок",
+                "hidden": true,
+                "disabled": true
+            },
+            {
+                "xtype": "fieldset",
+                "title": "Обязательные платежи",
+                "name": "fieldset_10",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_19",
+                "xtype": "textfield",
+                "fieldLabel": "Наименование налога, сбора или иного обязательного платежа",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Обязательные платежи в бюджет РФ. Например, налог, штраф"
+            },
+            {
+                "name": "textfield_20",
+                "xtype": "textfield",
+                "fieldLabel": "Всего",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "textfield_21",
+                "xtype": "textfield",
+                "fieldLabel": "Проценты",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "description": "Заполняется в случае, если возврат суммы излишне уплаченного налога осуществляется с нарушением сроков, установленных Налоговым кодексом Российской Федерации"
+            }
+        ],
+        "prefix": "cloneablePanel_5_2",
+        "fieldName": "cloneablePanel_5_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Сведения о неденежных обязательствах",
+        "name": "textfield_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "Например, передача имущества в собственность, выполнение работ, оказание услуг и т.п.). Если отсутствуют – указать «неденежные обязательства отсутствуют»",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Уведомление об отказе в приеме заявления",
+        "name": "checkbox_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Причина отказа в приеме заявления",
+        "name": "combobox_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "Список кредиторов и должников является неотъемлемой частью заявления о признании гражданина банкротом во внесудебном порядке",
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "непредставление заявителем документа, удостоверяющего его личность"
+                },
+                {
+                    "value": "непредставление представителем заявителя документа, удостоверяющего его личность и полномочия"
+                },
+                {
+                    "value": "несоответствие заявления о признании гражданина банкротом во внесудебном порядке форме, установленной нормативным правовым актом, принятым в соответствии с пунктом 3 статьи 2232 Федерального закона от 26.10.2002 № 127-ФЗ, или отсутствия в нем обязательных сведений"
+                },
+                {
+                    "value": "обращение заявителя не по месту жительства или по месту пребывания"
+                },
+                {
+                    "value": "отсутствие документов, необходимых для предоставления услуги, определённых Приказом Минэкономразвития России от 04.08.2020 № 497"
+                },
+                {
+                    "value": "наличие в Едином федеральном реестре сведений о банкротстве сведений о возбуждении процедуры внесудебного банкротства в отношении заявителя многофункциональным центром"
+                },
+                {
+                    "value": "наличие в Едином федеральном реестре сведений о банкротстве о прекращении либо завершении процедуры внесудебного банкротства в отношении заявителя менее 10 лет назад"
+                },
+                {
+                    "value": "наличие в Едином федеральном реестре сведений о банкротстве о возвращении заявителю многофункциональным центром заявления о признании гражданина банкротом во внесудебном порядке менее одного месяца назад"
+                }
+            ],
+            "type": "store"
+        },
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"text-transform:none;\"><b style=\"color:red\">Днем завершения считается день в соответствующее число последнего месяца срока. Отсчитывается со дня включения сведений о возбуждении процедуры внесудебного банкротства гражданина в ЕФРСБ. Если последний день срока приходится на нерабочий день, днем окончания срока считается ближайший следующий за ним рабочий день. Например, сообщение о возбуждении внесудебного банкротства было опубликовано на ЕФРСБ 10 сентября, то опубликовать сообщение о завершении процедуры внесудебного банкротства необходимо 10 марта (если этот день является рабочим!).</b></span>",
+        "name": "fieldset_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Дата публикации сообщения о возбуждении процедуры внесудебного банкротства на ЕФРСБ",
+        "name": "textfield_24",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scripts": [
+            "let date = findFormField(\"textfield_24\");\n\nif (/\\d{2}\\.\\d{2}\\.\\d{4}/.test(date.value)) {\n\nlet arr = date.value.match(/(\\d{2})\\.(\\d{2})\\.(\\d{4})/);\nif (arr[1] > 31 || arr[1] < 1) {\nfindFormField(\"textfield_25\").inputEl.dom.value = \"Укажите день в диапазоне «01-31»\";\nfindFormField(\"textfield_25\").value = \"Укажите день в диапазоне «01-31»\";\nreturn;\n}\n\nif (arr[2] > 12 || arr[2] < 1) {\nfindFormField(\"textfield_25\").inputEl.dom.value = \"Укажите месяц в диапазоне «01-12»\";\nfindFormField(\"textfield_25\").value = \"Укажите месяц в диапазоне «01-12»\";\nreturn;\n}\n\nlet newDate = new Date(arr[3] + \"-\" + arr[2] + \"-\" + arr[1]);\nnewDate.setMonth(newDate.getMonth() + 6);\nif (newDate.getDay() == 6) {\nnewDate.setDate(newDate.getDate() + 2);\n}\nif (newDate.getDay() == 0) {\nnewDate.setDate(newDate.getDate() + 1);\n}\nlet ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(newDate);\nlet mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(newDate);\nlet da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(newDate);\n\n\nfindFormField(\"textfield_25\").inputEl.dom.value = da + \".\" + mo + \".\" + ye;\nfindFormField(\"textfield_25\").value = da + \".\" + mo + \".\" + ye;\n\n} else { \n\nfindFormField(\"textfield_25\").inputEl.dom.value = \"Укажите дату в формате «01.01.1970»\";\nfindFormField(\"textfield_25\").value = \"Укажите дату в формате «01.01.1970»\";\n\n}\n"
+        ],
+        "maxLength": 10,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Планируемая дата публикации сообщения о завершения процедуры внесудебного банкротства на ЕФРСБ",
+        "name": "textfield_25",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"checkbox_1\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_2\"]}]},{\"fields\":[{\"name\":\"combobox_0\",\"value\":\"зарегистрирован или был зарегистрирован\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_6\"]}]},{\"fields\":[{\"name\":\"checkbox_2\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_8\",\"cloneablePanel_2_1\",\"cloneablePanel_2_2\",\"textfield_13\"]}]},{\"fields\":[{\"name\":\"checkbox_3\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_4_1\",\"cloneablePanel_4_2\",\"textfield_22\",\"fieldset_13\"]}]},{\"fields\":[{\"name\":\"checkbox_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"combobox_2\"]}]},{\"fields\":[{\"name\":\"checkbox_0\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"cloneablePanel_0\"]}]},{\"fields\":[{\"name\":\"checkbox_5\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_11\",\"fieldset_12\",\"cloneablePanel_3_1\",\"cloneablePanel_3_2\",\"textfield_17\"]}]},{\"fields\":[{\"name\":\"checkbox_6\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"fieldset_14\",\"fieldset_15\",\"cloneablePanel_5_1\",\"cloneablePanel_5_2\",\"textfield_23\"]}]}]}"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Список всех известных кредиторов, оформленный по утвержденной в соответствии с абзацем четвертым пункта 3 статьи 213.4 Закона о банкротстве форме",
+        "fieldName": "fileuploadpanel_0",
+        "name": "fileuploadpanel_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": ""
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Копия документа, удостоверяющего личность гражданина",
+        "fieldName": "fileuploadpanel_1",
+        "name": "fileuploadpanel_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": ""
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Копия документа, подтверждающего место жительства или пребывания гражданина",
+        "fieldName": "fileuploadpanel_2",
+        "name": "fileuploadpanel_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": ""
+    }
+]

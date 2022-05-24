@@ -1,4 +1,13 @@
 <style>
+.boxes smallbox {
+    width: 12px !important;
+    height: 12px !important;
+}
+* {
+    font-size: 7pt !important;
+    line-height: 6pt !important;
+}
+
 .subscript {
     font-size: 8pt;
     text-decoration: none;

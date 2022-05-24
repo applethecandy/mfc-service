@@ -1,4 +1,4 @@
-<!-- # lifesituation -> внесение изменений в сведения # -->
+<!-- # lifesituation -> предоставление выплаты # -->
 
 <style>
 .boxes smallbox {

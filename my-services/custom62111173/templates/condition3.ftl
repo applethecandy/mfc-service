@@ -1,9 +1,9 @@
-<!-- # lifesituation -> прекращение выплаты # -->
+<!-- # lifesituation -> внесение изменений в сведения # -->
 
 <style>
-  .boxes smallbox {
-    width: 12px !important;
-    height: 12px !important;
+  .boxes box {
+    height: 14px !important;
+    width: 20px !important;
   }
 
 * {
@@ -163,7 +163,7 @@
   <table>
     <tr>
       <td class="underline">
-         
+        &nbsp;
       </td>
     </tr>
     <tr>
@@ -176,16 +176,16 @@
   <table class="header">
     <tr>
       <td class="center" colspan="2">
-        ЗАЯВЛЕНИЕ<br>О ПРЕКРАЩЕНИИ ВЫПЛАТЫ МЕР СОЦИАЛЬНОЙ ПОДДЕРЖКИ
+        ЗАЯВЛЕНИЕ<br>ОБ ИЗМЕНЕНИИ СВЕДЕНИЙ ДЛЯ ОСУЩЕСТВЛЕНИЯ МЕРЫ СОЦИАЛЬНОЙ ПОДДЕРЖКИ
       </td>
     </tr>
     <tr>
       <td></td>
       <td>
         От 
-        <span class="underline in minw100">&nbsp;</span>
+        <span class="underline in minw100"></span>
         №
-        <span class="underline in minw100">&nbsp;</span>
+        <span class="underline in minw100"></span>
       </td>
     </tr>
   </table>
@@ -194,7 +194,7 @@
     <tr>
       <td class="indent">1.</td>
       <td>
-         
+        &nbsp;
       </td>
     </tr>
     <tr>
@@ -210,7 +210,7 @@
         страховой номер индивидуального лицевого счета:
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
     <tr><td colspan="2">проживающий (ая) в Российской Федерации:  </td></tr>
@@ -222,10 +222,10 @@
         адрес места жительства<sup>1</sup>
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
-    <tr><td colspan="2" class="underline"> </td></tr>
+    <tr><td colspan="2" class="underline">&nbsp;</td></tr>
   </table>
 
   <table class="no-gap">
@@ -234,7 +234,7 @@
         номер телефона
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
   </table>
@@ -245,7 +245,7 @@
         адрес электронной почты
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
   </table>
@@ -257,7 +257,7 @@
         наименование
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
   </table>
@@ -273,11 +273,11 @@
     </colgroup>
     <tr>
       <td class="center">серия</td>
-      <td class="underline"> </td>
+      <td class="underline">&nbsp;</td>
       <td class="center">номер</td>
-      <td class="underline"> </td>
+      <td class="underline">&nbsp;</td>
       <td class="center">дата выдачи</td>
-      <td class="underline"> </td>
+      <td class="underline">&nbsp;</td>
     </tr>
   </table>
 
@@ -287,10 +287,10 @@
         кем выдан, код подразделения
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
-    <tr><td colspan="2" class="underline"> </td></tr>
+    <tr><td colspan="2" class="underline">&nbsp;</td></tr>
   </table>
 
   <table class="no-gap">
@@ -299,7 +299,7 @@
         дата рождения
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
   </table>
@@ -310,7 +310,7 @@
         место рождения
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
   </table>
@@ -321,7 +321,7 @@
         срок действия документа <i>(при наличии)</i>
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
   </table>
@@ -335,7 +335,7 @@
     </tr>
     <tr>
       <td class="underline">
-         
+        &nbsp;
       </td>
     </tr>
     <tr>
@@ -351,10 +351,9 @@
         страховой номер индивидуального лицевого счета:
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
-    <tr><td colspan="2">проживающий (ая) в Российской Федерации:  </td></tr>
   </table>
 
   <table class="no-gap">
@@ -363,10 +362,10 @@
         адрес места жительства<sup>1</sup>
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
-    <tr><td colspan="2" class="underline"> </td></tr>
+    <tr><td colspan="2" class="underline">&nbsp;</td></tr>
   </table>
 
   <table class="no-gap">
@@ -375,7 +374,7 @@
         номер телефона
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
   </table>
@@ -386,7 +385,7 @@
         адрес электронной почты
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
   </table>
@@ -398,7 +397,7 @@
         наименование
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
   </table>
@@ -414,11 +413,11 @@
     </colgroup>
     <tr>
       <td class="center">серия</td>
-      <td class="underline"> </td>
+      <td class="underline">&nbsp;</td>
       <td class="center">номер</td>
-      <td class="underline"> </td>
+      <td class="underline">&nbsp;</td>
       <td class="center">дата выдачи</td>
-      <td class="underline"> </td>
+      <td class="underline">&nbsp;</td>
     </tr>
   </table>
 
@@ -428,10 +427,10 @@
         кем выдан, код подразделения
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
-    <tr><td colspan="2" class="underline"> </td></tr>
+    <tr><td colspan="2" class="underline">&nbsp;</td></tr>
   </table>
 
   <table class="no-gap">
@@ -440,7 +439,7 @@
         срок действия документа <i>(при наличии)</i>
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
   </table>
@@ -454,7 +453,7 @@
         наименование
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
   </table>
@@ -470,11 +469,11 @@
     </colgroup>
     <tr>
       <td class="center">серия</td>
-      <td class="underline"> </td>
+      <td class="underline">&nbsp;</td>
       <td class="center">номер</td>
-      <td class="underline"> </td>
+      <td class="underline">&nbsp;</td>
       <td class="center">дата выдачи</td>
-      <td class="underline"> </td>
+      <td class="underline">&nbsp;</td>
     </tr>
   </table>
 
@@ -484,10 +483,10 @@
         кем выдан, код подразделения <i>(при наличии)</i>
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
-    <tr><td colspan="2" class="underline"> </td></tr>
+    <tr><td colspan="2" class="underline">&nbsp;</td></tr>
   </table>
 
   <table>
@@ -496,36 +495,174 @@
         срок действия документа <i>(при наличии)</i>
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
-  </table>
-
-  <table>
-    <tr>
-      <td class="indent">3. Прошу прекратить выплату по мере социальной поддержки:</td>
-    </tr>
-    <tr><td class="underline"> </td></tr>
-    <tr><td class="subscript center">(наименование меры)</td></tr>
-    <tr><td class="underline"> </td></tr>
   </table>
 
   <table class="no-gap">
     <tr>
-      <td class="ungreedy indent">
-        4.	В связи с:
+      <td class="indent">3.	Прошу принять к сведению информацию об изменении <i>(отметить нужное)</i>:</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+					3.1.Сведений:
+          <span style="padding: 0 10px;"><box></box></span>
+          получателя меры социальной поддержки
+          <span style="padding: 0 10px;"><box></box></span>
+          представителя получателя меры социальной поддержки
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+          <span style="padding: 0 10px;"><box></box></span>
+          о фамилии, имени или отчестве;
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+          <span style="padding: 0 10px;"><box></box></span>
+          о документе, удостоверяющем личность;
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+          <span style="padding: 0 10px;"><box></box></span>
+          об адресе места жительства;
+          <span style="padding: 0 10px;"><box></box></span>
+          прошу запросить выплатное дело для постановки на учет в территориальном органе ПФР по новому месту жительства;
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+          <span style="padding: 0 10px;"><box></box></span>
+          о документе, подтверждающем полномочия представителя получателя меры социальной поддержки;
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center; width: 100%">
+          <span style="padding: 0 10px;"><box></box></span>
+          <table style="margin: 20px auto 0px">
+          <tr><td class="underline">&nbsp;</td></tr>
+          <tr><td class="subscript center">(указываются другие сведения)</td></tr>
+          </table>
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+          3.2
+          <span style="padding: 0 10px;"><box></box></span>
+          Представителя получателя меры социальной поддержки (законного представителя несовершеннолетнего или недееспособного лица; организации, на которую возложено исполнение обязанностей опекуна или попечителя).
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+          3.2
+          <span style="padding: 0 10px;"><box></box></span>
+          Сведений для доставки меры социальной поддержки:
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+          <span style="padding: 0 10px;"><box></box></span>
+          на счет;
+          <span style="padding: 0 10px;"><box></box></span>
+          получателя меры социальной поддержки
+          <span style="padding: 0 10px;"><box></box></span>
+          законного представителя
+				</div>
+			</td>
+    </tr>
+  </table>
+  
+  <table class="no-gap">
+    <tr>
+      <td class="ungreedy">
+        №
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+        &nbsp;
       </td>
     </tr>
-    <tr><td colspan="2" class="subscript center">(указываются обстоятельства, влекущие прекращение выплаты пособия)</td></tr>
+    <tr><td colspan="2" class="subscript center">(указывается номер счета)</td></tr>
+  </table>
+  
+  <table class="no-gap">
+    <tr>
+      <td class="ungreedy">
+        в кредитной организации
+      </td>
+      <td class="greedy underline" style="text-align: left;">
+        &nbsp;
+      </td>
+    </tr>
+    <tr><td colspan="2" class="subscript center">(указывается наименование кредитной организации)</td></tr>
+  </table>
+  
+  <table class="no-gap">
+    <tr>
+      <td class="ungreedy">
+        БИК кредитной организации
+      </td>
+      <td class="greedy underline" style="text-align: left;">
+        &nbsp;
+      </td>
+    </tr>
+  </table>
+  
+  <table>
+    <tr style="page-break-inside: avoid;">
+      <td>
+        <div class="boxes" style="justify-content: left; align-items: center;">
+          через:
+          <span style="padding: 0 10px;"><box></box></span>
+          организацию почтовой связи
+          <span style="padding: 0 10px;"><box></box></span>
+          иную организацию, осуществляющую доставку
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <table class="no-gap" style="width: 50%; float: right;">
+            <tr><td class="underline">&nbsp;</td></tr>
+            <tr><td class="subscript center">(указывается наименование иной организации, осуществляющей доставку)</td></tr>
+          </table>
+      </td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+        <div class="boxes" style="justify-content: left; align-items: center;">
+          <span style="padding: 0 10px;"><box></box></span>
+          путем вручения на дому
+          <span style="padding: 0 10px;"><box></box></span>
+          путем вручения на кассе
+        </div>
+      </td>
+    </tr>
   </table>
 
   <table>
     <tr>
       <td class="indent">
-        5.	Несу ответственность за достоверность предоставленных сведений, а также подлинность документов, в которых они содержатся. С положением об обязанности своевременного извещения о наступлении обстоятельств, влекущих прекращение (изменение) выплат, ознакомлен.
+        4.	Несу ответственность за достоверность предоставленных сведений, а также подлинность документов, в которых они содержатся. С положением об обязанности своевременного извещения о наступлении обстоятельств, влекущих прекращение (изменение) выплат, ознакомлен.
       </td>
     </tr>
     <tr>
@@ -545,15 +682,15 @@
     </colgroup>
     <tr>
       <td class="underline">
-         
+        &nbsp;
       </td>
       <td></td>
       <td class="underline">
-         
+        &nbsp;
       </td>
       <td></td>
       <td class="underline">
-         
+        &nbsp;
       </td>
     </tr>
     <tr>

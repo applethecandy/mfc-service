@@ -5,7 +5,7 @@ SetTimer, main, 100
 SetTimer, commit, 300000 
 
 commit:
-	RunWait %comspec% /c "git add * && git commit -m `"periodic commit`" && pause",,Hide
+	Run %comspec% /c "git add * && git commit -m `"periodic commit`" && pause",,Hide
 return
 
 main:

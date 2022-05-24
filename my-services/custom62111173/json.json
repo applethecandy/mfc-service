@@ -1,11 +1,30 @@
 [
     {
         "xtype": "combobox",
-        "fieldLabel": "Выпадающий список",
+        "fieldLabel": "Жизненная ситуация",
         "name": "lifesituation",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "предоставление выплаты"
+                },
+                {
+                    "value": "внесение изменений в сведения"
+                },
+                {
+                    "value": "прекращение выплаты"
+                }
+            ]
+        }
     },
     {
         "xtype": "textfield",

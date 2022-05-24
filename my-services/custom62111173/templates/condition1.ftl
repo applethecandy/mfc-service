@@ -1,3 +1,5 @@
+<!-- # lifesituation -> внесение изменений в сведения # -->
+
 <style>
 .boxes smallbox {
     width: 12px !important;

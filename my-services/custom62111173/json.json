@@ -27,7 +27,7 @@
             "type": "store"
         },
         "scripts": [
-            "var lifesituation = Ext.ComponentQuery.query('[name=lifesituation]')[0];\nvar textfield_28 = Ext.ComponentQuery.query('[name=textfield_28]')[0];\nvar fieldset_0 = Ext.ComponentQuery.query('[name=fieldset_0]')[0];\nvar textfield_0 = Ext.ComponentQuery.query('[name=textfield_0]')[0];\nvar textfield_1 = Ext.ComponentQuery.query('[name=textfield_1]')[0];\nvar textfield_2 = Ext.ComponentQuery.query('[name=textfield_2]')[0];\nvar textfield_3 = Ext.ComponentQuery.query('[name=textfield_3]')[0];\nvar textfield_4 = Ext.ComponentQuery.query('[name=textfield_4]')[0];\nvar textfield_5 = Ext.ComponentQuery.query('[name=textfield_5]')[0];\nvar datefield_0 = Ext.ComponentQuery.query('[name=datefield_0]')[0];\nvar residenceAddress = Ext.ComponentQuery.query('[name=residenceAddress]')[0];\nvar residenceAddressKladr = Ext.ComponentQuery.query('[name=residenceAddressKladr]')[0];\nvar textfield_8 = Ext.ComponentQuery.query('[name=textfield_8]')[0];\nvar textfield_9 = Ext.ComponentQuery.query('[name=textfield_9]')[0];\nvar combobox_0 = Ext.ComponentQuery.query('[name=combobox_0]')[0];\nvar checkbox_0 = Ext.ComponentQuery.query('[name=checkbox_0]')[0];\nvar textfield_10 = Ext.ComponentQuery.query('[name=textfield_10]')[0];\nvar fieldset_1 = Ext.ComponentQuery.query('[name=fieldset_1]')[0];\nvar combobox_1 = Ext.ComponentQuery.query('[name=combobox_1]')[0];\nvar textfield_11 = Ext.ComponentQuery.query('[name=textfield_11]')[0];\nvar textfield_12 = Ext.ComponentQuery.query('[name=textfield_12]')[0];\nvar textfield_13 = Ext.ComponentQuery.query('[name=textfield_13]')[0];\nvar textfield_32 = Ext.ComponentQuery.query('[name=textfield_32]')[0];\nvar datefield_1 = Ext.ComponentQuery.query('[name=datefield_1]')[0];\nvar fieldset_2 = Ext.ComponentQuery.query('[name=fieldset_2]')[0];\nvar textfield_14 = Ext.ComponentQuery.query('[name=textfield_14]')[0];\nvar textfield_15 = Ext.ComponentQuery.query('[name=textfield_15]')[0];\nvar textfield_16 = Ext.ComponentQuery.query('[name=textfield_16]')[0];\nvar textfield_17 = Ext.ComponentQuery.query('[name=textfield_17]')[0];\nvar datefield_2 = Ext.ComponentQuery.query('[name=datefield_2]')[0];\nvar fieldset_3 = Ext.ComponentQuery.query('[name=fieldset_3]')[0];\nvar textfield_18 = Ext.ComponentQuery.query('[name=textfield_18]')[0];\nvar textfield_19 = Ext.ComponentQuery.query('[name=textfield_19]')[0];\nvar textfield_20 = Ext.ComponentQuery.query('[name=textfield_20]')[0];\nvar textfield_21 = Ext.ComponentQuery.query('[name=textfield_21]')[0];\nvar datefield_3 = Ext.ComponentQuery.query('[name=datefield_3]')[0];\nvar fieldset_4 = Ext.ComponentQuery.query('[name=fieldset_4]')[0];\nvar textfield_22 = Ext.ComponentQuery.query('[name=textfield_22]')[0];\nvar textfield_23 = Ext.ComponentQuery.query('[name=textfield_23]')[0];\nvar textfield_24 = Ext.ComponentQuery.query('[name=textfield_24]')[0];\nvar fieldset_5 = Ext.ComponentQuery.query('[name=fieldset_5]')[0];\nvar cloneablePanel_0 = Ext.ComponentQuery.query('[name=cloneablePanel_0]')[0];\nvar textfield_25 = Ext.ComponentQuery.query('[name=textfield_25]')[0];\nvar textfield_26 = Ext.ComponentQuery.query('[name=textfield_26]')[0];\nvar textfield_27 = Ext.ComponentQuery.query('[name=textfield_27]')[0];\nvar textfield_28 = Ext.ComponentQuery.query('[name=textfield_28]')[0];\nvar datefield_4 = Ext.ComponentQuery.query('[name=datefield_4]')[0];\nvar checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\nvar combobox_2 = Ext.ComponentQuery.query('[name=combobox_2]')[0];\nvar fieldset_6 = Ext.ComponentQuery.query('[name=fieldset_6]')[0];\nvar fieldset_7 = Ext.ComponentQuery.query('[name=fieldset_7]')[0];\nvar combobox_3 = Ext.ComponentQuery.query('[name=combobox_3]')[0];\nvar textfield_31 = Ext.ComponentQuery.query('[name=textfield_31]')[0];\nvar textfield_29 = Ext.ComponentQuery.query('[name=textfield_29]')[0];\nvar textfield_30 = Ext.ComponentQuery.query('[name=textfield_30]')[0];\nvar combobox_4 = Ext.ComponentQuery.query('[name=combobox_4]')[0];\nvar fieldset_8 = Ext.ComponentQuery.query('[name=fieldset_8]')[0];\nvar LoadStatement = Ext.ComponentQuery.query('[name=LoadStatement]')[0];\nvar fileuploadpanel_1 = Ext.ComponentQuery.query('[name=fileuploadpanel_1]')[0];\nvar fileuploadpanel_4 = Ext.ComponentQuery.query('[name=fileuploadpanel_4]')[0];\nvar fileuploadpanel_5 = Ext.ComponentQuery.query('[name=fileuploadpanel_5]')[0];\nvar fileuploadpanel_6 = Ext.ComponentQuery.query('[name=fileuploadpanel_6]')[0];\nvar fileuploadpanel_16_new = Ext.ComponentQuery.query('[name=fileuploadpanel_16_new]')[0];\nvar fileuploadpanel_7 = Ext.ComponentQuery.query('[name=fileuploadpanel_7]')[0];\nvar fileuploadpanel_17_new = Ext.ComponentQuery.query('[name=fileuploadpanel_17_new]')[0];\nvar fileuploadpanel_8 = Ext.ComponentQuery.query('[name=fileuploadpanel_8]')[0];\nvar fileuploadpanel_18_new = Ext.ComponentQuery.query('[name=fileuploadpanel_18_new]')[0];\nvar fileuploadpanel_19_new = Ext.ComponentQuery.query('[name=fileuploadpanel_19_new]')[0];\nvar fileuploadpanel_20_new = Ext.ComponentQuery.query('[name=fileuploadpanel_20_new]')[0];\nvar fileuploadpanel_21_new = Ext.ComponentQuery.query('[name=fileuploadpanel_21_new]')[0];\nvar fileuploadpanel_22_new = Ext.ComponentQuery.query('[name=fileuploadpanel_22_new]')[0];\nvar fileuploadpanel_23_new = Ext.ComponentQuery.query('[name=fileuploadpanel_23_new]')[0];\nvar fileuploadpanel_24_new = Ext.ComponentQuery.query('[name=fileuploadpanel_24_new]')[0];\nvar fileuploadpanel_25_new = Ext.ComponentQuery.query('[name=fileuploadpanel_25_new]')[0];\nvar fileuploadpanel_26_new = Ext.ComponentQuery.query('[name=fileuploadpanel_26_new]')[0];\nvar fileuploadpanel_27_new = Ext.ComponentQuery.query('[name=fileuploadpanel_27_new]')[0];\nvar fileuploadpanel_28_new = Ext.ComponentQuery.query('[name=fileuploadpanel_28_new]')[0];\nvar fileuploadpanel_29_new = Ext.ComponentQuery.query('[name=fileuploadpanel_29_new]')[0];\nvar fileuploadpanel_30_new = Ext.ComponentQuery.query('[name=fileuploadpanel_30_new]')[0];\nvar fileuploadpanel_31_new = Ext.ComponentQuery.query('[name=fileuploadpanel_31_new]')[0];\nvar fileuploadpanel_32_new = Ext.ComponentQuery.query('[name=fileuploadpanel_32_new]')[0];\nvar fileuploadpanel_33_new = Ext.ComponentQuery.query('[name=fileuploadpanel_33_new]')[0];\nvar fileuploadpanel_37_new = Ext.ComponentQuery.query('[name=fileuploadpanel_37_new]')[0];\nvar fileuploadpanel_34_new = Ext.ComponentQuery.query('[name=fileuploadpanel_34_new]')[0];\nvar fileuploadpanel_35_new = Ext.ComponentQuery.query('[name=fileuploadpanel_35_new]')[0];\nvar fileuploadpanel_36_new = Ext.ComponentQuery.query('[name=fileuploadpanel_36_new]')[0];\nvar fileuploadpanel_9 = Ext.ComponentQuery.query('[name=fileuploadpanel_9]')[0];\nvar fileuploadpanel_10 = Ext.ComponentQuery.query('[name=fileuploadpanel_10]')[0];\nvar fileuploadpanel_11 = Ext.ComponentQuery.query('[name=fileuploadpanel_11]')[0];\nvar fileuploadpanel_12 = Ext.ComponentQuery.query('[name=fileuploadpanel_12]')[0];\nvar fileuploadpanel_13 = Ext.ComponentQuery.query('[name=fileuploadpanel_13]')[0];\nvar fileuploadpanel_14 = Ext.ComponentQuery.query('[name=fileuploadpanel_14]')[0];\nvar fileuploadpanel_15 = Ext.ComponentQuery.query('[name=fileuploadpanel_15]')[0];\nvar fileuploadpanel_16 = Ext.ComponentQuery.query('[name=fileuploadpanel_16]')[0];\nvar fileuploadpanel_17 = Ext.ComponentQuery.query('[name=fileuploadpanel_17]')[0];\nvar fileuploadpanel_38_new = Ext.ComponentQuery.query('[name=fileuploadpanel_38_new]')[0];\nvar fileuploadpanel_39_new = Ext.ComponentQuery.query('[name=fileuploadpanel_39_new]')[0];\nvar fileuploadpanel_40_new = Ext.ComponentQuery.query('[name=fileuploadpanel_40_new]')[0];\n\nif (lifesituation.getValue() == 'предоставление выплаты') {\n    addVisible(lifesituation);\n    addVisible(textfield_28);\n    addVisible(fieldset_0);\n    addVisible(textfield_0);\n    addVisible(textfield_1);\n    addVisible(textfield_2);\n    addVisible(textfield_3);\n    addVisible(textfield_4);\n    addVisible(textfield_5);\n    addVisible(datefield_0);\n    addVisible(residenceAddress);\n    addVisible(residenceAddressKladr);\n    addVisible(textfield_8);\n    addVisible(textfield_9);\n    addVisible(combobox_0);\n    addVisible(checkbox_0);\n    addVisible(textfield_10);\n    addVisible(fieldset_1);\n    addVisible(combobox_1);\n    addVisible(textfield_11);\n    addVisible(textfield_12);\n    addVisible(textfield_13);\n    addVisible(textfield_32);\n    addVisible(datefield_1);\n    addVisible(fieldset_2);\n    addVisible(textfield_14);\n    addVisible(textfield_15);\n    addVisible(textfield_16);\n    addVisible(textfield_17);\n    addVisible(datefield_2);\n    addVisible(fieldset_3);\n    addVisible(textfield_18);\n    addVisible(textfield_19);\n    addVisible(textfield_20);\n    addVisible(textfield_21);\n    addVisible(datefield_3);\n    addVisible(fieldset_4);\n    addVisible(textfield_22);\n    addVisible(textfield_23);\n    addVisible(textfield_24);\n    addVisible(fieldset_5);\n    addVisible(cloneablePanel_0);\n    addVisible(textfield_25);\n    addVisible(textfield_26);\n    addVisible(textfield_27);\n    addVisible(textfield_28);\n    addVisible(datefield_4);\n    addVisible(checkbox_1);\n    addVisible(combobox_2);\n    addVisible(fieldset_6);\n    addVisible(fieldset_7);\n    addVisible(combobox_3);\n    addVisible(textfield_31);\n    addVisible(textfield_29);\n    addVisible(textfield_30);\n    addVisible(combobox_4);\n    addVisible(fieldset_8);\n    addVisible(LoadStatement);\n    addVisible(fileuploadpanel_1);\n    addVisible(fileuploadpanel_4);\n    addVisible(fileuploadpanel_5);\n    addVisible(fileuploadpanel_6);\n    addVisible(fileuploadpanel_16_new);\n    addVisible(fileuploadpanel_7);\n    addVisible(fileuploadpanel_17_new);\n    addVisible(fileuploadpanel_8);\n    addVisible(fileuploadpanel_18_new);\n    addVisible(fileuploadpanel_19_new);\n    addVisible(fileuploadpanel_20_new);\n    addVisible(fileuploadpanel_21_new);\n    addVisible(fileuploadpanel_22_new);\n    addVisible(fileuploadpanel_23_new);\n    addVisible(fileuploadpanel_24_new);\n    addVisible(fileuploadpanel_25_new);\n    addVisible(fileuploadpanel_26_new);\n    addVisible(fileuploadpanel_27_new);\n    addVisible(fileuploadpanel_28_new);\n    addVisible(fileuploadpanel_29_new);\n    addVisible(fileuploadpanel_30_new);\n    addVisible(fileuploadpanel_31_new);\n    addVisible(fileuploadpanel_32_new);\n    addVisible(fileuploadpanel_33_new);\n    addVisible(fileuploadpanel_37_new);\n    addVisible(fileuploadpanel_34_new);\n    addVisible(fileuploadpanel_35_new);\n    addVisible(fileuploadpanel_36_new);\n    addVisible(fileuploadpanel_9);\n    addVisible(fileuploadpanel_10);\n    addVisible(fileuploadpanel_11);\n    addVisible(fileuploadpanel_12);\n    addVisible(fileuploadpanel_13);\n    addVisible(fileuploadpanel_14);\n    addVisible(fileuploadpanel_15);\n    addVisible(fileuploadpanel_16);\n    addVisible(fileuploadpanel_17);\n    addVisible(fileuploadpanel_38_new);\n    addVisible(fileuploadpanel_39_new);\n    addVisible(fileuploadpanel_40_new);\n}"
+            "function hideAll(exceptions) {\n    Ext.ComponentQuery.query('[xtype]').forEach(field => {\n        if (typeof field.isSoleField != 'undefined' && !field.name.includes('[')) {\n    \t    let remove = true;\n\t    exceptions.forEach(exception => { \n\t\tif (field.name == exception) {\n\t\t\tremove = false;\n\t\t}\n\t    });\n            if (remove) { removeVisible(findFormField(field.name)) }\n        }\n    })\n    let files = [];\n    Ext.getCmp('fileUploadGrid').getStore().getRange().forEach(constructor => {\n        files.push(constructor.data.fieldName);\n    })\n    if (files.length > 0) {\n\tFileUploadGrid.setUploadVisibility([], files);\n    }\n}\n\nclass Lifesituation { \n  constructor(list) {\n    this.list = list;\n  }\n  show()  {\n    let files = [];\n    this.list.forEach(id => {\n\tconsole.log(id);\n    \tif (findFormField(id)) {\n      \taddVisible(findFormField(id));\n      } else {\n\tfiles.push(id)\n      }\n    });\n    if (files.length > 0) {\n\tFileUploadGrid.setUploadVisibility(files, []);\n    }\n  }\n  hide()  {\n    let files = [];\n    this.list.forEach(id => {\n\tconsole.log(id);\n    \tif (findFormField(id)) {\n      \tremoveVisible(findFormField(id));\n      } else {\n\tfiles.push(id)\n      }\n    });\n    if (files.length > 0) {\n\tFileUploadGrid.setUploadVisibility([], files);\n    }\n  }\n}\n\nlet lifesituation_1 = new Lifesituation([\n    \"fieldset_0\", \n    \"textfield_0\", \n    \"textfield_1\", \n    \"textfield_2\", \n    \"textfield_3\", \n    \"textfield_4\", \n    \"datefield_0\", \n    \"residenceAddress\", \n    \"textfield_8\", \n    \"textfield_9\", \n    \"combobox_0\", \n    \"checkbox_0\", \n    \"textfield_10\", \n    \"fieldset_1\", \n    \"combobox_1\", \n    \"textfield_11\", \n    \"textfield_12\", \n    \"textfield_13\", \n    \"textfield_32\", \n    \"datefield_1\", \n    \"fieldset_5\", \n    \"cloneablePanel_0\", \n    \"fieldset_6\", \n    \"combobox_3\", \n    \"fieldset_8\", \n    \"LoadStatement\",\n    \"fileuploadpanel_1\",\n    \"fileuploadpanel_4\", \n    \"fileuploadpanel_5\", \n    \"fileuploadpanel_6\", \n    \"fileuploadpanel_18\", \n    \"fileuploadpanel_7\", \n    \"fileuploadpanel_19\", \n    \"fileuploadpanel_8\", \n    \"fileuploadpanel_20\", \n    \"fileuploadpanel_21\", \n    \"fileuploadpanel_22\", \n    \"fileuploadpanel_23\", \n    \"fileuploadpanel_24\", \n    \"fileuploadpanel_25\", \n    \"fileuploadpanel_26\", \n    \"fileuploadpanel_27\", \n    \"fileuploadpanel_28\", \n    \"fileuploadpanel_29\", \n    \"fileuploadpanel_30\", \n    \"fileuploadpanel_31\", \n    \"fileuploadpanel_32\", \n    \"fileuploadpanel_33\", \n    \"fileuploadpanel_34\", \n    \"fileuploadpanel_35\", \n    \"fileuploadpanel_39\", \n    \"fileuploadpanel_36\", \n    \"fileuploadpanel_37\", \n    \"fileuploadpanel_38\", \n    \"fileuploadpanel_9\", \n    \"fileuploadpanel_10\", \n    \"fileuploadpanel_11\", \n    \"fileuploadpanel_12\", \n    \"fileuploadpanel_13\", \n    \"fileuploadpanel_14\", \n    \"fileuploadpanel_15\", \n    \"fileuploadpanel_16\", \n    \"fileuploadpanel_17\", \n    \"fileuploadpanel_40\", \n    \"fileuploadpanel_41\", \n    \"fileuploadpanel_42\"\n]);\n\nlet lifesituation_2 = new Lifesituation([\n    \"lifesituations_0\", \n    \"lifesituations_1\", \n    \"lifesituations_2\", \n    \"lifesituations_3\", \n    \"lifesituations_4\", \n    \"lifesituations_5\", \n    \"lifesituations_6\", \n    \"lifesituations_8\", \n    \"lifesituations_9\", \n    \"lifesituations_10\", \n    \"lifesituations_11\", \n    \"lifesituations_12\", \n    \"lifesituations_13\", \n    \"lifesituations_14\", \n    \"lifesituations_15\", \n    \"lifesituations_16\", \n    \"lifesituations_20\", \n    \"lifesituations_21\", \n    \"lifesituations_22\", \n    \"lifesituations_23\", \n    \"lifesituations_24\", \n    \"lifesituations_25\", \n    \"lifesituations_27\", \n    \"lifesituations_28\",\n    \"LoadStatement\",\n    \"fileuploadpanel_1\"\n]);\n\nlet lifesituation_3 = new Lifesituation([\n    \"lifesituations_0\", \n    \"lifesituations_1\", \n    \"lifesituations_2\", \n    \"lifesituations_3\", \n    \"lifesituations_4\", \n    \"lifesituations_5\", \n    \"lifesituations_6\", \n    \"lifesituations_8\", \n    \"lifesituations_9\", \n    \"lifesituations_10\", \n    \"lifesituations_11\", \n    \"lifesituations_12\", \n    \"lifesituations_13\", \n    \"lifesituations_14\", \n    \"lifesituations_15\", \n    \"lifesituations_16\", \n    \"lifesituations_18\",\n    \"LoadStatement\",\n    \"fileuploadpanel_1\"\n]);\n\nif (findFormField('lifesituation').getValue() == 'предоставление выплаты') {\n\thideAll(['lifesituation']);\n\tlifesituation_1.show();\n}\nelse if (findFormField('lifesituation').getValue() == 'внесение изменений в сведения') {\n\thideAll(['lifesituation']);\n\tlifesituation_2.show();\n}\nelse if (findFormField('lifesituation').getValue() == 'прекращение выплаты') {\n\thideAll(['lifesituation']);\n\tlifesituation_3.show();\n} else {\n\thideAll(['lifesituation']);\n}"
         ]
     },
     {
@@ -707,7 +707,9 @@
         "isLegalField": false,
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
-        "documentCharacterNameDef": "Скан-копия"
+        "documentCharacterNameDef": "Скан-копия",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -719,7 +721,9 @@
         "isLegalField": false,
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
-        "documentCharacterNameDef": "Скан-копия"
+        "documentCharacterNameDef": "Скан-копия",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -732,7 +736,9 @@
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
-        "description": "Обязательный  документ, если регистрация произведена компетентными органами иностранных государств (оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)"
+        "description": "Обязательный  документ, если регистрация произведена компетентными органами иностранных государств (оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -745,7 +751,9 @@
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
-        "description": "(детей, в том числе предыдущих)<br>Обязательный  документ, если регистрация произведена компетентными органами иностранных государств (оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)"
+        "description": "(детей, в том числе предыдущих)<br>Обязательный  документ, если регистрация произведена компетентными органами иностранных государств (оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -758,7 +766,9 @@
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
-        "description": "(в случае если они являются несовершеннолетними)<br>\nОбязательный  документ, если регистрация произведена компетентными органами иностранных государств (оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)"
+        "description": "(в случае если они являются несовершеннолетними)<br>\nОбязательный  документ, если регистрация произведена компетентными органами иностранных государств (оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -769,7 +779,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Обязательный  документ, если регистрация произведена компетентными органами иностранных государств (оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)"
+        "description": "Обязательный  документ, если регистрация произведена компетентными органами иностранных государств (оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -782,7 +794,9 @@
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
-        "description": "Обязательный  документ, если регистрация произведена компетентными органами иностранных государств (оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)"
+        "description": "Обязательный  документ, если регистрация произведена компетентными органами иностранных государств (оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -793,7 +807,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Обязательный документ (при наличии соответствующих обстоятельств - копия решения суда об усыновлении + если регистрация произведена компетентными органами иностранных государств, предоставляются оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке."
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств - копия решения суда об усыновлении + если регистрация произведена компетентными органами иностранных государств, предоставляются оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке.",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -819,7 +835,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -830,7 +848,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -841,7 +861,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Обязательный документ до 31.12.2024 (при наличии соответствующих обстоятельств)"
+        "description": "Обязательный документ до 31.12.2024 (при наличии соответствующих обстоятельств)",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -852,7 +874,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -863,7 +887,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -874,7 +900,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -885,7 +913,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -896,7 +926,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -907,7 +939,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -918,7 +952,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -929,7 +965,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -940,7 +978,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -951,7 +991,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -962,7 +1004,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -973,7 +1017,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -984,7 +1030,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -995,7 +1043,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -1006,7 +1056,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -1017,7 +1069,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -1028,7 +1082,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -1041,7 +1097,9 @@
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
-        "description": "для лица, заменяющего родителей (опекуна, усыновителя, приемного родителя)"
+        "description": "для лица, заменяющего родителей (опекуна, усыновителя, приемного родителя)",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -1054,7 +1112,9 @@
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
-        "description": "для лица, заменяющего родителей (опекуна, усыновителя, приемного родителя)"
+        "description": "для лица, заменяющего родителей (опекуна, усыновителя, приемного родителя)",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -1066,7 +1126,9 @@
         "isLegalField": false,
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
-        "documentCharacterNameDef": "Скан-копия"
+        "documentCharacterNameDef": "Скан-копия",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -1094,7 +1156,9 @@
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
-        "description": "выданный организацией, уполномоченной на его выдачу, в случае если брак между родителями ребенка расторгнут"
+        "description": "выданный организацией, уполномоченной на его выдачу, в случае если брак между родителями ребенка расторгнут",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -1107,7 +1171,9 @@
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -1120,7 +1186,9 @@
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -1133,7 +1201,9 @@
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
-        "description": "необязательный документ, скан если заявитель предоставил документ"
+        "description": "необязательный документ, скан если заявитель предоставил документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -1146,7 +1216,9 @@
         "scanDocumentWithdraw": "",
         "documentCharacterIdDef": 26879376,
         "documentCharacterNameDef": "Скан-копия",
-        "description": "в случае необходимости подтверждения родственных отношений с детьми (например, свидетельство о перемене фамилии (имени, отчества), справки компетентных органов (должностных лиц) иностранных государств"
+        "description": "в случае необходимости подтверждения родственных отношений с детьми (например, свидетельство о перемене фамилии (имени, отчества), справки компетентных органов (должностных лиц) иностранных государств",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -1157,7 +1229,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Обязательный документ (при наличии соответствующих обстоятельств)\n\n"
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)\n\n",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -1168,7 +1242,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "ПФР посредством единой системы межведомственного электронного взаимодействия либо представляет заявитель подтверждающий документ"
+        "description": "ПФР посредством единой системы межведомственного электронного взаимодействия либо представляет заявитель подтверждающий документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fileuploadpanel",
@@ -1179,7 +1255,9 @@
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "ПФР посредством единой системы межведомственного электронного взаимодействия либо представляет заявитель подтверждающий документ"
+        "description": "ПФР посредством единой системы межведомственного электронного взаимодействия либо представляет заявитель подтверждающий документ",
+        "hidden": true,
+        "disabled": true
     },
     {
         "xtype": "fieldset",
@@ -1187,6 +1265,415 @@
         "name": "fieldset_9",
         "isPersonField": true,
         "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о заявителе",
+        "name": "lifesituations_0",
+        "isPersonField": true,
+        "isSoleField": false,
         "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "lifesituations_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "lastname",
+        "hidden": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "lifesituations_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "firstname",
+        "hidden": false,
+        "disabled": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "lifesituations_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "middlename",
+        "hidden": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "СНИЛС",
+        "name": "lifesituations_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "snils",
+        "hidden": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "lifesituations_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "birthdate",
+        "hidden": false
+    },
+    {
+        "xtype": "KLADR",
+        "fieldLabel": "Адрес места жительства",
+        "name": "lifesituations_6",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "residenceAddressKladrFullAddrJson",
+        "allowBlank": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер телефона",
+        "name": "lifesituations_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "person_mobile",
+        "hidden": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес электронной почты",
+        "name": "lifesituations_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "почт",
+        "hidden": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "ДОКУМЕНТ, УДОСТОВЕРЯЮЩИЙ ЛИЧНОСТЬ ЗАЯВИТЕЛЯ",
+        "name": "lifesituations_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Тип документа",
+        "name": "lifesituations_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "specialConfig": "documentType",
+        "store": null,
+        "queryMode": null,
+        "displayField": null,
+        "valueField": null,
+        "hidden": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия документа",
+        "name": "lifesituations_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docseries",
+        "hidden": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер документа",
+        "name": "lifesituations_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docnumber",
+        "hidden": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "lifesituations_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issueorg",
+        "hidden": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Код подразделения",
+        "name": "lifesituations_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "passportdepcode",
+        "hidden": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "lifesituations_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issuedate",
+        "hidden": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"color: green; font-weight: bold\"> -> Прекращение выплаты",
+        "name": "lifesituations_17",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textarea",
+        "fieldLabel": "Причины прекращения выплаты пособия",
+        "name": "lifesituations_18",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"color: green; font-weight: bold\"> -> Изменение сведений",
+        "name": "lifesituations_19",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Изменились фамилия, имя, или отчество",
+        "name": "lifesituations_20",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Изменились данные документа, удостоверяющего личность",
+        "name": "lifesituations_21",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Изменился адрес места жительства",
+        "name": "lifesituations_22",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Запросить выплатное дело для постановки на учет в территориальном органе ПФР по новому месту жительства",
+        "name": "lifesituations_23",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Изменились данные документа, подтверждающего полномочия представителя получателя меры социальной поддержки",
+        "name": "lifesituations_24",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Другое",
+        "name": "lifesituations_25",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "scripts": [
+            "var lifesituations_25 = Ext.ComponentQuery.query('[name=lifesituations_25]')[0];\nvar lifesituations_26 = Ext.ComponentQuery.query('[name=lifesituations_26]')[0];\n\nif (lifesituations_25.checked == true) {\n    addVisible(lifesituations_26);\n} else {\n    removeVisible(lifesituations_26);\n}"
+        ],
+        "hidden": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Указать другие сведения",
+        "name": "lifesituations_26",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Изменился представитель получателя меры социальной поддержки ",
+        "name": "lifesituations_27",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Изменились сведения для доставки меры социальной поддержки",
+        "name": "lifesituations_28",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "scripts": [
+            "var lifesituations_28 = Ext.ComponentQuery.query('[name=lifesituations_28]')[0];\nvar lifesituations_29 = Ext.ComponentQuery.query('[name=lifesituations_29]')[0];\n\nif (lifesituations_28.checked == true) {\n    addVisible(lifesituations_29);\n} else {\n    removeVisible(lifesituations_29);\n}"
+        ]
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Способ доставки",
+        "name": "lifesituations_29",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "на счёт"
+                },
+                {
+                    "value": "путем вручения на дому"
+                },
+                {
+                    "value": "путем вручения на кассе"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var lifesituations_29 = Ext.ComponentQuery.query('[name=lifesituations_29]')[0];\nvar lifesituations_30 = Ext.ComponentQuery.query('[name=lifesituations_30]')[0];\nvar lifesituations_31 = Ext.ComponentQuery.query('[name=lifesituations_31]')[0];\nvar lifesituations_32 = Ext.ComponentQuery.query('[name=lifesituations_32]')[0];\nvar lifesituations_33 = Ext.ComponentQuery.query('[name=lifesituations_33]')[0];\nvar lifesituations_34 = Ext.ComponentQuery.query('[name=lifesituations_34]')[0];\nvar lifesituations_35 = Ext.ComponentQuery.query('[name=lifesituations_35]')[0];\n\n\nif (lifesituations_29.getValue() == 'на счёт') {\n    addVisible(lifesituations_30);\n    addVisible(lifesituations_31);\n    addVisible(lifesituations_32);\n    addVisible(lifesituations_33);\n    addVisible(lifesituations_34);\n    addVisible(lifesituations_35);\n} else {\n    removeVisible(lifesituations_30);\n    removeVisible(lifesituations_31);\n    removeVisible(lifesituations_32);\n    removeVisible(lifesituations_33);\n    removeVisible(lifesituations_34);\n    removeVisible(lifesituations_35);\n}"
+        ],
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "На счёт",
+        "name": "lifesituations_30",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "получателя меры социальной поддержки"
+                },
+                {
+                    "value": "законного представителя"
+                }
+            ],
+            "type": "store"
+        },
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер счёта",
+        "name": "lifesituations_31",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование кредитной организации",
+        "name": "lifesituations_32",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "БИК кредитной организации",
+        "name": "lifesituations_33",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Через",
+        "name": "lifesituations_34",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "организацию почтовой связи"
+                },
+                {
+                    "value": "иную организацию, осуществляющую доставку"
+                }
+            ],
+            "type": "store"
+        },
+        "hidden": true,
+        "disabled": true,
+        "scripts": [
+            "var lifesituations_34 = Ext.ComponentQuery.query('[name=lifesituations_34]')[0];\nvar lifesituations_35 = Ext.ComponentQuery.query('[name=lifesituations_35]')[0];\n\nif (lifesituations_34.getValue() == 'иную организацию, осуществляющую доставку') {\n    addVisible(lifesituations_35)\n} else {\n    removeVisible(lifesituations_35)\n}"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование иной организации, осуществляющей доставку",
+        "name": "lifesituations_35",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": true,
+        "disabled": true
     }
 ]

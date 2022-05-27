@@ -1180,5 +1180,13 @@
         "isLegalField": false,
         "scanDocumentWithdraw": "",
         "description": "ПФР посредством единой системы межведомственного электронного взаимодействия либо представляет заявитель подтверждающий документ"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"font-weight: bold; color: green\"> -> lifesituations",
+        "name": "fieldset_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
     }
 ]

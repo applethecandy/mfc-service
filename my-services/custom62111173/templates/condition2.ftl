@@ -224,7 +224,7 @@
         адрес места жительства<sup>1</sup>
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.lifesituations_6FullAddr!''}
       </td>
     </tr>
     <tr><td colspan="2" class="underline"> </td></tr>
@@ -236,7 +236,7 @@
         номер телефона
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.lifesituations_8!''}
       </td>
     </tr>
   </table>
@@ -247,7 +247,7 @@
         адрес электронной почты
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.lifesituations_9!''}
       </td>
     </tr>
   </table>
@@ -259,7 +259,7 @@
         наименование
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.lifesituations_11!''}
       </td>
     </tr>
   </table>
@@ -275,11 +275,11 @@
     </colgroup>
     <tr>
       <td class="center">серия</td>
-      <td class="underline"> </td>
+      <td class="underline"> ${form.lifesituations_12!''}</td>
       <td class="center">номер</td>
-      <td class="underline"> </td>
+      <td class="underline"> ${form.lifesituations_13!''}</td>
       <td class="center">дата выдачи</td>
-      <td class="underline"> </td>
+      <td class="underline"> ${form.lifesituations_16!''}</td>
     </tr>
   </table>
 
@@ -289,7 +289,7 @@
         кем выдан, код подразделения
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.lifesituations_14!''} ${form.lifesituations_15!''}
       </td>
     </tr>
     <tr><td colspan="2" class="underline"> </td></tr>
@@ -301,7 +301,7 @@
         дата рождения
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.lifesituations_5!''}
       </td>
     </tr>
   </table>
@@ -312,7 +312,7 @@
         место рождения
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         !!!!!!!!!!!!!!!!!!!!!!
       </td>
     </tr>
   </table>
@@ -337,7 +337,7 @@
     </tr>
     <tr>
       <td class="underline">
-         
+         ${form.declarant_representative_lastName!""} ${form.declarant_representative_firstName!""} ${form.declarant_representative_patronymic!""}
       </td>
     </tr>
     <tr>
@@ -353,7 +353,7 @@
         страховой номер индивидуального лицевого счета:
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.declarant_representative_snils!" "}
       </td>
     </tr>
   </table>
@@ -364,7 +364,7 @@
         адрес места жительства<sup>1</sup>
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.declarant_representative_residenceAddress!""}
       </td>
     </tr>
     <tr><td colspan="2" class="underline"> </td></tr>
@@ -376,7 +376,7 @@
         номер телефона
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.declarant_representative_mobilePhone!""}
       </td>
     </tr>
   </table>
@@ -387,7 +387,7 @@
         адрес электронной почты
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.declarant_representative_email!""}
       </td>
     </tr>
   </table>
@@ -399,7 +399,7 @@
         наименование
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.declarantRepresentativeDocumentTypeText}
       </td>
     </tr>
   </table>
@@ -415,11 +415,11 @@
     </colgroup>
     <tr>
       <td class="center">серия</td>
-      <td class="underline"> </td>
+      <td class="underline"> ${form.declarant_representative_documentSeries}</td>
       <td class="center">номер</td>
-      <td class="underline"> </td>
+      <td class="underline"> ${form.declarant_representative_documentNumber}</td>
       <td class="center">дата выдачи</td>
-      <td class="underline"> </td>
+      <td class="underline"> ${form.declarant_representative_dateOfIssue}</td>
     </tr>
   </table>
 
@@ -429,7 +429,7 @@
         кем выдан, код подразделения
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.declarant_representative_documentAuthority}
       </td>
     </tr>
     <tr><td colspan="2" class="underline"> </td></tr>
@@ -441,7 +441,7 @@
         срок действия документа <i>(при наличии)</i>
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.declarant_representative_dateOfExpiration}
       </td>
     </tr>
   </table>
@@ -455,7 +455,7 @@
         наименование
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.declarant_representative_warrant_name!""}
       </td>
     </tr>
   </table>
@@ -471,11 +471,11 @@
     </colgroup>
     <tr>
       <td class="center">серия</td>
-      <td class="underline"> </td>
+      <td class="underline"> ${form.declarant_representative_warrant_series!""}</td>
       <td class="center">номер</td>
-      <td class="underline"> </td>
+      <td class="underline"> ${form.declarant_representative_warrant_number!""}</td>
       <td class="center">дата выдачи</td>
-      <td class="underline"> </td>
+      <td class="underline"> ${form.declarant_representative_warrant_date!""}</td>
     </tr>
   </table>
 
@@ -485,7 +485,7 @@
         кем выдан, код подразделения <i>(при наличии)</i>
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.declarant_representative_warrant_authority!""}
       </td>
     </tr>
     <tr><td colspan="2" class="underline"> </td></tr>
@@ -506,7 +506,7 @@
     <tr>
       <td class="indent">3. Прошу прекратить выплату по мере социальной поддержки:</td>
     </tr>
-    <tr><td class="underline"> </td></tr>
+    <tr><td class="underline"> ${order.getServiceTitle()}</td></tr>
     <tr><td class="subscript center">(наименование меры)</td></tr>
     <tr><td class="underline"> </td></tr>
   </table>
@@ -517,7 +517,7 @@
         4.	В связи с:
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.lifesituations_18!''}
       </td>
     </tr>
     <tr><td colspan="2" class="subscript center">(указываются обстоятельства, влекущие прекращение выплаты пособия)</td></tr>
@@ -546,7 +546,7 @@
     </colgroup>
     <tr>
       <td class="underline">
-         
+         ${.now}
       </td>
       <td></td>
       <td class="underline">
@@ -554,7 +554,7 @@
       </td>
       <td></td>
       <td class="underline">
-         
+         ${form.lifesituations_1!""} ${(form.lifesituations_2!'')?substring(0,1)}. ${(form.lifesituations_3!'')?substring(0,1)}
       </td>
     </tr>
     <tr>

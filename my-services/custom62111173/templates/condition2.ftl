@@ -212,7 +212,7 @@
         страховой номер индивидуального лицевого счета:
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         ${form.lifesituations_4!''}
       </td>
     </tr>
     <tr><td colspan="2">проживающий (ая) в Российской Федерации:  </td></tr>

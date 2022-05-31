@@ -1475,7 +1475,8 @@
                 {
                     "value": "доверенное лицо"
                 }
-            ]
+            ],
+            "type": "store"
         },
         "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },

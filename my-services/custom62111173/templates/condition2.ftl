@@ -1,6 +1,6 @@
 <!-- # lifesituation -> прекращение выплаты # -->
 
-12<style>
+<style>
   .boxes smallbox {
     width: 12px !important;
     height: 12px !important;
@@ -192,9 +192,11 @@
 
   <table class="no-gap">
     <tr>
-      <td class="indent">1.</td>
+      <td class="indent">
+        1.
+        ${form.lifesituations_1} ${form.lifesituations_2} ${form.lifesituations_3}</td>
       <td>
-         ${form.lifesituations_1} ${form.lifesituations_2} ${form.lifesituations_3} 
+          
       </td>
     </tr>
     <tr>
@@ -310,7 +312,7 @@
         место рождения
       </td>
       <td class="greedy underline" style="text-align: left;">
-         1
+         
       </td>
     </tr>
   </table>

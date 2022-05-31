@@ -332,7 +332,21 @@
   <table class="no-gap">
     <tr>
       <td class="indent">
-        2.	Представитель (законный представитель несовершеннолетнего или недееспособного лица; организация, на которую возложено исполнение обязанностей опекуна или попечителя; доверенное лицо) <i>(при наличии) (нужное подчеркнуть)</i>
+        2.	Представитель
+        (
+        ${form.lifesituations_36?contains('законный представитель')?then('<span style="border-bottom: solid black 1px;">', '')}
+        законный представитель несовершеннолетнего или недееспособного лица
+        ${form.lifesituations_36?contains('законный представитель')?then('</span>', '')}
+        ;
+        ${form.lifesituations_36?contains('организация')?then('<span style="border-bottom: solid black 1px;">', '')}
+        организация, на которую возложено исполнение обязанностей опекуна или попечителя
+        ${form.lifesituations_36?contains('организация')?then('</span>', '')}
+        ;
+        ${form.lifesituations_36?contains('доверенное лицо')?then('<span style="border-bottom: solid black 1px;">', '')}
+        доверенное лицо
+        ${form.lifesituations_36?contains('доверенное лицо')?then('</span>', '')}
+        )
+        <i>(при наличии) (нужное подчеркнуть)</i>
       </td>
     </tr>
     <tr>

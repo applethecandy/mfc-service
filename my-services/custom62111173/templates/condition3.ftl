@@ -163,7 +163,7 @@
   <table>
     <tr>
       <td class="underline">
-        &nbsp;
+         ${order.getSubDepartment()?has_content?then(order.getSubDepartment().getTitle()!'', order.getDepartment().getTitle()!'')!''}
       </td>
     </tr>
     <tr>
@@ -192,9 +192,11 @@
 
   <table class="no-gap">
     <tr>
-      <td class="indent">1.</td>
+      <td class="indent">
+        1.
+        ${form.lifesituations_1} ${form.lifesituations_2} ${form.lifesituations_3}</td>
       <td>
-        &nbsp;
+         
       </td>
     </tr>
     <tr>
@@ -210,7 +212,7 @@
         страховой номер индивидуального лицевого счета:
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.lifesituations_4!''}
       </td>
     </tr>
     <tr><td colspan="2">проживающий (ая) в Российской Федерации:  </td></tr>
@@ -222,10 +224,10 @@
         адрес места жительства<sup>1</sup>
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.lifesituations_6FullAddr!''}
       </td>
     </tr>
-    <tr><td colspan="2" class="underline">&nbsp;</td></tr>
+    <tr><td colspan="2" class="underline"> </td></tr>
   </table>
 
   <table class="no-gap">
@@ -234,7 +236,7 @@
         номер телефона
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.lifesituations_8!''}
       </td>
     </tr>
   </table>
@@ -245,7 +247,7 @@
         адрес электронной почты
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.lifesituations_9!''}
       </td>
     </tr>
   </table>
@@ -257,7 +259,7 @@
         наименование
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.lifesituations_11!''}
       </td>
     </tr>
   </table>
@@ -273,11 +275,11 @@
     </colgroup>
     <tr>
       <td class="center">серия</td>
-      <td class="underline">&nbsp;</td>
+      <td class="underline"> ${form.lifesituations_12!''}</td>
       <td class="center">номер</td>
-      <td class="underline">&nbsp;</td>
+      <td class="underline"> ${form.lifesituations_13!''}</td>
       <td class="center">дата выдачи</td>
-      <td class="underline">&nbsp;</td>
+      <td class="underline"> ${form.lifesituations_16!''}</td>
     </tr>
   </table>
 
@@ -287,10 +289,10 @@
         кем выдан, код подразделения
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.lifesituations_14!''} ${form.lifesituations_15!''}
       </td>
     </tr>
-    <tr><td colspan="2" class="underline">&nbsp;</td></tr>
+    <tr><td colspan="2" class="underline"> </td></tr>
   </table>
 
   <table class="no-gap">
@@ -299,7 +301,7 @@
         дата рождения
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.lifesituations_5!''}
       </td>
     </tr>
   </table>
@@ -310,7 +312,7 @@
         место рождения
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.lifesituations_7!''}
       </td>
     </tr>
   </table>
@@ -321,7 +323,7 @@
         срок действия документа <i>(при наличии)</i>
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         
       </td>
     </tr>
   </table>
@@ -335,7 +337,7 @@
     </tr>
     <tr>
       <td class="underline">
-        &nbsp;
+         ${form.declarant_representative_lastName!""} ${form.declarant_representative_firstName!""} ${form.declarant_representative_patronymic!""}
       </td>
     </tr>
     <tr>
@@ -351,7 +353,7 @@
         страховой номер индивидуального лицевого счета:
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.declarant_representative_snils!" "}
       </td>
     </tr>
   </table>
@@ -362,10 +364,10 @@
         адрес места жительства<sup>1</sup>
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.declarant_representative_residenceAddress!""}
       </td>
     </tr>
-    <tr><td colspan="2" class="underline">&nbsp;</td></tr>
+    <tr><td colspan="2" class="underline"> </td></tr>
   </table>
 
   <table class="no-gap">
@@ -374,7 +376,7 @@
         номер телефона
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.declarant_representative_mobilePhone!""}
       </td>
     </tr>
   </table>
@@ -385,7 +387,7 @@
         адрес электронной почты
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.declarant_representative_email!""}
       </td>
     </tr>
   </table>
@@ -397,7 +399,7 @@
         наименование
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.declarantRepresentativeDocumentTypeText}
       </td>
     </tr>
   </table>
@@ -413,11 +415,11 @@
     </colgroup>
     <tr>
       <td class="center">серия</td>
-      <td class="underline">&nbsp;</td>
+      <td class="underline"> ${form.declarant_representative_documentSeries}</td>
       <td class="center">номер</td>
-      <td class="underline">&nbsp;</td>
+      <td class="underline"> ${form.declarant_representative_documentNumber}</td>
       <td class="center">дата выдачи</td>
-      <td class="underline">&nbsp;</td>
+      <td class="underline"> ${form.declarant_representative_dateOfIssue}</td>
     </tr>
   </table>
 
@@ -427,10 +429,10 @@
         кем выдан, код подразделения
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.declarant_representative_documentAuthority}
       </td>
     </tr>
-    <tr><td colspan="2" class="underline">&nbsp;</td></tr>
+    <tr><td colspan="2" class="underline"> </td></tr>
   </table>
 
   <table class="no-gap">
@@ -439,7 +441,7 @@
         срок действия документа <i>(при наличии)</i>
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.declarant_representative_dateOfExpiration}
       </td>
     </tr>
   </table>
@@ -453,7 +455,7 @@
         наименование
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.declarant_representative_warrant_name!""}
       </td>
     </tr>
   </table>
@@ -469,11 +471,11 @@
     </colgroup>
     <tr>
       <td class="center">серия</td>
-      <td class="underline">&nbsp;</td>
+      <td class="underline"> ${form.declarant_representative_warrant_series!""}</td>
       <td class="center">номер</td>
-      <td class="underline">&nbsp;</td>
+      <td class="underline"> ${form.declarant_representative_warrant_number!""}</td>
       <td class="center">дата выдачи</td>
-      <td class="underline">&nbsp;</td>
+      <td class="underline"> ${form.declarant_representative_warrant_date!""}</td>
     </tr>
   </table>
 
@@ -483,10 +485,10 @@
         кем выдан, код подразделения <i>(при наличии)</i>
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.declarant_representative_warrant_authority!""}
       </td>
     </tr>
-    <tr><td colspan="2" class="underline">&nbsp;</td></tr>
+    <tr><td colspan="2" class="underline"> </td></tr>
   </table>
 
   <table>
@@ -495,7 +497,7 @@
         срок действия документа <i>(при наличии)</i>
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         
       </td>
     </tr>
   </table>
@@ -508,9 +510,9 @@
       <td>
 				<div class="boxes" style="justify-content: left; align-items: center;">
 					3.1.Сведений:
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box><#if !(form.representative_check?has_content)>V</#if></box></span>
           получателя меры социальной поддержки
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box><#if form.representative_check?has_content>V</#if></box></span>
           представителя получателя меры социальной поддержки
 				</div>
 			</td>
@@ -518,7 +520,7 @@
     <tr style="page-break-inside: avoid;">
       <td>
 				<div class="boxes" style="justify-content: left; align-items: center;">
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_20?has_content?then("V", "")}</box></span>
           о фамилии, имени или отчестве;
 				</div>
 			</td>
@@ -526,7 +528,7 @@
     <tr style="page-break-inside: avoid;">
       <td>
 				<div class="boxes" style="justify-content: left; align-items: center;">
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_21?has_content?then("V", "")}</box></span>
           о документе, удостоверяющем личность;
 				</div>
 			</td>
@@ -534,9 +536,9 @@
     <tr style="page-break-inside: avoid;">
       <td>
 				<div class="boxes" style="justify-content: left; align-items: center;">
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_22?has_content?then("V", "")}</box></span>
           об адресе места жительства;
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_23?has_content?then("V", "")}</box></span>
           прошу запросить выплатное дело для постановки на учет в территориальном органе ПФР по новому месту жительства;
 				</div>
 			</td>
@@ -544,7 +546,7 @@
     <tr style="page-break-inside: avoid;">
       <td>
 				<div class="boxes" style="justify-content: left; align-items: center;">
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_24?has_content?then("V", "")}</box></span>
           о документе, подтверждающем полномочия представителя получателя меры социальной поддержки;
 				</div>
 			</td>
@@ -552,9 +554,9 @@
     <tr style="page-break-inside: avoid;">
       <td>
 				<div class="boxes" style="justify-content: left; align-items: center; width: 100%">
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_25?has_content?then("V", "")}</box></span>
           <table style="margin: 20px auto 0px">
-          <tr><td class="underline">&nbsp;</td></tr>
+          <tr><td class="underline"> ${form.lifesituations_26!''}</td></tr>
           <tr><td class="subscript center">(указываются другие сведения)</td></tr>
           </table>
 				</div>
@@ -564,7 +566,7 @@
       <td>
 				<div class="boxes" style="justify-content: left; align-items: center;">
           3.2
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_27?has_content?then("V", "")}</box></span>
           Представителя получателя меры социальной поддержки (законного представителя несовершеннолетнего или недееспособного лица; организации, на которую возложено исполнение обязанностей опекуна или попечителя).
 				</div>
 			</td>
@@ -572,8 +574,8 @@
     <tr style="page-break-inside: avoid;">
       <td>
 				<div class="boxes" style="justify-content: left; align-items: center;">
-          3.2
-          <span style="padding: 0 10px;"><box></box></span>
+          3.3
+          <span style="padding: 0 10px;"><box>${form.lifesituations_28?has_content?then("V", "")}</box></span>
           Сведений для доставки меры социальной поддержки:
 				</div>
 			</td>
@@ -581,11 +583,11 @@
     <tr style="page-break-inside: avoid;">
       <td>
 				<div class="boxes" style="justify-content: left; align-items: center;">
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_29?contains("на счёт")?then("V", "")}</box></span>
           на счет;
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_30?contains("получателя")?then("V", "")}</box></span>
           получателя меры социальной поддержки
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_30?contains("представителя")?then("V", "")}</box></span>
           законного представителя
 				</div>
 			</td>
@@ -598,7 +600,7 @@
         №
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.lifesituations_31!''}
       </td>
     </tr>
     <tr><td colspan="2" class="subscript center">(указывается номер счета)</td></tr>
@@ -610,7 +612,7 @@
         в кредитной организации
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.lifesituations_32!''}
       </td>
     </tr>
     <tr><td colspan="2" class="subscript center">(указывается наименование кредитной организации)</td></tr>
@@ -622,7 +624,7 @@
         БИК кредитной организации
       </td>
       <td class="greedy underline" style="text-align: left;">
-        &nbsp;
+         ${form.lifesituations_33!''}
       </td>
     </tr>
   </table>
@@ -632,9 +634,9 @@
       <td>
         <div class="boxes" style="justify-content: left; align-items: center;">
           через:
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_34?contains("почтовой связи")?then("V", "")}</box></span>
           организацию почтовой связи
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_34?contains("доставку")?then("V", "")}</box></span>
           иную организацию, осуществляющую доставку
         </div>
       </td>
@@ -642,7 +644,7 @@
     <tr>
       <td>
           <table class="no-gap" style="width: 50%; float: right;">
-            <tr><td class="underline">&nbsp;</td></tr>
+            <tr><td class="underline"> ${form.lifesituations_35!''}</td></tr>
             <tr><td class="subscript center">(указывается наименование иной организации, осуществляющей доставку)</td></tr>
           </table>
       </td>
@@ -650,9 +652,9 @@
     <tr style="page-break-inside: avoid;">
       <td>
         <div class="boxes" style="justify-content: left; align-items: center;">
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_29?contains("на дому")?then("V", "")}</box></span>
           путем вручения на дому
-          <span style="padding: 0 10px;"><box></box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_29?contains("на кассе")?then("V", "")}</box></span>
           путем вручения на кассе
         </div>
       </td>
@@ -682,15 +684,15 @@
     </colgroup>
     <tr>
       <td class="underline">
-        &nbsp;
+         ${.now}
       </td>
       <td></td>
       <td class="underline">
-        &nbsp;
+         
       </td>
       <td></td>
       <td class="underline">
-        &nbsp;
+         ${form.lifesituations_1!""} ${(form.lifesituations_2!'')?substring(0,1)}. ${(form.lifesituations_3!'')?substring(0,1)}
       </td>
     </tr>
     <tr>

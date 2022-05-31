@@ -28,7 +28,8 @@
         },
         "scripts": [
             "function hideAll(exceptions) {\n    Ext.ComponentQuery.query('[xtype]').forEach(field => {\n        if (typeof field.isSoleField != 'undefined' && !field.name.includes('[')) {\n    \t    let remove = true;\n\t    exceptions.forEach(exception => { \n\t\tif (field.name == exception) {\n\t\t\tremove = false;\n\t\t}\n\t    });\n            if (remove) { removeVisible(findFormField(field.name)) }\n        }\n    })\n    let files = [];\n    Ext.getCmp('fileUploadGrid').getStore().getRange().forEach(constructor => {\n        files.push(constructor.data.fieldName);\n    })\n    if (files.length > 0) {\n\tFileUploadGrid.setUploadVisibility([], files);\n    }\n}\n\nclass Lifesituation { \n  constructor(list) {\n    this.list = list;\n  }\n  show()  {\n    let files = [];\n    this.list.forEach(id => {\n\tconsole.log(id);\n    \tif (findFormField(id)) {\n      \taddVisible(findFormField(id));\n      } else {\n\tfiles.push(id)\n      }\n    });\n    if (files.length > 0) {\n\tFileUploadGrid.setUploadVisibility(files, []);\n    }\n  }\n  hide()  {\n    let files = [];\n    this.list.forEach(id => {\n\tconsole.log(id);\n    \tif (findFormField(id)) {\n      \tremoveVisible(findFormField(id));\n      } else {\n\tfiles.push(id)\n      }\n    });\n    if (files.length > 0) {\n\tFileUploadGrid.setUploadVisibility([], files);\n    }\n  }\n}\n\nlet lifesituation_1 = new Lifesituation([\n    \"fieldset_0\", \n    \"textfield_0\", \n    \"textfield_1\", \n    \"textfield_2\", \n    \"textfield_3\", \n    \"textfield_4\", \n    \"datefield_0\", \n    \"residenceAddress\", \n    \"textfield_8\", \n    \"textfield_9\", \n    \"combobox_0\", \n    \"checkbox_0\", \n    \"textfield_10\", \n    \"fieldset_1\", \n    \"combobox_1\", \n    \"textfield_11\", \n    \"textfield_12\", \n    \"textfield_13\", \n    \"textfield_32\", \n    \"datefield_1\", \n    \"fieldset_5\", \n    \"cloneablePanel_0\", \n    \"fieldset_6\", \n    \"combobox_3\", \n    \"fieldset_8\", \n    \"LoadStatement\",\n    \"fileuploadpanel_1\",\n    \"fileuploadpanel_4\", \n    \"fileuploadpanel_5\", \n    \"fileuploadpanel_6\", \n    \"fileuploadpanel_18\", \n    \"fileuploadpanel_7\", \n    \"fileuploadpanel_19\", \n    \"fileuploadpanel_8\", \n    \"fileuploadpanel_20\", \n    \"fileuploadpanel_21\", \n    \"fileuploadpanel_22\", \n    \"fileuploadpanel_23\", \n    \"fileuploadpanel_24\", \n    \"fileuploadpanel_25\", \n    \"fileuploadpanel_26\", \n    \"fileuploadpanel_27\", \n    \"fileuploadpanel_28\", \n    \"fileuploadpanel_29\", \n    \"fileuploadpanel_30\", \n    \"fileuploadpanel_31\", \n    \"fileuploadpanel_32\", \n    \"fileuploadpanel_33\", \n    \"fileuploadpanel_34\", \n    \"fileuploadpanel_35\", \n    \"fileuploadpanel_39\", \n    \"fileuploadpanel_36\", \n    \"fileuploadpanel_37\", \n    \"fileuploadpanel_38\", \n    \"fileuploadpanel_9\", \n    \"fileuploadpanel_10\", \n    \"fileuploadpanel_11\", \n    \"fileuploadpanel_12\", \n    \"fileuploadpanel_13\", \n    \"fileuploadpanel_14\", \n    \"fileuploadpanel_15\", \n    \"fileuploadpanel_16\", \n    \"fileuploadpanel_17\", \n    \"fileuploadpanel_40\", \n    \"fileuploadpanel_41\", \n    \"fileuploadpanel_42\"\n]);\n\nlet lifesituation_2 = new Lifesituation([\n    \"lifesituations_0\", \n    \"lifesituations_1\", \n    \"lifesituations_2\", \n    \"lifesituations_3\", \n    \"lifesituations_4\", \n    \"lifesituations_5\", \n    \"lifesituations_6\", \n    \"lifesituations_7\", \n    \"lifesituations_8\", \n    \"lifesituations_9\", \n    \"lifesituations_10\", \n    \"lifesituations_11\", \n    \"lifesituations_12\", \n    \"lifesituations_13\", \n    \"lifesituations_14\", \n    \"lifesituations_15\", \n    \"lifesituations_16\", \n    \"lifesituations_20\", \n    \"lifesituations_21\", \n    \"lifesituations_22\", \n    \"lifesituations_23\", \n    \"lifesituations_24\", \n    \"lifesituations_25\", \n    \"lifesituations_27\", \n    \"lifesituations_28\",\n    \"LoadStatement\",\n    \"fileuploadpanel_1\"\n]);\n\nlet lifesituation_3 = new Lifesituation([\n    \"lifesituations_0\", \n    \"lifesituations_1\", \n    \"lifesituations_2\", \n    \"lifesituations_3\", \n    \"lifesituations_4\", \n    \"lifesituations_5\", \n    \"lifesituations_6\", \n    \"lifesituations_7\", \n    \"lifesituations_8\", \n    \"lifesituations_9\", \n    \"lifesituations_10\", \n    \"lifesituations_11\", \n    \"lifesituations_12\", \n    \"lifesituations_13\", \n    \"lifesituations_14\", \n    \"lifesituations_15\", \n    \"lifesituations_16\", \n    \"lifesituations_18\",\n    \"LoadStatement\",\n    \"fileuploadpanel_1\"\n]);\n\nif (findFormField('lifesituation').getValue() == 'предоставление выплаты') {\n\thideAll(['lifesituation']);\n\tlifesituation_1.show();\n}\nelse if (findFormField('lifesituation').getValue() == 'внесение изменений в сведения') {\n\thideAll(['lifesituation']);\n\tlifesituation_2.show();\n}\nelse if (findFormField('lifesituation').getValue() == 'прекращение выплаты') {\n\thideAll(['lifesituation']);\n\tlifesituation_3.show();\n} else {\n\thideAll(['lifesituation']);\n}"
-        ]
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -40,7 +41,7 @@
         "hidden": true,
         "disabled": true,
         "allowBlank": false,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "fieldset",
@@ -61,7 +62,7 @@
         "scripts": [
             "var combobox_0 = Ext.ComponentQuery.query('[name=combobox_0]')[0];\n\nif (combobox_0.getValue() == null) {\n\tcombobox_0.setValue(\"ежемесячное пособие по уходу за ребенком\");\n} else { console.log(combobox_0.getValue()); }"
         ],
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -71,7 +72,7 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "firstname",
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -81,7 +82,7 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "middlename",
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -91,7 +92,7 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "snils",
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -101,7 +102,7 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "citizenship",
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -112,7 +113,7 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "datefield",
@@ -135,7 +136,7 @@
         "isLegalField": false,
         "name": "residenceAddress",
         "strategy": "адрес места жительства",
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "KLADR",
@@ -155,7 +156,7 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "person_mobile",
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -165,7 +166,7 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "почт",
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "combobox",
@@ -203,7 +204,7 @@
             ],
             "type": "store"
         },
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "checkbox",
@@ -212,7 +213,7 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -222,7 +223,7 @@
         "isSoleField": false,
         "isLegalField": false,
         "description": "(указать наименование организации)",
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "fieldset",
@@ -244,7 +245,7 @@
         "queryMode": null,
         "displayField": null,
         "valueField": null,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -254,7 +255,7 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "docseries",
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -264,7 +265,7 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "docnumber",
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -274,7 +275,7 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "issueorg",
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -284,7 +285,7 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "passportdepcode",
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "datefield",
@@ -314,7 +315,7 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -325,7 +326,7 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -336,7 +337,7 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -347,7 +348,7 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "datefield",
@@ -378,7 +379,7 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -389,7 +390,7 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -400,7 +401,7 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -411,7 +412,7 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "datefield",
@@ -442,7 +443,7 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -453,7 +454,7 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -464,7 +465,7 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "fieldset",
@@ -626,7 +627,7 @@
         "scripts": [
             "var item = findFormField('combobox_3').getValue();\n\nif (item == \"путем зачисления на счет заявителя\") { // Путем зачисления на счет заявителя\n\taddVisible(findFormField('textfield_29')); // наименование кр. орг. или БИК кр. орг.\n\taddVisible(findFormField('textfield_30')); // Корреспондентский счёт\n\taddVisible(findFormField('textfield_31')); // Счет заявителя\n\t\n\tremoveVisible(findFormField('combobox_4'));\n} \nif (item == \"через организацию почтовой связи\") {\n\tremoveVisible(findFormField('textfield_29')); // наименование кр. орг. или БИК кр. орг.\n\tremoveVisible(findFormField('textfield_30')); // Корреспондентский счёт\n\tremoveVisible(findFormField('textfield_31')); // Счет заявителя\n\n\taddVisible(findFormField('combobox_4')); // Получение\n}"
         ],
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -637,7 +638,7 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -648,7 +649,7 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -659,7 +660,7 @@
         "isLegalField": false,
         "hidden": true,
         "disabled": true,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "combobox",
@@ -687,7 +688,7 @@
             ],
             "type": "store"
         },
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"textfield_28\"]}]}]}"
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "fieldset",
@@ -1285,7 +1286,8 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "lastname",
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -1296,7 +1298,8 @@
         "isLegalField": false,
         "strategy": "firstname",
         "hidden": false,
-        "disabled": false
+        "disabled": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -1306,7 +1309,8 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "middlename",
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -1316,7 +1320,8 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "snils",
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "datefield",
@@ -1344,7 +1349,8 @@
         "name": "lifesituations_7",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -1354,7 +1360,8 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "person_mobile",
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -1364,7 +1371,8 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "почт",
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "fieldset",
@@ -1386,7 +1394,8 @@
         "queryMode": null,
         "displayField": null,
         "valueField": null,
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -1396,7 +1405,8 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "docseries",
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -1406,7 +1416,8 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "docnumber",
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -1416,7 +1427,8 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "issueorg",
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -1426,7 +1438,8 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "passportdepcode",
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "datefield",
@@ -1437,6 +1450,34 @@
         "isLegalField": false,
         "strategy": "issuedate",
         "hidden": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Представитель",
+        "name": "lifesituations_36",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "законный представитель несовершеннолетнего или недееспособного лица"
+                },
+                {
+                    "value": "организация, на которую возложено исполнение обязанностей опекуна или попечителя"
+                },
+                {
+                    "value": "доверенное лицо"
+                }
+            ]
+        },
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "fieldset",
@@ -1455,7 +1496,8 @@
         "isPersonField": true,
         "isSoleField": true,
         "isLegalField": true,
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "fieldset",
@@ -1474,7 +1516,8 @@
         "isPersonField": true,
         "isSoleField": true,
         "isLegalField": true,
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "checkbox",
@@ -1483,7 +1526,8 @@
         "isPersonField": true,
         "isSoleField": true,
         "isLegalField": true,
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "checkbox",
@@ -1492,7 +1536,8 @@
         "isPersonField": true,
         "isSoleField": true,
         "isLegalField": true,
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "checkbox",
@@ -1501,7 +1546,8 @@
         "isPersonField": true,
         "isSoleField": true,
         "isLegalField": true,
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "checkbox",
@@ -1510,7 +1556,8 @@
         "isPersonField": true,
         "isSoleField": true,
         "isLegalField": true,
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "checkbox",
@@ -1522,7 +1569,8 @@
         "scripts": [
             "var lifesituations_25 = Ext.ComponentQuery.query('[name=lifesituations_25]')[0];\nvar lifesituations_26 = Ext.ComponentQuery.query('[name=lifesituations_26]')[0];\n\nif (lifesituations_25.checked == true) {\n    addVisible(lifesituations_26);\n} else {\n    removeVisible(lifesituations_26);\n}"
         ],
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -1532,7 +1580,8 @@
         "isSoleField": true,
         "isLegalField": true,
         "hidden": true,
-        "disabled": true
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "checkbox",
@@ -1541,7 +1590,8 @@
         "isPersonField": true,
         "isSoleField": true,
         "isLegalField": true,
-        "hidden": false
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "checkbox",
@@ -1552,7 +1602,8 @@
         "isLegalField": true,
         "scripts": [
             "var lifesituations_28 = Ext.ComponentQuery.query('[name=lifesituations_28]')[0];\nvar lifesituations_29 = Ext.ComponentQuery.query('[name=lifesituations_29]')[0];\n\nif (lifesituations_28.checked == true) {\n    addVisible(lifesituations_29);\n} else {\n    removeVisible(lifesituations_29);\n}"
-        ]
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "combobox",
@@ -1585,7 +1636,8 @@
             "var lifesituations_29 = Ext.ComponentQuery.query('[name=lifesituations_29]')[0];\nvar lifesituations_30 = Ext.ComponentQuery.query('[name=lifesituations_30]')[0];\nvar lifesituations_31 = Ext.ComponentQuery.query('[name=lifesituations_31]')[0];\nvar lifesituations_32 = Ext.ComponentQuery.query('[name=lifesituations_32]')[0];\nvar lifesituations_33 = Ext.ComponentQuery.query('[name=lifesituations_33]')[0];\nvar lifesituations_34 = Ext.ComponentQuery.query('[name=lifesituations_34]')[0];\nvar lifesituations_35 = Ext.ComponentQuery.query('[name=lifesituations_35]')[0];\n\n\nif (lifesituations_29.getValue() == 'на счёт') {\n    addVisible(lifesituations_30);\n    addVisible(lifesituations_31);\n    addVisible(lifesituations_32);\n    addVisible(lifesituations_33);\n    addVisible(lifesituations_34);\n    addVisible(lifesituations_35);\n} else {\n    removeVisible(lifesituations_30);\n    removeVisible(lifesituations_31);\n    removeVisible(lifesituations_32);\n    removeVisible(lifesituations_33);\n    removeVisible(lifesituations_34);\n    removeVisible(lifesituations_35);\n}"
         ],
         "hidden": true,
-        "disabled": true
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "combobox",
@@ -1612,7 +1664,8 @@
             "type": "store"
         },
         "hidden": true,
-        "disabled": true
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -1622,7 +1675,8 @@
         "isSoleField": true,
         "isLegalField": true,
         "hidden": true,
-        "disabled": true
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -1632,7 +1686,8 @@
         "isSoleField": true,
         "isLegalField": true,
         "hidden": true,
-        "disabled": true
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -1642,7 +1697,8 @@
         "isSoleField": true,
         "isLegalField": true,
         "hidden": true,
-        "disabled": true
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "combobox",
@@ -1672,7 +1728,8 @@
         "disabled": true,
         "scripts": [
             "var lifesituations_34 = Ext.ComponentQuery.query('[name=lifesituations_34]')[0];\nvar lifesituations_35 = Ext.ComponentQuery.query('[name=lifesituations_35]')[0];\n\nif (lifesituations_34.getValue() == 'иную организацию, осуществляющую доставку') {\n    addVisible(lifesituations_35)\n} else {\n    removeVisible(lifesituations_35)\n}"
-        ]
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -1682,6 +1739,7 @@
         "isSoleField": true,
         "isLegalField": true,
         "hidden": true,
-        "disabled": true
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
     }
 ]

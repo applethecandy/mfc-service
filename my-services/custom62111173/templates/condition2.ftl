@@ -1,6 +1,6 @@
 <!-- # lifesituation -> прекращение выплаты # -->
 
-<style>
+12<style>
   .boxes smallbox {
     width: 12px !important;
     height: 12px !important;
@@ -310,7 +310,7 @@
         место рождения
       </td>
       <td class="greedy underline" style="text-align: left;">
-         
+         1
       </td>
     </tr>
   </table>

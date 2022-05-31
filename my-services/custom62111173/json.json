@@ -1340,6 +1340,14 @@
     },
     {
         "xtype": "textfield",
+        "fieldLabel": "Место рождения",
+        "name": "lifesituations_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
         "fieldLabel": "Номер телефона",
         "name": "lifesituations_8",
         "isPersonField": true,

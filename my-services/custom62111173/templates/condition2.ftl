@@ -312,7 +312,7 @@
         место рождения
       </td>
       <td class="greedy underline" style="text-align: left;">
-         !!!!!!!!!!!!!!!!!!!!!!
+         ${form.lifesituations_7!''}
       </td>
     </tr>
   </table>

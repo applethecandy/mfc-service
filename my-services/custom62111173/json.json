@@ -1630,7 +1630,8 @@
                 {
                     "value": "через иную организацию, осуществляющую доставку"
                 }
-            ]
+            ],
+            "type": "store"
         },
         "scripts": [
             "function hideAll(exceptions) {\n    Ext.ComponentQuery.query('[xtype]').forEach(field => {\n        if (typeof field.isSoleField != 'undefined' && !field.name.includes('[')) {\n    \t    let remove = true;\n\t    exceptions.forEach(exception => { \n\t\tif (field.name == exception) {\n\t\t\tremove = false;\n\t\t}\n\t    });\n            if (remove) { removeVisible(findFormField(field.name)) }\n        }\n    })\n    let files = [];\n    Ext.getCmp('fileUploadGrid').getStore().getRange().forEach(constructor => {\n        files.push(constructor.data.fieldName);\n    })\n    if (files.length > 0) {\n\t    FileUploadGrid.setUploadVisibility([], files);\n    }\n}\n\nclass Lifesituation { \n  constructor(list) {\n    this.list = list;\n  }\n  show()  {\n    let files = [];\n    this.list.forEach(id => {\n\tconsole.log(id);\n    \tif (findFormField(id)) {\n      \taddVisible(findFormField(id));\n      } else {\n\tfiles.push(id)\n      }\n    });\n    if (files.length > 0) {\n\t    FileUploadGrid.setUploadVisibility(files, []);\n    }\n  }\n  hide()  {\n    let files = [];\n    this.list.forEach(id => {\n\tconsole.log(id);\n    \tif (findFormField(id)) {\n      \tremoveVisible(findFormField(id));\n      } else {\n\tfiles.push(id)\n      }\n    });\n    if (files.length > 0) {\n\t    FileUploadGrid.setUploadVisibility([], files);\n    }\n  }\n}\n\nlet delivery_1 = new Lifesituation([\n    \"lifesituations_30\", \n    \"lifesituations_31\", \n    \"lifesituations_32\", \n    \"lifesituations_33\"\n]);\n\nlet delivery_2 = new Lifesituation([\n    \"lifesituations_34\"\n]);\n\nlet delivery_3 = new Lifesituation([\n    \"lifesituations_35\"\n]);\n\nif (findFormField('lifesituations_29').getValue() == 'на счёт') {\n        delivery_2.hide();\n        delivery_3.hide();\n\t    delivery_1.show();\n}\nelse if (findFormField('lifesituations_29').getValue() == 'через организацию почтовой связи') {\n        delivery_1.hide();\n        delivery_3.hide();\n\t    delivery_2.show();\n}\nelse if (findFormField('lifesituations_29').getValue() == 'через иную организацию, осуществляющую доставку') {\n        delivery_1.hide();\n        delivery_2.hide();\n\t    delivery_3.show();\n} else {\n        delivery_1.hide();\n        delivery_2.hide();\n        delivery_3.hide();\n}"
@@ -1721,7 +1722,8 @@
                 {
                     "value": "путем вручения на кассе"
                 }
-            ]
+            ],
+            "type": "store"
         },
         "hidden": true,
         "disabled": true,

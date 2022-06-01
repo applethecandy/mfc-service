@@ -2,14 +2,9 @@
 
 <style>
   .boxes box {
-    height: 14px !important;
-    width: 20px !important;
+    height: 24px !important;
+    width: 30px !important;
   }
-
-* {
-    font-size: 7pt !important;
-    line-height: 6pt !important;
-}
 
   .subscript {
     font-size: 8pt;
@@ -183,9 +178,9 @@
       <td></td>
       <td>
         От 
-        <span class="underline in minw100"></span>
+        <span class="underline in minw100">${.now?date}</span>
         №
-        <span class="underline in minw100"></span>
+        <span class="underline in minw100">${order.getOrderNumber()}</span>
       </td>
     </tr>
   </table>
@@ -648,9 +643,9 @@
       <td>
         <div class="boxes" style="justify-content: left; align-items: center;">
           через:
-          <span style="padding: 0 10px;"><box>${form.lifesituations_34?contains("почтовой связи")?then("V", "")}</box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_29?contains("почтовой связи")?then("V", "")}</box></span>
           организацию почтовой связи
-          <span style="padding: 0 10px;"><box>${form.lifesituations_34?contains("доставку")?then("V", "")}</box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_29?contains("доставку")?then("V", "")}</box></span>
           иную организацию, осуществляющую доставку
         </div>
       </td>
@@ -666,9 +661,9 @@
     <tr style="page-break-inside: avoid;">
       <td>
         <div class="boxes" style="justify-content: left; align-items: center;">
-          <span style="padding: 0 10px;"><box>${form.lifesituations_29?contains("на дому")?then("V", "")}</box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_34?contains("на дому")?then("V", "")}</box></span>
           путем вручения на дому
-          <span style="padding: 0 10px;"><box>${form.lifesituations_29?contains("на кассе")?then("V", "")}</box></span>
+          <span style="padding: 0 10px;"><box>${form.lifesituations_34?contains("на кассе")?then("V", "")}</box></span>
           путем вручения на кассе
         </div>
       </td>
@@ -698,7 +693,7 @@
     </colgroup>
     <tr>
       <td class="underline">
-         ${.now}
+         ${.now?date}
       </td>
       <td></td>
       <td class="underline">

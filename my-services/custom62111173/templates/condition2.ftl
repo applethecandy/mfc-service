@@ -183,9 +183,9 @@
       <td></td>
       <td>
         От 
-        <span class="underline in minw100"> </span>
+        <span class="underline in minw100">${.now?date}</span>
         №
-        <span class="underline in minw100"> </span>
+        <span class="underline in minw100">${order.getOrderNumber()}</span>
       </td>
     </tr>
   </table>

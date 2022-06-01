@@ -1625,16 +1625,15 @@
                     "value": "на счёт"
                 },
                 {
-                    "value": "путем вручения на дому"
+                    "value": "через организацию почтовой связи"
                 },
                 {
-                    "value": "путем вручения на кассе"
+                    "value": "через иную организацию, осуществляющую доставку"
                 }
-            ],
-            "type": "store"
+            ]
         },
         "scripts": [
-            "var lifesituations_29 = Ext.ComponentQuery.query('[name=lifesituations_29]')[0];\nvar lifesituations_30 = Ext.ComponentQuery.query('[name=lifesituations_30]')[0];\nvar lifesituations_31 = Ext.ComponentQuery.query('[name=lifesituations_31]')[0];\nvar lifesituations_32 = Ext.ComponentQuery.query('[name=lifesituations_32]')[0];\nvar lifesituations_33 = Ext.ComponentQuery.query('[name=lifesituations_33]')[0];\nvar lifesituations_34 = Ext.ComponentQuery.query('[name=lifesituations_34]')[0];\nvar lifesituations_35 = Ext.ComponentQuery.query('[name=lifesituations_35]')[0];\n\n\nif (lifesituations_29.getValue() == 'на счёт') {\n    addVisible(lifesituations_30);\n    addVisible(lifesituations_31);\n    addVisible(lifesituations_32);\n    addVisible(lifesituations_33);\n    addVisible(lifesituations_34);\n    addVisible(lifesituations_35);\n} else {\n    removeVisible(lifesituations_30);\n    removeVisible(lifesituations_31);\n    removeVisible(lifesituations_32);\n    removeVisible(lifesituations_33);\n    removeVisible(lifesituations_34);\n    removeVisible(lifesituations_35);\n}"
+            "function hideAll(exceptions) {\n    Ext.ComponentQuery.query('[xtype]').forEach(field => {\n        if (typeof field.isSoleField != 'undefined' && !field.name.includes('[')) {\n    \t    let remove = true;\n\t    exceptions.forEach(exception => { \n\t\tif (field.name == exception) {\n\t\t\tremove = false;\n\t\t}\n\t    });\n            if (remove) { removeVisible(findFormField(field.name)) }\n        }\n    })\n    let files = [];\n    Ext.getCmp('fileUploadGrid').getStore().getRange().forEach(constructor => {\n        files.push(constructor.data.fieldName);\n    })\n    if (files.length > 0) {\n\t    FileUploadGrid.setUploadVisibility([], files);\n    }\n}\n\nclass Lifesituation { \n  constructor(list) {\n    this.list = list;\n  }\n  show()  {\n    let files = [];\n    this.list.forEach(id => {\n\tconsole.log(id);\n    \tif (findFormField(id)) {\n      \taddVisible(findFormField(id));\n      } else {\n\tfiles.push(id)\n      }\n    });\n    if (files.length > 0) {\n\t    FileUploadGrid.setUploadVisibility(files, []);\n    }\n  }\n  hide()  {\n    let files = [];\n    this.list.forEach(id => {\n\tconsole.log(id);\n    \tif (findFormField(id)) {\n      \tremoveVisible(findFormField(id));\n      } else {\n\tfiles.push(id)\n      }\n    });\n    if (files.length > 0) {\n\t    FileUploadGrid.setUploadVisibility([], files);\n    }\n  }\n}\n\nlet delivery_1 = new Lifesituation([\n    \"lifesituations_30\", \n    \"lifesituations_31\", \n    \"lifesituations_32\", \n    \"lifesituations_33\"\n]);\n\nlet delivery_2 = new Lifesituation([\n    \"lifesituations_34\"\n]);\n\nlet delivery_3 = new Lifesituation([\n    \"lifesituations_35\"\n]);\n\nif (findFormField('lifesituations_29').getValue() == 'на счёт') {\n        delivery_2.hide();\n        delivery_3.hide();\n\t    delivery_1.show();\n}\nelse if (findFormField('lifesituations_29').getValue() == 'через организацию почтовой связи') {\n        delivery_1.hide();\n        delivery_3.hide();\n\t    delivery_2.show();\n}\nelse if (findFormField('lifesituations_29').getValue() == 'через иную организацию, осуществляющую доставку') {\n        delivery_1.hide();\n        delivery_2.hide();\n\t    delivery_3.show();\n} else {\n        delivery_1.hide();\n        delivery_2.hide();\n        delivery_3.hide();\n}"
         ],
         "hidden": true,
         "disabled": true,
@@ -1703,7 +1702,7 @@
     },
     {
         "xtype": "combobox",
-        "fieldLabel": "Через",
+        "fieldLabel": "Через организацию почтовой связи",
         "name": "lifesituations_34",
         "isPersonField": true,
         "isSoleField": true,
@@ -1717,13 +1716,12 @@
             ],
             "data": [
                 {
-                    "value": "организацию почтовой связи"
+                    "value": "путем вручения на дому"
                 },
                 {
-                    "value": "иную организацию, осуществляющую доставку"
+                    "value": "путем вручения на кассе"
                 }
-            ],
-            "type": "store"
+            ]
         },
         "hidden": true,
         "disabled": true,

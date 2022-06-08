@@ -1,8 +1,175 @@
 [
     {
+        "xtype": "checkbox",
+        "boxLabel": "В роли заявителя выступает доверенное лицо",
+        "name": "representative_check",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
         "xtype": "combobox",
         "fieldLabel": "Жизненная ситуация",
-        "name": "combobox_0",
+        "name": "combobox_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Выдача разрешения на добычу лимитированных охотничьих ресурсов (лось, медведь, рысь, барсук, кабан)"
+                },
+                {
+                    "value": "Выдача разрешения на добычу нелимитированных пушных охотничьих ресурсов"
+                },
+                {
+                    "value": "Выдача разрешения на добычу нелимитированных пернатых охотничьих ресурсов"
+                }
+            ],
+            "type": "store"
+        },
+        "editable": false,
+        "scripts": [
+            "var combobox_3 = Ext.ComponentQuery.query('[name=combobox_3]')[0];\\nvar combobox_5 = Ext.ComponentQuery.query('[name=combobox_5]')[0];\\nvar fieldset_6 = Ext.ComponentQuery.query('[name=fieldset_6]')[0];\\nvar combobox_4 = Ext.ComponentQuery.query('[name=combobox_4]')[0];\\nvar combobox_6 = Ext.ComponentQuery.query('[name=combobox_6]')[0];\\nvar combobox_7 = Ext.ComponentQuery.query('[name=combobox_7]')[0];\\nvar checkbox_3 = Ext.ComponentQuery.query('[name=checkbox_3]')[0];\\nvar checkbox_2 = Ext.ComponentQuery.query('[name=checkbox_2]')[0];\\nvar checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\\nvar checkbox_4 = Ext.ComponentQuery.query('[name=checkbox_4]')[0];\\nvar checkbox_5 = Ext.ComponentQuery.query('[name=checkbox_5]')[0];\\nvar checkbox_6 = Ext.ComponentQuery.query('[name=checkbox_6]')[0];\\nvar checkbox_7 = Ext.ComponentQuery.query('[name=checkbox_7]')[0];\\nvar checkbox_8 = Ext.ComponentQuery.query('[name=checkbox_8]')[0];\\nvar checkbox_9 = Ext.ComponentQuery.query('[name=checkbox_9]')[0];\\nvar checkbox_10 = Ext.ComponentQuery.query('[name=checkbox_10]')[0];\\nvar checkbox_11 = Ext.ComponentQuery.query('[name=checkbox_11]')[0];\\nvar checkbox_12 = Ext.ComponentQuery.query('[name=checkbox_12]')[0];\\nvar checkbox_13 = Ext.ComponentQuery.query('[name=checkbox_13]')[0];\\nvar checkbox_14 = Ext.ComponentQuery.query('[name=checkbox_14]')[0];\\nvar checkbox_15 = Ext.ComponentQuery.query('[name=checkbox_15]')[0];\\nvar checkbox_16 = Ext.ComponentQuery.query('[name=checkbox_16]')[0];\\nvar checkbox_17 = Ext.ComponentQuery.query('[name=checkbox_17]')[0];\\nvar cloneablePanel_1 = Ext.ComponentQuery.query('[name=cloneablePanel_1]')[0];\\nvar cloneablePanel_2 = Ext.ComponentQuery.query('[name=cloneablePanel_2]')[0];\\nvar fileuploadpanel_1 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_1]')[0];\\nvar fileuploadpanel_2 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_2]')[0];\\nvar fileuploadpanel_3 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_3]')[0];\\nvar fileuploadpanel_4 = Ext.ComponentQuery.query('[fieldName=fileuploadpanel_4]')[0];\\n\\n\\nvar zs = ['Выдача разрешения на добычу лимитированных охотничьих ресурсов (лось, медведь, рысь, барсук, кабан)','Выдача разрешения на добычу нелимитированных пушных охотничьих ресурсов','Выдача разрешения на добычу нелимитированных пернатых охотничьих ресурсов'].indexOf(combobox_5.getValue());\\n\\n\\n\\tfileuploadpanel_1.hide();\\n\\tfileuploadpanel_2.hide();\\n\\tfileuploadpanel_3.hide();\\n\\tfileuploadpanel_4.hide();\\n\\n\\tcloneablePanel_1.hide();\\n\\tcloneablePanel_2.hide();\\n\\n\\ncombobox_3.hide();\\ncombobox_7.hide();\\nfieldset_6.hide();\\n\\nif (zs==0){\\ncombobox_3.show();\\ncombobox_6.show();\\ncombobox_4.hide();\\nfieldset_6.show();\\ncombobox_7.show();\\ncheckbox_1.hide();\\ncheckbox_2.hide();\\ncheckbox_3.hide();\\ncheckbox_4.hide();\\ncheckbox_5.hide();\\ncheckbox_6.hide();\\ncheckbox_7.hide();\\ncheckbox_8.hide();\\ncheckbox_9.hide();\\ncheckbox_10.hide();\\ncheckbox_11.hide();\\ncheckbox_12.hide();\\ncheckbox_13.hide();\\ncheckbox_14.hide();\\ncheckbox_15.hide();\\ncheckbox_16.hide();\\ncheckbox_17.hide();\\nfileuploadpanel_1.hide();\\nfileuploadpanel_2.hide();\\nfileuploadpanel_3.hide();\\nfileuploadpanel_4.hide();\\ncloneablePanel_1.hide();\\ncloneablePanel_2.hide();\\n} else {\\ncombobox_3.hide();\\ncombobox_6.hide();\\ncombobox_4.show();\\ncombobox_7.hide();\\nfieldset_6.hide();\\n};\\n\\nif (zs == 1){\\n\\tfileuploadpanel_1.show();\\n\\tfileuploadpanel_2.show();\\n\\tfileuploadpanel_3.show();\\n\\tfileuploadpanel_4.show();\\n\\tcloneablePanel_1.show();\\n\\tcloneablePanel_2.hide();\\n};\\nif (zs == 2 ){\\n\\tfileuploadpanel_1.show();\\n\\tfileuploadpanel_2.show();\\n\\tfileuploadpanel_3.show();\\n\\tfileuploadpanel_4.show();\\n\\tcloneablePanel_1.hide();\\n\\tcloneablePanel_2.show();\\n};",
+            "setTimeout(fuk, 1000);\\nfunction fuk(){\\n\\tdocument.getElementById('mfcCombo-triggerWrap').onmouseover = function() {\\n\\t//confirm(\\\"Получение результата по данной услуге исключительно в ОВ!!!\\\");\\n\\tvar div = document.createElement('div');\\n\\tdiv.setAttribute(\\\"id\\\", \\\"output_documents\\\");\\n\\tdocument.getElementById('mfcCombo-triggerWrap').appendChild(div);\\n\\tdocument.getElementById('output_documents').style.cssText=\\\"width: 100%;\\\\\\n\\theight: 89px;\\\\\\n\\tbackground-color: #f0724a;\\\\\\n\\tposition: absolute;\\\\\\n\\toverflow: hidden;\\\\\\n\\tclear: both;\\\\\\n\\tz-index: 1000;\\\\\\n\\ttop: 45px;\\\\\\n\\tright: 0px;\\\\\\n\\tdisplay: block;\\\\\\n\\tborder: 2px dashed #ff3f05;\\\\\\n\\tmargin: 0 auto;\\\\\\n\\ttext-align:center;\\\\\\n\\tpadding-top: 22px;\\\\\\n\\t\\\";\\n\\tdocument.getElementById('output_documents').innerHTML = \\\"<p>Место выдачи результата услуги -<br />исключительно ОГВ!</p>\\\"\\n\\t};\\n\\n\\n\\tdocument.getElementById('mfcCombo-triggerWrap').onmouseout = function() {\\n\\tvar div = document.createElement('div');\\n\\tdiv.setAttribute(\\\"id\\\", \\\"output_documents\\\");\\n\\tdocument.getElementById('mfcCombo-triggerWrap').appendChild(div);\\n\\tdocument.getElementById('output_documents').style.cssText=\\\"display: none;\\\";\\n\\t};\\n};"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "lastname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "firstname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "middlename"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "ИНН",
+        "name": "textfield_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "inn"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места жительства",
+        "name": "textfield_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "registrationAddress"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Контактный телефон",
+        "name": "textfield_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "person_mobile"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Данные документа, удостоверяющего личность",
+        "name": "fieldset_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование документа",
+        "name": "textfield_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "documenttypename"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "textfield_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docseries"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "textfield_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docnumber"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "textfield_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issueorg"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "datefield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issuedate"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о добываемых охотничьих ресурсах и их количестве",
+        "name": "fieldset_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "лимитируемые",
+        "name": "fieldset_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Вид/группа охотничьих ресурсов",
+        "name": "combobox_3",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
@@ -15,112 +182,138 @@
             ],
             "data": [
                 {
-                    "value": "Выдача разрешения на добычу нелимитированных пернатых охотничьих ресурсов"
+                    "value": "лось"
+                },
+                {
+                    "value": "бурый медведь"
+                },
+                {
+                    "value": "рысь"
+                },
+                {
+                    "value": "барсук"
+                },
+                {
+                    "value": "кабан"
                 }
             ],
             "type": "store"
-        }
+        },
+        "scripts": [
+            "var combobox_3 = Ext.ComponentQuery.query('[name=combobox_3]')[0];\\nvar combobox_7 = Ext.ComponentQuery.query('[name=combobox_7]')[0];\\n\\n\\nvar zver = ['лось','лось до года','лось с подхода','лось на гону','бурый медведь','рысь','барсук','кабан'].indexOf(combobox_3.getValue());\\n\\n\\ncombobox_7.hide();\\n\\nif (zver==0){\\ncombobox_7.show();\\n\\n} else {\\ncombobox_7.hide();\\n\\n};"
+        ],
+        "editable": false
     },
     {
-        "xtype": "textfield",
-        "fieldLabel": "Фамилия",
-        "name": "textfield_0",
+        "xtype": "combobox",
+        "fieldLabel": "Возраст лося",
+        "name": "combobox_7",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "до 1 года"
+                },
+                {
+                    "value": "старше 1 года"
+                },
+                {
+                    "value": "на гону"
+                }
+            ],
+            "type": "store"
+        },
+        "editable": false
     },
     {
-        "xtype": "textfield",
-        "fieldLabel": "Имя",
-        "name": "textfield_1",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "textfield",
-        "fieldLabel": "Отчество",
-        "name": "textfield_2",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "textfield",
-        "fieldLabel": "ИНН",
-        "name": "textfield_17",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "textfield",
-        "fieldLabel": "Адрес места жительства",
-        "name": "textfield_4",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "textfield",
-        "fieldLabel": "Контактный телефон",
-        "name": "textfield_13",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "fieldset",
-        "title": "ДАННЫЕ ДОКУМЕНТА, УДОСТОВЕРЯЮЩЕГО ЛИЧНОСТЬ",
-        "name": "fieldset_0",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "textfield",
-        "fieldLabel": "Наименование документа",
-        "name": "textfield_8",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "textfield",
-        "fieldLabel": "Серия",
-        "name": "textfield_7",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "textfield",
-        "fieldLabel": "Номер",
-        "name": "textfield_6",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "textfield",
-        "fieldLabel": "Кем выдан",
-        "name": "textfield_5",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "datefield",
-        "fieldLabel": "Дата выдачи",
-        "name": "datefield_0",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "fieldset",
-        "title": "СВЕДЕНИЯ О ДОБЫВАЕМЫХ ОХОТНИЧЬИХ РЕСУРСАХ И ИХ КОЛИЧЕСТВЕ",
-        "name": "fieldset_1",
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_1",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Нелимитированные пушные",
+                "hidden": true,
+                "disabled": true,
+                "isPersonField": true
+            },
+            {
+                "name": "combobox_17",
+                "xtype": "combobox",
+                "fieldLabel": "Пушное животное",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "белка"
+                        },
+                        {
+                            "value": "бобер"
+                        },
+                        {
+                            "value": "водяная полевка"
+                        },
+                        {
+                            "value": "волк"
+                        },
+                        {
+                            "value": "горностай"
+                        },
+                        {
+                            "value": "енотовидная собака"
+                        },
+                        {
+                            "value": "заяц беляк"
+                        },
+                        {
+                            "value": "крот"
+                        },
+                        {
+                            "value": "куница лесная"
+                        },
+                        {
+                            "value": "лисица"
+                        },
+                        {
+                            "value": "норка американская"
+                        },
+                        {
+                            "value": "ондатра"
+                        },
+                        {
+                            "value": "хорь черный "
+                        }
+                    ],
+                    "type": "store"
+                }
+            },
+            {
+                "name": "textfield_27",
+                "xtype": "textfield",
+                "fieldLabel": "Количество пушного животного к добыче",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneablePanel_1",
+        "fieldName": "cloneablePanel_1",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false
@@ -128,24 +321,69 @@
     {
         "xtype": "cloneablePanel",
         "fieldLabel": "Клонируемая панель",
-        "name": "cloneablePanel_0",
+        "name": "cloneablePanel_2",
         "items": [
             {
                 "xtype": "fieldset",
-                "title": "Заголовок",
+                "title": "нелимитированные пернатые",
                 "hidden": true,
-                "disabled": true
+                "disabled": true,
+                "isPersonField": true
             },
             {
-                "name": "combobox_1",
+                "name": "combobox_12",
                 "xtype": "combobox",
                 "fieldLabel": "Пернатое животное",
                 "isPersonField": true,
                 "isSoleField": false,
-                "isLegalField": false
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "голубь"
+                        },
+                        {
+                            "value": "болотно-луговая дичь"
+                        },
+                        {
+                            "value": "селезень утки"
+                        },
+                        {
+                            "value": "утка"
+                        },
+                        {
+                            "value": "казарка"
+                        },
+                        {
+                            "value": "гусь"
+                        },
+                        {
+                            "value": "вальдшнеп"
+                        },
+                        {
+                            "value": "белая куропатка"
+                        },
+                        {
+                            "value": "рябчик"
+                        },
+                        {
+                            "value": "тетерев"
+                        },
+                        {
+                            "value": "глухарь"
+                        }
+                    ],
+                    "type": "store"
+                }
             },
             {
-                "name": "textfield_10",
+                "name": "textfield_23",
                 "xtype": "textfield",
                 "fieldLabel": "Количество пернатого животного к добыче",
                 "isPersonField": true,
@@ -153,16 +391,16 @@
                 "isLegalField": false
             }
         ],
-        "prefix": "cloneablePanel_0",
-        "fieldName": "cloneablePanel_0",
+        "prefix": "cloneablePanel_2",
+        "fieldName": "cloneablePanel_2",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false
     },
     {
         "xtype": "fieldset",
-        "title": "ПРЕДПОЛАГАЕМЫЕ СРОКИ И МЕСТО ОХОТЫ",
-        "name": "fieldset_2",
+        "title": "Предполагаемые сроки и место охоты",
+        "name": "fieldset_3",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false
@@ -170,7 +408,7 @@
     {
         "xtype": "datefield",
         "fieldLabel": "С",
-        "name": "datefield_2",
+        "name": "datefield_1",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false
@@ -178,46 +416,118 @@
     {
         "xtype": "datefield",
         "fieldLabel": "По",
-        "name": "datefield_1",
+        "name": "datefield_2",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false
     },
     {
         "xtype": "combobox",
+        "fieldLabel": "Место охоты на лимитируемую дичь",
+        "name": "combobox_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "ОДОУ Беломорского района"
+                },
+                {
+                    "value": "ОДОУ Калевальского района"
+                },
+                {
+                    "value": "ОДОУ Кемского района"
+                },
+                {
+                    "value": "ОДОУ Лоухского района"
+                },
+                {
+                    "value": "ОДОУ Костомукшского городского округа"
+                },
+                {
+                    "value": "ОДОУ Медвежьегорского района"
+                },
+                {
+                    "value": "ОДОУ Муезерского района"
+                },
+                {
+                    "value": "ОДОУ Пудождского района"
+                },
+                {
+                    "value": "ОДОУ Сегежского района"
+                },
+                {
+                    "value": "ОДОУ Суоярвского района"
+                },
+                {
+                    "value": "ОДОУ Кондопожского района"
+                },
+                {
+                    "value": "ОДОУ Лахденпохского района"
+                },
+                {
+                    "value": "ОДОУ Олонецкого района"
+                },
+                {
+                    "value": "ОДОУ Питкярантского района"
+                },
+                {
+                    "value": "ОДОУ Прионежского района"
+                },
+                {
+                    "value": "ОДОУ Пряжинского района"
+                },
+                {
+                    "value": "ОДОУ Сортавальского района"
+                }
+            ],
+            "type": "store"
+        },
+        "editable": false
+    },
+    {
+        "xtype": "combobox",
         "fieldLabel": "Место охоты",
-        "name": "combobox_2",
+        "name": "combobox_4",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "fieldset",
-        "title": "<span style=\"font-size: smaller; color: rgb(130, 130, 130);\"><br><font color=\"black\">(Единое разрешение можно получить на несколько районов, расположенных в одном секторе) </font></span>",
-        "name": "fieldset_3",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Северный сектор (Беломорский, Калевальский, Кемский, Лоухский районы, Костомукшский городской округ)"
+                },
+                {
+                    "value": "Центральный сектор (Медвежьегорский, Муезерский, Пудожский, Сегежский, Суоярвский районы)"
+                },
+                {
+                    "value": "Южный сектор (Кондопожский, Лахденпохский, Олонецкий, Питкярантский, Прионежский, Пряжинский, Сортавальский районы)"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var checkbox_3 = Ext.ComponentQuery.query('[name=checkbox_3]')[0];\\nvar checkbox_2 = Ext.ComponentQuery.query('[name=checkbox_2]')[0];\\nvar checkbox_1 = Ext.ComponentQuery.query('[name=checkbox_1]')[0];\\nvar checkbox_4 = Ext.ComponentQuery.query('[name=checkbox_4]')[0];\\nvar checkbox_5 = Ext.ComponentQuery.query('[name=checkbox_5]')[0];\\nvar checkbox_6 = Ext.ComponentQuery.query('[name=checkbox_6]')[0];\\nvar checkbox_7 = Ext.ComponentQuery.query('[name=checkbox_7]')[0];\\nvar checkbox_8 = Ext.ComponentQuery.query('[name=checkbox_8]')[0];\\nvar checkbox_9 = Ext.ComponentQuery.query('[name=checkbox_9]')[0];\\nvar checkbox_10 = Ext.ComponentQuery.query('[name=checkbox_10]')[0];\\nvar checkbox_11 = Ext.ComponentQuery.query('[name=checkbox_11]')[0];\\nvar checkbox_12 = Ext.ComponentQuery.query('[name=checkbox_12]')[0];\\nvar checkbox_13 = Ext.ComponentQuery.query('[name=checkbox_13]')[0];\\nvar checkbox_14 = Ext.ComponentQuery.query('[name=checkbox_14]')[0];\\nvar checkbox_15 = Ext.ComponentQuery.query('[name=checkbox_15]')[0];\\nvar checkbox_16 = Ext.ComponentQuery.query('[name=checkbox_16]')[0];\\nvar checkbox_17 = Ext.ComponentQuery.query('[name=checkbox_17]')[0];\\n\\nvar combobox_4 = Ext.ComponentQuery.query('[name=combobox_4]')[0];\\n\\nvar sector = ['Северный сектор (Беломорский, Калевальский, Кемский, Лоухский районы, Костомукшский городской округ)', 'Центральный сектор (Медвежьегорский, Муезерский, Пудожский, Сегежский, Суоярвский районы)','Южный сектор (Кондопожский, Лахденпохский, Олонецкий, Питкярантский, Прионежский, Пряжинский, Сортавальский районы)'].indexOf(combobox_4.getValue());\\n\\ncheckbox_1.hide();\\ncheckbox_2.hide();\\ncheckbox_3.hide();\\ncheckbox_4.hide();\\ncheckbox_5.hide();\\ncheckbox_6.hide();\\ncheckbox_7.hide();\\ncheckbox_8.hide();\\ncheckbox_9.hide();\\ncheckbox_10.hide();\\ncheckbox_11.hide();\\ncheckbox_12.hide();\\ncheckbox_13.hide();\\ncheckbox_14.hide();\\ncheckbox_15.hide();\\ncheckbox_16.hide();\\ncheckbox_17.hide();\\n\\n\\nif (sector==0){\\ncheckbox_1.show();\\ncheckbox_2.show();\\ncheckbox_3.show();\\ncheckbox_4.hide();\\ncheckbox_5.hide();\\ncheckbox_6.hide();\\ncheckbox_7.hide();\\ncheckbox_8.hide();\\ncheckbox_9.hide();\\ncheckbox_10.hide();\\ncheckbox_11.hide();\\ncheckbox_12.show();\\ncheckbox_13.show();\\ncheckbox_14.hide();\\ncheckbox_15.hide();\\ncheckbox_16.hide();\\ncheckbox_17.hide();\\n} else {\\n\\tif (sector==1){\\n\\tcheckbox_1.hide();\\n\\tcheckbox_2.hide();\\n\\tcheckbox_3.hide();\\n\\tcheckbox_4.hide();\\n\\tcheckbox_5.hide();\\n\\tcheckbox_6.hide();\\n\\tcheckbox_7.show();\\n\\tcheckbox_8.show();\\n\\tcheckbox_9.show();\\n\\tcheckbox_10.show();\\n\\tcheckbox_11.show();\\n\\tcheckbox_12.hide();\\n\\tcheckbox_13.hide();\\n\\tcheckbox_14.hide();\\n\\tcheckbox_15.hide();\\n\\tcheckbox_16.hide();\\n\\tcheckbox_17.hide();\\n\\t} else {\\n\\t\\tif (sector==2){\\n\\t\\tcheckbox_1.hide();\\n\\t\\tcheckbox_2.hide();\\n\\t\\tcheckbox_3.hide();\\n\\t\\tcheckbox_4.show();\\n\\t\\tcheckbox_5.show();\\n\\t\\tcheckbox_6.show();\\n\\t\\tcheckbox_7.hide();\\n\\t\\tcheckbox_8.hide();\\n\\t\\tcheckbox_9.hide();\\n\\t\\tcheckbox_10.hide();\\n\\t\\tcheckbox_11.hide();\\n\\t\\tcheckbox_12.hide();\\n\\t\\tcheckbox_13.hide();\\n\\t\\tcheckbox_14.show();\\n\\t\\tcheckbox_15.show();\\n\\t\\tcheckbox_16.show();\\n\\t\\tcheckbox_17.show();\\n\\t\\t} else {\\n\\t\\tcheckbox_1.hide();\\n\\t\\tcheckbox_2.hide();\\n\\t\\tcheckbox_3.hide();\\n\\t\\tcheckbox_4.hide();\\n\\t\\tcheckbox_5.hide();\\n\\t\\tcheckbox_6.hide();\\n\\t\\tcheckbox_7.hide();\\n\\t\\tcheckbox_8.hide();\\n\\t\\tcheckbox_9.hide();\\n\\t\\tcheckbox_10.hide();\\n\\t\\tcheckbox_11.hide();\\n\\t\\tcheckbox_12.hide();\\n\\t\\tcheckbox_13.hide();\\n\\t\\tcheckbox_14.hide();\\n\\t\\tcheckbox_15.hide();\\n\\t\\tcheckbox_16.hide();\\n\\t\\tcheckbox_17.hide();\\n\\t\\t};\\n\\t};\\n};"
+        ],
+        "description": "<font color=\\\"black\\\">(Единое разрешение можно получить на несколько районов, расположенных в одном секторе) </font>",
+        "editable": false
     },
     {
         "xtype": "checkbox",
-        "boxLabel": "ОДОУ Медвежьегорского района",
-        "name": "checkbox_0",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "checkbox",
-        "boxLabel": "ОДОУ Муезерского района",
-        "name": "checkbox_4",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "checkbox",
-        "boxLabel": "ОДОУ Пудождского района",
+        "boxLabel": "ОДОУ Беломорского района",
         "name": "checkbox_3",
         "isPersonField": true,
         "isSoleField": false,
@@ -225,7 +535,7 @@
     },
     {
         "xtype": "checkbox",
-        "boxLabel": "ОДОУ Сегежского района",
+        "boxLabel": "ОДОУ Калевальского района",
         "name": "checkbox_2",
         "isPersonField": true,
         "isSoleField": false,
@@ -233,15 +543,127 @@
     },
     {
         "xtype": "checkbox",
-        "boxLabel": "ОДОУ Суоярвского района",
+        "boxLabel": "ОДОУ Кемского района",
         "name": "checkbox_1",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false
     },
     {
+        "xtype": "checkbox",
+        "boxLabel": "ОДОУ Лоухского района",
+        "name": "checkbox_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "ОДОУ Костомукшского городского округа",
+        "name": "checkbox_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "ОДОУ Медвежьегорского района",
+        "name": "checkbox_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "ОДОУ Муезерского района",
+        "name": "checkbox_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "ОДОУ Пудождского района",
+        "name": "checkbox_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "ОДОУ Сегежского района",
+        "name": "checkbox_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "ОДОУ Суоярвского района",
+        "name": "checkbox_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "ОДОУ Кондопожского района",
+        "name": "checkbox_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "ОДОУ Лахденпохского района",
+        "name": "checkbox_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "ОДОУ Олонецкого района",
+        "name": "checkbox_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "ОДОУ Питкярантского района",
+        "name": "checkbox_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "ОДОУ Прионежского района",
+        "name": "checkbox_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "ОДОУ Пряжинского района",
+        "name": "checkbox_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "ОДОУ Сортавальского района",
+        "name": "checkbox_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
         "xtype": "fieldset",
-        "title": "СВЕДЕНИЯ ОБ ОХОТНИЧЬЕМ БИЛЕТЕ",
+        "title": "Сведения об охотничьем билете",
         "name": "fieldset_4",
         "isPersonField": true,
         "isSoleField": false,
@@ -258,7 +680,7 @@
     {
         "xtype": "textfield",
         "fieldLabel": "Серия",
-        "name": "textfield_12",
+        "name": "textfield_14",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false
@@ -266,7 +688,7 @@
     {
         "xtype": "textfield",
         "fieldLabel": "Номер",
-        "name": "textfield_11",
+        "name": "textfield_15",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false
@@ -274,7 +696,39 @@
     {
         "xtype": "combobox",
         "fieldLabel": "Орган, выдавший билет",
-        "name": "combobox_3",
+        "name": "textfield_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "Министерство сельского, рыбного и охотничьего хозяйства по Республике Карелия"
+                },
+                {
+                    "value": "Министерство природных ресурсов и экологии Республики Карелия"
+                },
+                {
+                    "value": "Другой орган (написать какой)"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var textfield_16 = Ext.ComponentQuery.query('[name=textfield_16]')[0];\\nvar combobox_21 = Ext.ComponentQuery.query('[name=combobox_21]')[0];\\n\\nif (textfield_16.getValue() == \\\"Другой орган (написать какой)\\\"){\\ncombobox_21.show();\\n}else{\\ncombobox_21.hide();\\n};"
+        ],
+        "editable": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Орган, выдавший билет",
+        "name": "combobox_21",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false
@@ -282,7 +736,7 @@
     {
         "xtype": "fieldset",
         "title": "Список документов",
-        "name": "fieldset_5",
+        "name": "fieldset_12",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false
@@ -290,23 +744,22 @@
     {
         "xtype": "fileuploadpanel",
         "text": "Заявление на выдачу разрешения на добычу охотничьих ресурсов",
-        "fieldName": "fileuploadpanel_4",
-        "name": "fileuploadpanel_4",
+        "fieldName": "LoadStatement",
+        "name": "fileuploadpanel_0",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": "",
+        "flag": "original",
         "allowBlank": false
     },
     {
         "xtype": "fileuploadpanel",
         "text": "Документ, удостоверяющий личность заявителя",
-        "fieldName": "fileuploadpanel_3",
-        "name": "fileuploadpanel_3",
+        "fieldName": "fileuploadpanel_1",
+        "name": "fileuploadpanel_1",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": "",
         "description": "Скан-копия"
     },
     {
@@ -317,42 +770,28 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": "",
         "description": "Скан-копия"
     },
     {
         "xtype": "fileuploadpanel",
         "text": "Документы об уплате госпошлины",
-        "fieldName": "fileuploadpanel_1",
-        "name": "fileuploadpanel_1",
+        "fieldName": "fileuploadpanel_3",
+        "name": "fileuploadpanel_3",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": "",
-        "description": "(необязательный документ, рекомендуемый для ускорения получения результата, 650 рублей)"
+        "description": "(необязательный документ, рекомендуемый для ускорения получения результата, 650 рублей)",
+        "flag": "original"
     },
     {
         "xtype": "fileuploadpanel",
         "text": "Документ об уплате сбора за пользование объектами животного мира",
-        "fieldName": "fileuploadpanel_0",
-        "name": "fileuploadpanel_0",
+        "fieldName": "fileuploadpanel_4",
+        "name": "fileuploadpanel_4",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": "",
+        "flag": "original",
         "description": "(необязательный документ, рекомендуемый для ускорения получения результата)"
-    },
-    {
-        "xtype": "fileuploadpanel",
-        "text": "Заявление",
-        "fieldName": "LoadStatement",
-        "name": "fileuploadpanel_5",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false,
-        "scanDocumentWithdraw": "",
-        "hidden": true,
-        "disabled": true,
-        "scanDocumentTypeGroup": null
     }
 ]

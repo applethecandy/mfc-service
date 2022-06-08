@@ -1,0 +1,111 @@
+[
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "strategy": "lastname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_3",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "strategy": "firstname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_4",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": false,
+        "strategy": "middlename"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование организации",
+        "name": "textfield_1",
+        "isPersonField": false,
+        "isSoleField": false,
+        "isLegalField": true,
+        "strategy": "organizationbrief_orgfullname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Цель использования земельного участка",
+        "name": "textfield_2",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Способ получения результата",
+        "name": "combobox_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "лично в виде бумажного документа"
+                },
+                {
+                    "value": "в виде бумажного документа почтовым отправлением"
+                },
+                {
+                    "value": "в виде электронного документа"
+                },
+                {
+                    "value": "личная явка в МФЦ"
+                }
+            ],
+            "type": "store"
+        }
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Заявление",
+        "fieldName": "LoadStatement",
+        "name": "fileuploadpanel_0",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "scanDocumentWithdraw": ""
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Правоустанавливающие и (или) правоудостоверяющие документы на земельный участок",
+        "fieldName": "fileuploadpanel_1",
+        "name": "fileuploadpanel_1",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "scanDocumentWithdraw": "",
+        "documentCharacterIdDef": 2,
+        "documentCharacterNameDef": "Копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Письменная форма согласия землепользователей, землевладельцев, арендаторов, залогодержателей исходных земельных участков",
+        "fieldName": "fileuploadpanel_2",
+        "name": "fileuploadpanel_2",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "scanDocumentWithdraw": "",
+        "documentCharacterIdDef": 1,
+        "documentCharacterNameDef": "Оригинал"
+    }
+]

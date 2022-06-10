@@ -1,0 +1,1346 @@
+[
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Жизненная ситуация",
+        "name": "lifesituation",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "предоставление выплаты"
+                },
+                {
+                    "value": "внесение изменений в сведения"
+                },
+                {
+                    "value": "прекращение выплаты"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "function hideAll(exceptions) {\n    Ext.ComponentQuery.query('[xtype]').forEach(field => {\n        if (typeof field.isSoleField != 'undefined' && !field.name.includes('[')) {\n    \t    let remove = true;\n\t    exceptions.forEach(exception => { \n\t\tif (field.name == exception) {\n\t\t\tremove = false;\n\t\t}\n\t    });\n            if (remove) { removeVisible(findFormField(field.name)) }\n        }\n    })\n    let files = [];\n    Ext.getCmp('fileUploadGrid').getStore().getRange().forEach(constructor => {\n        files.push(constructor.data.fieldName);\n    })\n    if (files.length > 0) {\n\tFileUploadGrid.setUploadVisibility([], files);\n    }\n}\n\nclass Lifesituation { \n  constructor(list) {\n    this.list = list;\n  }\n  show()  {\n    let files = [];\n    this.list.forEach(id => {\n\tconsole.log(id);\n    \tif (findFormField(id)) {\n      \taddVisible(findFormField(id));\n      } else {\n\tfiles.push(id)\n      }\n    });\n    if (files.length > 0) {\n\tFileUploadGrid.setUploadVisibility(files, []);\n    }\n  }\n  hide()  {\n    let files = [];\n    this.list.forEach(id => {\n\tconsole.log(id);\n    \tif (findFormField(id)) {\n      \tremoveVisible(findFormField(id));\n      } else {\n\tfiles.push(id)\n      }\n    });\n    if (files.length > 0) {\n\tFileUploadGrid.setUploadVisibility([], files);\n    }\n  }\n}\n\nlet lifesituation_1 = new Lifesituation([\n    \"fieldset_0\", \n    \"textfield_0\", \n    \"textfield_1\", \n    \"textfield_2\", \n    \"textfield_3\", \n    \"textfield_4\", \n    \"datefield_0\", \n    \"residenceAddress\", \n    \"textfield_8\", \n    \"textfield_9\", \n    \"combobox_0\", \n    \"checkbox_0\", \n    \"textfield_10\", \n    \"fieldset_1\", \n    \"combobox_1\", \n    \"textfield_11\", \n    \"textfield_12\", \n    \"textfield_13\", \n    \"textfield_32\", \n    \"datefield_1\", \n    \"fieldset_5\", \n    \"cloneablePanel_0\", \n    \"fieldset_6\", \n    \"combobox_3\", \n    \"fieldset_8\", \n    \"LoadStatement\",\n    \"fileuploadpanel_1\",\n    \"fileuploadpanel_4\", \n    \"fileuploadpanel_5\", \n    \"fileuploadpanel_6\", \n    \"fileuploadpanel_18\", \n    \"fileuploadpanel_7\", \n    \"fileuploadpanel_19\", \n    \"fileuploadpanel_8\", \n    \"fileuploadpanel_20\", \n    \"fileuploadpanel_21\", \n    \"fileuploadpanel_22\", \n    \"fileuploadpanel_23\", \n    \"fileuploadpanel_24\", \n    \"fileuploadpanel_25\", \n    \"fileuploadpanel_26\", \n    \"fileuploadpanel_27\", \n    \"fileuploadpanel_28\", \n    \"fileuploadpanel_29\", \n    \"fileuploadpanel_30\", \n    \"fileuploadpanel_31\", \n    \"fileuploadpanel_32\", \n    \"fileuploadpanel_33\", \n    \"fileuploadpanel_34\", \n    \"fileuploadpanel_35\", \n    \"fileuploadpanel_39\", \n    \"fileuploadpanel_36\", \n    \"fileuploadpanel_37\", \n    \"fileuploadpanel_38\", \n    \"fileuploadpanel_9\", \n    \"fileuploadpanel_10\", \n    \"fileuploadpanel_11\", \n    \"fileuploadpanel_12\", \n    \"fileuploadpanel_13\", \n    \"fileuploadpanel_14\", \n    \"fileuploadpanel_15\", \n    \"fileuploadpanel_16\", \n    \"fileuploadpanel_17\", \n    \"fileuploadpanel_40\", \n    \"fileuploadpanel_41\", \n    \"fileuploadpanel_42\"\n]);\n\nlet lifesituation_2 = new Lifesituation([\n    \"lifesituations_0\", \n    \"lifesituations_1\", \n    \"lifesituations_2\", \n    \"lifesituations_3\", \n    \"lifesituations_4\", \n    \"lifesituations_5\", \n    \"lifesituations_6\", \n    \"lifesituations_7\", \n    \"lifesituations_8\", \n    \"lifesituations_9\", \n    \"lifesituations_10\", \n    \"lifesituations_11\", \n    \"lifesituations_12\", \n    \"lifesituations_13\", \n    \"lifesituations_14\", \n    \"lifesituations_15\", \n    \"lifesituations_16\", \n    \"lifesituations_20\", \n    \"lifesituations_21\", \n    \"lifesituations_22\", \n    \"lifesituations_23\", \n    \"lifesituations_24\", \n    \"lifesituations_25\", \n    \"lifesituations_27\", \n    \"lifesituations_28\",\n    \"LoadStatement\",\n    \"fileuploadpanel_1\"\n]);\n\nlet lifesituation_3 = new Lifesituation([\n    \"lifesituations_0\", \n    \"lifesituations_1\", \n    \"lifesituations_2\", \n    \"lifesituations_3\", \n    \"lifesituations_4\", \n    \"lifesituations_5\", \n    \"lifesituations_6\", \n    \"lifesituations_7\", \n    \"lifesituations_8\", \n    \"lifesituations_9\", \n    \"lifesituations_10\", \n    \"lifesituations_11\", \n    \"lifesituations_12\", \n    \"lifesituations_13\", \n    \"lifesituations_14\", \n    \"lifesituations_15\", \n    \"lifesituations_16\", \n    \"lifesituations_18\",\n    \"LoadStatement\",\n    \"fileuploadpanel_1\"\n]);\n\nif (findFormField('lifesituation').getValue() == 'предоставление выплаты') {\n\thideAll(['lifesituation']);\n\tlifesituation_1.show();\n}\nelse if (findFormField('lifesituation').getValue() == 'внесение изменений в сведения') {\n\thideAll(['lifesituation']);\n\tlifesituation_2.show();\n}\nelse if (findFormField('lifesituation').getValue() == 'прекращение выплаты') {\n\thideAll(['lifesituation']);\n\tlifesituation_3.show();\n} else {\n\thideAll(['lifesituation']);\n}"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"color:green\"><b> -> 1 РАЗДЕЛ",
+        "name": "field_48",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о заявителе",
+        "name": "fieldset_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "lastname",
+        "scripts": [
+            "var combobox_0 = Ext.ComponentQuery.query('[name=combobox_0]')[0];\n\nif (combobox_0.getValue() == null) {\n\tcombobox_0.setValue(\"единовременное пособие при рождении ребенка\");\n} else { console.log(combobox_0.getValue()); }"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "firstname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "middlename"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "СНИЛС",
+        "name": "textfield_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "snils"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Принадлежность к гражданству",
+        "name": "textfield_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "citizenship"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер полиса ОМС",
+        "name": "textfield_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "datefield_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "birthdate"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес места жительства",
+        "id": "residenceAddress",
+        "itemId": "residenceAddress",
+        "emptyText": "Адрес не заполнен",
+        "tabIndex": -1,
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "name": "residenceAddress",
+        "strategy": "адрес места жительства"
+    },
+    {
+        "xtype": "KLADR",
+        "name": "residenceAddressKladr",
+        "id": "residenceAddressKladr",
+        "strategy": "residenceAddressKladrFullAddrJson",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "logic": "\nvar residenceAddrKladr = Ext.getCmp(\"residenceAddressKladr\");\nvar residenceAddr = Ext.getCmp(\"residenceAddress\");\nvar listener = function(newValue){residenceAddr.setValue(newValue);\n};\nresidenceAddrKladr.initialConfig.listeners = {change : function(field,newValue){listener(newValue);}};\n"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер телефона",
+        "name": "textfield_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "person_mobile"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес электронной почты",
+        "name": "textfield_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "почт"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Вид пособия",
+        "name": "combobox_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "пособие по беременности и родам"
+                },
+                {
+                    "value": "единовременное пособие при рождении ребенка"
+                },
+                {
+                    "value": "единовременное пособие при передаче ребенка на воспитание в семью"
+                },
+                {
+                    "value": "ежемесячное пособие по уходу за ребенком"
+                },
+                {
+                    "value": "единовременное пособие беременной жене военнослужащего, проходящего военную службу по призыву"
+                },
+                {
+                    "value": "ежемесячное пособие на ребенка военнослужащего, проходящего военную службу по призыву"
+                }
+            ],
+            "type": "store"
+        }
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Обучение по очной форме",
+        "name": "checkbox_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Сведения о профессиональной образовательной организации высшего образования, образовательной организации дополнительного профессионального образования или научной организации",
+        "name": "textfield_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "description": "(указать наименование организации)"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "ДОКУМЕНТ, УДОСТОВЕРЯЮЩИЙ ЛИЧНОСТЬ ЗАЯВИТЕЛЯ",
+        "name": "fieldset_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Тип документа",
+        "name": "combobox_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "specialConfig": "documentType",
+        "store": null,
+        "queryMode": null,
+        "displayField": null,
+        "valueField": null
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия документа",
+        "name": "textfield_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docseries"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер документа",
+        "name": "textfield_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docnumber"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "textfield_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issueorg"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Код подразделения",
+        "name": "textfield_32",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "passportdepcode"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "datefield_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issuedate"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"color:green\"><b> -> 2 РАЗДЕЛ - ПРЕДСТАВИТЕЛЬ",
+        "name": "field_49",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"color:green\"><b> -> 3 РАЗДЕЛ",
+        "name": "field_50",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о втором родителе ребёнка",
+        "name": "fieldset_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "СНИЛС",
+        "name": "textfield_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "datefield_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"color:green\"><b> -> 4 РАЗДЕЛ",
+        "name": "field_51",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения об отце ребенка",
+        "name": "fieldset_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "textfield_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "textfield_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "textfield_20",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "СНИЛС",
+        "name": "textfield_21",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "datefield_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Дополнительные сведения",
+        "name": "fieldset_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование воинской части, в которой проходит служба по призыву",
+        "name": "textfield_22",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование военного комиссариата по месту призыва (в случае если военная служба окончена)",
+        "name": "textfield_23",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование военной профессиональной образовательной организации или военной образовательной организации высшего образования, в которой проходит обучение",
+        "name": "textfield_24",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"color:green\"><b> -> 5 РАЗДЕЛ",
+        "name": "field_52",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о детях заявителя",
+        "name": "fieldset_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneablePanel_0",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Заголовок"
+            },
+            {
+                "name": "textfield_25",
+                "xtype": "textfield",
+                "fieldLabel": "Фамилия",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"declarant_representative_authorityConfirmDocument\"]}]}]}"
+            },
+            {
+                "name": "textfield_26",
+                "xtype": "textfield",
+                "fieldLabel": "Имя",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"declarant_representative_authorityConfirmDocument\"]}]}]}"
+            },
+            {
+                "name": "textfield_27",
+                "xtype": "textfield",
+                "fieldLabel": "Отчество",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"declarant_representative_authorityConfirmDocument\"]}]}]}"
+            },
+            {
+                "name": "textfield_28",
+                "xtype": "textfield",
+                "fieldLabel": "СНИЛС",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"declarant_representative_authorityConfirmDocument\"]}]}]}"
+            },
+            {
+                "name": "datefield_4",
+                "xtype": "datefield",
+                "fieldLabel": "Дата рождения",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "name": "checkbox_1",
+                "xtype": "checkbox",
+                "boxLabel": "Ребенок находится на полном государственном обеспечении",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"declarant_representative_authorityConfirmDocument\"]}]}]}"
+            },
+            {
+                "name": "combobox_2",
+                "xtype": "combobox",
+                "fieldLabel": "Заявитель является для ребенка",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false,
+                "queryMode": "local",
+                "displayField": "value",
+                "valueField": "value",
+                "store": {
+                    "fields": [
+                        "value"
+                    ],
+                    "data": [
+                        {
+                            "value": "мать"
+                        },
+                        {
+                            "value": "отец"
+                        },
+                        {
+                            "value": "опекун (попечитель)"
+                        },
+                        {
+                            "value": "усыновитель"
+                        },
+                        {
+                            "value": "приемный родитель"
+                        },
+                        {
+                            "value": "другой родственник"
+                        }
+                    ],
+                    "type": "store"
+                },
+                "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"declarant_representative_authorityConfirmDocument\"]}]}]}"
+            }
+        ],
+        "prefix": "cloneablePanel_0",
+        "fieldName": "cloneablePanel_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"color:green\"><b> -> 6 РАЗДЕЛ",
+        "name": "field_53",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения для осуществления доставки пособия",
+        "name": "fieldset_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"font-weight: bold; color: green\"> -> ОБРАБОТЧИК НИЖЕ",
+        "name": "fieldset_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Способ доставки пособия",
+        "name": "combobox_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "через организацию почтовой связи"
+                },
+                {
+                    "value": "путем зачисления на счет заявителя"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "var item = findFormField('combobox_3').getValue();\n\nif (item == \"путем зачисления на счет заявителя\") { // Путем зачисления на счет заявителя\n\taddVisible(findFormField('textfield_29')); // наименование кр. орг. или БИК кр. орг.\n\taddVisible(findFormField('textfield_30')); // Корреспондентский счёт\n\taddVisible(findFormField('textfield_31')); // Счет заявителя\n\t\n\tremoveVisible(findFormField('combobox_4'));\n} \nif (item == \"через организацию почтовой связи\") {\n\tremoveVisible(findFormField('textfield_29')); // наименование кр. орг. или БИК кр. орг.\n\tremoveVisible(findFormField('textfield_30')); // Корреспондентский счёт\n\tremoveVisible(findFormField('textfield_31')); // Счет заявителя\n\n\taddVisible(findFormField('combobox_4')); // Получение\n}"
+        ]
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Счет заявителя",
+        "name": "textfield_31",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование кредитной организации или БИК кредитной организации",
+        "name": "textfield_29",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Корреспондентский счет",
+        "name": "textfield_30",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Получение",
+        "name": "combobox_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "на дому"
+                },
+                {
+                    "value": "в кассе"
+                }
+            ],
+            "type": "store"
+        }
+    },
+    {
+        "xtype": "fieldset",
+        "title": "получение результата в ОГВ",
+        "name": "fieldset_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Заявление",
+        "fieldName": "LoadStatement",
+        "name": "LoadStatement",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "documentCharacterIdDef": 26879376,
+        "documentCharacterNameDef": "Скан-копия",
+        "allowBlank": false
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документ, удостоверяющий личность",
+        "fieldName": "fileuploadpanel_1",
+        "name": "fileuploadpanel_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "documentCharacterIdDef": 26879376,
+        "documentCharacterNameDef": "Скан-копия"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о рождении ребенка",
+        "fieldName": "file_2",
+        "name": "fileuploadpanel_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (скан если заявитель предоставил документ)\n<br>\nОбязательный документ если регистрация произведена компетентными органами иностранных государств  (предоставляются оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о смерти матери ребенка",
+        "fieldName": "file_3",
+        "name": "fileuploadpanel_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (скан если заявитель предоставил документ)\n<br>\nОбязательный документ если регистрация произведена компетентными органами иностранных государств  (предоставляются оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о законных представителях (опекунах) ребенка",
+        "fieldName": "file_4",
+        "name": "fileuploadpanel_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (скан если заявитель предоставил документ)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о лишении матери родительских прав (об ограничении в родительских правах), признании ее недееспособной (ограниченно дееспособной)",
+        "fieldName": "file_5",
+        "name": "fileuploadpanel_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (скан если заявитель предоставил документ)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о признании матери безвестно отсутствующей или умершей",
+        "fieldName": "file_6",
+        "name": "fileuploadpanel_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ до 31.12.2022"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения, подтверждающие нахождение матери ребенка под стражей или отбывание ими наказания в виде лишения свободы",
+        "fieldName": "file_7",
+        "name": "fileuploadpanel_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (скан если заявитель предоставил документ)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие невозможность матери ухаживать за ребенком по состоянию здоровья",
+        "fieldName": "file_8",
+        "name": "fileuploadpanel_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ при наличии соответствующих обстоятельств"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о прохождении отца ребенка военной службы по призыву",
+        "fieldName": "file_9",
+        "name": "fileuploadpanel_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ до 31.12.2022"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о регистрации по месту жительства и месту пребывания гражданина РФ в пределах РФ",
+        "fieldName": "file_10",
+        "name": "fileuploadpanel_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (скан если заявитель предоставил документ)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о выдаче иностранному гражданину или лицу без гражданства вида на жительство (разрешения на временное проживание)",
+        "fieldName": "file_11",
+        "name": "fileuploadpanel_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ (скан если заявитель предоставил документ)"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о регистрации (о постановке на учет по месту пребывания) иностранного гражданина или лица без гражданства по месту жительства",
+        "fieldName": "file_12",
+        "name": "fileuploadpanel_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ до 31.12.2022"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о выдаче иностранному гражданину или лицу без гражданства удостоверения беженца",
+        "fieldName": "file_13",
+        "name": "fileuploadpanel_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ до 31.12.2022"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Документы, подтверждающие изменение персональных данных заявителя в случае необходимости подтверждения родственных отношений с детьми (например, свидетельство о перемене фамилии (имени, отчества), справки компетентных органов (должностных лиц) иностранных государств",
+        "fieldName": "file_14",
+        "name": "fileuploadpanel_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": ""
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"font-weight: bold; color: green\"> -> lifesituations",
+        "name": "fieldset_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о заявителе",
+        "name": "lifesituations_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "lifesituations_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "lastname",
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "lifesituations_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "firstname",
+        "hidden": false,
+        "disabled": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "lifesituations_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "middlename",
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "СНИЛС",
+        "name": "lifesituations_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "snils",
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата рождения",
+        "name": "lifesituations_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "birthdate",
+        "hidden": false
+    },
+    {
+        "xtype": "KLADR",
+        "fieldLabel": "Адрес места жительства",
+        "name": "lifesituations_6",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "strategy": "residenceAddressKladrFullAddrJson",
+        "allowBlank": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Место рождения",
+        "name": "lifesituations_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер телефона",
+        "name": "lifesituations_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "person_mobile",
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Адрес электронной почты",
+        "name": "lifesituations_9",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "почт",
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "ДОКУМЕНТ, УДОСТОВЕРЯЮЩИЙ ЛИЧНОСТЬ ЗАЯВИТЕЛЯ",
+        "name": "lifesituations_10",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Тип документа",
+        "name": "lifesituations_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "specialConfig": "documentType",
+        "store": null,
+        "queryMode": null,
+        "displayField": null,
+        "valueField": null,
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия документа",
+        "name": "lifesituations_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docseries",
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер документа",
+        "name": "lifesituations_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "docnumber",
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "lifesituations_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issueorg",
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Код подразделения",
+        "name": "lifesituations_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "passportdepcode",
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "lifesituations_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "issuedate",
+        "hidden": false
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Представитель",
+        "name": "lifesituations_36",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "законный представитель несовершеннолетнего или недееспособного лица"
+                },
+                {
+                    "value": "организация, на которую возложено исполнение обязанностей опекуна или попечителя"
+                },
+                {
+                    "value": "доверенное лицо"
+                }
+            ],
+            "type": "store"
+        },
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"color: green; font-weight: bold\"> -> Прекращение выплаты",
+        "name": "lifesituations_17",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textarea",
+        "fieldLabel": "Причины прекращения выплаты пособия",
+        "name": "lifesituations_18",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "fieldset",
+        "title": "<span style=\"color: green; font-weight: bold\"> -> Изменение сведений",
+        "name": "lifesituations_19",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Изменились фамилия, имя, или отчество",
+        "name": "lifesituations_20",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Изменились данные документа, удостоверяющего личность",
+        "name": "lifesituations_21",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Изменился адрес места жительства",
+        "name": "lifesituations_22",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Запросить выплатное дело для постановки на учет в территориальном органе ПФР по новому месту жительства",
+        "name": "lifesituations_23",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Изменились данные документа, подтверждающего полномочия представителя получателя меры социальной поддержки",
+        "name": "lifesituations_24",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Другое",
+        "name": "lifesituations_25",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "scripts": [
+            "var lifesituations_25 = Ext.ComponentQuery.query('[name=lifesituations_25]')[0];\nvar lifesituations_26 = Ext.ComponentQuery.query('[name=lifesituations_26]')[0];\n\nif (lifesituations_25.checked == true) {\n    addVisible(lifesituations_26);\n} else {\n    removeVisible(lifesituations_26);\n}"
+        ],
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Указать другие сведения",
+        "name": "lifesituations_26",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": true,
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Изменился представитель получателя меры социальной поддержки ",
+        "name": "lifesituations_27",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Изменились сведения для доставки меры социальной поддержки",
+        "name": "lifesituations_28",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "scripts": [
+            "var lifesituations_28 = Ext.ComponentQuery.query('[name=lifesituations_28]')[0];\nvar lifesituations_29 = Ext.ComponentQuery.query('[name=lifesituations_29]')[0];\n\nif (lifesituations_28.checked == true) {\n    addVisible(lifesituations_29);\n} else {\n    removeVisible(lifesituations_29);\n}"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Способ доставки",
+        "name": "lifesituations_29",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "на счёт"
+                },
+                {
+                    "value": "через организацию почтовой связи"
+                },
+                {
+                    "value": "через иную организацию, осуществляющую доставку"
+                }
+            ],
+            "type": "store"
+        },
+        "scripts": [
+            "function hideAll(exceptions) {\n    Ext.ComponentQuery.query('[xtype]').forEach(field => {\n        if (typeof field.isSoleField != 'undefined' && !field.name.includes('[')) {\n    \t    let remove = true;\n\t    exceptions.forEach(exception => { \n\t\tif (field.name == exception) {\n\t\t\tremove = false;\n\t\t}\n\t    });\n            if (remove) { removeVisible(findFormField(field.name)) }\n        }\n    })\n    let files = [];\n    Ext.getCmp('fileUploadGrid').getStore().getRange().forEach(constructor => {\n        files.push(constructor.data.fieldName);\n    })\n    if (files.length > 0) {\n\t    FileUploadGrid.setUploadVisibility([], files);\n    }\n}\n\nclass Lifesituation { \n  constructor(list) {\n    this.list = list;\n  }\n  show()  {\n    let files = [];\n    this.list.forEach(id => {\n\tconsole.log(id);\n    \tif (findFormField(id)) {\n      \taddVisible(findFormField(id));\n      } else {\n\tfiles.push(id)\n      }\n    });\n    if (files.length > 0) {\n\t    FileUploadGrid.setUploadVisibility(files, []);\n    }\n  }\n  hide()  {\n    let files = [];\n    this.list.forEach(id => {\n\tconsole.log(id);\n    \tif (findFormField(id)) {\n      \tremoveVisible(findFormField(id));\n      } else {\n\tfiles.push(id)\n      }\n    });\n    if (files.length > 0) {\n\t    FileUploadGrid.setUploadVisibility([], files);\n    }\n  }\n}\n\nlet delivery_1 = new Lifesituation([\n    \"lifesituations_30\", \n    \"lifesituations_31\", \n    \"lifesituations_32\", \n    \"lifesituations_33\"\n]);\n\nlet delivery_2 = new Lifesituation([\n    \"lifesituations_34\"\n]);\n\nlet delivery_3 = new Lifesituation([\n    \"lifesituations_35\"\n]);\n\nif (findFormField('lifesituations_29').getValue() == 'на счёт') {\n        delivery_2.hide();\n        delivery_3.hide();\n\t    delivery_1.show();\n}\nelse if (findFormField('lifesituations_29').getValue() == 'через организацию почтовой связи') {\n        delivery_1.hide();\n        delivery_3.hide();\n\t    delivery_2.show();\n}\nelse if (findFormField('lifesituations_29').getValue() == 'через иную организацию, осуществляющую доставку') {\n        delivery_1.hide();\n        delivery_2.hide();\n\t    delivery_3.show();\n} else {\n        delivery_1.hide();\n        delivery_2.hide();\n        delivery_3.hide();\n}"
+        ],
+        "hidden": true,
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "На счёт",
+        "name": "lifesituations_30",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "получателя меры социальной поддержки"
+                },
+                {
+                    "value": "законного представителя"
+                }
+            ],
+            "type": "store"
+        },
+        "hidden": true,
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер счёта",
+        "name": "lifesituations_31",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": true,
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование кредитной организации",
+        "name": "lifesituations_32",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": true,
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "БИК кредитной организации",
+        "name": "lifesituations_33",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": true,
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Через организацию почтовой связи",
+        "name": "lifesituations_34",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "путем вручения на дому"
+                },
+                {
+                    "value": "путем вручения на кассе"
+                }
+            ],
+            "type": "store"
+        },
+        "hidden": true,
+        "disabled": true,
+        "scripts": [
+            "var lifesituations_34 = Ext.ComponentQuery.query('[name=lifesituations_34]')[0];\nvar lifesituations_35 = Ext.ComponentQuery.query('[name=lifesituations_35]')[0];\n\nif (lifesituations_34.getValue() == 'иную организацию, осуществляющую доставку') {\n    addVisible(lifesituations_35)\n} else {\n    removeVisible(lifesituations_35)\n}"
+        ],
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование иной организации, осуществляющей доставку",
+        "name": "lifesituations_35",
+        "isPersonField": true,
+        "isSoleField": true,
+        "isLegalField": true,
+        "hidden": true,
+        "disabled": true,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"},{\"name\":\"lifesituation\",\"value\":\"внесение изменений в сведения;прекращение выплаты\",\"xtypeCondition\":\"combobox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"lifesituations_36\"]}]}]}"
+    }
+]

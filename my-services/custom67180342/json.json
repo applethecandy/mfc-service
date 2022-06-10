@@ -850,7 +850,8 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": ""
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ, скан если заявитель предоставил документ  "
     },
     {
         "xtype": "fileuploadpanel",
@@ -860,7 +861,8 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": ""
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ, скан если заявитель предоставил документ  "
     },
     {
         "xtype": "fileuploadpanel",
@@ -870,7 +872,8 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": ""
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ, скан если заявитель предоставил документ  "
     },
     {
         "xtype": "fileuploadpanel",
@@ -880,7 +883,8 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": ""
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ, скан если заявитель предоставил документ.  В случае если регистрация рождения ребенка (детей) произведена компетентными органами иностранных государств,  предоставляются оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке"
     },
     {
         "xtype": "fileuploadpanel",
@@ -890,7 +894,8 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": ""
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ, скан если заявитель предоставил документ. В случае если регистрация рождения произведена компетентными органами иностранных государств,  предоставляются оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке"
     },
     {
         "xtype": "fileuploadpanel",
@@ -900,7 +905,8 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": ""
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ, скан если заявитель предоставил документ  "
     },
     {
         "xtype": "fileuploadpanel",
@@ -910,7 +916,8 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": ""
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ, скан если заявитель предоставил документ  "
     },
     {
         "xtype": "fileuploadpanel",
@@ -920,7 +927,8 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": ""
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ, скан если заявитель предоставил документ  "
     },
     {
         "xtype": "fileuploadpanel",
@@ -930,7 +938,8 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": ""
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
     },
     {
         "xtype": "fileuploadpanel",
@@ -940,7 +949,8 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": ""
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ, скан если заявитель предоставил документ  "
     },
     {
         "xtype": "fileuploadpanel",
@@ -950,7 +960,8 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": ""
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
     },
     {
         "xtype": "fileuploadpanel",
@@ -960,7 +971,8 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": ""
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ (при наличии соответствующих обстоятельств)"
     },
     {
         "xtype": "fileuploadpanel",
@@ -970,7 +982,8 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": ""
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ, скан если заявитель предоставил документ  "
     },
     {
         "xtype": "fileuploadpanel",
@@ -980,7 +993,8 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": ""
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ, скан если заявитель предоставил документ  "
     },
     {
         "xtype": "checkbox",

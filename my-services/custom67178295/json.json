@@ -26,7 +26,7 @@
         "isLegalField": false,
         "strategy": "lastname",
         "scripts": [
-            "// var combobox_0 = Ext.ComponentQuery.query('[name=combobox_0]')[0];\n\n// if (combobox_0.getValue() == null) {\n// \tcombobox_0.setValue(\"единовременное пособие при рождении ребенка\");\n// } else { console.log(combobox_0.getValue()); }"
+            "// var combobox_0 = Ext.ComponentQuery.query('[name=combobox_0]')[0];\n\n// if (combobox_0.getValue() == null) {\n// \tcombobox_0.setValue(\"единовременное пособие при передаче ребенка на воспитание в семью\");\n// } else { console.log(combobox_0.getValue()); }"
         ]
     },
     {

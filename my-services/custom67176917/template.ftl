@@ -1,5 +1,3 @@
-<!-- # lifesituation -> предоставление выплаты # -->
-
 <style>
 
 .boxes smallbox {

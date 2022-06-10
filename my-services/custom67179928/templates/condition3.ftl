@@ -2244,7 +2244,7 @@ ${form.doc7_1_4!''}
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
-                <smallbox>${form.combobox_0?contains("супруга")?then("V", "")}</smallbox>
+                <smallbox>${form.field_93?contains("супруга")?then("V", "")}</smallbox>
                 <span>
                     Супруг/супруга
                 </span>
@@ -2270,13 +2270,13 @@ ${form.doc7_1_4!''}
                             Серия, номер
                         </td>
                         <td class="center">
-${form.combobox_0?contains("супруга")?then(form.doc7_2_2, "")} ${form.combobox_0?contains("супруга")?then(form.doc7_2_3, "")}
+${form.field_93?contains("супруга")?then(form.doc7_2_2, "")} ${form.field_93?contains("супруга")?then(form.doc7_2_3, "")}
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
- ${form.combobox_0?contains("супруга")?then(form.doc7_2_6, "")}
+ ${form.field_93?contains("супруга")?then(form.doc7_2_6, "")}
                         </td>
                     </tr>
                     <tr>
@@ -2284,7 +2284,7 @@ ${form.combobox_0?contains("супруга")?then(form.doc7_2_2, "")} ${form.com
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
- ${form.combobox_0?contains("супруга")?then(form.doc7_2_4, "")}
+ ${form.field_93?contains("супруга")?then(form.doc7_2_4, "")}
                         </td>
                     </tr>
                 </table>
@@ -2305,7 +2305,7 @@ ${form.combobox_0?contains("супруга")?then(form.doc7_2_2, "")} ${form.com
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
-                <smallbox>${form.combobox_0?contains("Родитель")?then("V", "")}</smallbox>
+                <smallbox>${form.field_93?contains("Родитель")?then("V", "")}</smallbox>
                 <span>
                     Родитель
                 </span>
@@ -2333,13 +2333,13 @@ ${form.combobox_0?contains("супруга")?then(form.doc7_2_2, "")} ${form.com
                             Серия, номер
                         </td>
                         <td class="center">
-${form.combobox_0?contains("Родитель")?then(form.doc7_3_2, "")} ${form.combobox_0?contains("Родитель")?then(form.doc7_3_3, "")}
+${form.field_93?contains("Родитель")?then(form.doc7_3_2, "")} ${form.field_93?contains("Родитель")?then(form.doc7_3_3, "")}
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-${form.combobox_0?contains("Родитель")?then(form.doc7_3_6, "")}
+${form.field_93?contains("Родитель")?then(form.doc7_3_6, "")}
                         </td>
                     </tr>
                     <tr>
@@ -2347,7 +2347,7 @@ ${form.combobox_0?contains("Родитель")?then(form.doc7_3_6, "")}
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-${form.combobox_0?contains("Родитель")?then(form.doc7_3_4, "")}
+${form.field_93?contains("Родитель")?then(form.doc7_3_4, "")}
                         </td>
                     </tr>
                 </table>
@@ -2368,7 +2368,7 @@ ${form.combobox_0?contains("Родитель")?then(form.doc7_3_4, "")}
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
-                <smallbox>${form.combobox_0?contains("дочь")?then("V", "")}</smallbox>
+                <smallbox>${form.field_93?contains("дочь")?then("V", "")}</smallbox>
                 <span>
                     Сын/дочь
                 </span>
@@ -2396,13 +2396,13 @@ ${form.combobox_0?contains("Родитель")?then(form.doc7_3_4, "")}
                             Серия, номер
                         </td>
                         <td class="center">
-${form.combobox_0?contains("дочь")?then(form.doc7_4_2, "")} ${form.combobox_0?contains("дочь")?then(form.doc7_4_3, "")}
+${form.field_93?contains("дочь")?then(form.doc7_4_2, "")} ${form.field_93?contains("дочь")?then(form.doc7_4_3, "")}
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-${form.combobox_0?contains("дочь")?then(form.doc7_4_6, "")}
+${form.field_93?contains("дочь")?then(form.doc7_4_6, "")}
                         </td>
                     </tr>
                     <tr>
@@ -2410,7 +2410,7 @@ ${form.combobox_0?contains("дочь")?then(form.doc7_4_6, "")}
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-${form.combobox_0?contains("дочь")?then(form.doc7_4_4, "")}
+${form.field_93?contains("дочь")?then(form.doc7_4_4, "")}
                         </td>
                     </tr>
                 </table>

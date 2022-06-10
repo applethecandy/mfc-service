@@ -15,10 +15,7 @@
             ],
             "data": [
                 {
-                    "value": "назначение ежемесячной денежной компенсации инвалиду вследствие военной травмы"
-                },
-                {
-                    "value": "назначение ежемесячной денежной компенсации членам семей"
+                    "value": "предоставление выплаты"
                 },
                 {
                     "value": "внесение изменений в сведения"
@@ -383,9 +380,7 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
-        "hidden": true,
-        "disabled": true
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}"
     },
     {
         "xtype": "datefield",

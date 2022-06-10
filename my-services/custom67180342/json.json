@@ -748,6 +748,217 @@
     },
     {
         "xtype": "fieldset",
+        "title": "Сведения о призыве отца ребенка на военную службу и прохождение им военной службы по призыву",
+        "name": "field_122",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование документа",
+        "name": "doc1_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "doc2_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "doc3_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "doc4_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "doc5_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о смерти",
+        "name": "field_123",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование документа",
+        "name": "doc6_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "doc7_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "doc8_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "doc9_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "doc10_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Признан в установленном порядке безвестно отсутствующим или объявлен умершим",
+        "name": "field_135",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Погиб (умер) при исполнении обязанностей военной службы (вследствие военной травмы)",
+        "name": "field_136",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Являюсь инвалидом с детства (для детей старше 18 лет)",
+        "name": "field_137",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Обучаюсь по очной форме в общеобразовательной организации либо профессиональной образовательной организации или образовательной организации высшего образования (для детей старше 18 лет)",
+        "name": "checkbox_99",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Наименование документа",
+        "name": "doc11_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "doc12_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "doc13_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "doc14_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "doc15_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "hidden": true,
+        "disabled": true
+    },
+    {
+        "xtype": "fieldset",
         "title": "<span class=\"diff_class title-label\"> -> Раздел 7 [услуга custom67179928]",
         "name": "fieldset_c6",
         "isPersonField": false,

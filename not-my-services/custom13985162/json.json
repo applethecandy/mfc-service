@@ -1621,7 +1621,8 @@
         "isLegalField": false,
         "documentCharacterIdDef": 1,
         "documentCharacterNameDef": "Оригинал",
-        "allowBlank": false
+        "allowBlank": false,
+        "scanDocumentWithdraw": ""
     },
     {
         "xtype": "fileuploadpanel",
@@ -1633,7 +1634,8 @@
         "isLegalField": false,
         "allowBlank": false,
         "documentCharacterIdDef": 1,
-        "documentCharacterNameDef": "Оригинал"
+        "documentCharacterNameDef": "Оригинал",
+        "scanDocumentWithdraw": ""
     },
     {
         "xtype": "fileuploadpanel",
@@ -1646,7 +1648,8 @@
         "allowBlank": false,
         "documentCharacterIdDef": 1,
         "documentCharacterNameDef": "Оригинал",
-        "description": "(для лица старше 18 лет, не являющегося заявителем)"
+        "description": "(для лица старше 18 лет, не являющегося заявителем)",
+        "scanDocumentWithdraw": ""
     },
     {
         "xtype": "fileuploadpanel",
@@ -1656,230 +1659,172 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "allowBlank": false
-    },
-    {
-        "xtype": "fileuploadpanel",
-        "text": "Свидетельство о рождении (усыновлении) ребенка (детей)",
-        "fieldName": "fileuploadpanel_2",
-        "name": "fileuploadpanel_2",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false,
         "allowBlank": false,
-        "description": "(документ, подтверждающий факт рождения и регистрации ребенка, выданный компетентным органом иностранного государства + перевод на русский язык)"
+        "scanDocumentWithdraw": ""
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "\t Выписка из решения органа опеки и попечительства об установлении над ребенком опеки",
-        "fieldName": "fileuploadpanel_3",
-        "name": "fileuploadpanel_3",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "fileuploadpanel",
-        "text": "Свидетельство о расторжении брака",
-        "fieldName": "fileuploadpanel_4",
+        "text": "Сведения о рождении ребенка",
+        "fieldName": "file_4",
         "name": "fileuploadpanel_4",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ в случае если регистрации записи соответствующего акта произведена  компетентным органом иностранного государства"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Решение суда о расторжении брака",
-        "fieldName": "fileuploadpanel_5",
+        "text": "Сведения, содержащиеся в решении органа опеки и попечительства об установлении опеки над ребенком",
+        "fieldName": "file_5",
         "name": "fileuploadpanel_5",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ. Скан если заявитель предоставил документ"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Свидетельство о заключении брака",
-        "fieldName": "fileuploadpanel_6",
+        "text": "Сведения о смерти члена семьи",
+        "fieldName": "file_6",
         "name": "fileuploadpanel_6",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ в случае если регистрации записи соответствующего акта произведена  компетентным органом иностранного государства"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Справка из военного комиссариата о призыве родителя (супруга родителя) на военную службу",
-        "fieldName": "fileuploadpanel_7",
+        "text": "Сведения о заключении (расторжении) брака",
+        "fieldName": "file_7",
         "name": "fileuploadpanel_7",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ в случае если регистрации записи соответствующего акта произведена  компетентным органом иностранного государства"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Документ, подтверждающий реквизиты счета в кредитной организации, открытого на заявителя",
-        "fieldName": "fileuploadpanel_8",
+        "text": "Сведения о вознаграждении за выполнение трудовых или иных обязанностей, включая выплаты стимулирующего характера, вознаграждении за выполненную работу, оказанную услугу, совершение действия в рамках гражданско-правового договора",
+        "fieldName": "file_8",
         "name": "fileuploadpanel_8",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "description": "(договор банковского вклада (счета), справка кредитной организации о реквизитах счета или другие документы, содержащие сведения о реквизитах счета)"
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ. Скан если заявитель предоставил документ"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Документы, подтверждающие приобретение несовершеннолетним ребенком дееспособности в полном объеме до достижения совершеннолетия",
-        "fieldName": "fileuploadpanel_9",
+        "text": "Сведения о доходах военнослужащих, сотрудников войск национальной гвардии РФ, органов принудительного исполнения РФ, таможенных органов РФ, Главного управления специальных программ Президента РФ",
+        "fieldName": "file_9",
         "name": "fileuploadpanel_9",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "description": "(свидетельство о браке, решение органа опеки и попечительства или решение суда об объявлении несовершеннолетнего полностью дееспособным), - в случае подачи заявления несовершеннолетним ребенком"
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ. Скан если заявитель предоставил документ"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Справка об осуждении члена семьи заявителя к лишению свободы или о применении в отношении него меры пресечения в виде заключения под стражу",
-        "fieldName": "fileuploadpanel_10",
+        "text": "Сведения о доходах сотрудников учреждений и органов уголовно-исполнительной системы РФ, органов федеральной службы безопасности, органов государственной охраны, органов внутренних дел РФ и других органов, в которых законодательством РФ предусмотрено прохождение федеральной государственной службы, связанной с правоохранительной деятельностью (за исключением военнослужащих, сотрудников войск национальной гвардии РФ, органов принудительного исполнения РФ, таможенных органов РФ, Главного управления специальных программ Президента РФ)",
+        "fieldName": "file_10",
         "name": "fileuploadpanel_10",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "description": "(в случае отбывания наказания в виде лишения свободы указанного лица либо применения в отношении указанного лица меры пресечения в виде заключения под стражу)"
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ при наличии соответствующих обстоятельств"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Решение суда о нахождении члена семьи заявителя на принудительном лечении",
-        "fieldName": "fileuploadpanel_11",
+        "text": "Сведения о суммах пенсии, пособий и иных аналогичных выплат, в том числе выплат по обязательному социальному страхованию и выплат компенсационного характера, полученных в соответствии с законодательством РФ и (или) законодательством субъекта РФ",
+        "fieldName": "file_11",
         "name": "fileuploadpanel_11",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ. Скан если заявитель предоставил документ"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Решение суда о лишении родительских прав члена семьи заявителя",
-        "fieldName": "fileuploadpanel_12",
+        "text": "Сведения о размере пенсии, получаемой лицами, проходящими (проходившими) военную службу, службу в учреждениях и органах уголовно-исполнительной системы РФ, органах ФСБ, органах государственной охраны, органах внутренних дел РФ, таможенных органах РФ, войсках национальной гвардии РФ, органах принудительного исполнения РФ, Главном управлении специальных программ Президента РФ",
+        "fieldName": "file_12",
         "name": "fileuploadpanel_12",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ при наличии соответствующих обстоятельств"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения о нахождении члена семьи заявителя на полном государственном обеспечении",
-        "fieldName": "fileuploadpanel_13",
+        "text": "Сведения о выплатах правопреемникам умерших застрахованных лиц в случаях, предусмотренных законодательством РФ об обязательном пенсионном страховании",
+        "fieldName": "file_13",
         "name": "fileuploadpanel_13",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ. Скан если заявитель предоставил документ"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Решение суда и иные документы, содержащие сведения об объявлении члена семьи умершим, о признании безвозвратно отсутствующим",
-        "fieldName": "fileuploadpanel_14",
+        "text": "Сведения о пребывании в местах лишения свободы членов семьи заявителя",
+        "fieldName": "file_14",
         "name": "fileuploadpanel_14",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ. Скан если заявитель предоставил документ"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Решение суда об отмене решения суда об объявлении гражданина умершим, о признании его безвозвратно отсутствующим, или о лишении его родительских прав",
-        "fieldName": "fileuploadpanel_15",
+        "text": "Сведения о прохождении заявителем и (или) членами его семьи военной службы по призыву, а также о статусе военнослужащего, обучающегося в военной профессиональной организации и военной образовательной организации высшего образования и не заключившего контракт о прохождении военной службы",
+        "fieldName": "file_15",
         "name": "fileuploadpanel_15",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ при наличии соответствующих обстоятельств"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Решение суда о восстановлении в родительских правах",
-        "fieldName": "fileuploadpanel_16",
+        "text": "Сведения о нахождении заявителя и (или) членов его семьи на принудительном лечении по решению суда",
+        "fieldName": "file_16",
         "name": "fileuploadpanel_16",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ при наличии соответствующих обстоятельств"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Справка с места работы (службы, учебы) либо иной документ, подтверждающий доход каждого члена семьи",
-        "fieldName": "fileuploadpanel_17",
+        "text": "Сведения о применении в отношении заявителя и (или) членов его семьи меры пресечения в виде заключения под стражу",
+        "fieldName": "file_17",
         "name": "fileuploadpanel_17",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ при наличии соответствующих обстоятельств"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения о пособиях и выплатах гражданину (члену семьи заявителя) в соответствии с нормативными правовыми актами РФ, нормативными актами субъектов РФ в качестве мер социальной поддержки",
-        "fieldName": "fileuploadpanel_18",
+        "text": "Сведения о размере стипендии, выплачиваемой лицам, обучающимся в профессиональных образовательных организациях и образовательных организациях высшего образования, аспирантам, обучающимся по очной форме по программам подготовки научно-педагогических кадров, докторантам образовательных организаций высшего образования и научных организаций и лицам, обучающимся в духовных образовательных организациях, а также о размерах компенсационных выплат указанным категориям граждан в период их нахождения в академическом отпуске по медицинским показаниям",
+        "fieldName": "file_18",
         "name": "fileuploadpanel_18",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "fileuploadpanel",
-        "text": "Сведения о получении пенсии, компенсационных выплат дополнительного ежемесячного обеспечения пенсионера",
-        "fieldName": "fileuploadpanel_19",
-        "name": "fileuploadpanel_19",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "fileuploadpanel",
-        "text": "Справка (сведения) о выплачиваемых студентам стипендии и иных денежных выплат студентам, аспирантам, ординаторам, ассистентам-стажерам, докторантам, слушателям подготовительных отделений",
-        "fieldName": "fileuploadpanel_20",
-        "name": "fileuploadpanel_20",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "fileuploadpanel",
-        "text": "Справка (сведения) о выплате пособия по безработице",
-        "fieldName": "fileuploadpanel_21",
-        "name": "fileuploadpanel_21",
-        "isPersonField": true,
-        "isSoleField": false,
         "isLegalField": false,
-        "description": "(материальной помощи и иных выплат безработным гражданам, о стипендии и материальной помощи, выплачиваемой гражданам в период прохождения профессионального обучения или получения дополнительного профессионального образования по направлению органов службы занятости; о выплате безработным гражданам, принимающим участие в общественных работах, и безработным гражданам, особо нуждающимся в социальной защите, в период их участия во временных работах, а также о выплате несовершеннолетним гражданам в возрасте от 14 до 18 лет в период их участия во временных работах)"
-    },
-    {
-        "xtype": "fileuploadpanel",
-        "text": "Сведения о ежемесячных страховых выплатах по обязательному социальному страхованию от несчастных случаев на производстве и профессиональных заболеваний",
-        "fieldName": "fileuploadpanel_22",
-        "name": "fileuploadpanel_22",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "fileuploadpanel",
-        "text": "Сведения о получении пособия по временной нетрудоспособности, пособия по беременности и родам, а также единовременного пособия женщинам, вставшим на учет в медицинских организациях в ранние сроки беременности, за счет средств ФСС РФ",
-        "fieldName": "fileuploadpanel_23",
-        "name": "fileuploadpanel_23",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false
-    },
-    {
-        "xtype": "fileuploadpanel",
-        "text": "Документы, подтверждающие смерть женщины, объявление ее умершей, лишение ее родительских прав, отмену усыновления",
-        "fieldName": "fileuploadpanel_24",
-        "name": "fileuploadpanel_24",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false,
-        "description": "(отцам (усыновителям), либо опекунам ребенка, в случае смерти женщины, объявления ее умершей, лишения ее родительских прав, а также в случае отмены усыновления)"
-    },
-    {
-        "xtype": "fileuploadpanel",
-        "text": "Выписка из правового акта органа местного самоуправления о назначении ребенку опекуна (попечителя) (договор о приемной семье и акт органа опеки и попечительства о назначении опекуна или попечителя, удостоверение опекуна",
-        "fieldName": "fileuploadpanel_25",
-        "name": "fileuploadpanel_25",
-        "isPersonField": true,
-        "isSoleField": false,
-        "isLegalField": false,
-        "description": "(гражданам, обратившимися за предоставлением ежемесячной выплаты в связи с рождением (усыновлением) первого ребенка, находящегося под опекой (попечительством))"
+        "scanDocumentWithdraw": "",
+        "description": "Обязательный документ при наличии соответствующих обстоятельств"
     }
 ]

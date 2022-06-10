@@ -789,108 +789,194 @@
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения о регистрации по месту жительства (пребывания) ",
+        "text": "Cведения о регистрации по месту жительства (пребывания)",
         "fieldName": "file_2",
         "name": "fileuploadpanel_2",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Необязательный документ (скан если заявитель предоставил документ)"
+        "description": "Необязательный документ, скан если заявитель предоставил документ  "
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения о призыве отца ребенка на военную службу и прохождение им военной службы по призыву - для детей, указанных в абзаце втором пункта 1 Правил № 481",
+        "text": "Сведения, подтверждающие факт установления инвалидности вследствие военной травмы",
         "fieldName": "file_3",
         "name": "fileuploadpanel_3",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Необязательный документ (скан если заявитель предоставил документ)"
+        "description": "Необязательный документ, скан если заявитель предоставил документ  "
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения, подтверждающие гибель (смерть, признание в установленном порядке безвестно отсутствующим или объявление умершим). Военнослужащего (сотрудника) либо сведения о заключении военно-врачебной комиссии о причинной связи увечья или заболевания, приведших к смерти военнослужащего, с военной травмой",
+        "text": "Сведения, подтверждающие получение военной травмы в период прохождения военной службы (военный билет, справка военного комиссариата, военно-медицинские документы, архивные справки)",
         "fieldName": "file_4",
         "name": "fileuploadpanel_4",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Необязательный документ (скан если заявитель предоставил документ)"
+        "description": "Необязательный документ, скан если заявитель предоставил документ"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения о государственной регистрации смерти (в отношении военнослужащего (сотрудника), лица, умершего вследствие военной травмы после увольнения с военной службы (службы в войсках, органах и учреждениях) ",
+        "text": "Сведения о законных представителях (опекунах, попечителях)",
         "fieldName": "file_5",
         "name": "fileuploadpanel_5",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Необязательный документ (скан если заявитель предоставил документ)"
+        "description": "Необязательный документ, скан если заявитель предоставил документ  "
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения о государственной регистрации рождения ребенка. Необязательный документ (скан если заявитель предоставил документ)",
+        "text": "Сведения, подтверждающие предоставление пенсионного обеспечения ПФ РФ",
         "fieldName": "file_6",
         "name": "fileuploadpanel_6",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Необязательный документ (скан если заявитель предоставил документ) Обязательный документ если регистрация произведена компетентными органами иностранных государств  (предоставляются оригиналы документов, копии документов, верность которых засвидетельствована в установленном порядке)"
+        "description": "Необязательный документ, скан если заявитель предоставил документ"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения о законных представителях (опекунах, попечителях, родителях)",
+        "text": "сведения о регистрации по месту жительства (пребывания)",
         "fieldName": "file_7",
         "name": "fileuploadpanel_7",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": "",
-        "description": "Необязательный документ (скан если заявитель предоставил документ)"
+        "scanDocumentWithdraw": ""
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения, подтверждающие факт установления инвалидности с детства. Для детей старше 18 лет, ставших инвалидами до достижения ими возраста 18 лет",
+        "text": "сведения о государственной регистрации смерти",
         "fieldName": "file_8",
         "name": "fileuploadpanel_8",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": "",
-        "description": "Необязательный документ (скан если заявитель предоставил документ)"
+        "scanDocumentWithdraw": ""
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения о факте обучения по очной форме в общеобразовательной организации либо профессиональной образовательной организации или образовательной организации высшего образования. Для детей достигших 18-летнего возраста, но не более чем до достижения ими возраста 23 лет",
+        "text": "сведения о государственной регистрации заключения брака",
         "fieldName": "file_9",
         "name": "fileuploadpanel_9",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": "",
-        "description": "Обязательный документ при наличии соответствующих обстоятельств."
+        "scanDocumentWithdraw": ""
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения, подтверждающие получение пенсии по случаю потери кормильца в Пенсионном фонде РФ",
+        "text": "сведения о государственной регистрации рождения ребенка",
         "fieldName": "file_10",
         "name": "fileuploadpanel_10",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "scanDocumentWithdraw": "",
-        "description": "Необязательный документ (скан если заявитель предоставил документ)"
+        "scanDocumentWithdraw": ""
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Документы, подтверждающие изменение персональных данных заявителя. В случае необходимости подтверждения родственных отношений с детьми (например, свидетельство о перемене фамилии (имени, отчества), справки компетентных органов (должностных лиц) иностранных государств",
+        "text": "сведения о государственной регистрации рождения военнослужащего (гражданина, призванного на военные сборы, инвалида) - при назначении ежемесячной денежной компенсации родителям",
         "fieldName": "file_11",
         "name": "fileuploadpanel_11",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": ""
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "сведения о законных представителях (опекунах, попечителях, родителях)",
+        "fieldName": "file_12",
+        "name": "fileuploadpanel_12",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": ""
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "сведения, подтверждающие факт установления инвалидности с детства, - для детей старше 18 лет, ставших инвалидами до достижения ими возраста 18 лет",
+        "fieldName": "file_13",
+        "name": "fileuploadpanel_13_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": ""
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "сведения, подтверждающие факт установления инвалидности, - для супруги (супруга), родителей, фактических воспитателей, являющихся инвалидами и не достигших возраста 50 и 55 лет (соответственно женщина и мужчина)",
+        "fieldName": "file_15",
+        "name": "fileuploadpanel_14_new",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": ""
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "сведения о факте обучения по очной форме в общеобразовательной организации либо профессиональной образовательной организации или образовательной организации высшего образования - для детей, достигших 18-летнего возраста, но не более чем до достижения ими возраста 23 лет",
+        "fieldName": "file_16",
+        "name": "fileuploadpanel_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": ""
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "сведения о гибели (смерти) военнослужащего или гражданина, призванного на военные сборы, при исполнении ими обязанностей военной службы либо сведения из заключения военно-врачебной комиссии, подтверждающего, что смерть военнослужащего или гражданина, призванного на военные сборы, наступила вследствие военной травмы",
+        "fieldName": "file_17",
+        "name": "fileuploadpanel_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": ""
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "решение суда о признании безвестно отсутствующим или объявлении умершим военнослужащего (гражданина, призванного на военные сборы), пропавшего без вести при исполнении им обязанностей военной службы",
+        "fieldName": "file_18",
+        "name": "fileuploadpanel_17",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": ""
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "решение суда о признании лица фактически воспитывавшим и содержавшим военнослужащего, гражданина, призванного на военные сборы, или инвалида вследствие военной травмы в течение не менее 5 лет до достижения ими совершеннолетия - для фактического воспитателя",
+        "fieldName": "file_19",
+        "name": "fileuploadpanel_18",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": ""
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "сведения об установлении инвалидности вследствие военной травмы",
+        "fieldName": "file_20",
+        "name": "fileuploadpanel_19",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": ""
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "сведения, подтверждающие получение умершим инвалидом военной травмы в период прохождения военной службы (военный билет, справка военного комиссариата, военно-медицинские документы, архивные справки)",
+        "fieldName": "file_21",
+        "name": "fileuploadpanel_20",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,

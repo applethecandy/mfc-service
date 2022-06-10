@@ -1514,7 +1514,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
-                <smallbox>V</smallbox>
+                <smallbox></smallbox>
                 <span>
                     <u>Компенсационная выплата в связи с расходами по оплате жилых помещений, коммунальных и других видов услуг членам семей погибших (умерших) военнослужащих и сотрудников некоторых федеральных органов исполнительной власти</u>
                 </span>
@@ -2125,7 +2125,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 0em">
-                <smallbox></smallbox>
+                <smallbox>V</smallbox>
                 <span>
                     Ежемесячная денежная компенсация военнослужащим, гражданам, призванным на военные сборы, и членам их семей 
                 </span>
@@ -2138,7 +2138,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
-                <smallbox></smallbox>
+                <smallbox>${form.field_83?has_content?then("V", "")}</smallbox>
                 <span>
                     Являюсь инвалидом вследствие военной травмы<sup>16</sup>;
                 </span>
@@ -2155,11 +2155,11 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
-                <smallbox></smallbox>
+                <smallbox>${form.field_83?has_content?then("V", "")}</smallbox>
                 <span>
                     Военная травма получена в период прохождения военной службы в 
                     <span class="underline in minw150">
-                         
+                         ${form.field_84!''}
                     </span> (выпадающий список силовых органов)
                 </span>
             </td>
@@ -2178,7 +2178,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-
+${form.doc7_1_1!''}
                         </td>
                     </tr>
                     <tr>
@@ -2186,13 +2186,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-
+${form.doc7_1_2!''} ${form.doc7_1_3!''}
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-
+${form.doc7_1_6!''}
                         </td>
                     </tr>
                     <tr>
@@ -2200,7 +2200,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-
+${form.doc7_1_4!''}
                         </td>
                     </tr>
                 </table>
@@ -2213,7 +2213,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
-                <smallbox></smallbox>
+                <smallbox>${form.field_91?has_content?then("V", "")}</smallbox>
                 <span>
                     Получаю пенсию в Пенсионный фонд Российской Федерации
                 </span>
@@ -2226,7 +2226,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 4em">
-                <smallbox></smallbox>
+                <smallbox>${form.field_92?has_content?then("V", "")}</smallbox>
                 <span>
                     Являюсь членом семьи погибшего (умершего)<sup>17</sup>
                 </span>
@@ -2244,7 +2244,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
-                <smallbox></smallbox>
+                <smallbox>${form.combobox_0?contains("супруга")?then("V", "")}</smallbox>
                 <span>
                     Супруг/супруга
                 </span>
@@ -2270,13 +2270,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-
+${form.combobox_0?contains("супруга")?then(form.doc7_2_2, "")} ${form.combobox_0?contains("супруга")?then(form.doc7_2_3, "")}
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-
+ ${form.combobox_0?contains("супруга")?then(form.doc7_2_6, "")}
                         </td>
                     </tr>
                     <tr>
@@ -2284,7 +2284,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-
+ ${form.combobox_0?contains("супруга")?then(form.doc7_2_4, "")}
                         </td>
                     </tr>
                 </table>
@@ -2292,7 +2292,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
-                <smallbox></smallbox>
+                <smallbox>${form.field_95?has_content?then("V", "")}</smallbox>
                 <span>
                     Являюсь инвалидом
                 </span>
@@ -2305,7 +2305,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
-                <smallbox></smallbox>
+                <smallbox>${form.combobox_0?contains("Родитель")?then("V", "")}</smallbox>
                 <span>
                     Родитель
                 </span>
@@ -2333,13 +2333,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-
+${form.combobox_0?contains("Родитель")?then(form.doc7_3_2, "")} ${form.combobox_0?contains("Родитель")?then(form.doc7_3_3, "")}
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-
+${form.combobox_0?contains("Родитель")?then(form.doc7_3_6, "")}
                         </td>
                     </tr>
                     <tr>
@@ -2347,7 +2347,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-
+${form.combobox_0?contains("Родитель")?then(form.doc7_3_4, "")}
                         </td>
                     </tr>
                 </table>
@@ -2355,7 +2355,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
-                <smallbox></smallbox>
+                <smallbox>${form.field_97?has_content?then("V", "")}</smallbox>
                 <span>
                     Являюсь инвалидом
                 </span>
@@ -2368,7 +2368,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
-                <smallbox></smallbox>
+                <smallbox>${form.combobox_0?contains("дочь")?then("V", "")}</smallbox>
                 <span>
                     Сын/дочь
                 </span>
@@ -2396,13 +2396,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-
+${form.combobox_0?contains("дочь")?then(form.doc7_4_2, "")} ${form.combobox_0?contains("дочь")?then(form.doc7_4_3, "")}
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-
+${form.combobox_0?contains("дочь")?then(form.doc7_4_6, "")}
                         </td>
                     </tr>
                     <tr>
@@ -2410,7 +2410,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-
+${form.combobox_0?contains("дочь")?then(form.doc7_4_4, "")}
                         </td>
                     </tr>
                 </table>
@@ -2418,7 +2418,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
-                <smallbox></smallbox>
+                <smallbox>${form.field_99?has_content?then("V", "")}</smallbox>
                 <span>
                     Являюсь инвалидом с детства
                 </span>
@@ -2426,7 +2426,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 6em">
-                <smallbox></smallbox>
+                <smallbox>${form.field_112?has_content?then("V", "")}</smallbox>
                 <span>
                     Обучаюсь по очной форме в общеобразовательной организации либо профессиональной образовательной организации или образовательной организации высшего образования
                 </span>
@@ -2450,7 +2450,7 @@
                             Наименование документа
                         </td>
                         <td colspan="3" class="center">
-
+${form.doc7_5_1!''}
                         </td>
                     </tr>
                     <tr>
@@ -2458,13 +2458,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-
+${form.doc7_5_2!''} ${form.doc7_5_3!''}
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-
+${form.doc7_5_6!''}
                         </td>
                     </tr>
                     <tr>
@@ -2472,7 +2472,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-
+${form.doc7_5_4!''}
                         </td>
                     </tr>
                 </table>
@@ -2485,7 +2485,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 8em">
-                <smallbox></smallbox>
+                <smallbox>${form.field_119?has_content?then("V", "")}</smallbox>
                 <span>
                     Являюсь лицом, фактически воспитавшим и содержавшим военнослужащего:
                 </span>
@@ -2513,13 +2513,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-
+${form.doc7_6_2!''} ${form.doc7_6_3!''}
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-
+${form.doc7_6_6!''}
                         </td>
                     </tr>
                     <tr>
@@ -2527,7 +2527,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-
+${form.doc7_6_4!''}
                         </td>
                     </tr>
                 </table>
@@ -2540,7 +2540,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
-                <smallbox></smallbox>
+                <smallbox>${form.field_91?has_content?then("V", "")}</smallbox>
                 <span>
                     Получаю пенсию в Пенсионный фонд Российской Федерации
                 </span>
@@ -2588,13 +2588,13 @@
                             Серия, номер
                         </td>
                         <td class="center">
-
+${form.doc7_7_2!''} ${form.doc7_7_3!''}
                         </td>
                         <td>
                             Дата выдачи
                         </td>
                         <td class="center">
-
+${form.doc7_7_6!''}
                         </td>
                     </tr>
                     <tr>
@@ -2602,7 +2602,7 @@
                             Кем выдан
                         </td>
                         <td colspan="3" class="center">
-
+${form.doc7_7_4!''}
                         </td>
                     </tr>
                 </table>
@@ -2615,7 +2615,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
-                <smallbox></smallbox>
+                <smallbox>${form.field_127?has_content?then("V", "")}</smallbox>
                 <span>
                     Признан в установленном порядке безвестно отсутствующим или объявлен умершим
                 </span>
@@ -2628,7 +2628,7 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
-                <smallbox></smallbox>
+                <smallbox>${form.field_128?has_content?then("V", "")}</smallbox>
                 <span>
                     Погиб (умер) при исполнении обязанностей военной службы (вследствие военной травмы)
                 </span>
@@ -2641,11 +2641,11 @@
         </tr>
         <tr class="nobreak">
             <td class="boxes" style="margin-left: 2em">
-                <smallbox></smallbox>
+                <smallbox>${form.field_129?has_content?then("V", "")}</smallbox>
                 <span>
                     Военная травма получена в период прохождения военной службы в 
                     <span class="underline in minw150">
-                         
+                         ${form.field_129!''}
                     </span> (выпадающий список силовых органов)
                 </span>
             </td>

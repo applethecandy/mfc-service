@@ -1,15 +1,10 @@
-<!-- # lifesituation -> прекращение выплаты # -->
+<!-- # lifesituation -> внесение изменений в сведения # -->
 
 <style>
-  .boxes smallbox {
-    width: 12px !important;
-    height: 12px !important;
+  .boxes box {
+    height: 24px !important;
+    width: 30px !important;
   }
-
-* {
-    font-size: 7pt !important;
-    line-height: 6pt !important;
-}
 
   .subscript {
     font-size: 8pt;
@@ -176,7 +171,7 @@
   <table class="header">
     <tr>
       <td class="center" colspan="2">
-        ЗАЯВЛЕНИЕ<br>О ПРЕКРАЩЕНИИ ВЫПЛАТЫ МЕР СОЦИАЛЬНОЙ ПОДДЕРЖКИ
+        ЗАЯВЛЕНИЕ<br>ОБ ИЗМЕНЕНИИ СВЕДЕНИЙ ДЛЯ ОСУЩЕСТВЛЕНИЯ МЕРЫ СОЦИАЛЬНОЙ ПОДДЕРЖКИ
       </td>
     </tr>
     <tr>
@@ -196,7 +191,7 @@
         1.
         ${form.lifesituations_1} ${form.lifesituations_2} ${form.lifesituations_3}</td>
       <td>
-          
+         
       </td>
     </tr>
     <tr>
@@ -516,31 +511,169 @@
     </tr>
   </table>
 
-  <table>
-    <tr>
-      <td class="indent">3. Прошу прекратить выплату по мере социальной поддержки:</td>
-    </tr>
-    <tr><td class="underline"> ${order.getServiceTitle()}</td></tr>
-    <tr><td class="subscript center">(наименование меры)</td></tr>
-    <tr><td class="underline"> </td></tr>
-  </table>
-
   <table class="no-gap">
     <tr>
-      <td class="ungreedy indent">
-        4.	В связи с:
+      <td class="indent">3.	Прошу принять к сведению информацию об изменении <i>(отметить нужное)</i>:</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+					3.1.Сведений:
+          <span style="padding: 0 10px;"><box><#if !(form.representative_check?has_content)>V</#if></box></span>
+          получателя меры социальной поддержки
+          <span style="padding: 0 10px;"><box><#if form.representative_check?has_content>V</#if></box></span>
+          представителя получателя меры социальной поддержки
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+          <span style="padding: 0 10px;"><box>${form.lifesituations_20?has_content?then("V", "")}</box></span>
+          о фамилии, имени или отчестве;
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+          <span style="padding: 0 10px;"><box>${form.lifesituations_21?has_content?then("V", "")}</box></span>
+          о документе, удостоверяющем личность;
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+          <span style="padding: 0 10px;"><box>${form.lifesituations_22?has_content?then("V", "")}</box></span>
+          об адресе места жительства;
+          <span style="padding: 0 10px;"><box>${form.lifesituations_23?has_content?then("V", "")}</box></span>
+          прошу запросить выплатное дело для постановки на учет в территориальном органе ПФР по новому месту жительства;
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+          <span style="padding: 0 10px;"><box>${form.lifesituations_24?has_content?then("V", "")}</box></span>
+          о документе, подтверждающем полномочия представителя получателя меры социальной поддержки;
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center; width: 100%">
+          <span style="padding: 0 10px;"><box>${form.lifesituations_25?has_content?then("V", "")}</box></span>
+          <table style="margin: 20px auto 0px">
+          <tr><td class="underline"> ${form.lifesituations_26!''}</td></tr>
+          <tr><td class="subscript center">(указываются другие сведения)</td></tr>
+          </table>
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+          3.2
+          <span style="padding: 0 10px;"><box>${form.lifesituations_27?has_content?then("V", "")}</box></span>
+          Представителя получателя меры социальной поддержки (законного представителя несовершеннолетнего или недееспособного лица; организации, на которую возложено исполнение обязанностей опекуна или попечителя).
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+          3.3
+          <span style="padding: 0 10px;"><box>${form.lifesituations_28?has_content?then("V", "")}</box></span>
+          Сведений для доставки меры социальной поддержки:
+				</div>
+			</td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+				<div class="boxes" style="justify-content: left; align-items: center;">
+          <span style="padding: 0 10px;"><box>${form.lifesituations_29?contains("на счёт")?then("V", "")}</box></span>
+          на счет;
+          <span style="padding: 0 10px;"><box>${form.lifesituations_30?contains("получателя")?then("V", "")}</box></span>
+          получателя меры социальной поддержки
+          <span style="padding: 0 10px;"><box>${form.lifesituations_30?contains("представителя")?then("V", "")}</box></span>
+          законного представителя
+				</div>
+			</td>
+    </tr>
+  </table>
+  
+  <table class="no-gap">
+    <tr>
+      <td class="ungreedy">
+        №
       </td>
       <td class="greedy underline" style="text-align: left;">
-         ${form.lifesituations_18!''}
+         ${form.lifesituations_31!''}
       </td>
     </tr>
-    <tr><td colspan="2" class="subscript center">(указываются обстоятельства, влекущие прекращение выплаты пособия)</td></tr>
+    <tr><td colspan="2" class="subscript center">(указывается номер счета)</td></tr>
+  </table>
+  
+  <table class="no-gap">
+    <tr>
+      <td class="ungreedy">
+        в кредитной организации
+      </td>
+      <td class="greedy underline" style="text-align: left;">
+         ${form.lifesituations_32!''}
+      </td>
+    </tr>
+    <tr><td colspan="2" class="subscript center">(указывается наименование кредитной организации)</td></tr>
+  </table>
+  
+  <table class="no-gap">
+    <tr>
+      <td class="ungreedy">
+        БИК кредитной организации
+      </td>
+      <td class="greedy underline" style="text-align: left;">
+         ${form.lifesituations_33!''}
+      </td>
+    </tr>
+  </table>
+  
+  <table>
+    <tr style="page-break-inside: avoid;">
+      <td>
+        <div class="boxes" style="justify-content: left; align-items: center;">
+          через:
+          <span style="padding: 0 10px;"><box>${form.lifesituations_29?contains("почтовой связи")?then("V", "")}</box></span>
+          организацию почтовой связи
+          <span style="padding: 0 10px;"><box>${form.lifesituations_29?contains("доставку")?then("V", "")}</box></span>
+          иную организацию, осуществляющую доставку
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <table class="no-gap" style="width: 50%; float: right;">
+            <tr><td class="underline"> ${form.lifesituations_35!''}</td></tr>
+            <tr><td class="subscript center">(указывается наименование иной организации, осуществляющей доставку)</td></tr>
+          </table>
+      </td>
+    </tr>
+    <tr style="page-break-inside: avoid;">
+      <td>
+        <div class="boxes" style="justify-content: left; align-items: center;">
+          <span style="padding: 0 10px;"><box>${form.lifesituations_34?contains("на дому")?then("V", "")}</box></span>
+          путем вручения на дому
+          <span style="padding: 0 10px;"><box>${form.lifesituations_34?contains("на кассе")?then("V", "")}</box></span>
+          путем вручения на кассе
+        </div>
+      </td>
+    </tr>
   </table>
 
   <table>
     <tr>
       <td class="indent">
-        5.	Несу ответственность за достоверность предоставленных сведений, а также подлинность документов, в которых они содержатся. С положением об обязанности своевременного извещения о наступлении обстоятельств, влекущих прекращение (изменение) выплат, ознакомлен.
+        4.	Несу ответственность за достоверность предоставленных сведений, а также подлинность документов, в которых они содержатся. С положением об обязанности своевременного извещения о наступлении обстоятельств, влекущих прекращение (изменение) выплат, ознакомлен.
       </td>
     </tr>
     <tr>

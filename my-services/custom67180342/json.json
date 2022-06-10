@@ -761,9 +761,7 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
-        "hidden": true,
-        "disabled": true
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -772,9 +770,7 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
-        "hidden": true,
-        "disabled": true
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -783,9 +779,7 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
-        "hidden": true,
-        "disabled": true
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -794,9 +788,7 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
-        "hidden": true,
-        "disabled": true
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}"
     },
     {
         "xtype": "datefield",
@@ -804,9 +796,7 @@
         "name": "doc5_6",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false,
-        "hidden": true,
-        "disabled": true
+        "isLegalField": false
     },
     {
         "xtype": "fieldset",
@@ -820,7 +810,7 @@
         "xtype": "textfield",
         "fieldLabel": "Наименование документа",
         "name": "doc6_6",
-        "isPersonField": true,
+        "isPersonField": false,
         "isSoleField": false,
         "isLegalField": false,
         "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
@@ -834,9 +824,7 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
-        "hidden": true,
-        "disabled": true
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -845,9 +833,7 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
-        "hidden": true,
-        "disabled": true
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -856,9 +842,7 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
-        "hidden": true,
-        "disabled": true
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}"
     },
     {
         "xtype": "datefield",
@@ -866,9 +850,7 @@
         "name": "doc10_6",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false,
-        "hidden": true,
-        "disabled": true
+        "isLegalField": false
     },
     {
         "xtype": "checkbox",
@@ -910,9 +892,7 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
-        "hidden": true,
-        "disabled": true
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -921,9 +901,7 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
-        "hidden": true,
-        "disabled": true
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -932,9 +910,7 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
-        "hidden": true,
-        "disabled": true
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -943,9 +919,7 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}",
-        "hidden": true,
-        "disabled": true
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\"]}]}]}"
     },
     {
         "xtype": "datefield",
@@ -953,9 +927,7 @@
         "name": "doc15_6",
         "isPersonField": true,
         "isSoleField": false,
-        "isLegalField": false,
-        "hidden": true,
-        "disabled": true
+        "isLegalField": false
     },
     {
         "xtype": "fieldset",

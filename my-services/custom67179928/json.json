@@ -676,6 +676,126 @@
         "isLegalField": false
     },
     {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "doc7_6_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\",\"fieldset_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "doc7_6_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\",\"fieldset_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "doc7_6_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\",\"fieldset_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Код подразделения",
+        "name": "doc7_6_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\",\"fieldset_21\"]}]}]}"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "doc7_6_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о смерти",
+        "name": "field_125",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Серия",
+        "name": "doc7_7_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\",\"fieldset_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер",
+        "name": "doc7_7_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\",\"fieldset_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Кем выдан",
+        "name": "doc7_7_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\",\"fieldset_21\"]}]}]}"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Код подразделения",
+        "name": "doc7_7_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"representative_check\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"KLADR_5\",\"KLADR_6\",\"textfield_38\",\"fieldset_21\"]}]}]}"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Дата выдачи",
+        "name": "doc7_7_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Признан в установленном порядке безвестно отсутствующим или объявлен умершим",
+        "name": "field_127",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Погиб (умер) при исполнении обязанностей военной службы (вследствие военной травмы)",
+        "name": "field_128",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Военная травма получена в период прохождения военной службы в",
+        "name": "field_129",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
         "xtype": "fieldset",
         "title": "<span class=\"diff_class title-label\"> -> Раздел 8",
         "name": "fieldset_c7",

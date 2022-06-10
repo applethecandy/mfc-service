@@ -674,7 +674,7 @@
     },
     {
         "xtype": "fieldset",
-        "title": "<span class=\"diff_class title-label\"> -> Раздел 7 [услуга -]",
+        "title": "<span class=\"diff_class title-label\"> -> Раздел 7 [услуга custom67179928]",
         "name": "fieldset_c6",
         "isPersonField": false,
         "isSoleField": false,

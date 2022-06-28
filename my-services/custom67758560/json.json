@@ -708,103 +708,102 @@
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения об усыновлении ребенка (детей)",
+        "text": "Сведения о рождении ребенка",
         "fieldName": "file_2",
         "name": "fileuploadpanel_2",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Обязательный документ при наличии соответствующих обстоятельств (посредством представления копии решения суда об усыновлении)"
+        "description": "Необязательный документ, скан если документ предоставлен (в случае регистрации записи акта гражданского состояния компетентным органом иностранного государства - представляет подтверждающий документ"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения об установлении опеки (попечительства) над ребенком",
+        "text": "Сведения об усыновлении ребенка",
         "fieldName": "file_3",
         "name": "fileuploadpanel_3",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Необязательный документ (скан если заявитель предоставит документ)"
+        "description": "Заявитель/посредством представления копии решения суда об усыновлении"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения о рождении усыновленного ребенка (детей)",
+        "text": "Сведения о периоде нетрудоспособности в связи с беременностью и родами",
         "fieldName": "file_4",
         "name": "fileuploadpanel_4",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "allowBlank": false,
-        "description": "Необязательный документ (скан если заявитель предоставит документ)"
+        "description": "Необязательный документ, скан если документ предоставлен"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения об инвалидности ребенка",
+        "text": "Сведения о периоде признания гражданина безработным",
         "fieldName": "file_5",
         "name": "fileuploadpanel_5",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Необязательный документ (скан если заявитель предоставит документ)"
+        "description": "Необязательный документ, скан если документ предоставлен"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения о законных представителях (опекунах, попечителях, родителях), включая сведения о передаче ребенка в приемную семью",
+        "text": "Сведения о трудовой деятельности по последнему месту работы и основаниях увольнения",
         "fieldName": "file_12",
         "name": "fileuploadpanel_12",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Необязательный документ (скан если заявитель предоставит документ)"
+        "description": "Необязательный документ, скан если документ предоставлен"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения о регистрации по месту жительства и месту пребывания гражданина Российской Федерации в пределах Российской Федерации",
+        "text": "Сведения о прекращении физическими лицами деятельности в качестве индивидуальных предпринимателей",
         "fieldName": "file_6",
         "name": "fileuploadpanel_6",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Необязательный документ (скан если заявитель предоставит документ)"
+        "description": "Необязательный документ, скан если документ предоставлен"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения о выдаче иностранному гражданину или лицу без гражданства вида на жительство",
+        "text": "Сведения о прекращении полномочий нотариусами, занимающимися частной практикой",
         "fieldName": "file_7",
         "name": "fileuploadpanel_7",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Необязательный документ (скан если заявитель предоставит документ)"
+        "description": "Необязательный документ, скан если документ предоставлен"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения о выдаче иностранному гражданину или лицу без гражданства разрешения на временное проживание",
+        "text": "Сведения из решений территориальных органов федеральной налоговой службы о государственной регистрации прекращения статуса адвоката и прекращения деятельности иными физическими лицами, профессиональная деятельность которых в соответствии с федеральными законами подлежит государственной регистрации и (или) лицензированию",
         "fieldName": "file_8",
         "name": "fileuploadpanel_8",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Необязательный документ (скан если заявитель предоставит документ)"
+        "description": "Необязательный документ, скан если документ предоставлен"
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения о постановке иностранного гражданина или лица без гражданства на учет по месту пребывания",
+        "text": "Сведения о регистрации по месту жительства и месту пребывания гражданина Российской Федерации в пределах Российской Федерации",
         "fieldName": "file_9",
         "name": "fileuploadpanel_9",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Обязательный документ при наличии соответствующих обстоятельств до 31.12.2022 "
+        "description": "Необязательный документ, скан если документ предоставлен"
     },
     {
         "xtype": "fileuploadpanel",
@@ -819,13 +818,57 @@
     },
     {
         "xtype": "fileuploadpanel",
-        "text": "Сведения о выдаче иностранному гражданину или лицу без гражданства удостоверения беженца",
+        "text": "Сведения о выдаче иностранному гражданину или лицу без гражданства разрешения на временное проживание",
         "fieldName": "file_11",
         "name": "fileuploadpanel_11",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
         "scanDocumentWithdraw": "",
-        "description": "Обязательный документ при наличии соответствующих обстоятельств до 31.12.2022 "
+        "description": "Необязательный документ, скан если документ предоставлен"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о выдаче иностранному гражданину или лицу без гражданства вида на жительство",
+        "fieldName": "file_13",
+        "name": "fileuploadpanel_13",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "Необязательный документ, скан если документ предоставлен"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о регистрации иностранного гражданина или лица без гражданства по месту жительства",
+        "fieldName": "file_14",
+        "name": "fileuploadpanel_14",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "До 31.12.2022 - заявитель/посредством предоставления подтверждающего документа\nс 01.01.2023 - Необязательный документ, скан если документ предоставлен\n"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о постановке иностранного гражданина или лица без гражданства на учет по месту пребывания",
+        "fieldName": "file_15",
+        "name": "fileuploadpanel_15",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "До 31.12.2022 - заявитель/посредством предоставления подтверждающего документа\nс 01.01.2023 - Необязательный документ, скан если документ предоставлен\n"
+    },
+    {
+        "xtype": "fileuploadpanel",
+        "text": "Сведения о выдаче иностранному гражданину или лицу без гражданства удостоверения беженца",
+        "fieldName": "file_16",
+        "name": "fileuploadpanel_16",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "scanDocumentWithdraw": "",
+        "description": "До 31.12.2022 - заявитель/посредством предоставления подтверждающего документа\nс 01.01.2023 - Необязательный документ, скан если документ предоставлен\n"
     }
 ]

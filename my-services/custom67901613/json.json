@@ -1,1 +1,39 @@
-[]
+[
+    {
+        "xtype": "fieldset",
+        "title": "Сведения о заявителе",
+        "name": "field_0",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Фамилия",
+        "name": "field_3",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "strategy": "lastname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Имя",
+        "name": "field_2",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "allowBlank": false,
+        "strategy": "firstname"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Отчество",
+        "name": "field_1",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "middlename"
+    }
+]

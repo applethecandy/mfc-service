@@ -139,6 +139,8 @@
   }
 </style>
 
+<#import "applethecandy-macros.ftl" as macros>
+
 <table>
   <colgroup>
     <col width="50%">
@@ -163,7 +165,7 @@
     <tr>
       <td></td>
       <td></td>
-      <td class=underline> </td>
+      <td class=underline><@macros.digits2text 1234567?c /></td>
     </tr>
     <tr>
       <td></td>

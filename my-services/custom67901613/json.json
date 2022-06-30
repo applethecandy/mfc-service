@@ -35,5 +35,13 @@
         "isSoleField": false,
         "isLegalField": false,
         "strategy": "middlename"
+    },
+    {
+        "xtype": "checkbox",
+        "boxLabel": "Требуется указать номер карты",
+        "name": "field_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
     }
 ]

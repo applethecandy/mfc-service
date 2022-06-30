@@ -15,7 +15,8 @@
         "isSoleField": false,
         "isLegalField": false,
         "allowBlank": false,
-        "strategy": "lastname"
+        "strategy": "lastname",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"field_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"field_5\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -25,7 +26,8 @@
         "isSoleField": false,
         "isLegalField": false,
         "allowBlank": false,
-        "strategy": "firstname"
+        "strategy": "firstname",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"field_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"field_5\"]}]}]}"
     },
     {
         "xtype": "textfield",
@@ -34,12 +36,117 @@
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false,
-        "strategy": "middlename"
+        "strategy": "middlename",
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"field_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"field_5\"]}]}]}"
     },
     {
         "xtype": "checkbox",
         "boxLabel": "Требуется указать номер карты",
         "name": "field_4",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"field_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"field_5\"]}]}]}"
+    },
+    {
+        "xtype": "combobox",
+        "fieldLabel": "Выпадающий список",
+        "name": "field_8",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "queryMode": "local",
+        "displayField": "value",
+        "valueField": "value",
+        "store": {
+            "fields": [
+                "value"
+            ],
+            "data": [
+                {
+                    "value": "ыфвафывафы"
+                },
+                {
+                    "value": "ыфвафывафывафывафыва"
+                }
+            ]
+        },
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"field_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"field_5\"]}]}]}"
+    },
+    {
+        "xtype": "KLADR",
+        "fieldLabel": "КЛАДР",
+        "name": "",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "strategy": "residenceAddressKladrFullAddrJson"
+    },
+    {
+        "xtype": "textarea",
+        "fieldLabel": "Текстовая область",
+        "name": "field_7",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"field_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"field_5\"]}]}]}"
+    },
+    {
+        "xtype": "datefield",
+        "fieldLabel": "Поле даты",
+        "name": "field_6",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "Номер карты",
+        "name": "field_5",
+        "isPersonField": true,
+        "isSoleField": false,
+        "isLegalField": false,
+        "customLogic": "{\"customLogic\":[{\"fields\":[{\"name\":\"field_4\",\"value\":true,\"xtypeCondition\":\"checkbox_condition\",\"logicOperator\":\"AND\"}],\"logics\":[{\"visibilityValue\":\"show\",\"fieldName\":[\"field_5\"]}]}]}"
+    },
+    {
+        "xtype": "cloneablePanel",
+        "fieldLabel": "Клонируемая панель",
+        "name": "cloneable_0",
+        "items": [
+            {
+                "xtype": "fieldset",
+                "title": "Заголовок"
+            },
+            {
+                "xtype": "fieldset",
+                "margin": 0,
+                "padding": 0,
+                "border": false,
+                "title": "ЗАГОЛОВОК",
+                "name": "field_9",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "xtype": "textfield",
+                "fieldLabel": "Текстовое поле",
+                "name": "field_10",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            },
+            {
+                "xtype": "textfield",
+                "fieldLabel": "Текстовое поле",
+                "name": "field_11",
+                "isPersonField": true,
+                "isSoleField": false,
+                "isLegalField": false
+            }
+        ],
+        "prefix": "cloneable_0",
+        "fieldName": "cloneable_0",
         "isPersonField": true,
         "isSoleField": false,
         "isLegalField": false

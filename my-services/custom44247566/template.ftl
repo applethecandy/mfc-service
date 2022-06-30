@@ -1545,7 +1545,7 @@
         
     <table style="page-break-inside: avoid">
 
-        <table class="borders center"">
+        <table class="borders center">
             <colgroup>
                 <col width="4%">
                 <col width="17%">

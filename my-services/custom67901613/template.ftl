@@ -149,12 +149,12 @@
     <tr>
       <td></td>
       <td class="right">В</td>
-      <td class="underline">&nbsp;</td>
+      <td class="underline"> </td>
     </tr>
     <tr>
       <td></td>
       <td></td>
-      <td class=underline>&nbsp;</td>
+      <td class=underline> </td>
     </tr>
     <tr>
       <td></td>
@@ -163,12 +163,12 @@
     <tr>
       <td></td>
       <td></td>
-      <td class=underline>&nbsp;</td>
+      <td class=underline> </td>
     </tr>
     <tr>
       <td></td>
       <td></td>
-      <td class=underline>&nbsp;</td>
+      <td class=underline>${form.field_3} ${form.field_2} ${form.field_1}</td>
     </tr>
     <tr>
       <td></td>
@@ -182,13 +182,13 @@
         <table class="no-gap" style="border-collapse: collapse;">
           <tr>
             <td style="white-space: nowrap;">дата рождения</td>
-            <td style="width: 100%" class="underline">&nbsp;</td>
+            <td style="width: 100%" class="underline"> </td>
           </tr>
         </table>
         <table class="no-gap" style="border-collapse: collapse;">
           <tr>
             <td style="white-space: nowrap;">адрес места жительства:</td>
-            <td style="width: 100%" class="underline">&nbsp;</td>
+            <td style="width: 100%" class="underline"> </td>
           </tr>
         </table>
       </td>
@@ -196,12 +196,12 @@
     <tr>
       <td></td>
       <td></td>
-      <td class=underline>&nbsp;</td>
+      <td class=underline> </td>
     </tr>
     <tr>
       <td></td>
       <td></td>
-      <td class=underline>&nbsp;</td>
+      <td class=underline> </td>
     </tr>
     <tr>
       <td></td>
@@ -211,12 +211,12 @@
     <tr>
       <td></td>
       <td></td>
-      <td class=underline>&nbsp;</td>
+      <td class=underline> </td>
     </tr>
     <tr>
       <td></td>
       <td></td>
-      <td class=underline>&nbsp;</td>
+      <td class=underline> </td>
     </tr>
     <tr>
       <td></td>
@@ -225,27 +225,27 @@
         <table class="no-gap" style="border-collapse: collapse;">
           <tr>
             <td style="white-space: nowrap;">номер телефона</td>
-            <td style="width: 100%" class="underline">&nbsp;</td>
+            <td style="width: 100%" class="underline"> </td>
           </tr>
         </table>
         <table class="no-gap" style="border-collapse: collapse;">
           <tr>
             <td style="white-space: nowrap;">паспорт: серия</td>
-            <td style="width: 40%" class="underline">&nbsp;</td>
+            <td style="width: 40%" class="underline"> </td>
             <td style="white-space: nowrap;">№</td>
-            <td style="width: 60%" class="underline">&nbsp;</td>
+            <td style="width: 60%" class="underline"> </td>
           </tr>
         </table>
         <table class="no-gap" style="border-collapse: collapse;">
           <tr>
             <td style="white-space: nowrap;">дата выдачи</td>
-            <td style="width: 100%" class="underline">&nbsp;</td>
+            <td style="width: 100%" class="underline"> </td>
           </tr>
         </table>
         <table class="no-gap" style="border-collapse: collapse;">
           <tr>
             <td style="white-space: nowrap;">кем выдан</td>
-            <td style="width: 100%" class="underline">&nbsp;</td>
+            <td style="width: 100%" class="underline"> </td>
           </tr>
         </table>
       </td>
@@ -253,12 +253,12 @@
     <tr>
       <td></td>
       <td></td>
-      <td class=underline>&nbsp;</td>
+      <td class=underline> </td>
     </tr>
     <tr>
       <td></td>
       <td></td>
-      <td class=underline>&nbsp;</td>
+      <td class=underline> </td>
     </tr>
     <tr>
       <td></td>
@@ -268,7 +268,7 @@
     <tr>
       <td></td>
       <td></td>
-      <td class=underline>&nbsp;</td>
+      <td class=underline> </td>
     </tr>
     <tr>
       <td></td>
@@ -277,7 +277,7 @@
         <table class="no-gap" style="border-collapse: collapse;">
           <tr>
             <td>Страховое свидетельство обязательного пенсионного страхования Российской Федерации (СНИЛС)</td>
-            <td style="width: 50%" class="underline">&nbsp;</td>
+            <td style="width: 50%" class="underline"> </td>
           </tr>
         </table>
       </td>
@@ -320,7 +320,7 @@
   </tr>
   <tr>
     <td class="underline" colspan="3">
-      &nbsp;
+       
     </td>
   </tr>
   <tr>
@@ -330,7 +330,7 @@
   </tr>
   <tr>
     <td class="underline" colspan="3">
-      &nbsp;
+       
     </td>
   </tr>
   <tr>
@@ -376,7 +376,7 @@
       законный представитель
     </td>
     <td class="underline">
-      &nbsp;
+       
     </td>
   </tr>
   <tr>
@@ -439,7 +439,7 @@
   </tr>
   <tr>
     <td class="underline">
-      &nbsp;
+       
     </td>
   </tr>
   <tr>
@@ -455,7 +455,7 @@
       Размер уплаченной страховой премии по договору ОСАГО
     </td>
     <td class="underline" style="width: 100%">
-      &nbsp;
+       
     </td>
   </tr>
 </table>
@@ -468,12 +468,12 @@
   </tr>
   <tr>
     <td class="underline">
-      &nbsp;
+       
     </td>
   </tr>
   <tr>
     <td class="underline">
-      &nbsp;
+       
     </td>
   </tr>
   <tr>
@@ -531,7 +531,7 @@
       направить по электронной почте
     </td>
     <td class="underline">
-      &nbsp;
+       
     </td>
   </tr>
 </table>
@@ -559,15 +559,15 @@
   </colgroup>
   <tr>
     <td class="underline">
-      &nbsp;
+       
     </td>
     <td></td>
     <td class="underline">
-      &nbsp;
+       
     </td>
     <td></td>
     <td class="underline">
-      &nbsp;
+       
     </td>
   </tr>
   <tr>
@@ -609,7 +609,7 @@
       Заявление и документы
     </td>
     <td class="underline center" style="width: 44%">
-      &nbsp;
+       
     </td>
     <td style="text-align: left; width: 23%">
       приняты
@@ -637,19 +637,19 @@
   </colgroup>
   <tr>
     <td class="underline">
-      &nbsp;
+       
     </td>
     <td></td>
     <td class="underline">
-      &nbsp;
+       
     </td>
     <td></td>
     <td class="underline">
-      &nbsp;
+       
     </td>
     <td></td>
     <td class="underline">
-      &nbsp;
+       
     </td>
   </tr>
   <tr>
